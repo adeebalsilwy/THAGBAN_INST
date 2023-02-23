@@ -13,6 +13,8 @@ using THAGBAN_INST.DATA;
 using THAGBAN_INST.FORM.FRM_MANG_STUD.spical;
 using DevExpress.XtraScheduler.UI;
 using DevExpress.XtraBars.Ribbon.Drawing;
+using THAGBAN_INST.FORM.FRM_LECTUER_MANG.lect_report;
+using DevExpress.XtraReports.UI;
 
 namespace THAGBAN_INST.FORM.FRM_LECTUER_MANG.lect_mark
 {
@@ -29,11 +31,14 @@ namespace THAGBAN_INST.FORM.FRM_LECTUER_MANG.lect_mark
         public string cours_desc;
         public int spiacla_id;
         public int term_id;
+        private int lect_id;
+        private int tech_lect_id;
 
         public frm_mang_lect_marks()
         {
             InitializeComponent();
             get_data();
+            cheack_change();
 
 
 
@@ -54,6 +59,105 @@ namespace THAGBAN_INST.FORM.FRM_LECTUER_MANG.lect_mark
                 // Bind data to control when loading complete
                 gridControl1.DataSource = dbContext.TBL_LECT_MARK.Local.ToBindingList();
             }, System.Threading.Tasks.TaskScheduler.FromCurrentSynchronizationContext());
+        }
+        void get_spic()
+        {
+            if (ch_lect.Checked == true && ch_grou.Checked == false)
+            {
+                try
+                {
+                    if (com_lect.SelectedValue != null)
+                    {
+                        lect_id = Convert.ToInt32(com_lect.SelectedValue);
+                        gridControl1.DataSource = con.TBL_LECT_MARK.Where(w => w.LECT_ID == lect_id).ToList();
+
+                    }
+                }
+                catch (Exception ex)
+                {
+
+                }
+            }
+
+            else if (ch_lect.Checked == true && ch_grou.Checked == true)
+            {
+                try
+                {
+                    if (com_lect.SelectedValue != null)
+                    {
+                        lect_id = Convert.ToInt32(com_lect.SelectedValue);
+                        tech_lect_id = Convert.ToInt32(com_group.SelectedValue);
+                        gridControl1.DataSource = con.TBL_LECT_MARK.Where(w => w.LECT_ID == lect_id && w.TBL_STUD_LECT.LECT_TECH_ID == tech_lect_id).ToList();
+
+                    }
+                }
+                catch (Exception ex)
+                {
+
+                }
+            }
+            else
+            {
+                get_data();
+            }
+
+        }
+        public void get_lect()
+        {
+            var tbl = con.TBL_LECT_TECH_COURS.Where(w => w.STATE == true)
+                .Join(con.TBL_LECTUER, l => l.TBL_LECTUER.LECT_ID, tl => tl.LECT_ID,
+                (l, tl) => new
+                {
+
+                    l.LECT_ID,
+
+                    tl.LECT_NAME,
+
+                }).Distinct();
+
+
+            if (tbl != null)
+            {
+                com_lect.DataSource = tbl.ToList();
+                com_lect.DisplayMember = "LECT_NAME";
+                com_lect.ValueMember = "LECT_ID";
+                //  lbl_lect_tech.Text = tbl.Count().ToString();
+                get_group();
+
+
+            }
+            else
+            {
+                com_lect.DataSource = null;
+                com_lect.Items.Clear();
+                com_lect.Text = "";
+            }
+        }
+        public void get_group()
+        {
+            try
+            {
+
+                lect_id = Convert.ToInt32(com_lect.SelectedValue);
+                var temp = con.TBL_LECT_TECH_COURS.Where(w => w.LECT_ID == lect_id).Distinct().ToList();
+                if (temp != null)
+                {
+                    com_group.DataSource = temp;
+                    com_group.DisplayMember = "GROUP_NAME";
+                    com_group.ValueMember = "TECH_LECT_ID";
+
+
+                }
+                else
+                {
+                    com_group.DataSource = null;
+                    com_group.Items.Clear();
+                    com_group.Text = "";
+                }
+            }
+            catch (Exception ex) { }
+
+
         }
         private void btn_save_Click(object sender, EventArgs e)
         {
@@ -168,10 +272,113 @@ namespace THAGBAN_INST.FORM.FRM_LECTUER_MANG.lect_mark
         
         private void simpleButton2_Click(object sender, EventArgs e)
         {
+
+            //  gridControl1.ShowRibbonPrintPreview();
+            report_lect_mark repors = new report_lect_mark();
+            List<TBL_LECT_MARK> list = new List<TBL_LECT_MARK>();
+
+            for (int i = 0; i < gridView2.RowCount; i++)
+            {
+                list.Add(gridView2.GetRow(i) as TBL_LECT_MARK);
+            }
+            repors.DataSource = list;
+            repors.DataMember = "";
+            int ints_id = THAGBAN_INST.Properties.Settings.Default.inst_id;
+            repors.lbl_inst_name.Text = con.TBL_INST.Find(ints_id).INST_NAME.ToString();
+            adl.method method = new adl.method();
+            method.data = con.TBL_INST.Find(ints_id).INST_LOGO;
+            repors.lbl_admin.Text = con.TBL_INST.Find(ints_id).INST_ADMIN;
+            repors.inst_logo.Image=Image.FromStream(method.convert_image());
+            repors.Watermark.Image= Image.FromStream(method.convert_image());
+            repors.lbl_inst_desc.Text = con.TBL_INST.Find(ints_id).INST_DESC;
+            repors.lbl_inst_locationn.Text = con.TBL_INST.Find(ints_id).INST_LOCATION;
+
+            repors.ShowRibbonPreview();
             
-            gridControl1.ShowRibbonPrintPreview();
             
-            
+        }
+
+        private void gridView2_SelectionChanged(object sender, DevExpress.Data.SelectionChangedEventArgs e)
+        {
+            get_sele();
+        }
+
+        private void gridControl1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+        void cheack_change()
+        {
+
+            if (ch_lect.Checked)
+            {
+                com_lect.Enabled = true;
+                get_spic();
+            }
+            else
+            {
+                com_lect.Enabled = false;
+            }
+            if (ch_grou.Checked)
+            {
+                com_group.Enabled = true;
+                get_spic();
+
+            }
+            else
+            {
+                //groupBox1.Enabled = false;
+                //groupBox1.Visible = false;
+                com_group.Enabled = false;
+            }
+
+        }
+
+        private void ch_lect_CheckedChanged(object sender, EventArgs e)
+        {
+             cheack_change();
+            get_lect();
+          
+            get_spic();
+        }
+
+        private void ch_grou_CheckedChanged(object sender, EventArgs e)
+        {
+           cheack_change();
+
+            get_group();
+            get_spic();
+        }
+
+        private void com_lect_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                if (com_lect.SelectedValue != null)
+                {
+                    lect_id = Convert.ToInt32(com_lect.SelectedValue);
+                    get_group();
+                    get_spic();
+
+
+                }
+            }
+            catch (Exception ex) { }
+        }
+
+        private void com_group_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                if (com_group.SelectedValue != null)
+                {
+                    tech_lect_id = Convert.ToInt32(com_group.SelectedValue);
+                    get_spic();
+
+
+                }
+            }
+            catch (Exception ex) { }
         }
     }
 }

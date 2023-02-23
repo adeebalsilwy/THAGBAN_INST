@@ -43,6 +43,7 @@
             this.colEMP_DATE = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colEMP_ADDRESS = new DevExpress.XtraGrid.Columns.GridColumn();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
+            this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             this.btn_delete = new DevExpress.XtraEditors.SimpleButton();
             this.btn_edite = new DevExpress.XtraEditors.SimpleButton();
@@ -116,6 +117,7 @@
             this.gridView2.OptionsView.EnableAppearanceEvenRow = true;
             this.gridView2.OptionsView.EnableAppearanceOddRow = true;
             this.gridView2.OptionsView.ShowGroupPanel = false;
+            this.gridView2.SelectionChanged += new DevExpress.Data.SelectionChangedEventHandler(this.gridView2_SelectionChanged);
             this.gridView2.FocusedRowChanged += new DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventHandler(this.gridView2_FocusedRowChanged);
             // 
             // colEMP_ID
@@ -201,6 +203,7 @@
             // 
             // panelControl1
             // 
+            this.panelControl1.Controls.Add(this.simpleButton2);
             this.panelControl1.Controls.Add(this.simpleButton1);
             this.panelControl1.Controls.Add(this.btn_delete);
             this.panelControl1.Controls.Add(this.btn_edite);
@@ -210,6 +213,24 @@
             this.panelControl1.Name = "panelControl1";
             this.panelControl1.Size = new System.Drawing.Size(925, 64);
             this.panelControl1.TabIndex = 8;
+            // 
+            // simpleButton2
+            // 
+            this.simpleButton2.AccessibleRole = System.Windows.Forms.AccessibleRole.Border;
+            this.simpleButton2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.simpleButton2.Appearance.BackColor = System.Drawing.Color.Transparent;
+            this.simpleButton2.Appearance.Font = new System.Drawing.Font("ae_AlArabiya", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.simpleButton2.Appearance.Options.UseBackColor = true;
+            this.simpleButton2.Appearance.Options.UseBorderColor = true;
+            this.simpleButton2.Appearance.Options.UseFont = true;
+            this.simpleButton2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton2.ImageOptions.Image")));
+            this.simpleButton2.Location = new System.Drawing.Point(52, 7);
+            this.simpleButton2.Name = "simpleButton2";
+            this.simpleButton2.ShowFocusRectangle = DevExpress.Utils.DefaultBoolean.True;
+            this.simpleButton2.Size = new System.Drawing.Size(132, 50);
+            this.simpleButton2.TabIndex = 46;
+            this.simpleButton2.Text = "كلمه المرور";
+            this.simpleButton2.Click += new System.EventHandler(this.simpleButton2_Click);
             // 
             // simpleButton1
             // 
@@ -323,5 +344,6 @@
         private DevExpress.XtraEditors.SimpleButton btn_delete;
         private DevExpress.XtraEditors.SimpleButton btn_edite;
         private DevExpress.XtraEditors.SimpleButton btn_save;
+        private DevExpress.XtraEditors.SimpleButton simpleButton2;
     }
 }

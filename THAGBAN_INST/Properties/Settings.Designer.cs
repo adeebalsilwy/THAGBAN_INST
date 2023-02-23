@@ -95,10 +95,116 @@ namespace THAGBAN_INST.Properties {
             }
         }
         
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool IsFirstOpen {
+            get {
+                return ((bool)(this["IsFirstOpen"]));
+            }
+            set {
+                this["IsFirstOpen"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::System.DateTime Start_Date {
+            get {
+                return ((global::System.DateTime)(this["Start_Date"]));
+            }
+            set {
+                this["Start_Date"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::System.DateTime End_Date {
+            get {
+                return ((global::System.DateTime)(this["End_Date"]));
+            }
+            set {
+                this["End_Date"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool ISActive {
+            get {
+                return ((bool)(this["ISActive"]));
+            }
+            set {
+                this["ISActive"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("ريال")]
+        public string courncy {
+            get {
+                return ((string)(this["courncy"]));
+            }
+            set {
+                this["courncy"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string database_name {
+            get {
+                return ((string)(this["database_name"]));
+            }
+            set {
+                this["database_name"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string port {
+            get {
+                return ((string)(this["port"]));
+            }
+            set {
+                this["port"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string user_server_id {
+            get {
+                return ((string)(this["user_server_id"]));
+            }
+            set {
+                this["user_server_id"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string user_server_pass {
+            get {
+                return ((string)(this["user_server_pass"]));
+            }
+            set {
+                this["user_server_pass"] = value;
+            }
+        }
+        
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DEEBO\\SQLEXPRESS;Initial Catalog=db_max_inst;Integrated Security=True" +
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=Deebo\\SQLEXPRESS;Initial Catalog=db_max_inst;Integrated Security=True" +
             ";MultipleActiveResultSets=True;Application Name=EntityFramework")]
         public string db_max_instConnectionString {
             get {

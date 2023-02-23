@@ -117,4 +117,7 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="erp_send_tech.Watermark.ImageSource" xml:space="preserve">
+    <value>iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAOwgAADsIBFShKgAAAAlxJREFUOE9jwAOEgNgJiO2BWAAkQBTg4eGxC4uOnt47ffrpQ+fPvz525cq7SXPmnAmJiprCy8urAVWGHegZG1eu3bnz1rWnT/9jw3OWLz+tpaXlCVWOCgxMTfNPXL36HqZ42+HDD4E2nztx7doHZEMWrF59VURExAGqDQ70F65dexmk4Nzt21+Kc7zWn57Je/HhSr4Xc8v5TqbGO207fPHiW5ghGfn5G4F6OCBagcDW0bETJlmUH77+916B3xfm8D9uKTDc31thvnNbJ/+l+EiH7TA1Z4GWyMjIREG1M/BUNTUdAklMnjPjyJ5+gbOftvF9d3c23NU5se/Q3tOnX2w5cOD+5gMHHsIMAOHQqKheqH4G653Hjj0BCeanuW78s0/gz4W5/I8mFomeWlwvfrShte4gskYYzioomA/Vz+B99s6dbyDB/PykLSDnX10k8KArR/RAT77E/u4pE46hawbhlOzsaVD9DGab9+9/ABLccujQnXnVUvuAhvyxMpLYW15VsAvo9HvomkHYyd29HKqfgb2mpQXuzPa+lt2vNvK/ubeC93l+usvWitrK/aXZThvdTNkP7jp2DBwO244cuc/JyWkO1Q9Mr+7uLTADQLijp2n3nCrRQw9X8T1/s5H//fQy4aOtPe2HYfJ+ISFToFrhQLK1r+8AsiHn7979OnHOnPPTFy68cOL69Y8w8cqmpq1A9XIQbUhAVFTUtqmnZ9/VJ0/+IRsEw7tPnHjqHxKykIODQwmqBSsQt7a3LwVFUUN7+4qa5ublKVlZc9y8vauBGh2B8owQZVQDDAwAv1HEi+4oBbAAAAAASUVORK5CYII=</value>
+  </data>
 </root>

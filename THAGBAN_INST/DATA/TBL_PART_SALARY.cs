@@ -21,7 +21,9 @@ namespace THAGBAN_INST.DATA
         public int PART_YEAR { get; set; }
         public int EMP_ID { get; set; }
         public System.DateTime SLAARY_DATE { get; set; }
+        public Nullable<int> OPRATION_ID { get; set; }
     
         public virtual TBL_EMPLOYEES TBL_EMPLOYEES { get; set; }
+        public virtual TBL_OPRATION TBL_OPRATION { get; set; }
     }
 }

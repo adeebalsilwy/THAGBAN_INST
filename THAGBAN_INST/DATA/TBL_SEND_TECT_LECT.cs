@@ -22,10 +22,12 @@ namespace THAGBAN_INST.DATA
         public Nullable<int> REST { get; set; }
         public Nullable<System.DateTime> SEND_TECH_DATE { get; set; }
         public Nullable<int> INST_ID { get; set; }
+        public Nullable<int> OPRATION_ID { get; set; }
     
         public virtual TBL_EMPLOYEES TBL_EMPLOYEES { get; set; }
-        public virtual TBL_LECTUER TBL_LECTUER { get; set; }
-        public virtual TBL_LECT_TECH_COURS TBL_LECT_TECH_COURS { get; set; }
         public virtual TBL_INST TBL_INST { get; set; }
+        public virtual TBL_LECT_TECH_COURS TBL_LECT_TECH_COURS { get; set; }
+        public virtual TBL_LECTUER TBL_LECTUER { get; set; }
+        public virtual TBL_OPRATION TBL_OPRATION { get; set; }
     }
 }

@@ -13,6 +13,10 @@ using THAGBAN_INST.FORM.FRM_EMP_MANEGER.employees;
 using THAGBAN_INST.DATA;
 using THAGBAN_INST.reports.emp_reports;
 using DevExpress.XtraReports.UI;
+using DevExpress.DocumentServices.ServiceModel.DataContracts;
+using DevExpress.XtraGrid.Views.Base;
+using DevExpress.CodeParser;
+using System.Drawing.Imaging;
 
 namespace THAGBAN_INST.FORM.FRM_EMP_MANEGER.part_salary
 {
@@ -133,7 +137,21 @@ namespace THAGBAN_INST.FORM.FRM_EMP_MANEGER.part_salary
 
         private void simpleButton2_Click(object sender, EventArgs e)
         {
-            gridControl1.ShowRibbonPrintPreview();
+            reports_part_salary report = new reports_part_salary();
+            List<TBL_PART_SALARY> list=new List<TBL_PART_SALARY>();
+           
+            for (int i = 0; i <gridView2.RowCount; i++)
+            {
+                list.Add(gridView2.GetRow(i) as TBL_PART_SALARY);
+            }
+            report.DataSource = list;
+       report.DataMember = "";
+            adl.method method= new adl.method();
+            int inst_id = THAGBAN_INST.Properties.Settings.Default.inst_id;
+            TBL_INST tbl=con.TBL_INST.Find(inst_id);
+            method.data = tbl.INST_LOGO;
+            report.Watermark.Image=Image.FromStream(method.convert_image());
+            report.ShowRibbonPreview();
         }
     }
 }

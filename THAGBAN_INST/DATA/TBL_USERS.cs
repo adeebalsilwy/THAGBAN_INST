@@ -20,5 +20,6 @@ namespace THAGBAN_INST.DATA
         public int EMP_ID { get; set; }
     
         public virtual TBL_EMPLOYEES TBL_EMPLOYEES { get; set; }
+        public virtual TBL_ROULLS_LECTUER TBL_ROULLS_LECTUER { get; set; }
     }
 }

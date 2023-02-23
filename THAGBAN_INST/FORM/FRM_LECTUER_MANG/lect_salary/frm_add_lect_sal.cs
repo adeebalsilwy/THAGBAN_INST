@@ -157,8 +157,10 @@ namespace THAGBAN_INST.FORM.FRM_LECTUER_MANG.lect_salary
                 try
                 {
                     TBL_SEND_TECT_LECT cl = new TBL_SEND_TECT_LECT();
+                    
+                  
 
-                    cl.TECH_ID = Convert.ToInt32(com_emp_name.SelectedValue) ;
+                cl.TECH_ID = Convert.ToInt32(com_emp_name.SelectedValue) ;
 
                     cl.TECH_LECT_ID = Convert.ToInt32(com_group.SelectedValue);
 
@@ -166,15 +168,33 @@ namespace THAGBAN_INST.FORM.FRM_LECTUER_MANG.lect_salary
                     cl.PAID_UP = Convert.ToInt32(txt_part_paid.Text);
                     cl.REST = Convert.ToInt32(txt_part_rest.Text);
                     cl.INST_ID = THAGBAN_INST.Properties.Settings.Default.inst_id;
-                    string aa = string.Format("{0:dd-MM-yyyy}", txt_part_date.Value);
-                    part_date = DateTime.ParseExact(aa, "dd-MM-yyyy", null);
-                    cl.SEND_TECH_DATE = part_date;
+                    adl.method method = new adl.method();
+                    // string aa = string.Format("{0:dd-MM-yyyy}", );
+                    //part_date = DateTime.ParseExact(aa, "dd-MM-yyyy", null);
+                    cl.SEND_TECH_DATE = method.convert_date(txt_part_date.Value) ;
+                    TBL_OPRATION opration = new TBL_OPRATION();
+                    opration.PORATION_AMOUNT = Convert.ToInt32(cl.PAID_UP);
+                    opration.PORATION_DATE = cl.SEND_TECH_DATE;
+                    opration.OPRATION_TYPE = "سحب";
+                    opration.INST_ID = Convert.ToInt32(cl.INST_ID);
 
+                    TBL_INST inst = con.TBL_INST.Find(cl.INST_ID);
+                    long total = Convert.ToInt64(inst.INST_TOTAL);
+                    total = Convert.ToInt64((total - Convert.ToInt32(opration.PORATION_AMOUNT)));
+                    inst.INST_TOTAL = total.ToString();
+                    inst.INST_ID = Convert.ToInt32(cl.INST_ID);
+                    con.TBL_INST.AddOrUpdate(inst);
 
+                   // MessageBox.Show(inst.INST_TOTAL);
                     if (part_id != 0)
                     {
                         //add 
+                        opration.OPRATION_ID = Convert.ToInt32(cl.OPRATION_ID);
+                        con.TBL_OPRATION.AddOrUpdate(opration);
                         cl.SEND_STUD_ID = Convert.ToInt32(part_id);
+                      
+
+
                         con.TBL_SEND_TECT_LECT.AddOrUpdate(cl);
                         con.SaveChanges();
                         print_id = Convert.ToInt32(cl.SEND_STUD_ID);
@@ -187,9 +207,10 @@ namespace THAGBAN_INST.FORM.FRM_LECTUER_MANG.lect_salary
                     else
                     {
                         //update 
-                       
+                        con.TBL_OPRATION.Add(opration);
+                        cl.OPRATION_ID = Convert.ToInt32(opration.OPRATION_ID);
                         con.TBL_SEND_TECT_LECT.AddOrUpdate(cl);
-                       
+                      
                        
                         con.SaveChanges();
                         print_id = Convert.ToInt32(cl.SEND_STUD_ID);
@@ -321,8 +342,10 @@ namespace THAGBAN_INST.FORM.FRM_LECTUER_MANG.lect_salary
                 txt_part_paid.Text = data_form.PAID_UP.ToString();
                 txt_part_rest.Text = data_form.REST.ToString();
 
+                int temp_oprid = (int)data_form.OPRATION_ID;
+                get_inst_data(temp_oprid);
 
-                get_emp();
+            get_emp();
                
                 get_salary();
                 //holiday_type_id = Convert.ToInt32(com_holiday_type.SelectedValue.ToString());
@@ -340,7 +363,33 @@ namespace THAGBAN_INST.FORM.FRM_LECTUER_MANG.lect_salary
             }
 
         }
+        void get_inst_data(int opri_id)
+        {
+            int temp_oprid =opri_id ;
+            TBL_OPRATION opra = con.TBL_OPRATION.Find(temp_oprid);
+            TBL_INST inst = con.TBL_INST.Find(opra.INST_ID);
+            long total = Convert.ToInt64(inst.INST_TOTAL);
+            total = Convert.ToInt64(total + opra.PORATION_AMOUNT);
+            inst.INST_TOTAL = total.ToString();
+            MessageBox.Show(inst.INST_TOTAL);
+            inst.INST_ID = opra.INST_ID;
+            con.TBL_INST.AddOrUpdate(inst);
+            con.SaveChanges();
 
+            /// add
+            ///  TBL_OPRATION opration = new TBL_OPRATION();
+            //opration.PORATION_AMOUNT = Convert.ToInt32(cl.PAID_UP);
+            //opration.PORATION_DATE = cl.SEND_TECH_DATE;
+            //opration.OPRATION_TYPE = "سحب";
+            //opration.INST_ID = Convert.ToInt32(cl.INST_ID);
+
+            //TBL_INST inst = con.TBL_INST.Find(cl.INST_ID);
+            //long total = Convert.ToInt64(inst.INST_TOTAL);
+            //total = Convert.ToInt64((total - Convert.ToInt32(opration.PORATION_AMOUNT)));
+            //inst.INST_TOTAL = total.ToString();
+            //inst.INST_ID = Convert.ToInt32(cl.INST_ID);
+            //con.TBL_INST.AddOrUpdate(inst);
+        }
         private void simpleButton1_Click(object sender, EventArgs e)
         {
 
@@ -540,28 +589,9 @@ void get_salary()
             {
                 erp_send_tech report = new erp_send_tech();
                 // var temp =con.TBL_SEND_TECT_LECT.Where(w=>w.SEND_STUD_ID==print_id).ToList();
-                var temp = (from st in con.TBL_SEND_TECT_LECT.Where(w => w.SEND_STUD_ID == print_id)
-                            join l in con.TBL_LECTUER on st.LECT_ID equals l.LECT_ID
-                            join tlc in con.TBL_LECT_TECH_COURS on st.TECH_LECT_ID equals tlc.TECH_LECT_ID
-                            join em in con.TBL_EMPLOYEES on st.TECH_ID equals em.EMP_ID
-                            join ins in con.TBL_INST on st.INST_ID equals ins.INST_ID
-                            select new
-                            {
-                                st.PAID_UP,
-                                st.REST,
-                                st.TBL_LECTUER.LECT_NAME,
-                                st.TBL_EMPLOYEES.EMP_NAME,
-                                st.TBL_EMPLOYEES.EMP_PHONE,
-                                st.TBL_INST.INST_DESC,
-                                st.TBL_INST.INST_LOCATION,
-                                st.TBL_INST.INST_NAME,
-                                st.TBL_INST.INST_LOGO,
-                                st.TBL_LECTUER.LECT_PRICE,
-                                st.TBL_LECT_TECH_COURS.GROUP_NAME,
-                                st.TBL_LECT_TECH_COURS.LECT_TIME,
-                                st.SEND_TECH_DATE,
-                            }).ToList();
-                report.DataSource = temp;
+               
+                report.DataSource =con.TBL_SEND_TECT_LECT.ToList();
+                report.DataMember = "";
                 report.ShowRibbonPreview();
             }catch(Exception ex) { }
 

@@ -26,6 +26,7 @@ namespace THAGBAN_INST.FORM.FRM_LECTUER_MANG.lect_send_stud
     {
 
         db_max_instEntities con = new db_max_instEntities();
+        TBL_INST inst =new TBL_INST();
         tost toast = new tost();
         dialge dialge = new dialge();
         int print_id = 0;
@@ -164,11 +165,27 @@ namespace THAGBAN_INST.FORM.FRM_LECTUER_MANG.lect_send_stud
                     cl.REST = Convert.ToInt32(txt_part_rest.Text);
                     cl.INST_ID = THAGBAN_INST.Properties.Settings.Default.inst_id;
                     cl.SEND_STUD_DATE = method.convert_date(txt_part_date.Value);
+                    // add opration
+                    int temp_ins = Convert.ToInt32(cl.INST_ID);
+                    inst = con.TBL_INST.Find(temp_ins);
+                    TBL_OPRATION opration = new TBL_OPRATION();
+                    opration.PORATION_AMOUNT = Convert.ToInt32(cl.PAID_UP);
+                    opration.PORATION_DATE = cl.SEND_STUD_DATE;
+                    opration.OPRATION_TYPE = "ايداع";
+                    opration.INST_ID = Convert.ToInt32(cl.INST_ID);
 
+
+                    long total = Convert.ToInt64(inst.INST_TOTAL);
+                    total = Convert.ToInt64((total + Convert.ToInt32(opration.PORATION_AMOUNT)));
+                    inst.INST_TOTAL = total.ToString();
+                    inst.INST_ID = Convert.ToInt32(cl.INST_ID);
+                    con.TBL_INST.AddOrUpdate(inst);
 
                     if (part_id != 0)
                     {
                         //add 
+                        opration.OPRATION_ID = Convert.ToInt32(cl.OPRATIN_ID);
+                        con.TBL_OPRATION.AddOrUpdate(opration);
                         cl.SEND_STUD_ID = Convert.ToInt32(part_id);
                         print_id=cl.SEND_STUD_ID;
                         con.TBL_SEND_STUD_LECT.AddOrUpdate(cl);
@@ -186,6 +203,8 @@ namespace THAGBAN_INST.FORM.FRM_LECTUER_MANG.lect_send_stud
                         notifiction.Show();
 
                         //update 
+                        con.TBL_OPRATION.AddOrUpdate(opration);
+                        cl.OPRATIN_ID= opration.OPRATION_ID;
                         con.TBL_SEND_STUD_LECT.AddOrUpdate(cl);
                         con.SaveChanges();
                         print_id = cl.SEND_STUD_ID;
@@ -193,6 +212,7 @@ namespace THAGBAN_INST.FORM.FRM_LECTUER_MANG.lect_send_stud
                         clear();
 
                     }
+                   // MessageBox.Show(inst.INST_TOTAL);
                 }
                 catch (Exception ex)
                 {
@@ -228,18 +248,7 @@ namespace THAGBAN_INST.FORM.FRM_LECTUER_MANG.lect_send_stud
                     stud_id = Convert.ToInt32(com_stud.SelectedValue.ToString());
                     lbl_l_name.Text = con.TBL_STUDENTS.Find(stud_id).STUD_LNAME.ToString();
 
-                  //om_lect.Items.Clear();
-
-                    //var temp1 = con.TBL_STUD_LECT.
-                    //      Where(w => w.STUD_ID == stud_id).Join(con.TBL_LECT_TECH_COURS.Where(w => w.STATE == true),
-                    //      s => s.TBL_LECT_TECH_COURS.LECT_ID,
-                    //      a => a.LECT_ID, (stud, cours) => new
-                    //      {
-                    //          stud.LECT_STUD_ID,
-                    //          cours.TBL_LECTUER.LECT_NAME,
-
-                    //      }).Distinct().ToList();
-                    //  var temp = con.TBL_STUD_LECT.Find(stud_id);
+                 
 
                     var temp1 = (from sl in con.TBL_STUD_LECT.Where(w => w.STUD_ID == stud_id)
                                  join
@@ -365,7 +374,8 @@ namespace THAGBAN_INST.FORM.FRM_LECTUER_MANG.lect_send_stud
                 txt_emp_salary.Text = con.TBL_LECTUER.Find(lect_id).LECT_PRICE.ToString();
                 txt_part_paid.Text = data_form.PAID_UP.ToString();
                 txt_part_rest.Text = data_form.REST.ToString();
-
+                int temo = Convert.ToInt32(data_form.OPRATIN_ID);
+                get_inst_data(temo);
 
                 get_data();
                 get_lect();
@@ -401,16 +411,22 @@ namespace THAGBAN_INST.FORM.FRM_LECTUER_MANG.lect_send_stud
             
         }
 
-       
-       
 
-       
+        void get_inst_data(int opri_id)
+        {
+            int temp_oprid = opri_id;
+            TBL_OPRATION opra = con.TBL_OPRATION.Find(temp_oprid);
+             inst = con.TBL_INST.Find(opra.INST_ID);
+            long total = Convert.ToInt64(inst.INST_TOTAL);
+            total = Convert.ToInt64(total - opra.PORATION_AMOUNT);
+            inst.INST_TOTAL = total.ToString();
+            //MessageBox.Show(inst.INST_TOTAL);
+            inst.INST_ID = opra.INST_ID;
 
-        
-
-       
-
-    private void btn_save_Click(object sender, EventArgs e)
+            /// add
+         
+        }
+        private void btn_save_Click(object sender, EventArgs e)
         {
             add_part_of_salary();
 
@@ -637,7 +653,7 @@ void get_salary()
 
         private void simpleButton2_Click(object sender, EventArgs e)
         {
-            send_lect report = new send_lect();
+            reort_send_lect report = new reort_send_lect();
             add_part_of_salary();
           //  MessageBox.Show(print_id+"");
             int inst_id=Convert.ToInt32(con.TBL_SEND_STUD_LECT.Find(print_id).INST_ID);

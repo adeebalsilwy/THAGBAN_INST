@@ -133,9 +133,9 @@
   <assembly alias="DevExpress.Data.v22.2" name="DevExpress.Data.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
   <data name="simpleButton1.ImageOptions.SvgImage" type="DevExpress.Utils.Svg.SvgImage, DevExpress.Data.v22.2" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        AAEAAAD/////AQAAAAAAAAAMAgAAAFlEZXZFeHByZXNzLkRhdGEudjIxLjIsIFZlcnNpb249MjEuMi4z
+        AAEAAAD/////AQAAAAAAAAAMAgAAAFlEZXZFeHByZXNzLkRhdGEudjIyLjIsIFZlcnNpb249MjIuMi4z
         LjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49Yjg4ZDE3NTRkNzAwZTQ5YQUBAAAAHURl
-        dkV4cHJlc3MuVXRpbHMuU3ZnLlN2Z0ltYWdlAQAAAAREYXRhBwICAAAACQMAAAAPAwAAANgDAAAC77u/
+        dkV4cHJlc3MuVXRpbHMuU3ZnLlN2Z0ltYWdlAQAAAAREYXRhBwICAAAACQMAAAAPAwAAAMoDAAAC77u/
         PD94bWwgdmVyc2lvbj0nMS4wJyBlbmNvZGluZz0nVVRGLTgnPz4NCjxzdmcgeD0iMHB4IiB5PSIwcHgi
         IHZpZXdCb3g9IjAgMCAzMiAzMiIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcv
         MjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4bWw6c3Bh
@@ -145,14 +145,14 @@
         OUMyMzt9CgkuUmVke2ZpbGw6I0QxMUMxQzt9CgkuV2hpdGV7ZmlsbDojRkZGRkZGO30KCS5zdDB7b3Bh
         Y2l0eTowLjc1O30KCS5zdDF7b3BhY2l0eTowLjU7fQoJLnN0MntvcGFjaXR5OjAuMjU7fQo8L3N0eWxl
         Pg0KICA8ZyBpZD0iQWRkR3JvdXBIZWFkZXIiPg0KICAgIDxyZWN0IHg9IjYiIHk9IjgiIHdpZHRoPSIx
-        NCIgaGVpZ2h0PSI2IiByeD0iMCIgcnk9IjAiIGNsYXNzPSJCbHVlIiAvPg0KICAgIDxnIGNsYXNzPSJz
-        dDAiPg0KICAgICAgPHBhdGggZD0iTTIwLDE4SDZ2LTJoMTRWMTh6IE0yMCwyMEg2djJoMTRWMjB6IE0y
-        MCwyNEg2djJoMTRWMjR6IiBjbGFzcz0iQmxhY2siIC8+DQogICAgPC9nPg0KICAgIDxwYXRoIGQ9Ik0y
-        MiwyOEg0VjZoMTZoMmgwLjJsMS42LTEuNkMyMy42LDQuMiwyMy4zLDQsMjMsNEgzQzIuNSw0LDIsNC41
-        LDIsNXYyNGMwLDAuNSwwLjUsMSwxLDFoMjBjMC41LDAsMS0wLjUsMS0xICAgdi05LjJsLTItMlYyOHoi
-        IGNsYXNzPSJCbGFjayIgLz4NCiAgICA8cG9seWdvbiBwb2ludHM9IjMwLDcgMjcsMTAgMjQsNyAyMiw5
-        IDI1LDEyIDIyLDE1IDI0LDE3IDI3LDE0IDMwLDE3IDMyLDE1IDI5LDEyIDMyLDkgICIgY2xhc3M9IlJl
-        ZCIgLz4NCiAgPC9nPg0KPC9zdmc+Cw==
+        NCIgaGVpZ2h0PSI2IiBjbGFzcz0iQmx1ZSIgLz4NCiAgICA8ZyBjbGFzcz0ic3QwIj4NCiAgICAgIDxw
+        YXRoIGQ9Ik0yMCwxOEg2di0yaDE0VjE4eiBNMjAsMjBINnYyaDE0VjIweiBNMjAsMjRINnYyaDE0VjI0
+        eiIgY2xhc3M9IkJsYWNrIiAvPg0KICAgIDwvZz4NCiAgICA8cGF0aCBkPSJNMjIsMjhINFY2aDE2aDJo
+        MC4ybDEuNi0xLjZDMjMuNiw0LjIsMjMuMyw0LDIzLDRIM0MyLjUsNCwyLDQuNSwyLDV2MjRjMCwwLjUs
+        MC41LDEsMSwxaDIwYzAuNSwwLDEtMC41LDEtMSAgIHYtOS4ybC0yLTJWMjh6IiBjbGFzcz0iQmxhY2si
+        IC8+DQogICAgPHBvbHlnb24gcG9pbnRzPSIzMCw3IDI3LDEwIDI0LDcgMjIsOSAyNSwxMiAyMiwxNSAy
+        NCwxNyAyNywxNCAzMCwxNyAzMiwxNSAyOSwxMiAzMiw5ICAiIGNsYXNzPSJSZWQiIC8+DQogIDwvZz4N
+        Cjwvc3ZnPgs=
 </value>
   </data>
   <data name="btn_save.ImageOptions.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
@@ -180,7 +180,7 @@
   </data>
   <data name="btn_delete.ImageOptions.SvgImage" type="DevExpress.Utils.Svg.SvgImage, DevExpress.Data.v22.2" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        AAEAAAD/////AQAAAAAAAAAMAgAAAFlEZXZFeHByZXNzLkRhdGEudjIxLjIsIFZlcnNpb249MjEuMi4z
+        AAEAAAD/////AQAAAAAAAAAMAgAAAFlEZXZFeHByZXNzLkRhdGEudjIyLjIsIFZlcnNpb249MjIuMi4z
         LjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49Yjg4ZDE3NTRkNzAwZTQ5YQUBAAAAHURl
         dkV4cHJlc3MuVXRpbHMuU3ZnLlN2Z0ltYWdlAQAAAAREYXRhBwICAAAACQMAAAAPAwAAAM0DAAAC77u/
         PD94bWwgdmVyc2lvbj0nMS4wJyBlbmNvZGluZz0nVVRGLTgnPz4NCjxzdmcgeD0iMHB4IiB5PSIwcHgi

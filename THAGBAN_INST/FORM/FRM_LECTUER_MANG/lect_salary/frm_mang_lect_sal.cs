@@ -55,11 +55,9 @@ namespace THAGBAN_INST.FORM.FRM_LECTUER_MANG.lect_salary
             // Instantiate a new DBContext
             THAGBAN_INST.DATA.db_max_instEntities dbContext = new THAGBAN_INST.DATA.db_max_instEntities();
             // Call the LoadAsync method to asynchronously get the data for the given DbSet from the database.
-            dbContext.TBL_SEND_TECT_LECT.LoadAsync().ContinueWith(loadTask =>
-            {
+           
                 // Bind data to control when loading complete
-                gridControl1.DataSource = dbContext.TBL_SEND_TECT_LECT.Local.ToBindingList();
-            }, System.Threading.Tasks.TaskScheduler.FromCurrentSynchronizationContext());
+                gridControl1.DataSource = dbContext.TBL_SEND_TECT_LECT.ToList();
         }
 
         void get_spic()
@@ -149,6 +147,7 @@ namespace THAGBAN_INST.FORM.FRM_LECTUER_MANG.lect_salary
         private void btn_delete_Click(object sender, EventArgs e)
         {
             delete();
+            get_data();
         }
         void delete()
         {
@@ -179,7 +178,23 @@ namespace THAGBAN_INST.FORM.FRM_LECTUER_MANG.lect_salary
 
         private void simpleButton2_Click(object sender, EventArgs e)
         {
-            gridControl1.ShowRibbonPrintPreview();
+
+            erp_send_tech repors = new erp_send_tech();
+            List<TBL_SEND_TECT_LECT> list = new List<TBL_SEND_TECT_LECT>();
+
+            for (int i = 0; i < gridView2.RowCount; i++)
+            {
+                list.Add(gridView2.GetRow(i) as TBL_SEND_TECT_LECT);
+            }
+            repors.DataSource = list;
+            repors.DataMember = "";
+            int ints_id = THAGBAN_INST.Properties.Settings.Default.inst_id;
+            adl.method method = new adl.method();
+            method.data = con.TBL_INST.Find(ints_id).INST_LOGO;
+           
+            repors.Watermark.Image = Image.FromStream(method.convert_image());
+
+            repors.ShowRibbonPreview();
         }
 
         private void gridControl1_Click(object sender, EventArgs e)

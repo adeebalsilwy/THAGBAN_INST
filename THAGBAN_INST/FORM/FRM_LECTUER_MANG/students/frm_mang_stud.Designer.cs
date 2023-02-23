@@ -42,6 +42,8 @@
             this.colSTUD_PHONE1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colSTUD_STATE1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
+            this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
+            this.btn_export = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             this.btn_delete = new DevExpress.XtraEditors.SimpleButton();
             this.btn_edite = new DevExpress.XtraEditors.SimpleButton();
@@ -196,15 +198,67 @@
             // 
             // panelControl1
             // 
+            this.panelControl1.Appearance.BackColor = System.Drawing.Color.Black;
+            this.panelControl1.Appearance.BorderColor = System.Drawing.Color.SlateGray;
+            this.panelControl1.Appearance.FontStyleDelta = System.Drawing.FontStyle.Bold;
+            this.panelControl1.Appearance.Options.UseBackColor = true;
+            this.panelControl1.Appearance.Options.UseBorderColor = true;
+            this.panelControl1.Appearance.Options.UseFont = true;
+            this.panelControl1.Appearance.Options.UseForeColor = true;
+            this.panelControl1.Appearance.Options.UseTextOptions = true;
+            this.panelControl1.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
+            this.panelControl1.CausesValidation = false;
+            this.panelControl1.ContentImage = global::THAGBAN_INST.Properties.Resources.icons8_classroom_3;
+            this.panelControl1.Controls.Add(this.simpleButton2);
+            this.panelControl1.Controls.Add(this.btn_export);
             this.panelControl1.Controls.Add(this.simpleButton1);
             this.panelControl1.Controls.Add(this.btn_delete);
             this.panelControl1.Controls.Add(this.btn_edite);
             this.panelControl1.Controls.Add(this.btn_save);
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panelControl1.FireScrollEventOnMouseWheel = true;
+            this.panelControl1.ImeMode = System.Windows.Forms.ImeMode.Katakana;
             this.panelControl1.Location = new System.Drawing.Point(0, 484);
             this.panelControl1.Name = "panelControl1";
             this.panelControl1.Size = new System.Drawing.Size(925, 64);
             this.panelControl1.TabIndex = 8;
+            this.panelControl1.Paint += new System.Windows.Forms.PaintEventHandler(this.panelControl1_Paint);
+            // 
+            // simpleButton2
+            // 
+            this.simpleButton2.AccessibleRole = System.Windows.Forms.AccessibleRole.Border;
+            this.simpleButton2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.simpleButton2.Appearance.BackColor = System.Drawing.Color.Transparent;
+            this.simpleButton2.Appearance.Font = new System.Drawing.Font("ae_AlArabiya", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.simpleButton2.Appearance.Options.UseBackColor = true;
+            this.simpleButton2.Appearance.Options.UseBorderColor = true;
+            this.simpleButton2.Appearance.Options.UseFont = true;
+            this.simpleButton2.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("simpleButton2.ImageOptions.SvgImage")));
+            this.simpleButton2.Location = new System.Drawing.Point(135, 9);
+            this.simpleButton2.Name = "simpleButton2";
+            this.simpleButton2.ShowFocusRectangle = DevExpress.Utils.DefaultBoolean.True;
+            this.simpleButton2.Size = new System.Drawing.Size(102, 50);
+            this.simpleButton2.TabIndex = 48;
+            this.simpleButton2.Text = " استيراد ";
+            this.simpleButton2.Click += new System.EventHandler(this.simpleButton2_Click);
+            // 
+            // btn_export
+            // 
+            this.btn_export.AccessibleRole = System.Windows.Forms.AccessibleRole.Border;
+            this.btn_export.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btn_export.Appearance.BackColor = System.Drawing.Color.Transparent;
+            this.btn_export.Appearance.Font = new System.Drawing.Font("ae_AlArabiya", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_export.Appearance.Options.UseBackColor = true;
+            this.btn_export.Appearance.Options.UseBorderColor = true;
+            this.btn_export.Appearance.Options.UseFont = true;
+            this.btn_export.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btn_export.ImageOptions.SvgImage")));
+            this.btn_export.Location = new System.Drawing.Point(260, 9);
+            this.btn_export.Name = "btn_export";
+            this.btn_export.ShowFocusRectangle = DevExpress.Utils.DefaultBoolean.True;
+            this.btn_export.Size = new System.Drawing.Size(102, 50);
+            this.btn_export.TabIndex = 47;
+            this.btn_export.Text = "تصدير ";
+            this.btn_export.Click += new System.EventHandler(this.btn_export_Click);
             // 
             // simpleButton1
             // 
@@ -216,7 +270,7 @@
             this.simpleButton1.Appearance.Options.UseBorderColor = true;
             this.simpleButton1.Appearance.Options.UseFont = true;
             this.simpleButton1.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("simpleButton1.ImageOptions.SvgImage")));
-            this.simpleButton1.Location = new System.Drawing.Point(215, 7);
+            this.simpleButton1.Location = new System.Drawing.Point(382, 9);
             this.simpleButton1.Name = "simpleButton1";
             this.simpleButton1.ShowFocusRectangle = DevExpress.Utils.DefaultBoolean.True;
             this.simpleButton1.Size = new System.Drawing.Size(101, 50);
@@ -234,7 +288,7 @@
             this.btn_delete.Appearance.Options.UseBorderColor = true;
             this.btn_delete.Appearance.Options.UseFont = true;
             this.btn_delete.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_delete.ImageOptions.Image")));
-            this.btn_delete.Location = new System.Drawing.Point(345, 7);
+            this.btn_delete.Location = new System.Drawing.Point(513, 9);
             this.btn_delete.Name = "btn_delete";
             this.btn_delete.ShowFocusRectangle = DevExpress.Utils.DefaultBoolean.True;
             this.btn_delete.Size = new System.Drawing.Size(101, 50);
@@ -252,7 +306,7 @@
             this.btn_edite.Appearance.Options.UseBorderColor = true;
             this.btn_edite.Appearance.Options.UseFont = true;
             this.btn_edite.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_edite.ImageOptions.Image")));
-            this.btn_edite.Location = new System.Drawing.Point(495, 7);
+            this.btn_edite.Location = new System.Drawing.Point(638, 9);
             this.btn_edite.Name = "btn_edite";
             this.btn_edite.ShowFocusRectangle = DevExpress.Utils.DefaultBoolean.True;
             this.btn_edite.Size = new System.Drawing.Size(101, 50);
@@ -273,7 +327,7 @@
             this.btn_save.Appearance.Options.UseBorderColor = true;
             this.btn_save.Appearance.Options.UseFont = true;
             this.btn_save.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_save.ImageOptions.Image")));
-            this.btn_save.Location = new System.Drawing.Point(609, 7);
+            this.btn_save.Location = new System.Drawing.Point(764, 9);
             this.btn_save.Name = "btn_save";
             this.btn_save.ShowFocusRectangle = DevExpress.Utils.DefaultBoolean.True;
             this.btn_save.Size = new System.Drawing.Size(101, 50);
@@ -332,7 +386,6 @@
         private System.Windows.Forms.Panel panel2;
         private DevExpress.XtraGrid.GridControl gridControl1;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView2;
-        private DevExpress.XtraEditors.PanelControl panelControl1;
         private DevExpress.XtraEditors.SimpleButton simpleButton1;
         private DevExpress.XtraEditors.SimpleButton btn_delete;
         private DevExpress.XtraEditors.SimpleButton btn_edite;
@@ -349,5 +402,8 @@
         private DevExpress.XtraGrid.Columns.GridColumn colSTUD_NAME;
         private DevExpress.XtraGrid.Columns.GridColumn colSTUD_PHONE1;
         private DevExpress.XtraGrid.Columns.GridColumn colSTUD_STATE1;
+        private DevExpress.XtraEditors.SimpleButton btn_export;
+        private DevExpress.XtraEditors.SimpleButton simpleButton2;
+        private DevExpress.XtraEditors.PanelControl panelControl1;
     }
 }

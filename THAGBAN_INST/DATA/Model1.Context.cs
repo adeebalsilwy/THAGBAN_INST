@@ -27,8 +27,8 @@ namespace THAGBAN_INST.DATA
             throw new UnintentionalCodeFirstException();
         }
     
+        public virtual DbSet<TBL_ACTIVE_SYSTEM> TBL_ACTIVE_SYSTEM { get; set; }
         public virtual DbSet<TBL_ATTENDS> TBL_ATTENDS { get; set; }
-        public virtual DbSet<TBL_BOX> TBL_BOX { get; set; }
         public virtual DbSet<TBL_COURS> TBL_COURS { get; set; }
         public virtual DbSet<TBL_DEPT> TBL_DEPT { get; set; }
         public virtual DbSet<TBL_EMPLOYEES> TBL_EMPLOYEES { get; set; }
@@ -40,11 +40,14 @@ namespace THAGBAN_INST.DATA
         public virtual DbSet<TBL_LECT_COURS> TBL_LECT_COURS { get; set; }
         public virtual DbSet<TBL_LECT_MARK> TBL_LECT_MARK { get; set; }
         public virtual DbSet<TBL_LECT_MATRIAL> TBL_LECT_MATRIAL { get; set; }
+        public virtual DbSet<TBL_LECT_TECH_COURS> TBL_LECT_TECH_COURS { get; set; }
         public virtual DbSet<TBL_LECTUER> TBL_LECTUER { get; set; }
         public virtual DbSet<TBL_LEVLE> TBL_LEVLE { get; set; }
         public virtual DbSet<TBL_MARKS> TBL_MARKS { get; set; }
+        public virtual DbSet<TBL_OPRATION> TBL_OPRATION { get; set; }
         public virtual DbSet<TBL_PART_SALARY> TBL_PART_SALARY { get; set; }
         public virtual DbSet<TBL_SALARY> TBL_SALARY { get; set; }
+        public virtual DbSet<TBL_SEND_STUD_LECT> TBL_SEND_STUD_LECT { get; set; }
         public virtual DbSet<TBL_SEND_TECT_LECT> TBL_SEND_TECT_LECT { get; set; }
         public virtual DbSet<TBL_SPE_COURS> TBL_SPE_COURS { get; set; }
         public virtual DbSet<TBL_SPECIAL> TBL_SPECIAL { get; set; }
@@ -55,10 +58,7 @@ namespace THAGBAN_INST.DATA
         public virtual DbSet<TBL_TERMS> TBL_TERMS { get; set; }
         public virtual DbSet<TBL_USERS> TBL_USERS { get; set; }
         public virtual DbSet<TBL_YEARS> TBL_YEARS { get; set; }
-        public virtual DbSet<KpiDefinition> KpiDefinitions { get; set; }
-        public virtual DbSet<KpiInstance> KpiInstances { get; set; }
-        public virtual DbSet<TBL_LECT_TECH_COURS> TBL_LECT_TECH_COURS { get; set; }
-        public virtual DbSet<TBL_SEND_STUD_LECT> TBL_SEND_STUD_LECT { get; set; }
+        public virtual DbSet<TBL_ROULLS_LECTUER> TBL_ROULLS_LECTUER { get; set; }
     
         public virtual ObjectResult<get_send_stud_query_Result> get_send_stud_query()
         {

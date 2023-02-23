@@ -20,10 +20,10 @@ namespace THAGBAN_INST.DATA
             this.TBL_FOLDER = new HashSet<TBL_FOLDER>();
             this.TBL_LECT_MARK = new HashSet<TBL_LECT_MARK>();
             this.TBL_MARKS = new HashSet<TBL_MARKS>();
+            this.TBL_SEND_STUD_LECT = new HashSet<TBL_SEND_STUD_LECT>();
             this.TBL_STUD_LECT = new HashSet<TBL_STUD_LECT>();
             this.TBL_STUD_SPEC = new HashSet<TBL_STUD_SPEC>();
             this.TBL_STUD_STUDY_COURS = new HashSet<TBL_STUD_STUDY_COURS>();
-            this.TBL_SEND_STUD_LECT = new HashSet<TBL_SEND_STUD_LECT>();
         }
     
         public int STUD_ID { get; set; }
@@ -42,12 +42,12 @@ namespace THAGBAN_INST.DATA
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<TBL_MARKS> TBL_MARKS { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<TBL_SEND_STUD_LECT> TBL_SEND_STUD_LECT { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<TBL_STUD_LECT> TBL_STUD_LECT { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<TBL_STUD_SPEC> TBL_STUD_SPEC { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<TBL_STUD_STUDY_COURS> TBL_STUD_STUDY_COURS { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<TBL_SEND_STUD_LECT> TBL_SEND_STUD_LECT { get; set; }
     }
 }

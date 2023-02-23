@@ -20,7 +20,6 @@ namespace THAGBAN_INST.DATA
             this.TBL_LECT_MARK = new HashSet<TBL_LECT_MARK>();
             this.TBL_LECT_MATRIAL = new HashSet<TBL_LECT_MATRIAL>();
             this.TBL_LECTUER = new HashSet<TBL_LECTUER>();
-            this.TBL_STUD_LECT = new HashSet<TBL_STUD_LECT>();
         }
     
         public int LECT_COURS_ID { get; set; }
@@ -35,7 +34,5 @@ namespace THAGBAN_INST.DATA
         public virtual ICollection<TBL_LECT_MATRIAL> TBL_LECT_MATRIAL { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<TBL_LECTUER> TBL_LECTUER { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<TBL_STUD_LECT> TBL_STUD_LECT { get; set; }
     }
 }

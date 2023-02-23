@@ -62,7 +62,7 @@ namespace THAGBAN_INST.FORM.FRM_LECTUER_MANG
                 com_lect.DataSource = tbl.ToList();
                 com_lect.DisplayMember = "LECT_NAME";
                 com_lect.ValueMember = "LECT_ID";
-                lbl_lect_tech.Text = tbl.Count().ToString();
+                lbl_lect.Text = tbl.Count().ToString();
                 get_group();
 
 
@@ -129,7 +129,7 @@ namespace THAGBAN_INST.FORM.FRM_LECTUER_MANG
             var stud = con.TBL_STUDENTS.ToList();
             lbl_mal.Text = stud.Where(w=>w.STUD_GENDER.Trim().Equals("ذكر")).Count().ToString();
             lbl_femal.Text = stud.Where(w => w.STUD_GENDER.Trim().Equals("انثى")).Count().ToString();
-            lbl_tech.Text = con.TBL_EMPLOYEES.Join(con.TBL_JOB.Where(w => w.JOB_NAME.Equals("مدرس")), w => w.JOB_ID, s => s.JOB_ID
+            lbl_lect_tech.Text = con.TBL_EMPLOYEES.Join(con.TBL_JOB.Where(w => w.JOB_NAME.Equals("مدرس")), w => w.JOB_ID, s => s.JOB_ID
              , (tec, job) => new
              {
                  tec.EMP_ID
@@ -226,13 +226,13 @@ namespace THAGBAN_INST.FORM.FRM_LECTUER_MANG
         {
             try
             {
-                report_lect_stud report = new report_lect_stud();
+                report_send_stud report = new report_send_stud();
 
 
                 int temp = con.TBL_SEND_STUD_LECT.Count();
                 if(temp>0)
                 {
-                    send_lect _Lect = new send_lect();
+                    reort_send_lect _Lect = new reort_send_lect();
                    // _Lect.DataSource = temp;
                     _Lect.ShowPreview();
                 }
@@ -265,7 +265,7 @@ namespace THAGBAN_INST.FORM.FRM_LECTUER_MANG
         }
         void print_report()
         {
-            send_lect _Lect = new send_lect();
+            reort_send_lect _Lect = new reort_send_lect();
 
             if (com_lect.Enabled==true && com_group.Enabled==false && com_stud.Enabled==false)
             {
@@ -426,6 +426,168 @@ namespace THAGBAN_INST.FORM.FRM_LECTUER_MANG
 
 
         }
+      
+        void print_studnts_name()
+        {
+            report_lect_studns_ttend _Lect = new report_lect_studns_ttend();
+
+            if (com_lect.Enabled == true && com_group.Enabled == false && com_stud.Enabled == false)
+            {
+                if (com_lect.SelectedValue != null)
+                    lect_id = Convert.ToInt32(com_lect.SelectedValue);
+                var temp_lec = con.TBL_STUD_LECT.Where(w => w.LECT_ID == lect_id).ToList();
+
+                // _Lect.DataSource=con.TBL_SEND_STUD_LECT.Where(w=>w.id)
+                if (temp_lec.Count > 0)
+                {
+
+                    _Lect.DataSource = temp_lec.ToList();
+
+
+
+                    _Lect.DataMember = "";
+                    _Lect.ShowPreview();
+                    // _Lect.ShowRibbonPreview();
+
+                }
+                else
+                {
+                    NotifictionUser notif = new NotifictionUser("    لايوجد طلاب   في هذه الدوره ", THAGBAN_INST.Properties.Resources.icons8_Notification_128px);
+                    notif.StartPosition = FormStartPosition.CenterScreen;
+                    notif.Show();
+                }
+            }
+
+
+            else if (com_lect.Enabled == true && com_group.Enabled == true && com_stud.Enabled == false)
+            {
+                if (com_group.SelectedValue != null)
+                    tech_lect_id = Convert.ToInt32(com_group.SelectedValue);
+                var temp_tech = con.TBL_STUD_LECT.Where(w => w.LECT_ID == lect_id && w.LECT_TECH_ID == tech_lect_id).ToList();
+                // _Lect.DataSource=con.TBL_SEND_STUD_LECT.Where(w=>w.id)
+                if (temp_tech.Count > 0)
+                {
+                    _Lect.DataSource = temp_tech;
+                    _Lect.DataMember = "";
+                    _Lect.ShowPreview();
+                    //_Lect.ShowRibbonPreview();
+                }
+                else
+                {
+                    NotifictionUser notif = new NotifictionUser("    لايوجد طلاب   في هذه الدوره ", THAGBAN_INST.Properties.Resources.icons8_Notification_128px);
+                    notif.StartPosition = FormStartPosition.CenterScreen;
+                    notif.Show();
+                }
+            }
+
+            else if (com_lect.Enabled == true && com_group.Enabled == true && com_stud.Enabled == true)
+            {
+                if (com_group.SelectedValue != null)
+                    tech_lect_id = Convert.ToInt32(com_group.SelectedValue);
+                stud_id = Convert.ToInt32(com_stud.SelectedValue);
+                var temp = con.TBL_STUD_LECT.Where(w => w.LECT_ID == lect_id && w.LECT_TECH_ID == tech_lect_id && w.STUD_ID == stud_id).ToList();
+                // _Lect.DataSource=con.TBL_SEND_STUD_LECT.Where(w=>w.id)
+                if (temp.Count > 0)
+                {
+                    _Lect.DataSource = temp;
+                    _Lect.DataMember = "";
+                    _Lect.ShowPreview();
+                    //_Lect.ShowRibbonPreview();
+                }
+                else
+                {
+                    NotifictionUser notif = new NotifictionUser("      الطالب غير مسجل بهذه الدوره  في هذه الدوره ", THAGBAN_INST.Properties.Resources.icons8_Notification_128px);
+                    notif.StartPosition = FormStartPosition.CenterScreen;
+                    notif.Show();
+                }
+            }
+
+            else if (com_lect.Enabled == true && com_group.Enabled == false && com_stud.Enabled == true)
+            {
+                if (com_group.SelectedValue != null)
+                    tech_lect_id = Convert.ToInt32(com_group.SelectedValue);
+                stud_id = Convert.ToInt32(com_stud.SelectedValue);
+                var temp = con.TBL_STUD_LECT.Where(w => w.LECT_ID == lect_id && w.STUD_ID == stud_id).ToList();
+                // _Lect.DataSource=con.TBL_SEND_STUD_LECT.Where(w=>w.id)
+                if (temp.Count > 0)
+                {
+                    _Lect.DataSource = temp;
+                    _Lect.DataMember = "";
+                    _Lect.ShowPreview();
+                    //_Lect.ShowRibbonPreview();
+                }
+                else
+                {
+                    NotifictionUser notif = new NotifictionUser("    لايوجد طلاب   في هذه الدوره ", THAGBAN_INST.Properties.Resources.icons8_Notification_128px);
+                    notif.StartPosition = FormStartPosition.CenterScreen;
+                    notif.Show();
+                }
+            }
+
+            else if (com_stud.Enabled == true && com_lect.Enabled == false && com_group.Enabled == false)
+            {
+                if (com_stud.SelectedValue != null)
+                    stud_id = Convert.ToInt32(com_stud.SelectedValue);
+                var temp1 = con.TBL_STUD_LECT.Where(w => w.STUD_ID == stud_id).ToList();
+                if (temp1.Count > 0)
+                {
+                    _Lect.DataSource = temp1;
+                    _Lect.DataMember = "";
+                    _Lect.ShowPreview();
+                    // _Lect.ShowRibbonPreview();
+                }
+                else
+                {
+                    NotifictionUser notif = new NotifictionUser(" الطالب   غير مسجل باي دوره     ", THAGBAN_INST.Properties.Resources.icons8_Notification_128px);
+                    notif.StartPosition = FormStartPosition.CenterScreen;
+                    notif.Show();
+                }
+            }
+
+            else if (com_stud.Enabled == true && com_lect.Enabled == false && com_group.Enabled == true)
+            {
+                if (com_stud.SelectedValue != null)
+                    stud_id = Convert.ToInt32(com_stud.SelectedValue);
+                var temp1 = con.TBL_STUD_LECT.Where(w => w.STUD_ID == stud_id && w.LECT_TECH_ID == tech_lect_id).ToList();
+                if (temp1.Count > 0)
+                {
+                    _Lect.DataSource = temp1;
+                    _Lect.DataMember = "";
+                    _Lect.ShowPreview();
+                    // _Lect.ShowRibbonPreview();
+                }
+                else
+                {
+                    NotifictionUser notif = new NotifictionUser(" الطالب   غير مسجل  في هذه الدفعه    ", THAGBAN_INST.Properties.Resources.icons8_Notification_128px);
+                    notif.StartPosition = FormStartPosition.CenterScreen;
+                    notif.Show();
+                }
+            }
+
+            else
+            {
+
+                //_Lect.DataSource = con.TBL_SEND_STUD_LECT.ToList();
+
+                // _Lect.ShowPreview();
+                var temp1 = con.TBL_STUD_LECT.ToList();
+                if (temp1.Count > 0)
+                {
+                    // _Lect.ShowPreview();
+
+                    _Lect.ShowRibbonPreview();
+                }
+                else
+                {
+                    NotifictionUser notif = new NotifictionUser(" لايوجد طلاب مسجيلين في الدورات ", THAGBAN_INST.Properties.Resources.icons8_Notification_128px);
+                    notif.StartPosition = FormStartPosition.CenterScreen;
+                    notif.Show();
+                }
+                // _Lect.DataSource=con.TBL_SEND_STUD_LECT.Where(w=>w.id)
+
+            }
+
+        }
         private void com_stud_SelectionChangeCommitted(object sender, EventArgs e)
         {
             try
@@ -491,6 +653,17 @@ namespace THAGBAN_INST.FORM.FRM_LECTUER_MANG
 
             cheack_change();
             
+        }
+
+        private void lbl_mal_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void simpleButton1_Click_1(object sender, EventArgs e)
+        {
+            cheack_change();
+            print_studnts_name();
         }
     }
 

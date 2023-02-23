@@ -30,9 +30,11 @@ namespace THAGBAN_INST.FORM.FRM_LECTUER_MANG.lect_mark
         /// </summary>
         private void InitializeComponent()
         {
+            DevExpress.XtraGrid.GridLevelNode gridLevelNode1 = new DevExpress.XtraGrid.GridLevelNode();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_mang_lect_marks));
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colMARK_ID = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -51,12 +53,21 @@ namespace THAGBAN_INST.FORM.FRM_LECTUER_MANG.lect_mark
             this.btn_edite = new DevExpress.XtraEditors.SimpleButton();
             this.btn_save = new DevExpress.XtraEditors.SimpleButton();
             this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.com_group = new System.Windows.Forms.ComboBox();
+            this.com_lect = new System.Windows.Forms.ComboBox();
+            this.ch_grou = new DevExpress.XtraEditors.CheckEdit();
+            this.ch_lect = new DevExpress.XtraEditors.CheckEdit();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ch_grou.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ch_lect.Properties)).BeginInit();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -72,7 +83,8 @@ namespace THAGBAN_INST.FORM.FRM_LECTUER_MANG.lect_mark
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.gridControl1);
+            this.panel2.Controls.Add(this.panel4);
+            this.panel2.Controls.Add(this.panel3);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
@@ -80,19 +92,31 @@ namespace THAGBAN_INST.FORM.FRM_LECTUER_MANG.lect_mark
             this.panel2.TabIndex = 9;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.gridControl1);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel4.Location = new System.Drawing.Point(0, 69);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(925, 409);
+            this.panel4.TabIndex = 10;
+            // 
             // gridControl1
             // 
             this.gridControl1.DataSource = typeof(THAGBAN_INST.DATA.TBL_LECT_MARK);
             this.gridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            gridLevelNode1.RelationName = "Level1";
+            this.gridControl1.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
+            gridLevelNode1});
             this.gridControl1.Location = new System.Drawing.Point(0, 0);
             this.gridControl1.MainView = this.gridView2;
             this.gridControl1.Name = "gridControl1";
             this.gridControl1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.gridControl1.Size = new System.Drawing.Size(925, 478);
-            this.gridControl1.TabIndex = 8;
+            this.gridControl1.Size = new System.Drawing.Size(925, 409);
+            this.gridControl1.TabIndex = 9;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView2});
-            this.gridControl1.Click += new System.EventHandler(this.gridControl1_Click);
+            this.gridControl1.Click += new System.EventHandler(this.gridControl1_Click_1);
             // 
             // gridView2
             // 
@@ -128,10 +152,7 @@ namespace THAGBAN_INST.FORM.FRM_LECTUER_MANG.lect_mark
             this.gridView2.OptionsView.EnableAppearanceEvenRow = true;
             this.gridView2.OptionsView.EnableAppearanceOddRow = true;
             this.gridView2.OptionsView.RowAutoHeight = true;
-            this.gridView2.RowClick += new DevExpress.XtraGrid.Views.Grid.RowClickEventHandler(this.gridView2_RowClick);
-            this.gridView2.RowCellClick += new DevExpress.XtraGrid.Views.Grid.RowCellClickEventHandler(this.gridView2_RowCellClick);
-            this.gridView2.FocusedRowChanged += new DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventHandler(this.gridView2_FocusedRowChanged);
-            this.gridView2.Click += new System.EventHandler(this.gridView2_Click);
+            this.gridView2.SelectionChanged += new DevExpress.Data.SelectionChangedEventHandler(this.gridView2_SelectionChanged);
             // 
             // colMARK_ID
             // 
@@ -317,6 +338,72 @@ namespace THAGBAN_INST.FORM.FRM_LECTUER_MANG.lect_mark
             this.gridColumn1.VisibleIndex = 1;
             this.gridColumn1.Width = 163;
             // 
+            // com_group
+            // 
+            this.com_group.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.com_group.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.com_group.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.com_group.Font = new System.Drawing.Font("ae_AlArabiya", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.com_group.FormattingEnabled = true;
+            this.com_group.Location = new System.Drawing.Point(184, 18);
+            this.com_group.Name = "com_group";
+            this.com_group.Size = new System.Drawing.Size(132, 41);
+            this.com_group.TabIndex = 119;
+            this.com_group.SelectedIndexChanged += new System.EventHandler(this.com_group_SelectedIndexChanged);
+            this.com_group.SelectionChangeCommitted += new System.EventHandler(this.com_group_SelectedIndexChanged);
+            this.com_group.SelectedValueChanged += new System.EventHandler(this.com_group_SelectedIndexChanged);
+            // 
+            // com_lect
+            // 
+            this.com_lect.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.com_lect.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.com_lect.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.com_lect.Font = new System.Drawing.Font("ae_AlArabiya", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.com_lect.FormattingEnabled = true;
+            this.com_lect.Location = new System.Drawing.Point(534, 18);
+            this.com_lect.Name = "com_lect";
+            this.com_lect.Size = new System.Drawing.Size(185, 41);
+            this.com_lect.TabIndex = 120;
+            this.com_lect.SelectedIndexChanged += new System.EventHandler(this.com_lect_SelectedIndexChanged);
+            this.com_lect.SelectionChangeCommitted += new System.EventHandler(this.com_lect_SelectedIndexChanged);
+            this.com_lect.SelectedValueChanged += new System.EventHandler(this.com_lect_SelectedIndexChanged);
+            // 
+            // ch_grou
+            // 
+            this.ch_grou.Location = new System.Drawing.Point(362, 23);
+            this.ch_grou.Name = "ch_grou";
+            this.ch_grou.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ch_grou.Properties.Appearance.Options.UseFont = true;
+            this.ch_grou.Properties.Caption = "اختيار اسم الدفعه";
+            this.ch_grou.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.ch_grou.Size = new System.Drawing.Size(149, 28);
+            this.ch_grou.TabIndex = 134;
+            this.ch_grou.CheckedChanged += new System.EventHandler(this.ch_grou_CheckedChanged);
+            // 
+            // ch_lect
+            // 
+            this.ch_lect.Location = new System.Drawing.Point(736, 23);
+            this.ch_lect.Name = "ch_lect";
+            this.ch_lect.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ch_lect.Properties.Appearance.Options.UseFont = true;
+            this.ch_lect.Properties.Caption = "اختيار الدوره ";
+            this.ch_lect.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.ch_lect.Size = new System.Drawing.Size(149, 28);
+            this.ch_lect.TabIndex = 135;
+            this.ch_lect.CheckedChanged += new System.EventHandler(this.ch_lect_CheckedChanged);
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.ch_lect);
+            this.panel3.Controls.Add(this.ch_grou);
+            this.panel3.Controls.Add(this.com_lect);
+            this.panel3.Controls.Add(this.com_group);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(925, 69);
+            this.panel3.TabIndex = 9;
+            // 
             // frm_mang_lect_marks
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -326,10 +413,14 @@ namespace THAGBAN_INST.FORM.FRM_LECTUER_MANG.lect_mark
             this.Size = new System.Drawing.Size(925, 548);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
+            this.panel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.ch_grou.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ch_lect.Properties)).EndInit();
+            this.panel3.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -343,10 +434,11 @@ namespace THAGBAN_INST.FORM.FRM_LECTUER_MANG.lect_mark
         private DevExpress.XtraEditors.SimpleButton btn_edite;
         private DevExpress.XtraEditors.SimpleButton btn_save;
         private System.Windows.Forms.Panel panel2;
-        private DevExpress.XtraGrid.GridControl gridControl1;
-        private DevExpress.XtraGrid.Views.Grid.GridView gridView2;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
         private DevExpress.XtraEditors.SimpleButton simpleButton2;
+        private System.Windows.Forms.Panel panel4;
+        private DevExpress.XtraGrid.GridControl gridControl1;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridView2;
         private DevExpress.XtraGrid.Columns.GridColumn colMARK_ID;
         private DevExpress.XtraGrid.Columns.GridColumn colSTUD_ID;
         private DevExpress.XtraGrid.Columns.GridColumn colSTUD_ID1;
@@ -356,5 +448,10 @@ namespace THAGBAN_INST.FORM.FRM_LECTUER_MANG.lect_mark
         private DevExpress.XtraGrid.Columns.GridColumn colLECT_TECH_ID;
         private DevExpress.XtraGrid.Columns.GridColumn colMATRIAL_ID;
         private DevExpress.XtraGrid.Columns.GridColumn colMARK_VALUE;
+        private System.Windows.Forms.Panel panel3;
+        private DevExpress.XtraEditors.CheckEdit ch_lect;
+        private DevExpress.XtraEditors.CheckEdit ch_grou;
+        public System.Windows.Forms.ComboBox com_lect;
+        public System.Windows.Forms.ComboBox com_group;
     }
 }

@@ -4,7 +4,9 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Data.Entity;
+using System.Diagnostics;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -37,6 +39,7 @@ namespace THAGBAN_INST.FORM.FRM_LECTUER_MANG.students
             InitializeComponent();
             // get_data();
             get_sp();
+           
 
 
 
@@ -144,6 +147,48 @@ namespace THAGBAN_INST.FORM.FRM_LECTUER_MANG.students
         private void simpleButton1_Click(object sender, EventArgs e)
         {
             get_sp();
+        }
+        void export_to_acel()
+        {
+            try
+            {
+                FolderBrowserDialog folder = new FolderBrowserDialog();
+                var rs = folder.ShowDialog();
+                if (rs == DialogResult.OK)
+                {
+                   
+
+
+                    var fullpath = folder.SelectedPath+ "output.xls";
+                    gridControl1.ExportToXls(fullpath);
+                    Process.Start(fullpath);
+                    
+                    MessageBox.Show("تم  التصدير بنجاح");
+                }
+            }
+            catch
+            {
+                MessageBox.Show("خطأ , لا يمكن النسخ الاحتياطي الى المسار المحدد, الرجاء تحديد مسار مختلف, تذكر لا تحدد القرص C");
+            }
+
+        }
+
+     
+        private void btn_export_Click(object sender, EventArgs e)
+        {
+            export_to_acel();
+        }
+
+        private void simpleButton2_Click(object sender, EventArgs e)
+        {
+            frm_import_stud frm=new frm_import_stud();
+            frm.ShowDialog();
+            get_data();
+        }
+
+        private void panelControl1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

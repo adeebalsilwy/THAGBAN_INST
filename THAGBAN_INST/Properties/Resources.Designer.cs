@@ -122,16 +122,6 @@ namespace THAGBAN_INST.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap combo_chart_32px {
-            get {
-                object obj = ResourceManager.GetObject("combo_chart_32px", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap Delete_32px {
             get {
                 object obj = ResourceManager.GetObject("Delete_32px", resourceCulture);
@@ -179,6 +169,16 @@ namespace THAGBAN_INST.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap EAYS {
+            get {
+                object obj = ResourceManager.GetObject("EAYS", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap edit_32px {
             get {
                 object obj = ResourceManager.GetObject("edit_32px", resourceCulture);
@@ -192,6 +192,15 @@ namespace THAGBAN_INST.Properties {
         internal static string EditNotificationText {
             get {
                 return ResourceManager.GetString("EditNotificationText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to الرجاء ادخال جميع الحقول.
+        /// </summary>
+        internal static string empty_notifcationText {
+            get {
+                return ResourceManager.GetString("empty_notifcationText", resourceCulture);
             }
         }
         
@@ -218,9 +227,79 @@ namespace THAGBAN_INST.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_book_48px {
+            get {
+                object obj = ResourceManager.GetObject("icons8_book_48px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_book_philosophy_100px {
+            get {
+                object obj = ResourceManager.GetObject("icons8_book_philosophy_100px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_book_shelf_48px {
+            get {
+                object obj = ResourceManager.GetObject("icons8_book_shelf_48px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_bookmark {
+            get {
+                object obj = ResourceManager.GetObject("icons8_bookmark", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_books_48px {
+            get {
+                object obj = ResourceManager.GetObject("icons8_books_48px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_box_96px_1 {
             get {
                 object obj = ResourceManager.GetObject("icons8_box_96px_1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_cash_in_hand {
+            get {
+                object obj = ResourceManager.GetObject("icons8_cash_in_hand", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_classroom_3 {
+            get {
+                object obj = ResourceManager.GetObject("icons8_classroom_3", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -232,6 +311,26 @@ namespace THAGBAN_INST.Properties {
             get {
                 object obj = ResourceManager.GetObject("icons8_Close_80px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
+        /// </summary>
+        internal static System.Drawing.Icon icons8_course {
+            get {
+                object obj = ResourceManager.GetObject("icons8_course", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
+        /// </summary>
+        internal static System.Drawing.Icon icons8_course_1 {
+            get {
+                object obj = ResourceManager.GetObject("icons8_course_1", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
             }
         }
         
@@ -291,6 +390,56 @@ namespace THAGBAN_INST.Properties {
         internal static System.Drawing.Bitmap icons8_database_restore_80px_1 {
             get {
                 object obj = ResourceManager.GetObject("icons8_database_restore_80px_1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
+        /// </summary>
+        internal static System.Drawing.Icon icons8_euro {
+            get {
+                object obj = ResourceManager.GetObject("icons8_euro", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
+        /// </summary>
+        internal static System.Drawing.Icon icons8_euro_1 {
+            get {
+                object obj = ResourceManager.GetObject("icons8_euro_1", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
+        /// </summary>
+        internal static System.Drawing.Icon icons8_euro_2 {
+            get {
+                object obj = ResourceManager.GetObject("icons8_euro_2", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
+        /// </summary>
+        internal static System.Drawing.Icon icons8_euro_3 {
+            get {
+                object obj = ResourceManager.GetObject("icons8_euro_3", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_euro_4 {
+            get {
+                object obj = ResourceManager.GetObject("icons8_euro_4", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -356,6 +505,16 @@ namespace THAGBAN_INST.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
+        /// </summary>
+        internal static System.Drawing.Icon icons8_man_student {
+            get {
+                object obj = ResourceManager.GetObject("icons8_man_student", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap icons8_memo_32px {
@@ -388,6 +547,16 @@ namespace THAGBAN_INST.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_nerd_3 {
+            get {
+                object obj = ResourceManager.GetObject("icons8_nerd_3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_Notification_128px {
             get {
                 object obj = ResourceManager.GetObject("icons8_Notification_128px", resourceCulture);
@@ -408,9 +577,39 @@ namespace THAGBAN_INST.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_ok_200px1 {
+            get {
+                object obj = ResourceManager.GetObject("icons8_ok_200px1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_person_walking {
+            get {
+                object obj = ResourceManager.GetObject("icons8_person_walking", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_printer_96px {
             get {
                 object obj = ResourceManager.GetObject("icons8_printer_96px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_receive_cash {
+            get {
+                object obj = ResourceManager.GetObject("icons8_receive_cash", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -422,6 +621,16 @@ namespace THAGBAN_INST.Properties {
             get {
                 object obj = ResourceManager.GetObject("icons8_scan_stock_128px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
+        /// </summary>
+        internal static System.Drawing.Icon icons8_school {
+            get {
+                object obj = ResourceManager.GetObject("icons8_school", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
             }
         }
         
@@ -441,6 +650,16 @@ namespace THAGBAN_INST.Properties {
         internal static System.Drawing.Bitmap icons8_select_users_32px_1 {
             get {
                 object obj = ResourceManager.GetObject("icons8_select_users_32px_1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_study_100px {
+            get {
+                object obj = ResourceManager.GetObject("icons8_study_100px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -476,12 +695,51 @@ namespace THAGBAN_INST.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
+        /// </summary>
+        internal static System.Drawing.Icon icons8_woman_student {
+            get {
+                object obj = ResourceManager.GetObject("icons8_woman_student", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap Loading_icon {
             get {
                 object obj = ResourceManager.GetObject("Loading_icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap login {
+            get {
+                object obj = ResourceManager.GetObject("login", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap LOGODEEBO {
+            get {
+                object obj = ResourceManager.GetObject("LOGODEEBO", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ليس لديك صلاحيات لاستخدام هذه الواجهه.
+        /// </summary>
+        internal static string not_have_rouls {
+            get {
+                return ResourceManager.GetString("not_have_rouls", resourceCulture);
             }
         }
         
@@ -511,6 +769,16 @@ namespace THAGBAN_INST.Properties {
         internal static System.Drawing.Bitmap panel_picture_frame_bg_pressed_blue_9 {
             get {
                 object obj = ResourceManager.GetObject("panel_picture_frame_bg_pressed_blue.9", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap PASS {
+            get {
+                object obj = ResourceManager.GetObject("PASS", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -571,6 +839,16 @@ namespace THAGBAN_INST.Properties {
         internal static System.Drawing.Bitmap settings_32px {
             get {
                 object obj = ResourceManager.GetObject("settings_32px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap slidebank_login {
+            get {
+                object obj = ResourceManager.GetObject("slidebank_login", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

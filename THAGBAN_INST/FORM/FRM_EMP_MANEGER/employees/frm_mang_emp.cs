@@ -11,6 +11,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using THAGBAN_INST.DATA;
 using THAGBAN_INST.FORM.FRM_EMP_MANEGER.employees;
+using THAGBAN_INST.FORM.FRM_EMP_MANEGER.users;
 
 namespace THAGBAN_INST.FORM.FRM_EMP_MANEGER
 {
@@ -136,6 +137,20 @@ namespace THAGBAN_INST.FORM.FRM_EMP_MANEGER
         private void simpleButton1_Click(object sender, EventArgs e)
         {
             get_data();
+        }
+
+        private void simpleButton2_Click(object sender, EventArgs e)
+        {
+            get_sele();
+                frm_add_users frm = new frm_add_users();
+                frm.emp_id= emp_id;
+                frm.ShowDialog();
+            
+        }
+
+        private void gridView2_SelectionChanged(object sender, DevExpress.Data.SelectionChangedEventArgs e)
+        {
+            get_sele();
         }
     }
 }

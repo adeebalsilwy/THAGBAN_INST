@@ -7,11 +7,13 @@ using System.Data.Entity;
 using System.Data.Entity.Migrations;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.Remoting.Contexts;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using THAGBAN_INST.DATA;
 using THAGBAN_INST.FORM.FRM_EMP_MANEGER.lsits;
+using THAGBAN_INST.FORM.FRM_LECTUER_MANG;
 
 namespace THAGBAN_INST.FORM.FRM_EMP_MANEGER.users
 {
@@ -30,6 +32,10 @@ namespace THAGBAN_INST.FORM.FRM_EMP_MANEGER.users
         public string user_pass;
         public int dept_id;
         public string dept_name;
+        int temp_dept_id = 0;
+        int temp_emp_id = 0;
+        int temp_job_id = 0;
+
 
 
         public frm_add_users()
@@ -44,46 +50,78 @@ namespace THAGBAN_INST.FORM.FRM_EMP_MANEGER.users
 
         private void frm_add_job_Load(object sender, EventArgs e)
         {
-            get_dept();
+
+
+            List<TBL_USERS> list = new List<TBL_USERS>();
+
+            TBL_USERS tbl = new TBL_USERS();
+           
             if (user_id != 0)
             {
+                get_dept();
                 com_dept.SelectedValue = dept_id;
                 com_emp.SelectedValue = emp_id;
                 com_emp.Text = emp_name;
                 com_dept.Text = dept_name;
                 com_job.Text = job_name;
                 com_job.SelectedValue = job_id;
+
                 txt_user_name.Text = user_name;
-                txt_user_pass.Text=user_pass;
+                txt_user_pass.Text = user_pass;
+
+
+            }else if (emp_id != 0)
+            {
+
+                try
+                {
+                    tbl = con.TBL_USERS.Where(w => w.EMP_ID == emp_id).FirstOrDefault();
+                    if (tbl != null)
+                    {
+
+                        user_id = tbl.USER_ID;
+                        user_name = tbl.USER_NAME;
+                        user_pass = tbl.USER_PASS;
+                        temp_emp_id = emp_id;
+                        temp_job_id = Convert.ToInt32(tbl.TBL_EMPLOYEES.JOB_ID);
+                        temp_dept_id = Convert.ToInt32(tbl.TBL_EMPLOYEES.TBL_JOB.DEPT_ID);
+
+                        get_dept();
+                        //com_dept.SelectedValue = dept_id;
+                        txt_user_name.Text = user_name;
+                        txt_user_pass.Text = user_pass;
+                    }
+                    else
+                    {
+                        get_dept();
+                    }
+
+                }
+                catch (Exception ex)
+                {
+                    tbl = null;
+                }
+                
             }
            
+          
+        
+
+           
         }
+      
         public void get_emp()
         {
 
 
-            db_max_instEntities dbContext = new db_max_instEntities();
-            // Call the LoadAsync method to asynchronously get the data for the given DbSet from the database.
-            dbContext.TBL_EMPLOYEES.LoadAsync().ContinueWith(loadTask =>
-            {
-                //var list = from emp in dbContext.TBL_EMPLOYEES join job in dbContext.TBL_JOB
-                //           on emp.JOB_ID equals job.JOB_ID join dep in dbContext.TBL_DEPT
-                //           on job.DEPT_ID equals dep.DEPT_ID select new
-                //           {
-                //               EMP_ID= emp.EMP_ID,
-                //               EMP_NAME= emp.EMP_NAME,
-                //               DEPT_ID=dep.DEPT_ID,
-                //               JOB_NAME=job.JOB_NAME,
-                //           };
-                com_emp.DataSource = dbContext.TBL_EMPLOYEES.Where(w=>w.JOB_ID==job_id && w.STATE==true).ToList();
+          
+                com_emp.DataSource = con.TBL_EMPLOYEES.Where(w=>w.JOB_ID==job_id && w.STATE==true).ToList();
                 com_emp.DisplayMember = "EMP_NAME";
                 com_emp.ValueMember = "EMP_ID";
-            }, System.Threading.Tasks.TaskScheduler.FromCurrentSynchronizationContext());
-
-
-            // get holidat type 
-            // Call the LoadAsync method to asynchronously get the data for the given DbSet from the database.
-           
+               
+            if (temp_emp_id != 0)
+                com_emp.SelectedValue = temp_emp_id;
+          
 
         }
         public void get_dept()
@@ -93,13 +131,13 @@ namespace THAGBAN_INST.FORM.FRM_EMP_MANEGER.users
             // Instantiate a new DBContext
             db_max_instEntities dbContext = new db_max_instEntities();
             // Call the LoadAsync method to asynchronously get the data for the given DbSet from the database.
-            dbContext.TBL_DEPT.LoadAsync().ContinueWith(loadTask =>
-            {
+           
                 // Bind data to control when loading complete
-                com_dept.DataSource = dbContext.TBL_DEPT.Local.ToBindingList();
+                com_dept.DataSource = con.TBL_DEPT.ToList();
                 com_dept.DisplayMember = "DEPT_NAME";
                 com_dept.ValueMember = "DEPT_ID";
-            }, System.Threading.Tasks.TaskScheduler.FromCurrentSynchronizationContext());
+            if(emp_id!=0)
+                com_dept.SelectedValue = temp_dept_id;
         }
         public void get_job()
         {
@@ -108,13 +146,14 @@ namespace THAGBAN_INST.FORM.FRM_EMP_MANEGER.users
             // Instantiate a new DBContext
             db_max_instEntities dbContext = new db_max_instEntities();
             // Call the LoadAsync method to asynchronously get the data for the given DbSet from the database.
-            dbContext.TBL_JOB.LoadAsync().ContinueWith(loadTask =>
-            {
+           
                 // Bind data to control when loading complete
-                com_job.DataSource = dbContext.TBL_JOB.Where(W => W.DEPT_ID == dept_id).ToList();
+                com_job.DataSource = con.TBL_JOB.Where(W => W.DEPT_ID == dept_id).ToList();
                 com_job.DisplayMember = "JOB_NAME";
                 com_job.ValueMember = "JOB_ID";
-            }, System.Threading.Tasks.TaskScheduler.FromCurrentSynchronizationContext());
+            if (emp_id != 0)
+                com_job.SelectedValue = temp_job_id;
+
         }
         void clear()
         {
@@ -212,8 +251,14 @@ namespace THAGBAN_INST.FORM.FRM_EMP_MANEGER.users
         {
             if (com_dept.SelectedItem != null)
             {
-                dept_id = Convert.ToInt32(com_dept.SelectedValue.ToString());
-                get_job();
+                try
+                {
+                    dept_id = Convert.ToInt32(com_dept.SelectedValue.ToString());
+                    get_job();
+                }catch (Exception ex)
+                {
+
+                }
             }
           
         }
@@ -222,8 +267,12 @@ namespace THAGBAN_INST.FORM.FRM_EMP_MANEGER.users
         {
             if (com_job.SelectedItem != null)
             {
-                job_id = Convert.ToInt32(com_job.SelectedValue.ToString());
-                get_emp();
+                try
+                {
+                    job_id = Convert.ToInt32(com_job.SelectedValue.ToString());
+
+                    get_emp();
+                }catch(Exception ex) { }
             }
            
         }
@@ -232,7 +281,10 @@ namespace THAGBAN_INST.FORM.FRM_EMP_MANEGER.users
         {
             if (com_emp.SelectedItem != null)
             {
-                emp_id = Convert.ToInt32(com_emp.SelectedValue.ToString());
+                try
+                {
+                    emp_id = Convert.ToInt32(com_emp.SelectedValue.ToString());
+                }catch (Exception ex) { }
             }
         }
 

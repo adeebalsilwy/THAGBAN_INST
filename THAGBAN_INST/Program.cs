@@ -15,11 +15,13 @@ using THAGBAN_INST.FORM.FRM_LECTUER_MANG.lect_send_stud;
 using THAGBAN_INST.FORM.FRM_LECTUER_MANG.lect_stud;
 using THAGBAN_INST.FORM.FRM_LECTUER_MANG.lect_students;
 using THAGBAN_INST.FORM.FRM_LECTUER_MANG.move_stud;
+using THAGBAN_INST.FORM.FRM_LECTUER_MANG.students;
 using THAGBAN_INST.FORM.FRM_MANG_STUD.marks;
 using THAGBAN_INST.FORM.FRM_MANG_STUD.matrila;
 using THAGBAN_INST.FORM.FRM_MANG_STUD.spical;
 using THAGBAN_INST.FORM.FRM_MANG_STUD.stud_foloder;
 using THAGBAN_INST.FORM.FRM_MANG_STUD.terms;
+using THAGBAN_INST.FORM.FRM_SYSTEM;
 
 namespace THAGBAN_INST
 {
@@ -33,7 +35,7 @@ namespace THAGBAN_INST
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FRM_LECTUER_MANG());
+            Application.Run(new FRM_Start());
         }
     }
 }

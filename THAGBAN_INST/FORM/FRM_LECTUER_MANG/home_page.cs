@@ -48,7 +48,7 @@ namespace THAGBAN_INST.FORM.FRM_LECTUER_MANG
 
         private void home_page_Load(object sender, EventArgs e)
         {
-
+            get_info();
         }
     }
 }

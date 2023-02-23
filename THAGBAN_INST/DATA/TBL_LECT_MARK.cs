@@ -25,9 +25,9 @@ namespace THAGBAN_INST.DATA
     
         public virtual TBL_LECT_COURS TBL_LECT_COURS { get; set; }
         public virtual TBL_LECT_MATRIAL TBL_LECT_MATRIAL { get; set; }
+        public virtual TBL_LECT_TECH_COURS TBL_LECT_TECH_COURS { get; set; }
         public virtual TBL_LECTUER TBL_LECTUER { get; set; }
         public virtual TBL_STUD_LECT TBL_STUD_LECT { get; set; }
         public virtual TBL_STUDENTS TBL_STUDENTS { get; set; }
-        public virtual TBL_LECT_TECH_COURS TBL_LECT_TECH_COURS { get; set; }
     }
 }

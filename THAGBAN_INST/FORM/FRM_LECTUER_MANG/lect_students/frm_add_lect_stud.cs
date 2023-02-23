@@ -108,8 +108,7 @@ namespace THAGBAN_INST.FORM.FRM_LECTUER_MANG.lect_students
         void add_stud_lect()
         {
 
-            tost toast = new tost();
-            dialge dialge = new dialge();
+           
             if (is_empty() != true)
             {
                 //cheak add or edit 
@@ -262,18 +261,7 @@ namespace THAGBAN_INST.FORM.FRM_LECTUER_MANG.lect_students
         }
         void get_group()
         {
-            //var tbl = con.TBL_LECT_TECH_COURS.Where(w => w.COURS_ID == stud_lect_id && w.STATE == true)
-            //    .Join(con.TBL_LECTUER, l => l.TBL_LECTUER.LECT_ID, tl => tl.LECT_ID,
-            //    (l, tl) => new
-            //    {
-            //        l.TECH_LECT_ID,
-            //        l.GROUP_NAME,
-            //        tl.LECT_NAME,
-
-            //    });
-
-
-
+            
 
            lect_id =Convert.ToInt32(com_lect.SelectedValue);
                 var temp= con.TBL_LECT_TECH_COURS.Where(w=>w.LECT_ID==lect_id).ToList();
@@ -382,6 +370,29 @@ namespace THAGBAN_INST.FORM.FRM_LECTUER_MANG.lect_students
             //    com_cours.SelectedValue = stud_lect_id;
 
 
+
+        }
+
+        private void com_lect_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+            if (com_lect.SelectedValue != null)
+            {
+                try
+                {
+
+                    lect_id = Convert.ToInt32(com_lect.SelectedValue);
+                    get_group();
+                }
+                catch (Exception ex)
+                {
+
+                }
+            }
+        }
+
+        private void com_group_SelectedIndexChanged(object sender, EventArgs e)
+        {
 
         }
     }

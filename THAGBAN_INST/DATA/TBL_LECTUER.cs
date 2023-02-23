@@ -19,10 +19,10 @@ namespace THAGBAN_INST.DATA
         {
             this.TBL_LECT_MARK = new HashSet<TBL_LECT_MARK>();
             this.TBL_LECT_MATRIAL = new HashSet<TBL_LECT_MATRIAL>();
-            this.TBL_SEND_TECT_LECT = new HashSet<TBL_SEND_TECT_LECT>();
-            this.TBL_STUD_LECT = new HashSet<TBL_STUD_LECT>();
             this.TBL_LECT_TECH_COURS = new HashSet<TBL_LECT_TECH_COURS>();
             this.TBL_SEND_STUD_LECT = new HashSet<TBL_SEND_STUD_LECT>();
+            this.TBL_SEND_TECT_LECT = new HashSet<TBL_SEND_TECT_LECT>();
+            this.TBL_STUD_LECT = new HashSet<TBL_STUD_LECT>();
         }
     
         public int LECT_ID { get; set; }
@@ -37,12 +37,12 @@ namespace THAGBAN_INST.DATA
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<TBL_LECT_MATRIAL> TBL_LECT_MATRIAL { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<TBL_SEND_TECT_LECT> TBL_SEND_TECT_LECT { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<TBL_STUD_LECT> TBL_STUD_LECT { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<TBL_LECT_TECH_COURS> TBL_LECT_TECH_COURS { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<TBL_SEND_STUD_LECT> TBL_SEND_STUD_LECT { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<TBL_SEND_TECT_LECT> TBL_SEND_TECT_LECT { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<TBL_STUD_LECT> TBL_STUD_LECT { get; set; }
     }
 }

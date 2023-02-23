@@ -28,13 +28,12 @@ namespace THAGBAN_INST.DATA
         public Nullable<int> COURS_ID { get; set; }
         public Nullable<System.DateTime> LECT_STUD_DATE { get; set; }
     
-        public virtual TBL_LECT_COURS TBL_LECT_COURS { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<TBL_LECT_MARK> TBL_LECT_MARK { get; set; }
-        public virtual TBL_LECTUER TBL_LECTUER { get; set; }
-        public virtual TBL_STUDENTS TBL_STUDENTS { get; set; }
         public virtual TBL_LECT_TECH_COURS TBL_LECT_TECH_COURS { get; set; }
+        public virtual TBL_LECTUER TBL_LECTUER { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<TBL_SEND_STUD_LECT> TBL_SEND_STUD_LECT { get; set; }
+        public virtual TBL_STUDENTS TBL_STUDENTS { get; set; }
     }
 }

@@ -52,6 +52,7 @@
             this.colTBL_STUD_SPEC = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colSTUD_STATE = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colSTUD_PHONE = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.btn_export = new DevExpress.XtraEditors.SimpleButton();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
@@ -217,6 +218,7 @@
             // 
             // panelControl1
             // 
+            this.panelControl1.Controls.Add(this.btn_export);
             this.panelControl1.Controls.Add(this.simpleButton1);
             this.panelControl1.Controls.Add(this.btn_delete);
             this.panelControl1.Controls.Add(this.btn_edite);
@@ -237,7 +239,7 @@
             this.simpleButton1.Appearance.Options.UseBorderColor = true;
             this.simpleButton1.Appearance.Options.UseFont = true;
             this.simpleButton1.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("simpleButton1.ImageOptions.SvgImage")));
-            this.simpleButton1.Location = new System.Drawing.Point(215, 7);
+            this.simpleButton1.Location = new System.Drawing.Point(388, 11);
             this.simpleButton1.Name = "simpleButton1";
             this.simpleButton1.ShowFocusRectangle = DevExpress.Utils.DefaultBoolean.True;
             this.simpleButton1.Size = new System.Drawing.Size(101, 50);
@@ -255,7 +257,7 @@
             this.btn_delete.Appearance.Options.UseBorderColor = true;
             this.btn_delete.Appearance.Options.UseFont = true;
             this.btn_delete.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_delete.ImageOptions.Image")));
-            this.btn_delete.Location = new System.Drawing.Point(345, 7);
+            this.btn_delete.Location = new System.Drawing.Point(518, 11);
             this.btn_delete.Name = "btn_delete";
             this.btn_delete.ShowFocusRectangle = DevExpress.Utils.DefaultBoolean.True;
             this.btn_delete.Size = new System.Drawing.Size(101, 50);
@@ -273,7 +275,7 @@
             this.btn_edite.Appearance.Options.UseBorderColor = true;
             this.btn_edite.Appearance.Options.UseFont = true;
             this.btn_edite.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_edite.ImageOptions.Image")));
-            this.btn_edite.Location = new System.Drawing.Point(495, 7);
+            this.btn_edite.Location = new System.Drawing.Point(643, 9);
             this.btn_edite.Name = "btn_edite";
             this.btn_edite.ShowFocusRectangle = DevExpress.Utils.DefaultBoolean.True;
             this.btn_edite.Size = new System.Drawing.Size(101, 50);
@@ -294,7 +296,7 @@
             this.btn_save.Appearance.Options.UseBorderColor = true;
             this.btn_save.Appearance.Options.UseFont = true;
             this.btn_save.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_save.ImageOptions.Image")));
-            this.btn_save.Location = new System.Drawing.Point(609, 7);
+            this.btn_save.Location = new System.Drawing.Point(757, 9);
             this.btn_save.Name = "btn_save";
             this.btn_save.ShowFocusRectangle = DevExpress.Utils.DefaultBoolean.True;
             this.btn_save.Size = new System.Drawing.Size(101, 50);
@@ -329,6 +331,24 @@
             this.colSTUD_PHONE.FieldName = "STUD_PHONE";
             this.colSTUD_PHONE.Name = "colSTUD_PHONE";
             this.colSTUD_PHONE.Width = 88;
+            // 
+            // btn_export
+            // 
+            this.btn_export.AccessibleRole = System.Windows.Forms.AccessibleRole.Border;
+            this.btn_export.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btn_export.Appearance.BackColor = System.Drawing.Color.Transparent;
+            this.btn_export.Appearance.Font = new System.Drawing.Font("ae_AlArabiya", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_export.Appearance.Options.UseBackColor = true;
+            this.btn_export.Appearance.Options.UseBorderColor = true;
+            this.btn_export.Appearance.Options.UseFont = true;
+            this.btn_export.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("simpleButton2.ImageOptions.SvgImage")));
+            this.btn_export.Location = new System.Drawing.Point(210, 11);
+            this.btn_export.Name = "btn_export";
+            this.btn_export.ShowFocusRectangle = DevExpress.Utils.DefaultBoolean.True;
+            this.btn_export.Size = new System.Drawing.Size(155, 50);
+            this.btn_export.TabIndex = 46;
+            this.btn_export.Text = "تصدير اكسل";
+            this.btn_export.Click += new System.EventHandler(this.simpleButton2_Click);
             // 
             // frm_mang_stud
             // 
@@ -372,5 +392,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn colSTUD_STATE1;
         private DevExpress.XtraGrid.Columns.GridColumn colTBL_STUD_SPEC2;
         private DevExpress.XtraGrid.Columns.GridColumn colTBL_STUD_SPEC3;
+        private DevExpress.XtraEditors.SimpleButton btn_export;
     }
 }

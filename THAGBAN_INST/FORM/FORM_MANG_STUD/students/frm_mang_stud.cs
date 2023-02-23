@@ -1,9 +1,11 @@
-﻿using DevExpress.XtraEditors;
+﻿using DevExpress.ClipboardSource.SpreadsheetML;
+using DevExpress.XtraEditors;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Data.Entity;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -20,7 +22,7 @@ namespace THAGBAN_INST.FORM.FRM_MANG_STUD.students
         db_max_instEntities con = new db_max_instEntities();
         tost toast = new tost();
         dialge dialge = new dialge();
-        
+
         public int stud_id = 0;
         public int spical_id = 0;
         public string stud_name;
@@ -31,6 +33,7 @@ namespace THAGBAN_INST.FORM.FRM_MANG_STUD.students
         public string stud_gender;
         public bool stud_state;
         public DateTime stud_date;
+        private IEnumerable<TBL_STUDENTS> data;
 
         public frm_mang_stud()
         {
@@ -60,7 +63,7 @@ namespace THAGBAN_INST.FORM.FRM_MANG_STUD.students
             // Call the LoadAsync method to asynchronously get the data for the given DbSet from the database.
             dbContext.TBL_STUDENTS.LoadAsync().ContinueWith(loadTask =>
             {
-               
+
                 // Bind data to control when loading complete
                 gridControl1.DataSource = dbContext.TBL_STUDENTS.Local.ToBindingList();
             }, System.Threading.Tasks.TaskScheduler.FromCurrentSynchronizationContext());
@@ -102,7 +105,7 @@ namespace THAGBAN_INST.FORM.FRM_MANG_STUD.students
             if (gridView2.SelectedRowsCount > 0)
             {
 
-                
+
                 stud_name = gridView2.GetFocusedRowCellValue("STUD_NAME").ToString();
                 stud_lname = gridView2.GetFocusedRowCellValue("STUD_LNAME").ToString();
                 stud_phone = gridView2.GetFocusedRowCellValue("STUD_PHONE").ToString();
@@ -112,21 +115,21 @@ namespace THAGBAN_INST.FORM.FRM_MANG_STUD.students
                 stud_gender = gridView2.GetFocusedRowCellValue("STUD_GENDER").ToString();
                 stud_id = Convert.ToInt32(gridView2.GetFocusedRowCellValue("STUD_ID").ToString());
                 // holidaytype_id= Convert.ToInt32(gridView2.GetFocusedRowCellValue("DEPT_ID").ToString());
-                string SP="";
-                if (gridView2.GetFocusedRowCellValue("SPEC_NAME")!=null)
-               SP =gridView2.GetFocusedRowCellValue("SPEC_NAME").ToString();
-              //  MessageBox.Show(SP);
-                TBL_SPECIAL tbl=con.TBL_SPECIAL.Where(w=>w.SPEC_NAME.Trim().Equals(SP.Trim())).FirstOrDefault();
+                string SP = "";
+                if (gridView2.GetFocusedRowCellValue("SPEC_NAME") != null)
+                    SP = gridView2.GetFocusedRowCellValue("SPEC_NAME").ToString();
+                //  MessageBox.Show(SP);
+                TBL_SPECIAL tbl = con.TBL_SPECIAL.Where(w => w.SPEC_NAME.Trim().Equals(SP.Trim())).FirstOrDefault();
                 spical_id = tbl.SPEC_ID;
             }
         }
         private void btn_edite_Click(object sender, EventArgs e)
         {
             frm_add_students frm = new frm_add_students();
-            frm.stud_id =stud_id;
-           
-           
-            frm.spical_id =spical_id;
+            frm.stud_id = stud_id;
+
+
+            frm.spical_id = spical_id;
             frm.btn_save.Text = "تعديل";
             frm.ShowDialog();
 
@@ -152,7 +155,7 @@ namespace THAGBAN_INST.FORM.FRM_MANG_STUD.students
                         notifiction.Show();
                     }
                     get_sp();
-                }catch (Exception ex) { }
+                } catch (Exception ex) { }
             }
         }
         private void gridView2_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
@@ -168,6 +171,70 @@ namespace THAGBAN_INST.FORM.FRM_MANG_STUD.students
         private void simpleButton1_Click(object sender, EventArgs e)
         {
             get_sp();
+        }
+
+        void ExportToExcela(IEnumerable<TBL_STUDENTS> inputCollection)
+        {
+            this.data = inputCollection;
+
+            try
+            {
+                FolderBrowserDialog folder = new FolderBrowserDialog();
+                var rs = folder.ShowDialog();
+                if (rs == DialogResult.OK)
+                {
+                   
+
+
+                    var fullpath = folder.SelectedPath.ToString();
+                    gridControl1.ExportToXls(fullpath);
+                    MessageBox.Show("تم النسخ الاحتياطي بنجاح");
+
+                }
+            }
+            catch
+            {
+                MessageBox.Show("خطأ , لا يمكن النسخ الاحتياطي الى المسار المحدد, الرجاء تحديد مسار مختلف, تذكر لا تحدد القرص C");
+            }
+            }
+
+    
+        
+        void open_dialg_path()
+        {
+            try
+            {
+                FolderBrowserDialog folder = new FolderBrowserDialog();
+                var rs = folder.ShowDialog();
+                if (rs == DialogResult.OK)
+                {
+                    //db_max_instEntities db = new db_max_instEntities();
+                    ////  string dbname = db.Database.Connection.Database;
+                    //// string dbBackUp = "EPSback" + DateTime.Now.ToString("yyyyMMddHHmm");
+                    //var fullpath = folder.SelectedPath.ToString();/*+ dbBackUp + ".bak";*/
+                    //string sqlCommand = @"BACKUP DATABASE [{0}] TO  DISK = '" + fullpath + "' WITH NOFORMAT, NOINIT,  NAME = N'DBEPS', SKIP, NOREWIND, NOUNLOAD,  STATS = 10";
+                    //int path = db.Database.ExecuteSqlCommand(System.Data.Entity.TransactionalBehavior.DoNotEnsureTransaction, string.Format(sqlCommand, dbname, dbBackUp));
+                    //MessageBox.Show("تم النسخ الاحتياطي بنجاح");
+
+                  
+                    var fullpath = folder.SelectedPath.ToString();
+                    gridControl1.ExportToCsv(fullpath);
+                    //  string sqlCommand = @"BACKUP DATABASE [{0}] TO  DISK = '" + fullpath + "' WITH NOFORMAT, NOINIT,  NAME = N'DBEPS', SKIP, NOREWIND, NOUNLOAD,  STATS = 10";
+                    // int path = db.Database.ExecuteSqlCommand(System.Data.Entity.TransactionalBehavior.DoNotEnsureTransaction, string.Format(sqlCommand, dbname, dbBackUp));
+                    MessageBox.Show("تم النسخ الاحتياطي بنجاح");
+                }
+            }
+            catch
+            {
+                MessageBox.Show("خطأ , لا يمكن النسخ الاحتياطي الى المسار المحدد, الرجاء تحديد مسار مختلف, تذكر لا تحدد القرص C");
+            }
+            
+        }
+        private void simpleButton2_Click(object sender, EventArgs e)
+        {
+            open_dialg_path();
+
+
         }
     }
 }

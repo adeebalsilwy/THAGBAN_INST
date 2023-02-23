@@ -13,6 +13,7 @@ using System.Windows.Forms;
 using THAGBAN_INST.DATA;
 using THAGBAN_INST.FORM.FRM_EMP_MANEGER.job;
 using THAGBAN_INST.FORM.FRM_EMP_MANEGER.lsits;
+using THAGBAN_INST.FORM.FRM_EMP_MANEGER.users;
 
 namespace THAGBAN_INST.FORM.FRM_EMP_MANEGER.employees
 {
@@ -172,6 +173,9 @@ namespace THAGBAN_INST.FORM.FRM_EMP_MANEGER.employees
                         //update 
                         con.TBL_EMPLOYEES.AddOrUpdate(cl);
                         con.SaveChanges();
+                        frm_add_users frm = new frm_add_users();
+                        frm.emp_id = cl.EMP_ID;
+                        frm.ShowDialog();
                         adl.NotifictionUser notifiction = new adl.NotifictionUser(THAGBAN_INST.Properties.Resources.AddNotificationText, THAGBAN_INST.Properties.Resources.add_32px);
                         notifiction.Show();
                         clear();

@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_add_part));
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties1 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties2 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties3 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
@@ -45,6 +44,7 @@
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties14 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties15 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties16 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_add_part));
             this.panel1 = new System.Windows.Forms.Panel();
             this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             this.btn_save = new DevExpress.XtraEditors.SimpleButton();
@@ -67,6 +67,7 @@
             this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
             this.txt_emp_year = new Bunifu.UI.WinForms.BunifuTextBox();
             this.btn_emp_list = new DevExpress.XtraEditors.SimpleButton();
+            this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
             this.panel1.SuspendLayout();
             this.bunifuPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txt_part_month)).BeginInit();
@@ -74,6 +75,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.simpleButton2);
             this.panel1.Controls.Add(this.simpleButton1);
             this.panel1.Controls.Add(this.btn_save);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
@@ -118,7 +120,7 @@
             this.btn_save.Appearance.TextOptions.Trimming = DevExpress.Utils.Trimming.EllipsisCharacter;
             this.btn_save.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.btn_save.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_save.ImageOptions.Image")));
-            this.btn_save.Location = new System.Drawing.Point(212, 3);
+            this.btn_save.Location = new System.Drawing.Point(274, 3);
             this.btn_save.Name = "btn_save";
             this.btn_save.ShowFocusRectangle = DevExpress.Utils.DefaultBoolean.True;
             this.btn_save.Size = new System.Drawing.Size(94, 43);
@@ -640,6 +642,28 @@
             this.btn_emp_list.Size = new System.Drawing.Size(44, 41);
             this.btn_emp_list.TabIndex = 105;
             // 
+            // simpleButton2
+            // 
+            this.simpleButton2.AccessibleRole = System.Windows.Forms.AccessibleRole.Border;
+            this.simpleButton2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.simpleButton2.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.simpleButton2.Appearance.Options.UseBorderColor = true;
+            this.simpleButton2.Appearance.Options.UseFont = true;
+            this.simpleButton2.Appearance.Options.UseTextOptions = true;
+            this.simpleButton2.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.simpleButton2.Appearance.TextOptions.Trimming = DevExpress.Utils.Trimming.EllipsisCharacter;
+            this.simpleButton2.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.simpleButton2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton2.ImageOptions.Image")));
+            this.simpleButton2.Location = new System.Drawing.Point(122, 3);
+            this.simpleButton2.Name = "simpleButton2";
+            this.simpleButton2.ShowFocusRectangle = DevExpress.Utils.DefaultBoolean.True;
+            this.simpleButton2.Size = new System.Drawing.Size(116, 43);
+            this.simpleButton2.TabIndex = 105;
+            this.simpleButton2.Text = "خفظ وطباعه";
+            this.simpleButton2.Click += new System.EventHandler(this.simpleButton2_Click);
+            // 
             // frm_add_part
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -700,5 +724,6 @@
         public DevExpress.XtraEditors.SimpleButton simpleButton1;
         public DevExpress.XtraEditors.SimpleButton btn_save;
         public DevExpress.XtraEditors.SimpleButton btn_emp_list;
+        public DevExpress.XtraEditors.SimpleButton simpleButton2;
     }
 }

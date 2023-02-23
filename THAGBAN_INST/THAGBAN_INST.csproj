@@ -134,6 +134,9 @@
     <Reference Include="DevExpress.XtraTreeMap.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraTreeMap.v22.2.UI, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraVerticalGrid.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DeviceId, Version=6.3.0.0, Culture=neutral, PublicKeyToken=f755c371b5c59c52, processorArchitecture=MSIL">
+      <HintPath>..\packages\DeviceId.6.3.0\lib\net40\DeviceId.dll</HintPath>
+    </Reference>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
@@ -164,6 +167,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="adl\Active_System.cs" />
+    <Compile Include="adl\FRM_LOADING.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="adl\FRM_LOADING.Designer.cs">
+      <DependentUpon>FRM_LOADING.cs</DependentUpon>
+    </Compile>
+    <Compile Include="adl\Interface1.cs" />
     <Compile Include="adl\method.cs" />
     <Compile Include="adl\NotificaitonPanel.cs">
       <SubType>UserControl</SubType>
@@ -178,13 +189,8 @@
       <DependentUpon>NotifictionUser.cs</DependentUpon>
     </Compile>
     <Compile Include="adl\send_stud_report.cs" />
+    <Compile Include="adl\students_class_impoet.cs" />
     <Compile Include="DATA\get_send_stud_query_Result.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
-    </Compile>
-    <Compile Include="DATA\KpiDefinition.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
-    </Compile>
-    <Compile Include="DATA\KpiInstance.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="DATA\Model1.Context.cs">
@@ -210,11 +216,10 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>stud_send.xsd</DependentUpon>
     </Compile>
-    <Compile Include="DATA\TBL_ATTENDS.cs">
+    <Compile Include="DATA\TBL_ACTIVE_SYSTEM.cs">
       <DependentUpon>Model1.tt</DependentUpon>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
-    <Compile Include="DATA\TBL_BOX.cs">
+    <Compile Include="DATA\TBL_ATTENDS.cs">
       <DependentUpon>Model1.tt</DependentUpon>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
@@ -274,9 +279,15 @@
       <DependentUpon>Model1.tt</DependentUpon>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
+    <Compile Include="DATA\TBL_OPRATION.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <Compile Include="DATA\TBL_PART_SALARY.cs">
       <DependentUpon>Model1.tt</DependentUpon>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="DATA\TBL_ROULLS_LECTUER.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="DATA\TBL_SALARY.cs">
       <DependentUpon>Model1.tt</DependentUpon>
@@ -486,6 +497,12 @@
     <Compile Include="FORM\FRM_EMP_MANEGER\employees\frm_mang_emp.Designer.cs">
       <DependentUpon>frm_mang_emp.cs</DependentUpon>
     </Compile>
+    <Compile Include="FORM\FRM_EMP_MANEGER\reports_emp\reports_part_salary.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FORM\FRM_EMP_MANEGER\reports_emp\reports_part_salary.Designer.cs">
+      <DependentUpon>reports_part_salary.cs</DependentUpon>
+    </Compile>
     <Compile Include="FORM\FRM_EMP_MANEGER\users\frm_add_users.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -576,17 +593,35 @@
     <Compile Include="FORM\FRM_LECTUER_MANG\cours\frm_mange_lect_cours.Designer.cs">
       <DependentUpon>frm_mange_lect_cours.cs</DependentUpon>
     </Compile>
-    <Compile Include="FORM\FRM_LECTUER_MANG\FRM_LECTUER_MANG.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FORM\FRM_LECTUER_MANG\FRM_LECTUER_MANG.Designer.cs">
-      <DependentUpon>FRM_LECTUER_MANG.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FORM\FRM_LECTUER_MANG\lect_report\erp_send_stud.cs">
+    <Compile Include="FORM\FRM_LECTUER_MANG\lect_report\report_lect_mark.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="FORM\FRM_LECTUER_MANG\lect_report\erp_send_stud.Designer.cs">
-      <DependentUpon>erp_send_stud.cs</DependentUpon>
+    <Compile Include="FORM\FRM_LECTUER_MANG\lect_report\report_lect_mark.Designer.cs">
+      <DependentUpon>report_lect_mark.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM\FRM_LECTUER_MANG\analys_admin.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FORM\FRM_LECTUER_MANG\analys_admin.Designer.cs">
+      <DependentUpon>analys_admin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM\FRM_LECTUER_MANG\lect_report\report_lect_studns_ttend.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FORM\FRM_LECTUER_MANG\lect_report\report_lect_studns_ttend.Designer.cs">
+      <DependentUpon>report_lect_studns_ttend.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM\FRM_LECTUER_MANG\students\frm_import_stud.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM\FRM_LECTUER_MANG\students\frm_import_stud.Designer.cs">
+      <DependentUpon>frm_import_stud.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM\FRM_MAIN_LECTUER.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM\FRM_MAIN_LECTUER.Designer.cs">
+      <DependentUpon>FRM_MAIN_LECTUER.cs</DependentUpon>
     </Compile>
     <Compile Include="FORM\FRM_LECTUER_MANG\lect_report\erp_send_tech.cs">
       <SubType>Component</SubType>
@@ -594,23 +629,11 @@
     <Compile Include="FORM\FRM_LECTUER_MANG\lect_report\erp_send_tech.Designer.cs">
       <DependentUpon>erp_send_tech.cs</DependentUpon>
     </Compile>
-    <Compile Include="FORM\FRM_LECTUER_MANG\lect_report\lect_paid.cs">
+    <Compile Include="FORM\FRM_LECTUER_MANG\lect_report\reort_send_lect.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="FORM\FRM_LECTUER_MANG\lect_report\lect_paid.Designer.cs">
-      <DependentUpon>lect_paid.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FORM\FRM_LECTUER_MANG\lect_report\send_lect.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="FORM\FRM_LECTUER_MANG\lect_report\send_lect.Designer.cs">
-      <DependentUpon>send_lect.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FORM\FRM_LECTUER_MANG\lect_report\report_lect_stud.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="FORM\FRM_LECTUER_MANG\lect_report\report_lect_stud.Designer.cs">
-      <DependentUpon>report_lect_stud.cs</DependentUpon>
+    <Compile Include="FORM\FRM_LECTUER_MANG\lect_report\reort_send_lect.Designer.cs">
+      <DependentUpon>reort_send_lect.cs</DependentUpon>
     </Compile>
     <Compile Include="FORM\FRM_LECTUER_MANG\lect_report\report_send_stud.cs">
       <SubType>Component</SubType>
@@ -762,6 +785,42 @@
     <Compile Include="FORM\frm_setting.Designer.cs">
       <DependentUpon>frm_setting.cs</DependentUpon>
     </Compile>
+    <Compile Include="FORM\FRM_SYSTEM\AboutBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM\FRM_SYSTEM\AboutBox.designer.cs">
+      <DependentUpon>AboutBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM\FRM_SYSTEM\AnalyticsPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FORM\FRM_SYSTEM\AnalyticsPage.designer.cs">
+      <DependentUpon>AnalyticsPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM\FRM_SYSTEM\FRM_CLOCE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM\FRM_SYSTEM\FRM_CLOCE.designer.cs">
+      <DependentUpon>FRM_CLOCE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM\FRM_SYSTEM\FRM_A.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM\FRM_SYSTEM\FRM_A.designer.cs">
+      <DependentUpon>FRM_A.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM\FRM_SYSTEM\FRM_LOGIN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM\FRM_SYSTEM\FRM_LOGIN.Designer.cs">
+      <DependentUpon>FRM_LOGIN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM\FRM_SYSTEM\FRM_Start.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM\FRM_SYSTEM\FRM_Start.designer.cs">
+      <DependentUpon>FRM_Start.cs</DependentUpon>
+    </Compile>
     <Compile Include="gnrate\XtraReport2.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -782,6 +841,9 @@
     <Compile Include="reports\emp_reports\part_salary_report.Designer.cs">
       <DependentUpon>part_salary_report.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="adl\FRM_LOADING.resx">
+      <DependentUpon>FRM_LOADING.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="adl\NotificaitonPanel.resx">
       <DependentUpon>NotificaitonPanel.cs</DependentUpon>
     </EmbeddedResource>
@@ -869,6 +931,9 @@
     <EmbeddedResource Include="FORM\FRM_EMP_MANEGER\employees\frm_mang_emp.resx">
       <DependentUpon>frm_mang_emp.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FORM\FRM_EMP_MANEGER\reports_emp\reports_part_salary.resx">
+      <DependentUpon>reports_part_salary.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FORM\FRM_EMP_MANEGER\users\frm_add_users.resx">
       <DependentUpon>frm_add_users.cs</DependentUpon>
     </EmbeddedResource>
@@ -914,23 +979,26 @@
     <EmbeddedResource Include="FORM\FRM_LECTUER_MANG\cours\frm_mange_lect_cours.resx">
       <DependentUpon>frm_mange_lect_cours.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FORM\FRM_LECTUER_MANG\FRM_LECTUER_MANG.resx">
-      <DependentUpon>FRM_LECTUER_MANG.cs</DependentUpon>
+    <EmbeddedResource Include="FORM\FRM_LECTUER_MANG\lect_report\report_lect_mark.resx">
+      <DependentUpon>report_lect_mark.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FORM\FRM_LECTUER_MANG\lect_report\erp_send_stud.resx">
-      <DependentUpon>erp_send_stud.cs</DependentUpon>
+    <EmbeddedResource Include="FORM\FRM_LECTUER_MANG\analys_admin.resx">
+      <DependentUpon>analys_admin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM\FRM_LECTUER_MANG\lect_report\report_lect_studns_ttend.resx">
+      <DependentUpon>report_lect_studns_ttend.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM\FRM_LECTUER_MANG\students\frm_import_stud.resx">
+      <DependentUpon>frm_import_stud.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM\FRM_MAIN_LECTUER.resx">
+      <DependentUpon>FRM_MAIN_LECTUER.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FORM\FRM_LECTUER_MANG\lect_report\erp_send_tech.resx">
       <DependentUpon>erp_send_tech.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FORM\FRM_LECTUER_MANG\lect_report\lect_paid.resx">
-      <DependentUpon>lect_paid.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FORM\FRM_LECTUER_MANG\lect_report\send_lect.resx">
-      <DependentUpon>send_lect.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FORM\FRM_LECTUER_MANG\lect_report\report_lect_stud.resx">
-      <DependentUpon>report_lect_stud.cs</DependentUpon>
+    <EmbeddedResource Include="FORM\FRM_LECTUER_MANG\lect_report\reort_send_lect.resx">
+      <DependentUpon>reort_send_lect.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FORM\FRM_LECTUER_MANG\lect_report\report_send_stud.resx">
       <DependentUpon>report_send_stud.cs</DependentUpon>
@@ -1006,6 +1074,24 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FORM\frm_setting.resx">
       <DependentUpon>frm_setting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM\FRM_SYSTEM\AboutBox.resx">
+      <DependentUpon>AboutBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM\FRM_SYSTEM\AnalyticsPage.resx">
+      <DependentUpon>AnalyticsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM\FRM_SYSTEM\FRM_CLOCE.resx">
+      <DependentUpon>FRM_CLOCE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM\FRM_SYSTEM\FRM_A.resx">
+      <DependentUpon>FRM_A.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM\FRM_SYSTEM\FRM_LOGIN.resx">
+      <DependentUpon>FRM_LOGIN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM\FRM_SYSTEM\FRM_Start.resx">
+      <DependentUpon>FRM_Start.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="gnrate\XtraReport2.resx">
       <DependentUpon>XtraReport2.cs</DependentUpon>
@@ -1095,6 +1181,46 @@
       <LastGenOutput>Model1.cs</LastGenOutput>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <None Include="Resources\icons8_nerd_3.ico" />
+    <None Include="Resources\icons8_person_walking.ico" />
+    <None Include="Resources\icons8_classroom_3.ico" />
+    <None Include="Resources\icons8_cash_in_hand.ico" />
+    <None Include="Resources\icons8_receive_cash.ico" />
+    <None Include="Resources\icons8_euro_4.ico" />
+    <None Include="Resources\icons8_bookmark.ico" />
+    <None Include="Resources\icons8_woman_student.ico" />
+    <None Include="Resources\icons8_man_student.ico" />
+    <None Include="Resources\icons8_school.ico" />
+    <None Include="Resources\icons8_course_1.ico" />
+    <None Include="Resources\icons8_course.ico" />
+    <None Include="Resources\icons8_euro_3.ico" />
+    <None Include="Resources\icons8_euro_2.ico" />
+    <None Include="Resources\icons8_euro_1.ico" />
+    <None Include="Resources\icons8_euro.ico" />
+    <None Include="Resources\icons8_euro_100px.png" />
+    <None Include="Resources\icons8_euro_48px.png" />
+    <None Include="Resources\icons8_books_48px.png" />
+    <None Include="Resources\icons8_book_shelf_48px.png" />
+    <None Include="Resources\icons8_book_shelf_64px.png" />
+    <None Include="Resources\icons8_bookmark_80px.png" />
+    <None Include="Resources\icons8_classroom_50px.png" />
+    <None Include="Resources\icons8_classroom_40px.png" />
+    <None Include="Resources\icons8_man_student_48px.png" />
+    <None Include="Resources\icons8_woman_student_48px.png" />
+    <None Include="Resources\icons8_book_philosophy_100px.png" />
+    <None Include="Resources\icons8_book_48px.png" />
+    <None Include="Resources\icons8_classroom_100px_1.png" />
+    <None Include="Resources\icons8_study_100px.png" />
+    <None Include="Resources\icons8_training_100px.png" />
+    <None Include="Resources\icons8_training_50px.png" />
+    <None Include="Resources\icons8_graduate_40px.png" />
+    <None Include="Resources\icons8_student_male_40px.png" />
+    <None Include="Resources\icons8_course_40px.png" />
+    <None Include="Resources\LOGODEEBO.jpg" />
+    <None Include="Resources\login.gif" />
+    <None Include="Resources\slidebank+login.gif" />
+    <None Include="Resources\PASS.png" />
+    <None Include="Resources\EAYS.png" />
     <None Include="Resources\users_32px.png" />
     <None Include="Resources\supplier_32px.png" />
     <None Include="Resources\sorting_32px.png" />

@@ -32,6 +32,7 @@
             DevExpress.XtraReports.UI.XRSummary xrSummary1 = new DevExpress.XtraReports.UI.XRSummary();
             DevExpress.XtraReports.UI.XRSummary xrSummary2 = new DevExpress.XtraReports.UI.XRSummary();
             DevExpress.DataAccess.EntityFramework.EFConnectionParameters efConnectionParameters1 = new DevExpress.DataAccess.EntityFramework.EFConnectionParameters();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(report_send_stud));
             this.TopMargin = new DevExpress.XtraReports.UI.TopMarginBand();
             this.xrLabel26 = new DevExpress.XtraReports.UI.XRLabel();
             this.pictureBox1 = new DevExpress.XtraReports.UI.XRPictureBox();
@@ -39,6 +40,8 @@
             this.xrLabel6 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel5 = new DevExpress.XtraReports.UI.XRLabel();
             this.BottomMargin = new DevExpress.XtraReports.UI.BottomMarginBand();
+            this.xrLabel31 = new DevExpress.XtraReports.UI.XRLabel();
+            this.xrLabel33 = new DevExpress.XtraReports.UI.XRLabel();
             this.pageInfo1 = new DevExpress.XtraReports.UI.XRPageInfo();
             this.pageInfo2 = new DevExpress.XtraReports.UI.XRPageInfo();
             this.ReportHeader = new DevExpress.XtraReports.UI.ReportHeaderBand();
@@ -116,7 +119,7 @@
             this.pictureBox1.AnchorHorizontal = ((DevExpress.XtraReports.UI.HorizontalAnchorStyles)((DevExpress.XtraReports.UI.HorizontalAnchorStyles.Left | DevExpress.XtraReports.UI.HorizontalAnchorStyles.Right)));
             this.pictureBox1.AnchorVertical = ((DevExpress.XtraReports.UI.VerticalAnchorStyles)((DevExpress.XtraReports.UI.VerticalAnchorStyles.Top | DevExpress.XtraReports.UI.VerticalAnchorStyles.Bottom)));
             this.pictureBox1.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "ImageSource", "[TBL_INST.INST_LOGO]")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "ImageSource", "[TBL_OPRATION].[TBL_INST].[INST_LOGO]")});
             this.pictureBox1.LocationFloat = new DevExpress.Utils.PointFloat(214.4443F, 21.875F);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.SizeF = new System.Drawing.SizeF(168.0139F, 92.08336F);
@@ -128,7 +131,7 @@
             this.xrLabel7.Borders = DevExpress.XtraPrinting.BorderSide.Left;
             this.xrLabel7.BorderWidth = 2F;
             this.xrLabel7.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[TBL_INST.INST_LOCATION]")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[TBL_OPRATION].[TBL_INST].[INST_LOCATION]")});
             this.xrLabel7.Font = new DevExpress.Drawing.DXFont("Arial", 12F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrLabel7.ForeColor = System.Drawing.Color.Black;
             this.xrLabel7.LocationFloat = new DevExpress.Utils.PointFloat(460.1587F, 51.45836F);
@@ -151,7 +154,7 @@
             this.xrLabel6.Borders = DevExpress.XtraPrinting.BorderSide.Left;
             this.xrLabel6.BorderWidth = 2F;
             this.xrLabel6.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[TBL_INST.INST_DESC]")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[TBL_OPRATION].[TBL_INST].[INST_DESC]")});
             this.xrLabel6.Font = new DevExpress.Drawing.DXFont("Arial", 12F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrLabel6.ForeColor = System.Drawing.Color.Black;
             this.xrLabel6.LocationFloat = new DevExpress.Utils.PointFloat(10F, 21.875F);
@@ -174,7 +177,7 @@
             this.xrLabel5.Borders = DevExpress.XtraPrinting.BorderSide.Left;
             this.xrLabel5.BorderWidth = 2F;
             this.xrLabel5.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[TBL_INST.INST_NAME]")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[TBL_OPRATION].[TBL_INST].[INST_NAME]")});
             this.xrLabel5.Font = new DevExpress.Drawing.DXFont("Arial", 16F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrLabel5.ForeColor = System.Drawing.Color.Black;
             this.xrLabel5.LocationFloat = new DevExpress.Utils.PointFloat(213.9669F, 129.1667F);
@@ -194,24 +197,56 @@
             // BottomMargin
             // 
             this.BottomMargin.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+            this.xrLabel31,
+            this.xrLabel33,
             this.pageInfo1,
             this.pageInfo2});
             this.BottomMargin.HeightF = 39.16696F;
             this.BottomMargin.Name = "BottomMargin";
+            // 
+            // xrLabel31
+            // 
+            this.xrLabel31.Font = new DevExpress.Drawing.DXFont("Arial", 14F, DevExpress.Drawing.DXFontStyle.Bold);
+            this.xrLabel31.ForeColor = System.Drawing.Color.Black;
+            this.xrLabel31.LocationFloat = new DevExpress.Utils.PointFloat(176.5027F, 0F);
+            this.xrLabel31.Name = "xrLabel31";
+            this.xrLabel31.SizeF = new System.Drawing.SizeF(90.26499F, 24.84182F);
+            this.xrLabel31.StyleName = "Title";
+            this.xrLabel31.StylePriority.UseFont = false;
+            this.xrLabel31.StylePriority.UseForeColor = false;
+            this.xrLabel31.StylePriority.UseTextAlignment = false;
+            this.xrLabel31.Text = "عميد المعهد";
+            this.xrLabel31.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
+            // 
+            // xrLabel33
+            // 
+            this.xrLabel33.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[TBL_INST].[INST_ADMIN]")});
+            this.xrLabel33.Font = new DevExpress.Drawing.DXFont("Arial", 14F, DevExpress.Drawing.DXFontStyle.Bold);
+            this.xrLabel33.ForeColor = System.Drawing.Color.Black;
+            this.xrLabel33.LocationFloat = new DevExpress.Utils.PointFloat(266.7678F, 0F);
+            this.xrLabel33.Name = "xrLabel33";
+            this.xrLabel33.SizeF = new System.Drawing.SizeF(227.2175F, 24.84182F);
+            this.xrLabel33.StyleName = "Title";
+            this.xrLabel33.StylePriority.UseFont = false;
+            this.xrLabel33.StylePriority.UseForeColor = false;
+            this.xrLabel33.StylePriority.UseTextAlignment = false;
+            this.xrLabel33.Text = "عميد المعهد";
+            this.xrLabel33.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
             // 
             // pageInfo1
             // 
             this.pageInfo1.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
             this.pageInfo1.Name = "pageInfo1";
             this.pageInfo1.PageInfo = DevExpress.XtraPrinting.PageInfo.DateTime;
-            this.pageInfo1.SizeF = new System.Drawing.SizeF(293.5F, 23F);
+            this.pageInfo1.SizeF = new System.Drawing.SizeF(176.5027F, 23F);
             this.pageInfo1.StyleName = "PageInfo";
             // 
             // pageInfo2
             // 
-            this.pageInfo2.LocationFloat = new DevExpress.Utils.PointFloat(293.5F, 0F);
+            this.pageInfo2.LocationFloat = new DevExpress.Utils.PointFloat(510.1666F, 0F);
             this.pageInfo2.Name = "pageInfo2";
-            this.pageInfo2.SizeF = new System.Drawing.SizeF(293.5F, 23F);
+            this.pageInfo2.SizeF = new System.Drawing.SizeF(76.8334F, 23F);
             this.pageInfo2.StyleName = "PageInfo";
             this.pageInfo2.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
             this.pageInfo2.TextFormatString = "Page {0} of {1}";
@@ -1005,6 +1040,8 @@
             this.GrandTotalBackground1,
             this.PageInfo});
             this.Version = "22.2";
+            this.Watermark.ImageSource = new DevExpress.XtraPrinting.Drawing.ImageSource("img", resources.GetString("report_send_stud.Watermark.ImageSource"));
+            this.Watermark.ImageTransparency = 214;
             this.DataSourceDemanded += new System.EventHandler<System.EventArgs>(this.report_send_stud_DataSourceDemanded);
             ((System.ComponentModel.ISupportInitialize)(this.efDataSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
@@ -1064,5 +1101,7 @@
         private DevExpress.XtraReports.UI.XRLabel xrLabel14;
         private DevExpress.XtraReports.UI.XRLabel xrLabel12;
         private DevExpress.XtraReports.UI.XRLabel xrLabel13;
+        private DevExpress.XtraReports.UI.XRLabel xrLabel31;
+        private DevExpress.XtraReports.UI.XRLabel xrLabel33;
     }
 }

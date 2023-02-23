@@ -17,8 +17,8 @@ namespace THAGBAN_INST.DATA
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public TBL_INST()
         {
-            this.TBL_BOX = new HashSet<TBL_BOX>();
             this.TBL_LEVLE = new HashSet<TBL_LEVLE>();
+            this.TBL_OPRATION = new HashSet<TBL_OPRATION>();
             this.TBL_SEND_STUD_LECT = new HashSet<TBL_SEND_STUD_LECT>();
             this.TBL_SEND_TECT_LECT = new HashSet<TBL_SEND_TECT_LECT>();
         }
@@ -30,12 +30,12 @@ namespace THAGBAN_INST.DATA
         public byte[] INST_LOGO { get; set; }
         public string NOTE { get; set; }
         public string INST_ADMIN { get; set; }
-        public Nullable<int> INST_TOTAL { get; set; }
+        public string INST_TOTAL { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<TBL_BOX> TBL_BOX { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<TBL_LEVLE> TBL_LEVLE { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<TBL_OPRATION> TBL_OPRATION { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<TBL_SEND_STUD_LECT> TBL_SEND_STUD_LECT { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

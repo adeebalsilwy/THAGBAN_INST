@@ -63,7 +63,7 @@ namespace THAGBAN_INST.FORM.FRM_LECTUER_MANG.reports
         }
         void print_report()
         {
-            send_lect _Lect = new send_lect();
+            reort_send_lect _Lect = new reort_send_lect();
 
             if (com_lect.Enabled == true && com_group.Enabled == false && com_stud.Enabled == false)
             {
@@ -438,9 +438,9 @@ namespace THAGBAN_INST.FORM.FRM_LECTUER_MANG.reports
         private void simpleButton2_Click_2(object sender, EventArgs e)
         {
             //  gridControl1.ShowRibbonPrintPreview();
-            send_lect rpt = new send_lect();
+            reort_send_lect rpt = new reort_send_lect();
             rpt.DataSource = gridControl1.DataSource;
-            report_lect_stud ro = new report_lect_stud();
+            report_send_stud ro = new report_send_stud();
 
             ro.DataSource = gridControl1.DataSource;
             

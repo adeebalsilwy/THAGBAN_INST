@@ -13,6 +13,7 @@ using THAGBAN_INST.FORM.FRM_EMP_MANEGER.employees;
 using THAGBAN_INST.DATA;
 using THAGBAN_INST.reports.emp_reports;
 using DevExpress.XtraReports.UI;
+using THAGBAN_INST.FORM.FRM_LECTUER_MANG.lect_report;
 
 namespace THAGBAN_INST.FORM.FRM_LECTUER_MANG.lect_send_stud
 {
@@ -139,7 +140,23 @@ namespace THAGBAN_INST.FORM.FRM_LECTUER_MANG.lect_send_stud
 
         private void simpleButton2_Click(object sender, EventArgs e)
         {
-            gridControl1.ShowRibbonPrintPreview();
+
+            report_send_stud repors = new report_send_stud();
+            List<TBL_SEND_STUD_LECT> list = new List<TBL_SEND_STUD_LECT>();
+
+            for (int i = 0; i < gridView2.RowCount; i++)
+            {
+                list.Add(gridView2.GetRow(i) as TBL_SEND_STUD_LECT);
+            }
+            repors.DataSource = list;
+            repors.DataMember = "";
+            int ints_id = THAGBAN_INST.Properties.Settings.Default.inst_id;
+            adl.method method = new adl.method();
+            method.data = con.TBL_INST.Find(ints_id).INST_LOGO;
+
+            repors.Watermark.Image = Image.FromStream(method.convert_image());
+            repors.ShowRibbonPreview();
+
         }
     }
 }

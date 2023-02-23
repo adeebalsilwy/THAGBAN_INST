@@ -23,11 +23,13 @@ namespace THAGBAN_INST.DATA
         public Nullable<System.DateTime> SEND_STUD_DATE { get; set; }
         public Nullable<int> INST_ID { get; set; }
         public Nullable<int> TECH_LECT_ID { get; set; }
+        public Nullable<int> OPRATIN_ID { get; set; }
     
-        public virtual TBL_LECTUER TBL_LECTUER { get; set; }
-        public virtual TBL_STUD_LECT TBL_STUD_LECT { get; set; }
-        public virtual TBL_STUDENTS TBL_STUDENTS { get; set; }
         public virtual TBL_INST TBL_INST { get; set; }
         public virtual TBL_LECT_TECH_COURS TBL_LECT_TECH_COURS { get; set; }
+        public virtual TBL_LECTUER TBL_LECTUER { get; set; }
+        public virtual TBL_OPRATION TBL_OPRATION { get; set; }
+        public virtual TBL_STUD_LECT TBL_STUD_LECT { get; set; }
+        public virtual TBL_STUDENTS TBL_STUDENTS { get; set; }
     }
 }

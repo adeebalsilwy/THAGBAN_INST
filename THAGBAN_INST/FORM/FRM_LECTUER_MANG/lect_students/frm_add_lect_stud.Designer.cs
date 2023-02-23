@@ -105,6 +105,7 @@
             this.com_lect.Name = "com_lect";
             this.com_lect.Size = new System.Drawing.Size(247, 41);
             this.com_lect.TabIndex = 60;
+            this.com_lect.SelectedIndexChanged += new System.EventHandler(this.com_lect_SelectedIndexChanged);
             this.com_lect.SelectionChangeCommitted += new System.EventHandler(this.com_term_year_SelectionChangeCommitted);
             this.com_lect.SelectedValueChanged += new System.EventHandler(this.com_term_year_SelectionChangeCommitted);
             // 
@@ -212,6 +213,7 @@
             this.com_group.Name = "com_group";
             this.com_group.Size = new System.Drawing.Size(247, 41);
             this.com_group.TabIndex = 90;
+            this.com_group.SelectedIndexChanged += new System.EventHandler(this.com_group_SelectedIndexChanged);
             // 
             // labelControl5
             // 

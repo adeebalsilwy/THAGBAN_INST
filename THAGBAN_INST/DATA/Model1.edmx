@@ -5,42 +5,14 @@
     <!-- SSDL content -->
     <edmx:StorageModels>
     <Schema Namespace="db_max_instModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
-        <EntityType Name="KpiDefinition">
+        <EntityType Name="TBL_ACTIVE_SYSTEM">
           <Key>
-            <PropertyRef Name="Oid" />
+            <PropertyRef Name="ID" />
           </Key>
-          <Property Name="Oid" Type="uniqueidentifier" Nullable="false" />
-          <Property Name="TargetObjectType" Type="nvarchar(max)" />
-          <Property Name="Changed" Type="datetime" />
-          <Property Name="KpiInstance" Type="uniqueidentifier" />
-          <Property Name="Name" Type="nvarchar" MaxLength="100" />
-          <Property Name="Active" Type="bit" />
-          <Property Name="Criteria" Type="nvarchar(max)" />
-          <Property Name="Expression" Type="nvarchar(max)" />
-          <Property Name="GreenZone" Type="float" />
-          <Property Name="RedZone" Type="float" />
-          <Property Name="Range" Type="nvarchar" MaxLength="100" />
-          <Property Name="Compare" Type="bit" />
-          <Property Name="RangeToCompare" Type="nvarchar" MaxLength="100" />
-          <Property Name="MeasurementFrequency" Type="int" />
-          <Property Name="MeasurementMode" Type="int" />
-          <Property Name="Direction" Type="int" />
-          <Property Name="ChangedOn" Type="datetime" />
-          <Property Name="SuppressedSeries" Type="nvarchar" MaxLength="100" />
-          <Property Name="EnableCustomizeRepresentation" Type="bit" />
-          <Property Name="OptimisticLockField" Type="int" />
-          <Property Name="GCRecord" Type="int" />
-        </EntityType>
-        <EntityType Name="KpiInstance">
-          <Key>
-            <PropertyRef Name="Oid" />
-          </Key>
-          <Property Name="Oid" Type="uniqueidentifier" Nullable="false" />
-          <Property Name="ForceMeasurementDateTime" Type="datetime" />
-          <Property Name="KpiDefinition" Type="uniqueidentifier" />
-          <Property Name="Settings" Type="nvarchar(max)" />
-          <Property Name="OptimisticLockField" Type="int" />
-          <Property Name="GCRecord" Type="int" />
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Mack_address" Type="nvarchar(max)" />
+          <Property Name="Key" Type="nvarchar(max)" />
+          <Property Name="Added_date" Type="date" />
         </EntityType>
         <EntityType Name="TBL_ATTENDS">
           <Key>
@@ -51,14 +23,6 @@
           <Property Name="ATTEND_GO" Type="int" Nullable="false" />
           <Property Name="ATTEND_DATE" Type="date" Nullable="false" />
           <Property Name="EMP_ID" Type="int" Nullable="false" />
-        </EntityType>
-        <EntityType Name="TBL_BOX">
-          <Key>
-            <PropertyRef Name="BOX_ID" />
-          </Key>
-          <Property Name="BOX_ID" Type="int" Nullable="false" />
-          <Property Name="BOX_AMOUNT" Type="nvarchar(max)" />
-          <Property Name="INST_ID" Type="int" />
         </EntityType>
         <EntityType Name="TBL_COURS">
           <Key>
@@ -139,7 +103,7 @@
           <Property Name="INST_LOGO" Type="image" />
           <Property Name="NOTE" Type="nvarchar" MaxLength="50" />
           <Property Name="INST_ADMIN" Type="nvarchar" MaxLength="50" />
-          <Property Name="INST_TOTAL" Type="int" />
+          <Property Name="INST_TOTAL" Type="nvarchar(max)" />
         </EntityType>
         <EntityType Name="TBL_JOB">
           <Key>
@@ -230,6 +194,16 @@
           <Property Name="MARK_YEAR" Type="date" />
           <Property Name="SPEC_ID" Type="int" />
         </EntityType>
+        <EntityType Name="TBL_OPRATION">
+          <Key>
+            <PropertyRef Name="OPRATION_ID" />
+          </Key>
+          <Property Name="OPRATION_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="OPRATION_TYPE" Type="nvarchar" MaxLength="50" />
+          <Property Name="PORATION_AMOUNT" Type="int" />
+          <Property Name="PORATION_DATE" Type="date" />
+          <Property Name="INST_ID" Type="int" Nullable="false" />
+        </EntityType>
         <EntityType Name="TBL_PART_SALARY">
           <Key>
             <PropertyRef Name="PART_ID" />
@@ -241,6 +215,33 @@
           <Property Name="PART_YEAR" Type="int" Nullable="false" />
           <Property Name="EMP_ID" Type="int" Nullable="false" />
           <Property Name="SLAARY_DATE" Type="date" Nullable="false" />
+          <Property Name="OPRATION_ID" Type="int" />
+        </EntityType>
+        <EntityType Name="TBL_ROULLS_LECTUER">
+          <Key>
+            <PropertyRef Name="USER_ID" />
+          </Key>
+          <Property Name="USER_ID" Type="int" Nullable="false" />
+          <Property Name="ch_activ" Type="bit" />
+          <Property Name="ch_admin" Type="bit" />
+          <Property Name="ch_apu" Type="bit" />
+          <Property Name="ch_attend" Type="bit" />
+          <Property Name="ch_cours_lect" Type="bit" />
+          <Property Name="ch_dept" Type="bit" />
+          <Property Name="ch_emp" Type="bit" />
+          <Property Name="ch_job" Type="bit" />
+          <Property Name="ch_lect" Type="bit" />
+          <Property Name="ch_lect_stud" Type="bit" />
+          <Property Name="ch_main" Type="bit" />
+          <Property Name="ch_mark" Type="bit" />
+          <Property Name="ch_matrila" Type="bit" />
+          <Property Name="ch_report" Type="bit" />
+          <Property Name="ch_sala" Type="bit" />
+          <Property Name="ch_send_stud" Type="bit" />
+          <Property Name="ch_send_tech" Type="bit" />
+          <Property Name="ch_sett" Type="bit" />
+          <Property Name="ch_stud" Type="bit" />
+          <Property Name="ch_tech_lec" Type="bit" />
         </EntityType>
         <EntityType Name="TBL_SALARY">
           <Key>
@@ -266,6 +267,7 @@
           <Property Name="SEND_STUD_DATE" Type="date" />
           <Property Name="INST_ID" Type="int" />
           <Property Name="TECH_LECT_ID" Type="int" />
+          <Property Name="OPRATIN_ID" Type="int" />
         </EntityType>
         <EntityType Name="TBL_SEND_TECT_LECT">
           <Key>
@@ -279,6 +281,7 @@
           <Property Name="REST" Type="int" />
           <Property Name="SEND_TECH_DATE" Type="date" />
           <Property Name="INST_ID" Type="int" />
+          <Property Name="OPRATION_ID" Type="int" />
         </EntityType>
         <EntityType Name="TBL_SPE_COURS">
           <Key>
@@ -373,30 +376,6 @@
           <Property Name="YEAR_NAME" Type="nvarchar" MaxLength="50" />
           <Property Name="SPEC_ID" Type="int" />
         </EntityType>
-        <Association Name="FK_KpiDefinition_KpiInstance">
-          <End Role="KpiInstance" Type="Self.KpiInstance" Multiplicity="0..1" />
-          <End Role="KpiDefinition" Type="Self.KpiDefinition" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="KpiInstance">
-              <PropertyRef Name="Oid" />
-            </Principal>
-            <Dependent Role="KpiDefinition">
-              <PropertyRef Name="KpiInstance" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_KpiInstance_KpiDefinition">
-          <End Role="KpiDefinition" Type="Self.KpiDefinition" Multiplicity="0..1" />
-          <End Role="KpiInstance" Type="Self.KpiInstance" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="KpiDefinition">
-              <PropertyRef Name="Oid" />
-            </Principal>
-            <Dependent Role="KpiInstance">
-              <PropertyRef Name="KpiDefinition" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <Association Name="FK_TBL_ATTENDS_TBL_EMPLOYEES">
           <End Role="TBL_EMPLOYEES" Type="Self.TBL_EMPLOYEES" Multiplicity="1" />
           <End Role="TBL_ATTENDS" Type="Self.TBL_ATTENDS" Multiplicity="*" />
@@ -406,18 +385,6 @@
             </Principal>
             <Dependent Role="TBL_ATTENDS">
               <PropertyRef Name="EMP_ID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_TBL_BOX_TBL_INST">
-          <End Role="TBL_INST" Type="Self.TBL_INST" Multiplicity="0..1" />
-          <End Role="TBL_BOX" Type="Self.TBL_BOX" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="TBL_INST">
-              <PropertyRef Name="INST_ID" />
-            </Principal>
-            <Dependent Role="TBL_BOX">
-              <PropertyRef Name="INST_ID" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -687,6 +654,18 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_TBL_OPRATION_TBL_INST">
+          <End Role="TBL_INST" Type="Self.TBL_INST" Multiplicity="1" />
+          <End Role="TBL_OPRATION" Type="Self.TBL_OPRATION" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TBL_INST">
+              <PropertyRef Name="INST_ID" />
+            </Principal>
+            <Dependent Role="TBL_OPRATION">
+              <PropertyRef Name="INST_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_TBL_PART_SALARY_TBL_EMPLOYEES">
           <End Role="TBL_EMPLOYEES" Type="Self.TBL_EMPLOYEES" Multiplicity="1" />
           <End Role="TBL_PART_SALARY" Type="Self.TBL_PART_SALARY" Multiplicity="*" />
@@ -696,6 +675,30 @@
             </Principal>
             <Dependent Role="TBL_PART_SALARY">
               <PropertyRef Name="EMP_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TBL_PART_SALARY_TBL_OPRATION">
+          <End Role="TBL_OPRATION" Type="Self.TBL_OPRATION" Multiplicity="0..1" />
+          <End Role="TBL_PART_SALARY" Type="Self.TBL_PART_SALARY" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TBL_OPRATION">
+              <PropertyRef Name="OPRATION_ID" />
+            </Principal>
+            <Dependent Role="TBL_PART_SALARY">
+              <PropertyRef Name="OPRATION_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TBL_ROULLS_LECTUER_TBL_USERS">
+          <End Role="TBL_USERS" Type="Self.TBL_USERS" Multiplicity="1" />
+          <End Role="TBL_ROULLS_LECTUER" Type="Self.TBL_ROULLS_LECTUER" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="TBL_USERS">
+              <PropertyRef Name="USER_ID" />
+            </Principal>
+            <Dependent Role="TBL_ROULLS_LECTUER">
+              <PropertyRef Name="USER_ID" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -759,6 +762,18 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_TBL_SEND_STUD_LECT_TBL_OPRATION">
+          <End Role="TBL_OPRATION" Type="Self.TBL_OPRATION" Multiplicity="0..1" />
+          <End Role="TBL_SEND_STUD_LECT" Type="Self.TBL_SEND_STUD_LECT" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TBL_OPRATION">
+              <PropertyRef Name="OPRATION_ID" />
+            </Principal>
+            <Dependent Role="TBL_SEND_STUD_LECT">
+              <PropertyRef Name="OPRATIN_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_TBL_SEND_STUD_LECT_TBL_STUDENTS">
           <End Role="TBL_STUDENTS" Type="Self.TBL_STUDENTS" Multiplicity="0..1" />
           <End Role="TBL_SEND_STUD_LECT" Type="Self.TBL_SEND_STUD_LECT" Multiplicity="*" />
@@ -816,6 +831,18 @@
             </Principal>
             <Dependent Role="TBL_SEND_TECT_LECT">
               <PropertyRef Name="LECT_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TBL_SEND_TECT_LECT_TBL_OPRATION">
+          <End Role="TBL_OPRATION" Type="Self.TBL_OPRATION" Multiplicity="0..1" />
+          <End Role="TBL_SEND_TECT_LECT" Type="Self.TBL_SEND_TECT_LECT" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TBL_OPRATION">
+              <PropertyRef Name="OPRATION_ID" />
+            </Principal>
+            <Dependent Role="TBL_SEND_TECT_LECT">
+              <PropertyRef Name="OPRATION_ID" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -1027,10 +1054,8 @@
         </Association>
         <Function Name="get_send_stud_query" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
         <EntityContainer Name="db_max_instModelStoreContainer">
-          <EntitySet Name="KpiDefinition" EntityType="Self.KpiDefinition" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="KpiInstance" EntityType="Self.KpiInstance" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TBL_ACTIVE_SYSTEM" EntityType="Self.TBL_ACTIVE_SYSTEM" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TBL_ATTENDS" EntityType="Self.TBL_ATTENDS" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="TBL_BOX" EntityType="Self.TBL_BOX" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TBL_COURS" EntityType="Self.TBL_COURS" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TBL_DEPT" EntityType="Self.TBL_DEPT" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TBL_EMPLOYEES" EntityType="Self.TBL_EMPLOYEES" Schema="dbo" store:Type="Tables" />
@@ -1046,7 +1071,9 @@
           <EntitySet Name="TBL_LECTUER" EntityType="Self.TBL_LECTUER" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TBL_LEVLE" EntityType="Self.TBL_LEVLE" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TBL_MARKS" EntityType="Self.TBL_MARKS" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TBL_OPRATION" EntityType="Self.TBL_OPRATION" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TBL_PART_SALARY" EntityType="Self.TBL_PART_SALARY" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TBL_ROULLS_LECTUER" EntityType="Self.TBL_ROULLS_LECTUER" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TBL_SALARY" EntityType="Self.TBL_SALARY" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TBL_SEND_STUD_LECT" EntityType="Self.TBL_SEND_STUD_LECT" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TBL_SEND_TECT_LECT" EntityType="Self.TBL_SEND_TECT_LECT" Schema="dbo" store:Type="Tables" />
@@ -1059,21 +1086,9 @@
           <EntitySet Name="TBL_TERMS" EntityType="Self.TBL_TERMS" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TBL_USERS" EntityType="Self.TBL_USERS" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TBL_YEARS" EntityType="Self.TBL_YEARS" Schema="dbo" store:Type="Tables" />
-          <AssociationSet Name="FK_KpiDefinition_KpiInstance" Association="Self.FK_KpiDefinition_KpiInstance">
-            <End Role="KpiInstance" EntitySet="KpiInstance" />
-            <End Role="KpiDefinition" EntitySet="KpiDefinition" />
-          </AssociationSet>
-          <AssociationSet Name="FK_KpiInstance_KpiDefinition" Association="Self.FK_KpiInstance_KpiDefinition">
-            <End Role="KpiDefinition" EntitySet="KpiDefinition" />
-            <End Role="KpiInstance" EntitySet="KpiInstance" />
-          </AssociationSet>
           <AssociationSet Name="FK_TBL_ATTENDS_TBL_EMPLOYEES" Association="Self.FK_TBL_ATTENDS_TBL_EMPLOYEES">
             <End Role="TBL_EMPLOYEES" EntitySet="TBL_EMPLOYEES" />
             <End Role="TBL_ATTENDS" EntitySet="TBL_ATTENDS" />
-          </AssociationSet>
-          <AssociationSet Name="FK_TBL_BOX_TBL_INST" Association="Self.FK_TBL_BOX_TBL_INST">
-            <End Role="TBL_INST" EntitySet="TBL_INST" />
-            <End Role="TBL_BOX" EntitySet="TBL_BOX" />
           </AssociationSet>
           <AssociationSet Name="FK_TBL_COURS_TBL_TERM" Association="Self.FK_TBL_COURS_TBL_TERM">
             <End Role="TBL_TERMS" EntitySet="TBL_TERMS" />
@@ -1159,9 +1174,21 @@
             <End Role="TBL_STUDENTS" EntitySet="TBL_STUDENTS" />
             <End Role="TBL_MARKS" EntitySet="TBL_MARKS" />
           </AssociationSet>
+          <AssociationSet Name="FK_TBL_OPRATION_TBL_INST" Association="Self.FK_TBL_OPRATION_TBL_INST">
+            <End Role="TBL_INST" EntitySet="TBL_INST" />
+            <End Role="TBL_OPRATION" EntitySet="TBL_OPRATION" />
+          </AssociationSet>
           <AssociationSet Name="FK_TBL_PART_SALARY_TBL_EMPLOYEES" Association="Self.FK_TBL_PART_SALARY_TBL_EMPLOYEES">
             <End Role="TBL_EMPLOYEES" EntitySet="TBL_EMPLOYEES" />
             <End Role="TBL_PART_SALARY" EntitySet="TBL_PART_SALARY" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TBL_PART_SALARY_TBL_OPRATION" Association="Self.FK_TBL_PART_SALARY_TBL_OPRATION">
+            <End Role="TBL_OPRATION" EntitySet="TBL_OPRATION" />
+            <End Role="TBL_PART_SALARY" EntitySet="TBL_PART_SALARY" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TBL_ROULLS_LECTUER_TBL_USERS" Association="Self.FK_TBL_ROULLS_LECTUER_TBL_USERS">
+            <End Role="TBL_USERS" EntitySet="TBL_USERS" />
+            <End Role="TBL_ROULLS_LECTUER" EntitySet="TBL_ROULLS_LECTUER" />
           </AssociationSet>
           <AssociationSet Name="FK_TBL_SALARY_TBL_EMPLOYEES" Association="Self.FK_TBL_SALARY_TBL_EMPLOYEES">
             <End Role="TBL_EMPLOYEES" EntitySet="TBL_EMPLOYEES" />
@@ -1183,6 +1210,10 @@
             <End Role="TBL_LECTUER" EntitySet="TBL_LECTUER" />
             <End Role="TBL_SEND_STUD_LECT" EntitySet="TBL_SEND_STUD_LECT" />
           </AssociationSet>
+          <AssociationSet Name="FK_TBL_SEND_STUD_LECT_TBL_OPRATION" Association="Self.FK_TBL_SEND_STUD_LECT_TBL_OPRATION">
+            <End Role="TBL_OPRATION" EntitySet="TBL_OPRATION" />
+            <End Role="TBL_SEND_STUD_LECT" EntitySet="TBL_SEND_STUD_LECT" />
+          </AssociationSet>
           <AssociationSet Name="FK_TBL_SEND_STUD_LECT_TBL_STUDENTS" Association="Self.FK_TBL_SEND_STUD_LECT_TBL_STUDENTS">
             <End Role="TBL_STUDENTS" EntitySet="TBL_STUDENTS" />
             <End Role="TBL_SEND_STUD_LECT" EntitySet="TBL_SEND_STUD_LECT" />
@@ -1201,6 +1232,10 @@
           </AssociationSet>
           <AssociationSet Name="FK_TBL_SEND_TECT_LECT_TBL_LECTUER" Association="Self.FK_TBL_SEND_TECT_LECT_TBL_LECTUER">
             <End Role="TBL_LECTUER" EntitySet="TBL_LECTUER" />
+            <End Role="TBL_SEND_TECT_LECT" EntitySet="TBL_SEND_TECT_LECT" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TBL_SEND_TECT_LECT_TBL_OPRATION" Association="Self.FK_TBL_SEND_TECT_LECT_TBL_OPRATION">
+            <End Role="TBL_OPRATION" EntitySet="TBL_OPRATION" />
             <End Role="TBL_SEND_TECT_LECT" EntitySet="TBL_SEND_TECT_LECT" />
           </AssociationSet>
           <AssociationSet Name="FK_TBL_SPE_COURS_TBL_COURS" Association="Self.FK_TBL_SPE_COURS_TBL_COURS">
@@ -1277,8 +1312,9 @@
     <edmx:ConceptualModels>
       <Schema Namespace="db_max_instModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
         <EntityContainer Name="db_max_instEntities" annotation:LazyLoadingEnabled="true">
+          <FunctionImport Name="get_send_stud_query" ReturnType="Collection(db_max_instModel.get_send_stud_query_Result)" />
+          <EntitySet Name="TBL_ACTIVE_SYSTEM" EntityType="db_max_instModel.TBL_ACTIVE_SYSTEM" />
           <EntitySet Name="TBL_ATTENDS" EntityType="db_max_instModel.TBL_ATTENDS" />
-          <EntitySet Name="TBL_BOX" EntityType="db_max_instModel.TBL_BOX" />
           <EntitySet Name="TBL_COURS" EntityType="db_max_instModel.TBL_COURS" />
           <EntitySet Name="TBL_DEPT" EntityType="db_max_instModel.TBL_DEPT" />
           <EntitySet Name="TBL_EMPLOYEES" EntityType="db_max_instModel.TBL_EMPLOYEES" />
@@ -1290,11 +1326,14 @@
           <EntitySet Name="TBL_LECT_COURS" EntityType="db_max_instModel.TBL_LECT_COURS" />
           <EntitySet Name="TBL_LECT_MARK" EntityType="db_max_instModel.TBL_LECT_MARK" />
           <EntitySet Name="TBL_LECT_MATRIAL" EntityType="db_max_instModel.TBL_LECT_MATRIAL" />
+          <EntitySet Name="TBL_LECT_TECH_COURS" EntityType="db_max_instModel.TBL_LECT_TECH_COURS" />
           <EntitySet Name="TBL_LECTUER" EntityType="db_max_instModel.TBL_LECTUER" />
           <EntitySet Name="TBL_LEVLE" EntityType="db_max_instModel.TBL_LEVLE" />
           <EntitySet Name="TBL_MARKS" EntityType="db_max_instModel.TBL_MARKS" />
+          <EntitySet Name="TBL_OPRATION" EntityType="db_max_instModel.TBL_OPRATION" />
           <EntitySet Name="TBL_PART_SALARY" EntityType="db_max_instModel.TBL_PART_SALARY" />
           <EntitySet Name="TBL_SALARY" EntityType="db_max_instModel.TBL_SALARY" />
+          <EntitySet Name="TBL_SEND_STUD_LECT" EntityType="db_max_instModel.TBL_SEND_STUD_LECT" />
           <EntitySet Name="TBL_SEND_TECT_LECT" EntityType="db_max_instModel.TBL_SEND_TECT_LECT" />
           <EntitySet Name="TBL_SPE_COURS" EntityType="db_max_instModel.TBL_SPE_COURS" />
           <EntitySet Name="TBL_SPECIAL" EntityType="db_max_instModel.TBL_SPECIAL" />
@@ -1308,10 +1347,6 @@
           <AssociationSet Name="FK_TBL_ATTENDS_TBL_EMPLOYEES" Association="db_max_instModel.FK_TBL_ATTENDS_TBL_EMPLOYEES">
             <End Role="TBL_EMPLOYEES" EntitySet="TBL_EMPLOYEES" />
             <End Role="TBL_ATTENDS" EntitySet="TBL_ATTENDS" />
-          </AssociationSet>
-          <AssociationSet Name="FK_TBL_BOX_TBL_INST" Association="db_max_instModel.FK_TBL_BOX_TBL_INST">
-            <End Role="TBL_INST" EntitySet="TBL_INST" />
-            <End Role="TBL_BOX" EntitySet="TBL_BOX" />
           </AssociationSet>
           <AssociationSet Name="FK_TBL_MARKS_TBL_COURS" Association="db_max_instModel.FK_TBL_MARKS_TBL_COURS">
             <End Role="TBL_COURS" EntitySet="TBL_COURS" />
@@ -1336,6 +1371,10 @@
           <AssociationSet Name="FK_TBL_HOLIDAYS_TBL_EMPLOYEES" Association="db_max_instModel.FK_TBL_HOLIDAYS_TBL_EMPLOYEES">
             <End Role="TBL_EMPLOYEES" EntitySet="TBL_EMPLOYEES" />
             <End Role="TBL_HOLIDAYS" EntitySet="TBL_HOLIDAYS" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TBL_LECT_TECH_COURS_TBL_EMPLOYEES" Association="db_max_instModel.FK_TBL_LECT_TECH_COURS_TBL_EMPLOYEES">
+            <End Role="TBL_EMPLOYEES" EntitySet="TBL_EMPLOYEES" />
+            <End Role="TBL_LECT_TECH_COURS" EntitySet="TBL_LECT_TECH_COURS" />
           </AssociationSet>
           <AssociationSet Name="FK_TBL_PART_SALARY_TBL_EMPLOYEES" Association="db_max_instModel.FK_TBL_PART_SALARY_TBL_EMPLOYEES">
             <End Role="TBL_EMPLOYEES" EntitySet="TBL_EMPLOYEES" />
@@ -1365,6 +1404,18 @@
             <End Role="TBL_INST" EntitySet="TBL_INST" />
             <End Role="TBL_LEVLE" EntitySet="TBL_LEVLE" />
           </AssociationSet>
+          <AssociationSet Name="FK_TBL_OPRATION_TBL_INST" Association="db_max_instModel.FK_TBL_OPRATION_TBL_INST">
+            <End Role="TBL_INST" EntitySet="TBL_INST" />
+            <End Role="TBL_OPRATION" EntitySet="TBL_OPRATION" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TBL_SEND_STUD_LECT_TBL_INST" Association="db_max_instModel.FK_TBL_SEND_STUD_LECT_TBL_INST">
+            <End Role="TBL_INST" EntitySet="TBL_INST" />
+            <End Role="TBL_SEND_STUD_LECT" EntitySet="TBL_SEND_STUD_LECT" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TBL_SEND_TECT_LECT_TBL_INST" Association="db_max_instModel.FK_TBL_SEND_TECT_LECT_TBL_INST">
+            <End Role="TBL_INST" EntitySet="TBL_INST" />
+            <End Role="TBL_SEND_TECT_LECT" EntitySet="TBL_SEND_TECT_LECT" />
+          </AssociationSet>
           <AssociationSet Name="FK_TBL_LECT_MARK_TBL_LECT_COURS" Association="db_max_instModel.FK_TBL_LECT_MARK_TBL_LECT_COURS">
             <End Role="TBL_LECT_COURS" EntitySet="TBL_LECT_COURS" />
             <End Role="TBL_LECT_MARK" EntitySet="TBL_LECT_MARK" />
@@ -1377,12 +1428,12 @@
             <End Role="TBL_LECT_COURS" EntitySet="TBL_LECT_COURS" />
             <End Role="TBL_LECTUER" EntitySet="TBL_LECTUER" />
           </AssociationSet>
-          <AssociationSet Name="FK_TBL_STUD_LECT_TBL_LECT_COURS" Association="db_max_instModel.FK_TBL_STUD_LECT_TBL_LECT_COURS">
-            <End Role="TBL_LECT_COURS" EntitySet="TBL_LECT_COURS" />
-            <End Role="TBL_STUD_LECT" EntitySet="TBL_STUD_LECT" />
-          </AssociationSet>
           <AssociationSet Name="FK_TBL_LECT_MARK_TBL_LECT_MATRIAL" Association="db_max_instModel.FK_TBL_LECT_MARK_TBL_LECT_MATRIAL">
             <End Role="TBL_LECT_MATRIAL" EntitySet="TBL_LECT_MATRIAL" />
+            <End Role="TBL_LECT_MARK" EntitySet="TBL_LECT_MARK" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TBL_LECT_MARK_TBL_LECT_TECH_COURS" Association="db_max_instModel.FK_TBL_LECT_MARK_TBL_LECT_TECH_COURS">
+            <End Role="TBL_LECT_TECH_COURS" EntitySet="TBL_LECT_TECH_COURS" />
             <End Role="TBL_LECT_MARK" EntitySet="TBL_LECT_MARK" />
           </AssociationSet>
           <AssociationSet Name="FK_TBL_LECT_MARK_TBL_LECTUER" Association="db_max_instModel.FK_TBL_LECT_MARK_TBL_LECTUER">
@@ -1400,6 +1451,26 @@
           <AssociationSet Name="FK_TBL_LECT_MATRIAL_TBL_LECTUER" Association="db_max_instModel.FK_TBL_LECT_MATRIAL_TBL_LECTUER">
             <End Role="TBL_LECTUER" EntitySet="TBL_LECTUER" />
             <End Role="TBL_LECT_MATRIAL" EntitySet="TBL_LECT_MATRIAL" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TBL_LECT_TECH_COURS_TBL_LECTUER" Association="db_max_instModel.FK_TBL_LECT_TECH_COURS_TBL_LECTUER">
+            <End Role="TBL_LECTUER" EntitySet="TBL_LECTUER" />
+            <End Role="TBL_LECT_TECH_COURS" EntitySet="TBL_LECT_TECH_COURS" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TBL_SEND_STUD_LECT_TBL_LECT_TECH_COURS" Association="db_max_instModel.FK_TBL_SEND_STUD_LECT_TBL_LECT_TECH_COURS">
+            <End Role="TBL_LECT_TECH_COURS" EntitySet="TBL_LECT_TECH_COURS" />
+            <End Role="TBL_SEND_STUD_LECT" EntitySet="TBL_SEND_STUD_LECT" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TBL_SEND_TECT_LECT_TBL_LECT_STUD_TECH" Association="db_max_instModel.FK_TBL_SEND_TECT_LECT_TBL_LECT_STUD_TECH">
+            <End Role="TBL_LECT_TECH_COURS" EntitySet="TBL_LECT_TECH_COURS" />
+            <End Role="TBL_SEND_TECT_LECT" EntitySet="TBL_SEND_TECT_LECT" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TBL_STUD_LECT_TBL_LECT_TECH_COURS" Association="db_max_instModel.FK_TBL_STUD_LECT_TBL_LECT_TECH_COURS">
+            <End Role="TBL_LECT_TECH_COURS" EntitySet="TBL_LECT_TECH_COURS" />
+            <End Role="TBL_STUD_LECT" EntitySet="TBL_STUD_LECT" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TBL_SEND_STUD_LECT_TBL_LECTUER" Association="db_max_instModel.FK_TBL_SEND_STUD_LECT_TBL_LECTUER">
+            <End Role="TBL_LECTUER" EntitySet="TBL_LECTUER" />
+            <End Role="TBL_SEND_STUD_LECT" EntitySet="TBL_SEND_STUD_LECT" />
           </AssociationSet>
           <AssociationSet Name="FK_TBL_SEND_TECT_LECT_TBL_LECTUER" Association="db_max_instModel.FK_TBL_SEND_TECT_LECT_TBL_LECTUER">
             <End Role="TBL_LECTUER" EntitySet="TBL_LECTUER" />
@@ -1420,6 +1491,26 @@
           <AssociationSet Name="FK_TBL_MARKS_TBL_STUDENTS" Association="db_max_instModel.FK_TBL_MARKS_TBL_STUDENTS">
             <End Role="TBL_STUDENTS" EntitySet="TBL_STUDENTS" />
             <End Role="TBL_MARKS" EntitySet="TBL_MARKS" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TBL_PART_SALARY_TBL_OPRATION" Association="db_max_instModel.FK_TBL_PART_SALARY_TBL_OPRATION">
+            <End Role="TBL_OPRATION" EntitySet="TBL_OPRATION" />
+            <End Role="TBL_PART_SALARY" EntitySet="TBL_PART_SALARY" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TBL_SEND_STUD_LECT_TBL_OPRATION" Association="db_max_instModel.FK_TBL_SEND_STUD_LECT_TBL_OPRATION">
+            <End Role="TBL_OPRATION" EntitySet="TBL_OPRATION" />
+            <End Role="TBL_SEND_STUD_LECT" EntitySet="TBL_SEND_STUD_LECT" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TBL_SEND_TECT_LECT_TBL_OPRATION" Association="db_max_instModel.FK_TBL_SEND_TECT_LECT_TBL_OPRATION">
+            <End Role="TBL_OPRATION" EntitySet="TBL_OPRATION" />
+            <End Role="TBL_SEND_TECT_LECT" EntitySet="TBL_SEND_TECT_LECT" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TBL_SEND_STUD_LECT_TBL_LECT_STUD_TECH" Association="db_max_instModel.FK_TBL_SEND_STUD_LECT_TBL_LECT_STUD_TECH">
+            <End Role="TBL_STUD_LECT" EntitySet="TBL_STUD_LECT" />
+            <End Role="TBL_SEND_STUD_LECT" EntitySet="TBL_SEND_STUD_LECT" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TBL_SEND_STUD_LECT_TBL_STUDENTS" Association="db_max_instModel.FK_TBL_SEND_STUD_LECT_TBL_STUDENTS">
+            <End Role="TBL_STUDENTS" EntitySet="TBL_STUDENTS" />
+            <End Role="TBL_SEND_STUD_LECT" EntitySet="TBL_SEND_STUD_LECT" />
           </AssociationSet>
           <AssociationSet Name="FK_TBL_COURS_TBL_TERM" Association="db_max_instModel.FK_TBL_COURS_TBL_TERM">
             <End Role="TBL_TERMS" EntitySet="TBL_TERMS" />
@@ -1469,64 +1560,36 @@
             <End Role="TBL_YEARS" EntitySet="TBL_YEARS" />
             <End Role="TBL_TERMS" EntitySet="TBL_TERMS" />
           </AssociationSet>
-          <EntitySet Name="KpiDefinitions" EntityType="db_max_instModel.KpiDefinition" />
-          <EntitySet Name="KpiInstances" EntityType="db_max_instModel.KpiInstance" />
-          <AssociationSet Name="FK_KpiDefinition_KpiInstance" Association="db_max_instModel.FK_KpiDefinition_KpiInstance">
-            <End Role="KpiInstance" EntitySet="KpiInstances" />
-            <End Role="KpiDefinition" EntitySet="KpiDefinitions" />
-          </AssociationSet>
-          <AssociationSet Name="FK_KpiInstance_KpiDefinition" Association="db_max_instModel.FK_KpiInstance_KpiDefinition">
-            <End Role="KpiDefinition" EntitySet="KpiDefinitions" />
-            <End Role="KpiInstance" EntitySet="KpiInstances" />
-          </AssociationSet>
-          <EntitySet Name="TBL_LECT_TECH_COURS" EntityType="db_max_instModel.TBL_LECT_TECH_COURS" />
-          <AssociationSet Name="FK_TBL_LECT_MARK_TBL_LECT_TECH_COURS" Association="db_max_instModel.FK_TBL_LECT_MARK_TBL_LECT_TECH_COURS">
-            <End Role="TBL_LECT_TECH_COURS" EntitySet="TBL_LECT_TECH_COURS" />
-            <End Role="TBL_LECT_MARK" EntitySet="TBL_LECT_MARK" />
-          </AssociationSet>
-          <AssociationSet Name="FK_TBL_SEND_TECT_LECT_TBL_LECT_STUD_TECH" Association="db_max_instModel.FK_TBL_SEND_TECT_LECT_TBL_LECT_STUD_TECH">
-            <End Role="TBL_LECT_TECH_COURS" EntitySet="TBL_LECT_TECH_COURS" />
-            <End Role="TBL_SEND_TECT_LECT" EntitySet="TBL_SEND_TECT_LECT" />
-          </AssociationSet>
-          <AssociationSet Name="FK_TBL_STUD_LECT_TBL_LECT_TECH_COURS" Association="db_max_instModel.FK_TBL_STUD_LECT_TBL_LECT_TECH_COURS">
-            <End Role="TBL_LECT_TECH_COURS" EntitySet="TBL_LECT_TECH_COURS" />
-            <End Role="TBL_STUD_LECT" EntitySet="TBL_STUD_LECT" />
-          </AssociationSet>
-          <AssociationSet Name="FK_TBL_LECT_TECH_COURS_TBL_LECTUER" Association="db_max_instModel.FK_TBL_LECT_TECH_COURS_TBL_LECTUER">
-            <End Role="TBL_LECTUER" EntitySet="TBL_LECTUER" />
-            <End Role="TBL_LECT_TECH_COURS" EntitySet="TBL_LECT_TECH_COURS" />
-          </AssociationSet>
-          <AssociationSet Name="FK_TBL_LECT_TECH_COURS_TBL_EMPLOYEES" Association="db_max_instModel.FK_TBL_LECT_TECH_COURS_TBL_EMPLOYEES">
-            <End Role="TBL_EMPLOYEES" EntitySet="TBL_EMPLOYEES" />
-            <End Role="TBL_LECT_TECH_COURS" EntitySet="TBL_LECT_TECH_COURS" />
-          </AssociationSet>
-          <EntitySet Name="TBL_SEND_STUD_LECT" EntityType="db_max_instModel.TBL_SEND_STUD_LECT" />
-          <AssociationSet Name="FK_TBL_SEND_STUD_LECT_TBL_LECTUER" Association="db_max_instModel.FK_TBL_SEND_STUD_LECT_TBL_LECTUER">
-            <End Role="TBL_LECTUER" EntitySet="TBL_LECTUER" />
-            <End Role="TBL_SEND_STUD_LECT" EntitySet="TBL_SEND_STUD_LECT" />
-          </AssociationSet>
-          <AssociationSet Name="FK_TBL_SEND_STUD_LECT_TBL_LECT_STUD_TECH" Association="db_max_instModel.FK_TBL_SEND_STUD_LECT_TBL_LECT_STUD_TECH">
-            <End Role="TBL_STUD_LECT" EntitySet="TBL_STUD_LECT" />
-            <End Role="TBL_SEND_STUD_LECT" EntitySet="TBL_SEND_STUD_LECT" />
-          </AssociationSet>
-          <AssociationSet Name="FK_TBL_SEND_STUD_LECT_TBL_STUDENTS" Association="db_max_instModel.FK_TBL_SEND_STUD_LECT_TBL_STUDENTS">
-            <End Role="TBL_STUDENTS" EntitySet="TBL_STUDENTS" />
-            <End Role="TBL_SEND_STUD_LECT" EntitySet="TBL_SEND_STUD_LECT" />
-          </AssociationSet>
-          <AssociationSet Name="FK_TBL_SEND_STUD_LECT_TBL_INST" Association="db_max_instModel.FK_TBL_SEND_STUD_LECT_TBL_INST">
-            <End Role="TBL_INST" EntitySet="TBL_INST" />
-            <End Role="TBL_SEND_STUD_LECT" EntitySet="TBL_SEND_STUD_LECT" />
-          </AssociationSet>
-          <AssociationSet Name="FK_TBL_SEND_TECT_LECT_TBL_INST" Association="db_max_instModel.FK_TBL_SEND_TECT_LECT_TBL_INST">
-            <End Role="TBL_INST" EntitySet="TBL_INST" />
-            <End Role="TBL_SEND_TECT_LECT" EntitySet="TBL_SEND_TECT_LECT" />
-          </AssociationSet>
-          <FunctionImport Name="get_send_stud_query" ReturnType="Collection(db_max_instModel.get_send_stud_query_Result)" />
-          <AssociationSet Name="FK_TBL_SEND_STUD_LECT_TBL_LECT_TECH_COURS" Association="db_max_instModel.FK_TBL_SEND_STUD_LECT_TBL_LECT_TECH_COURS">
-            <End Role="TBL_LECT_TECH_COURS" EntitySet="TBL_LECT_TECH_COURS" />
-            <End Role="TBL_SEND_STUD_LECT" EntitySet="TBL_SEND_STUD_LECT" />
+          <EntitySet Name="TBL_ROULLS_LECTUER" EntityType="db_max_instModel.TBL_ROULLS_LECTUER" />
+          <AssociationSet Name="FK_TBL_ROULLS_LECTUER_TBL_USERS" Association="db_max_instModel.FK_TBL_ROULLS_LECTUER_TBL_USERS">
+            <End Role="TBL_USERS" EntitySet="TBL_USERS" />
+            <End Role="TBL_ROULLS_LECTUER" EntitySet="TBL_ROULLS_LECTUER" />
           </AssociationSet>
           </EntityContainer>
+        <ComplexType Name="get_send_stud_query_Result">
+          <Property Type="Int32" Name="PAID_UP" Nullable="true" />
+          <Property Type="Int32" Name="REST" Nullable="true" />
+          <Property Type="DateTime" Name="SEND_STUD_DATE" Nullable="true" />
+          <Property Type="String" Name="LECT_NAME" Nullable="true" MaxLength="50" />
+          <Property Type="Int32" Name="LECT_PRICE" Nullable="true" />
+          <Property Type="String" Name="GROUP_NAME" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="STUD_NAME" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="STUD_LNAME" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="EMP_NAME" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="INST_NAME" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="INST_DESC" Nullable="true" />
+          <Property Type="String" Name="INST_LOCATION" Nullable="true" />
+          <Property Type="Binary" Name="INST_LOGO" Nullable="true" MaxLength="Max" />
+        </ComplexType>
+        <EntityType Name="TBL_ACTIVE_SYSTEM">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Mack_address" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Key" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Added_date" Type="DateTime" Precision="0" />
+        </EntityType>
         <EntityType Name="TBL_ATTENDS">
           <Key>
             <PropertyRef Name="ATTEND_ID" />
@@ -1537,15 +1600,6 @@
           <Property Name="ATTEND_DATE" Type="DateTime" Nullable="false" Precision="0" />
           <Property Name="EMP_ID" Type="Int32" Nullable="false" />
           <NavigationProperty Name="TBL_EMPLOYEES" Relationship="db_max_instModel.FK_TBL_ATTENDS_TBL_EMPLOYEES" FromRole="TBL_ATTENDS" ToRole="TBL_EMPLOYEES" />
-        </EntityType>
-        <EntityType Name="TBL_BOX">
-          <Key>
-            <PropertyRef Name="BOX_ID" />
-          </Key>
-          <Property Name="BOX_ID" Type="Int32" Nullable="false" />
-          <Property Name="BOX_AMOUNT" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="INST_ID" Type="Int32" />
-          <NavigationProperty Name="TBL_INST" Relationship="db_max_instModel.FK_TBL_BOX_TBL_INST" FromRole="TBL_BOX" ToRole="TBL_INST" />
         </EntityType>
         <EntityType Name="TBL_COURS">
           <Key>
@@ -1586,11 +1640,11 @@
           <NavigationProperty Name="TBL_ATTENDS" Relationship="db_max_instModel.FK_TBL_ATTENDS_TBL_EMPLOYEES" FromRole="TBL_EMPLOYEES" ToRole="TBL_ATTENDS" />
           <NavigationProperty Name="TBL_JOB" Relationship="db_max_instModel.FK_TBL_EMPLOYEES_TBL_JOB" FromRole="TBL_EMPLOYEES" ToRole="TBL_JOB" />
           <NavigationProperty Name="TBL_HOLIDAYS" Relationship="db_max_instModel.FK_TBL_HOLIDAYS_TBL_EMPLOYEES" FromRole="TBL_EMPLOYEES" ToRole="TBL_HOLIDAYS" />
+          <NavigationProperty Name="TBL_LECT_TECH_COURS" Relationship="db_max_instModel.FK_TBL_LECT_TECH_COURS_TBL_EMPLOYEES" FromRole="TBL_EMPLOYEES" ToRole="TBL_LECT_TECH_COURS" />
           <NavigationProperty Name="TBL_PART_SALARY" Relationship="db_max_instModel.FK_TBL_PART_SALARY_TBL_EMPLOYEES" FromRole="TBL_EMPLOYEES" ToRole="TBL_PART_SALARY" />
           <NavigationProperty Name="TBL_SALARY" Relationship="db_max_instModel.FK_TBL_SALARY_TBL_EMPLOYEES" FromRole="TBL_EMPLOYEES" ToRole="TBL_SALARY" />
           <NavigationProperty Name="TBL_SEND_TECT_LECT" Relationship="db_max_instModel.FK_TBL_SEND_TECT_LECT_TBL_LECT_TECHER" FromRole="TBL_EMPLOYEES" ToRole="TBL_SEND_TECT_LECT" />
           <NavigationProperty Name="TBL_USERS" Relationship="db_max_instModel.FK_USERS_TBL_EMPLOYEES" FromRole="TBL_EMPLOYEES" ToRole="TBL_USERS" />
-          <NavigationProperty Name="TBL_LECT_TECH_COURS" Relationship="db_max_instModel.FK_TBL_LECT_TECH_COURS_TBL_EMPLOYEES" FromRole="TBL_EMPLOYEES" ToRole="TBL_LECT_TECH_COURS" />
         </EntityType>
         <EntityType Name="TBL_FOLDER">
           <Key>
@@ -1642,9 +1696,9 @@
           <Property Name="INST_LOGO" Type="Binary" MaxLength="Max" FixedLength="false" />
           <Property Name="NOTE" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="INST_ADMIN" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="TBL_BOX" Relationship="db_max_instModel.FK_TBL_BOX_TBL_INST" FromRole="TBL_INST" ToRole="TBL_BOX" />
+          <Property Name="INST_TOTAL" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="TBL_LEVLE" Relationship="db_max_instModel.FK_TBL_LEVLE_TBL_INST" FromRole="TBL_INST" ToRole="TBL_LEVLE" />
-          <Property Name="INST_TOTAL" Type="Int32" />
+          <NavigationProperty Name="TBL_OPRATION" Relationship="db_max_instModel.FK_TBL_OPRATION_TBL_INST" FromRole="TBL_INST" ToRole="TBL_OPRATION" />
           <NavigationProperty Name="TBL_SEND_STUD_LECT" Relationship="db_max_instModel.FK_TBL_SEND_STUD_LECT_TBL_INST" FromRole="TBL_INST" ToRole="TBL_SEND_STUD_LECT" />
           <NavigationProperty Name="TBL_SEND_TECT_LECT" Relationship="db_max_instModel.FK_TBL_SEND_TECT_LECT_TBL_INST" FromRole="TBL_INST" ToRole="TBL_SEND_TECT_LECT" />
         </EntityType>
@@ -1672,7 +1726,6 @@
           <NavigationProperty Name="TBL_LECT_MARK" Relationship="db_max_instModel.FK_TBL_LECT_MARK_TBL_LECT_COURS" FromRole="TBL_LECT_COURS" ToRole="TBL_LECT_MARK" />
           <NavigationProperty Name="TBL_LECT_MATRIAL" Relationship="db_max_instModel.FK_TBL_LECT_MATRIAL_TBL_LECT_COURS" FromRole="TBL_LECT_COURS" ToRole="TBL_LECT_MATRIAL" />
           <NavigationProperty Name="TBL_LECTUER" Relationship="db_max_instModel.FK_TBL_LECTUER_TBL_LECT_COURS" FromRole="TBL_LECT_COURS" ToRole="TBL_LECTUER" />
-          <NavigationProperty Name="TBL_STUD_LECT" Relationship="db_max_instModel.FK_TBL_STUD_LECT_TBL_LECT_COURS" FromRole="TBL_LECT_COURS" ToRole="TBL_STUD_LECT" />
         </EntityType>
         <EntityType Name="TBL_LECT_MARK">
           <Key>
@@ -1688,10 +1741,10 @@
           <Property Name="LECT_STUD_ID" Type="Int32" />
           <NavigationProperty Name="TBL_LECT_COURS" Relationship="db_max_instModel.FK_TBL_LECT_MARK_TBL_LECT_COURS" FromRole="TBL_LECT_MARK" ToRole="TBL_LECT_COURS" />
           <NavigationProperty Name="TBL_LECT_MATRIAL" Relationship="db_max_instModel.FK_TBL_LECT_MARK_TBL_LECT_MATRIAL" FromRole="TBL_LECT_MARK" ToRole="TBL_LECT_MATRIAL" />
+          <NavigationProperty Name="TBL_LECT_TECH_COURS" Relationship="db_max_instModel.FK_TBL_LECT_MARK_TBL_LECT_TECH_COURS" FromRole="TBL_LECT_MARK" ToRole="TBL_LECT_TECH_COURS" />
           <NavigationProperty Name="TBL_LECTUER" Relationship="db_max_instModel.FK_TBL_LECT_MARK_TBL_LECTUER" FromRole="TBL_LECT_MARK" ToRole="TBL_LECTUER" />
           <NavigationProperty Name="TBL_STUD_LECT" Relationship="db_max_instModel.FK_TBL_LECT_MARK_TBL_STUD_LECT" FromRole="TBL_LECT_MARK" ToRole="TBL_STUD_LECT" />
           <NavigationProperty Name="TBL_STUDENTS" Relationship="db_max_instModel.FK_TBL_LECT_MARK_TBL_STUDENTS" FromRole="TBL_LECT_MARK" ToRole="TBL_STUDENTS" />
-          <NavigationProperty Name="TBL_LECT_TECH_COURS" Relationship="db_max_instModel.FK_TBL_LECT_MARK_TBL_LECT_TECH_COURS" FromRole="TBL_LECT_MARK" ToRole="TBL_LECT_TECH_COURS" />
         </EntityType>
         <EntityType Name="TBL_LECT_MATRIAL">
           <Key>
@@ -1705,6 +1758,27 @@
           <NavigationProperty Name="TBL_LECT_MARK" Relationship="db_max_instModel.FK_TBL_LECT_MARK_TBL_LECT_MATRIAL" FromRole="TBL_LECT_MATRIAL" ToRole="TBL_LECT_MARK" />
           <NavigationProperty Name="TBL_LECTUER" Relationship="db_max_instModel.FK_TBL_LECT_MATRIAL_TBL_LECTUER" FromRole="TBL_LECT_MATRIAL" ToRole="TBL_LECTUER" />
         </EntityType>
+        <EntityType Name="TBL_LECT_TECH_COURS">
+          <Key>
+            <PropertyRef Name="TECH_LECT_ID" />
+          </Key>
+          <Property Name="TECH_LECT_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="LECT_ID" Type="Int32" />
+          <Property Name="COURS_ID" Type="Int32" />
+          <Property Name="LECT_START_DATE" Type="DateTime" Precision="0" />
+          <Property Name="LECT_END_DATE" Type="DateTime" Precision="0" />
+          <Property Name="TECHER_ID" Type="Int32" />
+          <Property Name="TECHER_SALARY" Type="Int32" />
+          <Property Name="GROUP_NAME" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="LECT_TIME" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="STATE" Type="Boolean" />
+          <NavigationProperty Name="TBL_EMPLOYEES" Relationship="db_max_instModel.FK_TBL_LECT_TECH_COURS_TBL_EMPLOYEES" FromRole="TBL_LECT_TECH_COURS" ToRole="TBL_EMPLOYEES" />
+          <NavigationProperty Name="TBL_LECT_MARK" Relationship="db_max_instModel.FK_TBL_LECT_MARK_TBL_LECT_TECH_COURS" FromRole="TBL_LECT_TECH_COURS" ToRole="TBL_LECT_MARK" />
+          <NavigationProperty Name="TBL_LECTUER" Relationship="db_max_instModel.FK_TBL_LECT_TECH_COURS_TBL_LECTUER" FromRole="TBL_LECT_TECH_COURS" ToRole="TBL_LECTUER" />
+          <NavigationProperty Name="TBL_SEND_STUD_LECT" Relationship="db_max_instModel.FK_TBL_SEND_STUD_LECT_TBL_LECT_TECH_COURS" FromRole="TBL_LECT_TECH_COURS" ToRole="TBL_SEND_STUD_LECT" />
+          <NavigationProperty Name="TBL_SEND_TECT_LECT" Relationship="db_max_instModel.FK_TBL_SEND_TECT_LECT_TBL_LECT_STUD_TECH" FromRole="TBL_LECT_TECH_COURS" ToRole="TBL_SEND_TECT_LECT" />
+          <NavigationProperty Name="TBL_STUD_LECT" Relationship="db_max_instModel.FK_TBL_STUD_LECT_TBL_LECT_TECH_COURS" FromRole="TBL_LECT_TECH_COURS" ToRole="TBL_STUD_LECT" />
+        </EntityType>
         <EntityType Name="TBL_LECTUER">
           <Key>
             <PropertyRef Name="LECT_ID" />
@@ -1717,10 +1791,10 @@
           <NavigationProperty Name="TBL_LECT_COURS" Relationship="db_max_instModel.FK_TBL_LECTUER_TBL_LECT_COURS" FromRole="TBL_LECTUER" ToRole="TBL_LECT_COURS" />
           <NavigationProperty Name="TBL_LECT_MARK" Relationship="db_max_instModel.FK_TBL_LECT_MARK_TBL_LECTUER" FromRole="TBL_LECTUER" ToRole="TBL_LECT_MARK" />
           <NavigationProperty Name="TBL_LECT_MATRIAL" Relationship="db_max_instModel.FK_TBL_LECT_MATRIAL_TBL_LECTUER" FromRole="TBL_LECTUER" ToRole="TBL_LECT_MATRIAL" />
-          <NavigationProperty Name="TBL_SEND_TECT_LECT" Relationship="db_max_instModel.FK_TBL_SEND_TECT_LECT_TBL_LECTUER" FromRole="TBL_LECTUER" ToRole="TBL_SEND_TECT_LECT" />
-          <NavigationProperty Name="TBL_STUD_LECT" Relationship="db_max_instModel.FK_TBL_STUD_LECT_TBL_LECTUER" FromRole="TBL_LECTUER" ToRole="TBL_STUD_LECT" />
           <NavigationProperty Name="TBL_LECT_TECH_COURS" Relationship="db_max_instModel.FK_TBL_LECT_TECH_COURS_TBL_LECTUER" FromRole="TBL_LECTUER" ToRole="TBL_LECT_TECH_COURS" />
           <NavigationProperty Name="TBL_SEND_STUD_LECT" Relationship="db_max_instModel.FK_TBL_SEND_STUD_LECT_TBL_LECTUER" FromRole="TBL_LECTUER" ToRole="TBL_SEND_STUD_LECT" />
+          <NavigationProperty Name="TBL_SEND_TECT_LECT" Relationship="db_max_instModel.FK_TBL_SEND_TECT_LECT_TBL_LECTUER" FromRole="TBL_LECTUER" ToRole="TBL_SEND_TECT_LECT" />
+          <NavigationProperty Name="TBL_STUD_LECT" Relationship="db_max_instModel.FK_TBL_STUD_LECT_TBL_LECTUER" FromRole="TBL_LECTUER" ToRole="TBL_STUD_LECT" />
         </EntityType>
         <EntityType Name="TBL_LEVLE">
           <Key>
@@ -1749,6 +1823,20 @@
           <NavigationProperty Name="TBL_SPECIAL" Relationship="db_max_instModel.FK_TBL_MARKS_TBL_SPECIAL" FromRole="TBL_MARKS" ToRole="TBL_SPECIAL" />
           <NavigationProperty Name="TBL_STUDENTS" Relationship="db_max_instModel.FK_TBL_MARKS_TBL_STUDENTS" FromRole="TBL_MARKS" ToRole="TBL_STUDENTS" />
         </EntityType>
+        <EntityType Name="TBL_OPRATION">
+          <Key>
+            <PropertyRef Name="OPRATION_ID" />
+          </Key>
+          <Property Name="OPRATION_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="OPRATION_TYPE" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="PORATION_AMOUNT" Type="Int32" />
+          <Property Name="PORATION_DATE" Type="DateTime" Precision="0" />
+          <Property Name="INST_ID" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="TBL_INST" Relationship="db_max_instModel.FK_TBL_OPRATION_TBL_INST" FromRole="TBL_OPRATION" ToRole="TBL_INST" />
+          <NavigationProperty Name="TBL_PART_SALARY" Relationship="db_max_instModel.FK_TBL_PART_SALARY_TBL_OPRATION" FromRole="TBL_OPRATION" ToRole="TBL_PART_SALARY" />
+          <NavigationProperty Name="TBL_SEND_STUD_LECT" Relationship="db_max_instModel.FK_TBL_SEND_STUD_LECT_TBL_OPRATION" FromRole="TBL_OPRATION" ToRole="TBL_SEND_STUD_LECT" />
+          <NavigationProperty Name="TBL_SEND_TECT_LECT" Relationship="db_max_instModel.FK_TBL_SEND_TECT_LECT_TBL_OPRATION" FromRole="TBL_OPRATION" ToRole="TBL_SEND_TECT_LECT" />
+        </EntityType>
         <EntityType Name="TBL_PART_SALARY">
           <Key>
             <PropertyRef Name="PART_ID" />
@@ -1760,7 +1848,9 @@
           <Property Name="PART_YEAR" Type="Int32" Nullable="false" />
           <Property Name="EMP_ID" Type="Int32" Nullable="false" />
           <Property Name="SLAARY_DATE" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="OPRATION_ID" Type="Int32" />
           <NavigationProperty Name="TBL_EMPLOYEES" Relationship="db_max_instModel.FK_TBL_PART_SALARY_TBL_EMPLOYEES" FromRole="TBL_PART_SALARY" ToRole="TBL_EMPLOYEES" />
+          <NavigationProperty Name="TBL_OPRATION" Relationship="db_max_instModel.FK_TBL_PART_SALARY_TBL_OPRATION" FromRole="TBL_PART_SALARY" ToRole="TBL_OPRATION" />
         </EntityType>
         <EntityType Name="TBL_SALARY">
           <Key>
@@ -1774,6 +1864,27 @@
           <Property Name="EMP_ID" Type="Int32" />
           <NavigationProperty Name="TBL_EMPLOYEES" Relationship="db_max_instModel.FK_TBL_SALARY_TBL_EMPLOYEES" FromRole="TBL_SALARY" ToRole="TBL_EMPLOYEES" />
         </EntityType>
+        <EntityType Name="TBL_SEND_STUD_LECT">
+          <Key>
+            <PropertyRef Name="SEND_STUD_ID" />
+          </Key>
+          <Property Name="SEND_STUD_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="STUD_ID" Type="Int32" />
+          <Property Name="STUD_LECT_ID" Type="Int32" />
+          <Property Name="PAID_UP" Type="Int32" />
+          <Property Name="LECT_ID" Type="Int32" />
+          <Property Name="REST" Type="Int32" />
+          <Property Name="SEND_STUD_DATE" Type="DateTime" Precision="0" />
+          <Property Name="INST_ID" Type="Int32" />
+          <Property Name="TECH_LECT_ID" Type="Int32" />
+          <Property Name="OPRATIN_ID" Type="Int32" />
+          <NavigationProperty Name="TBL_INST" Relationship="db_max_instModel.FK_TBL_SEND_STUD_LECT_TBL_INST" FromRole="TBL_SEND_STUD_LECT" ToRole="TBL_INST" />
+          <NavigationProperty Name="TBL_LECT_TECH_COURS" Relationship="db_max_instModel.FK_TBL_SEND_STUD_LECT_TBL_LECT_TECH_COURS" FromRole="TBL_SEND_STUD_LECT" ToRole="TBL_LECT_TECH_COURS" />
+          <NavigationProperty Name="TBL_LECTUER" Relationship="db_max_instModel.FK_TBL_SEND_STUD_LECT_TBL_LECTUER" FromRole="TBL_SEND_STUD_LECT" ToRole="TBL_LECTUER" />
+          <NavigationProperty Name="TBL_OPRATION" Relationship="db_max_instModel.FK_TBL_SEND_STUD_LECT_TBL_OPRATION" FromRole="TBL_SEND_STUD_LECT" ToRole="TBL_OPRATION" />
+          <NavigationProperty Name="TBL_STUD_LECT" Relationship="db_max_instModel.FK_TBL_SEND_STUD_LECT_TBL_LECT_STUD_TECH" FromRole="TBL_SEND_STUD_LECT" ToRole="TBL_STUD_LECT" />
+          <NavigationProperty Name="TBL_STUDENTS" Relationship="db_max_instModel.FK_TBL_SEND_STUD_LECT_TBL_STUDENTS" FromRole="TBL_SEND_STUD_LECT" ToRole="TBL_STUDENTS" />
+        </EntityType>
         <EntityType Name="TBL_SEND_TECT_LECT">
           <Key>
             <PropertyRef Name="SEND_STUD_ID" />
@@ -1785,11 +1896,13 @@
           <Property Name="LECT_ID" Type="Int32" />
           <Property Name="REST" Type="Int32" />
           <Property Name="SEND_TECH_DATE" Type="DateTime" Precision="0" />
-          <NavigationProperty Name="TBL_EMPLOYEES" Relationship="db_max_instModel.FK_TBL_SEND_TECT_LECT_TBL_LECT_TECHER" FromRole="TBL_SEND_TECT_LECT" ToRole="TBL_EMPLOYEES" />
-          <NavigationProperty Name="TBL_LECTUER" Relationship="db_max_instModel.FK_TBL_SEND_TECT_LECT_TBL_LECTUER" FromRole="TBL_SEND_TECT_LECT" ToRole="TBL_LECTUER" />
-          <NavigationProperty Name="TBL_LECT_TECH_COURS" Relationship="db_max_instModel.FK_TBL_SEND_TECT_LECT_TBL_LECT_STUD_TECH" FromRole="TBL_SEND_TECT_LECT" ToRole="TBL_LECT_TECH_COURS" />
           <Property Name="INST_ID" Type="Int32" />
+          <Property Name="OPRATION_ID" Type="Int32" />
+          <NavigationProperty Name="TBL_EMPLOYEES" Relationship="db_max_instModel.FK_TBL_SEND_TECT_LECT_TBL_LECT_TECHER" FromRole="TBL_SEND_TECT_LECT" ToRole="TBL_EMPLOYEES" />
           <NavigationProperty Name="TBL_INST" Relationship="db_max_instModel.FK_TBL_SEND_TECT_LECT_TBL_INST" FromRole="TBL_SEND_TECT_LECT" ToRole="TBL_INST" />
+          <NavigationProperty Name="TBL_LECT_TECH_COURS" Relationship="db_max_instModel.FK_TBL_SEND_TECT_LECT_TBL_LECT_STUD_TECH" FromRole="TBL_SEND_TECT_LECT" ToRole="TBL_LECT_TECH_COURS" />
+          <NavigationProperty Name="TBL_LECTUER" Relationship="db_max_instModel.FK_TBL_SEND_TECT_LECT_TBL_LECTUER" FromRole="TBL_SEND_TECT_LECT" ToRole="TBL_LECTUER" />
+          <NavigationProperty Name="TBL_OPRATION" Relationship="db_max_instModel.FK_TBL_SEND_TECT_LECT_TBL_OPRATION" FromRole="TBL_SEND_TECT_LECT" ToRole="TBL_OPRATION" />
         </EntityType>
         <EntityType Name="TBL_SPE_COURS">
           <Key>
@@ -1833,12 +1946,11 @@
           <Property Name="LECT_TECH_ID" Type="Int32" />
           <Property Name="COURS_ID" Type="Int32" />
           <Property Name="LECT_STUD_DATE" Type="DateTime" Precision="0" />
-          <NavigationProperty Name="TBL_LECT_COURS" Relationship="db_max_instModel.FK_TBL_STUD_LECT_TBL_LECT_COURS" FromRole="TBL_STUD_LECT" ToRole="TBL_LECT_COURS" />
           <NavigationProperty Name="TBL_LECT_MARK" Relationship="db_max_instModel.FK_TBL_LECT_MARK_TBL_STUD_LECT" FromRole="TBL_STUD_LECT" ToRole="TBL_LECT_MARK" />
-          <NavigationProperty Name="TBL_LECTUER" Relationship="db_max_instModel.FK_TBL_STUD_LECT_TBL_LECTUER" FromRole="TBL_STUD_LECT" ToRole="TBL_LECTUER" />
-          <NavigationProperty Name="TBL_STUDENTS" Relationship="db_max_instModel.FK_TBL_STUD_LECT_TBL_STUDENTS" FromRole="TBL_STUD_LECT" ToRole="TBL_STUDENTS" />
           <NavigationProperty Name="TBL_LECT_TECH_COURS" Relationship="db_max_instModel.FK_TBL_STUD_LECT_TBL_LECT_TECH_COURS" FromRole="TBL_STUD_LECT" ToRole="TBL_LECT_TECH_COURS" />
+          <NavigationProperty Name="TBL_LECTUER" Relationship="db_max_instModel.FK_TBL_STUD_LECT_TBL_LECTUER" FromRole="TBL_STUD_LECT" ToRole="TBL_LECTUER" />
           <NavigationProperty Name="TBL_SEND_STUD_LECT" Relationship="db_max_instModel.FK_TBL_SEND_STUD_LECT_TBL_LECT_STUD_TECH" FromRole="TBL_STUD_LECT" ToRole="TBL_SEND_STUD_LECT" />
+          <NavigationProperty Name="TBL_STUDENTS" Relationship="db_max_instModel.FK_TBL_STUD_LECT_TBL_STUDENTS" FromRole="TBL_STUD_LECT" ToRole="TBL_STUDENTS" />
         </EntityType>
         <EntityType Name="TBL_STUD_SPEC">
           <Key>
@@ -1882,10 +1994,10 @@
           <NavigationProperty Name="TBL_FOLDER" Relationship="db_max_instModel.FK_TBL_FOLDER_TBL_STUDENTS" FromRole="TBL_STUDENTS" ToRole="TBL_FOLDER" />
           <NavigationProperty Name="TBL_LECT_MARK" Relationship="db_max_instModel.FK_TBL_LECT_MARK_TBL_STUDENTS" FromRole="TBL_STUDENTS" ToRole="TBL_LECT_MARK" />
           <NavigationProperty Name="TBL_MARKS" Relationship="db_max_instModel.FK_TBL_MARKS_TBL_STUDENTS" FromRole="TBL_STUDENTS" ToRole="TBL_MARKS" />
+          <NavigationProperty Name="TBL_SEND_STUD_LECT" Relationship="db_max_instModel.FK_TBL_SEND_STUD_LECT_TBL_STUDENTS" FromRole="TBL_STUDENTS" ToRole="TBL_SEND_STUD_LECT" />
           <NavigationProperty Name="TBL_STUD_LECT" Relationship="db_max_instModel.FK_TBL_STUD_LECT_TBL_STUDENTS" FromRole="TBL_STUDENTS" ToRole="TBL_STUD_LECT" />
           <NavigationProperty Name="TBL_STUD_SPEC" Relationship="db_max_instModel.FK_TBL_STUD_SPEC_TBL_STUD_SPEC" FromRole="TBL_STUDENTS" ToRole="TBL_STUD_SPEC" />
           <NavigationProperty Name="TBL_STUD_STUDY_COURS" Relationship="db_max_instModel.FK_TBL_STUD_STUDY_COURS_TBL_STUDENTS" FromRole="TBL_STUDENTS" ToRole="TBL_STUD_STUDY_COURS" />
-          <NavigationProperty Name="TBL_SEND_STUD_LECT" Relationship="db_max_instModel.FK_TBL_SEND_STUD_LECT_TBL_STUDENTS" FromRole="TBL_STUDENTS" ToRole="TBL_SEND_STUD_LECT" />
         </EntityType>
         <EntityType Name="TBL_TERMS">
           <Key>
@@ -1909,6 +2021,7 @@
           <Property Name="USER_PASS" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="EMP_ID" Type="Int32" Nullable="false" />
           <NavigationProperty Name="TBL_EMPLOYEES" Relationship="db_max_instModel.FK_USERS_TBL_EMPLOYEES" FromRole="TBL_USERS" ToRole="TBL_EMPLOYEES" />
+          <NavigationProperty Name="TBL_ROULLS_LECTUER" Relationship="db_max_instModel.FK_TBL_ROULLS_LECTUER_TBL_USERS" FromRole="TBL_USERS" ToRole="TBL_ROULLS_LECTUER" />
         </EntityType>
         <EntityType Name="TBL_YEARS">
           <Key>
@@ -1931,18 +2044,6 @@
             </Principal>
             <Dependent Role="TBL_ATTENDS">
               <PropertyRef Name="EMP_ID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_TBL_BOX_TBL_INST">
-          <End Type="db_max_instModel.TBL_INST" Role="TBL_INST" Multiplicity="0..1" />
-          <End Type="db_max_instModel.TBL_BOX" Role="TBL_BOX" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="TBL_INST">
-              <PropertyRef Name="INST_ID" />
-            </Principal>
-            <Dependent Role="TBL_BOX">
-              <PropertyRef Name="INST_ID" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -2019,6 +2120,18 @@
             </Principal>
             <Dependent Role="TBL_HOLIDAYS">
               <PropertyRef Name="EMP_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TBL_LECT_TECH_COURS_TBL_EMPLOYEES">
+          <End Type="db_max_instModel.TBL_EMPLOYEES" Role="TBL_EMPLOYEES" Multiplicity="0..1" />
+          <End Type="db_max_instModel.TBL_LECT_TECH_COURS" Role="TBL_LECT_TECH_COURS" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TBL_EMPLOYEES">
+              <PropertyRef Name="EMP_ID" />
+            </Principal>
+            <Dependent Role="TBL_LECT_TECH_COURS">
+              <PropertyRef Name="TECHER_ID" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -2108,6 +2221,42 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_TBL_OPRATION_TBL_INST">
+          <End Type="db_max_instModel.TBL_INST" Role="TBL_INST" Multiplicity="1" />
+          <End Type="db_max_instModel.TBL_OPRATION" Role="TBL_OPRATION" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TBL_INST">
+              <PropertyRef Name="INST_ID" />
+            </Principal>
+            <Dependent Role="TBL_OPRATION">
+              <PropertyRef Name="INST_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TBL_SEND_STUD_LECT_TBL_INST">
+          <End Type="db_max_instModel.TBL_INST" Role="TBL_INST" Multiplicity="0..1" />
+          <End Type="db_max_instModel.TBL_SEND_STUD_LECT" Role="TBL_SEND_STUD_LECT" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TBL_INST">
+              <PropertyRef Name="INST_ID" />
+            </Principal>
+            <Dependent Role="TBL_SEND_STUD_LECT">
+              <PropertyRef Name="INST_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TBL_SEND_TECT_LECT_TBL_INST">
+          <End Type="db_max_instModel.TBL_INST" Role="TBL_INST" Multiplicity="0..1" />
+          <End Type="db_max_instModel.TBL_SEND_TECT_LECT" Role="TBL_SEND_TECT_LECT" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TBL_INST">
+              <PropertyRef Name="INST_ID" />
+            </Principal>
+            <Dependent Role="TBL_SEND_TECT_LECT">
+              <PropertyRef Name="INST_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_TBL_LECT_MARK_TBL_LECT_COURS">
           <End Type="db_max_instModel.TBL_LECT_COURS" Role="TBL_LECT_COURS" Multiplicity="0..1" />
           <End Type="db_max_instModel.TBL_LECT_MARK" Role="TBL_LECT_MARK" Multiplicity="*" />
@@ -2148,18 +2297,6 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_TBL_STUD_LECT_TBL_LECT_COURS">
-          <End Type="db_max_instModel.TBL_LECT_COURS" Role="TBL_LECT_COURS" Multiplicity="0..1" />
-          <End Type="db_max_instModel.TBL_STUD_LECT" Role="TBL_STUD_LECT" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="TBL_LECT_COURS">
-              <PropertyRef Name="LECT_COURS_ID" />
-            </Principal>
-            <Dependent Role="TBL_STUD_LECT">
-              <PropertyRef Name="COURS_ID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <Association Name="FK_TBL_LECT_MARK_TBL_LECT_MATRIAL">
           <End Type="db_max_instModel.TBL_LECT_MATRIAL" Role="TBL_LECT_MATRIAL" Multiplicity="0..1" />
           <End Type="db_max_instModel.TBL_LECT_MARK" Role="TBL_LECT_MARK" Multiplicity="*" />
@@ -2169,6 +2306,20 @@
             </Principal>
             <Dependent Role="TBL_LECT_MARK">
               <PropertyRef Name="MATRIAL_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TBL_LECT_MARK_TBL_LECT_TECH_COURS">
+          <End Type="db_max_instModel.TBL_LECT_TECH_COURS" Role="TBL_LECT_TECH_COURS" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Type="db_max_instModel.TBL_LECT_MARK" Role="TBL_LECT_MARK" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TBL_LECT_TECH_COURS">
+              <PropertyRef Name="TECH_LECT_ID" />
+            </Principal>
+            <Dependent Role="TBL_LECT_MARK">
+              <PropertyRef Name="LECT_TECH_ID" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -2218,6 +2369,66 @@
               <PropertyRef Name="LECT_ID" />
             </Principal>
             <Dependent Role="TBL_LECT_MATRIAL">
+              <PropertyRef Name="LECT_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TBL_LECT_TECH_COURS_TBL_LECTUER">
+          <End Type="db_max_instModel.TBL_LECTUER" Role="TBL_LECTUER" Multiplicity="0..1" />
+          <End Type="db_max_instModel.TBL_LECT_TECH_COURS" Role="TBL_LECT_TECH_COURS" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TBL_LECTUER">
+              <PropertyRef Name="LECT_ID" />
+            </Principal>
+            <Dependent Role="TBL_LECT_TECH_COURS">
+              <PropertyRef Name="LECT_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TBL_SEND_STUD_LECT_TBL_LECT_TECH_COURS">
+          <End Type="db_max_instModel.TBL_LECT_TECH_COURS" Role="TBL_LECT_TECH_COURS" Multiplicity="0..1" />
+          <End Type="db_max_instModel.TBL_SEND_STUD_LECT" Role="TBL_SEND_STUD_LECT" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TBL_LECT_TECH_COURS">
+              <PropertyRef Name="TECH_LECT_ID" />
+            </Principal>
+            <Dependent Role="TBL_SEND_STUD_LECT">
+              <PropertyRef Name="TECH_LECT_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TBL_SEND_TECT_LECT_TBL_LECT_STUD_TECH">
+          <End Type="db_max_instModel.TBL_LECT_TECH_COURS" Role="TBL_LECT_TECH_COURS" Multiplicity="0..1" />
+          <End Type="db_max_instModel.TBL_SEND_TECT_LECT" Role="TBL_SEND_TECT_LECT" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TBL_LECT_TECH_COURS">
+              <PropertyRef Name="TECH_LECT_ID" />
+            </Principal>
+            <Dependent Role="TBL_SEND_TECT_LECT">
+              <PropertyRef Name="TECH_LECT_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TBL_STUD_LECT_TBL_LECT_TECH_COURS">
+          <End Type="db_max_instModel.TBL_LECT_TECH_COURS" Role="TBL_LECT_TECH_COURS" Multiplicity="0..1" />
+          <End Type="db_max_instModel.TBL_STUD_LECT" Role="TBL_STUD_LECT" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TBL_LECT_TECH_COURS">
+              <PropertyRef Name="TECH_LECT_ID" />
+            </Principal>
+            <Dependent Role="TBL_STUD_LECT">
+              <PropertyRef Name="LECT_TECH_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TBL_SEND_STUD_LECT_TBL_LECTUER">
+          <End Type="db_max_instModel.TBL_LECTUER" Role="TBL_LECTUER" Multiplicity="0..1" />
+          <End Type="db_max_instModel.TBL_SEND_STUD_LECT" Role="TBL_SEND_STUD_LECT" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TBL_LECTUER">
+              <PropertyRef Name="LECT_ID" />
+            </Principal>
+            <Dependent Role="TBL_SEND_STUD_LECT">
               <PropertyRef Name="LECT_ID" />
             </Dependent>
           </ReferentialConstraint>
@@ -2278,6 +2489,66 @@
               <PropertyRef Name="STUD_ID" />
             </Principal>
             <Dependent Role="TBL_MARKS">
+              <PropertyRef Name="STUD_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TBL_PART_SALARY_TBL_OPRATION">
+          <End Type="db_max_instModel.TBL_OPRATION" Role="TBL_OPRATION" Multiplicity="0..1" />
+          <End Type="db_max_instModel.TBL_PART_SALARY" Role="TBL_PART_SALARY" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TBL_OPRATION">
+              <PropertyRef Name="OPRATION_ID" />
+            </Principal>
+            <Dependent Role="TBL_PART_SALARY">
+              <PropertyRef Name="OPRATION_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TBL_SEND_STUD_LECT_TBL_OPRATION">
+          <End Type="db_max_instModel.TBL_OPRATION" Role="TBL_OPRATION" Multiplicity="0..1" />
+          <End Type="db_max_instModel.TBL_SEND_STUD_LECT" Role="TBL_SEND_STUD_LECT" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TBL_OPRATION">
+              <PropertyRef Name="OPRATION_ID" />
+            </Principal>
+            <Dependent Role="TBL_SEND_STUD_LECT">
+              <PropertyRef Name="OPRATIN_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TBL_SEND_TECT_LECT_TBL_OPRATION">
+          <End Type="db_max_instModel.TBL_OPRATION" Role="TBL_OPRATION" Multiplicity="0..1" />
+          <End Type="db_max_instModel.TBL_SEND_TECT_LECT" Role="TBL_SEND_TECT_LECT" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TBL_OPRATION">
+              <PropertyRef Name="OPRATION_ID" />
+            </Principal>
+            <Dependent Role="TBL_SEND_TECT_LECT">
+              <PropertyRef Name="OPRATION_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TBL_SEND_STUD_LECT_TBL_LECT_STUD_TECH">
+          <End Type="db_max_instModel.TBL_STUD_LECT" Role="TBL_STUD_LECT" Multiplicity="0..1" />
+          <End Type="db_max_instModel.TBL_SEND_STUD_LECT" Role="TBL_SEND_STUD_LECT" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TBL_STUD_LECT">
+              <PropertyRef Name="LECT_STUD_ID" />
+            </Principal>
+            <Dependent Role="TBL_SEND_STUD_LECT">
+              <PropertyRef Name="STUD_LECT_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TBL_SEND_STUD_LECT_TBL_STUDENTS">
+          <End Type="db_max_instModel.TBL_STUDENTS" Role="TBL_STUDENTS" Multiplicity="0..1" />
+          <End Type="db_max_instModel.TBL_SEND_STUD_LECT" Role="TBL_SEND_STUD_LECT" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TBL_STUDENTS">
+              <PropertyRef Name="STUD_ID" />
+            </Principal>
+            <Dependent Role="TBL_SEND_STUD_LECT">
               <PropertyRef Name="STUD_ID" />
             </Dependent>
           </ReferentialConstraint>
@@ -2428,257 +2699,42 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityType Name="KpiDefinition">
+        <EntityType Name="TBL_ROULLS_LECTUER">
           <Key>
-            <PropertyRef Name="Oid" />
+            <PropertyRef Name="USER_ID" />
           </Key>
-          <Property Name="Oid" Type="Guid" Nullable="false" />
-          <Property Name="TargetObjectType" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="Changed" Type="DateTime" Precision="3" />
-          <Property Name="KpiInstance" Type="Guid" />
-          <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
-          <Property Name="Active" Type="Boolean" />
-          <Property Name="Criteria" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="Expression" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="GreenZone" Type="Double" />
-          <Property Name="RedZone" Type="Double" />
-          <Property Name="Range" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
-          <Property Name="Compare" Type="Boolean" />
-          <Property Name="RangeToCompare" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
-          <Property Name="MeasurementFrequency" Type="Int32" />
-          <Property Name="MeasurementMode" Type="Int32" />
-          <Property Name="Direction" Type="Int32" />
-          <Property Name="ChangedOn" Type="DateTime" Precision="3" />
-          <Property Name="SuppressedSeries" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
-          <Property Name="EnableCustomizeRepresentation" Type="Boolean" />
-          <Property Name="OptimisticLockField" Type="Int32" />
-          <Property Name="GCRecord" Type="Int32" />
-          <NavigationProperty Name="KpiInstance1" Relationship="db_max_instModel.FK_KpiDefinition_KpiInstance" FromRole="KpiDefinition" ToRole="KpiInstance" />
-          <NavigationProperty Name="KpiInstances" Relationship="db_max_instModel.FK_KpiInstance_KpiDefinition" FromRole="KpiDefinition" ToRole="KpiInstance" />
+          <Property Name="USER_ID" Type="Int32" Nullable="false" />
+          <Property Name="ch_activ" Type="Boolean" />
+          <Property Name="ch_admin" Type="Boolean" />
+          <Property Name="ch_apu" Type="Boolean" />
+          <Property Name="ch_attend" Type="Boolean" />
+          <Property Name="ch_cours_lect" Type="Boolean" />
+          <Property Name="ch_dept" Type="Boolean" />
+          <Property Name="ch_emp" Type="Boolean" />
+          <Property Name="ch_job" Type="Boolean" />
+          <Property Name="ch_lect" Type="Boolean" />
+          <Property Name="ch_lect_stud" Type="Boolean" />
+          <Property Name="ch_main" Type="Boolean" />
+          <Property Name="ch_mark" Type="Boolean" />
+          <Property Name="ch_matrila" Type="Boolean" />
+          <Property Name="ch_report" Type="Boolean" />
+          <Property Name="ch_sala" Type="Boolean" />
+          <Property Name="ch_send_stud" Type="Boolean" />
+          <Property Name="ch_send_tech" Type="Boolean" />
+          <Property Name="ch_sett" Type="Boolean" />
+          <Property Name="ch_stud" Type="Boolean" />
+          <Property Name="ch_tech_lec" Type="Boolean" />
+          <NavigationProperty Name="TBL_USERS" Relationship="db_max_instModel.FK_TBL_ROULLS_LECTUER_TBL_USERS" FromRole="TBL_ROULLS_LECTUER" ToRole="TBL_USERS" />
         </EntityType>
-        <EntityType Name="KpiInstance">
-          <Key>
-            <PropertyRef Name="Oid" />
-          </Key>
-          <Property Name="Oid" Type="Guid" Nullable="false" />
-          <Property Name="ForceMeasurementDateTime" Type="DateTime" Precision="3" />
-          <Property Name="KpiDefinition" Type="Guid" />
-          <Property Name="Settings" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="OptimisticLockField" Type="Int32" />
-          <Property Name="GCRecord" Type="Int32" />
-          <NavigationProperty Name="KpiDefinitions" Relationship="db_max_instModel.FK_KpiDefinition_KpiInstance" FromRole="KpiInstance" ToRole="KpiDefinition" />
-          <NavigationProperty Name="KpiDefinition1" Relationship="db_max_instModel.FK_KpiInstance_KpiDefinition" FromRole="KpiInstance" ToRole="KpiDefinition" />
-        </EntityType>
-        <Association Name="FK_KpiDefinition_KpiInstance">
-          <End Type="db_max_instModel.KpiInstance" Role="KpiInstance" Multiplicity="0..1" />
-          <End Type="db_max_instModel.KpiDefinition" Role="KpiDefinition" Multiplicity="*" />
+        <Association Name="FK_TBL_ROULLS_LECTUER_TBL_USERS">
+          <End Type="db_max_instModel.TBL_USERS" Role="TBL_USERS" Multiplicity="1" />
+          <End Type="db_max_instModel.TBL_ROULLS_LECTUER" Role="TBL_ROULLS_LECTUER" Multiplicity="0..1" />
           <ReferentialConstraint>
-            <Principal Role="KpiInstance">
-              <PropertyRef Name="Oid" />
+            <Principal Role="TBL_USERS">
+              <PropertyRef Name="USER_ID" />
             </Principal>
-            <Dependent Role="KpiDefinition">
-              <PropertyRef Name="KpiInstance" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_KpiInstance_KpiDefinition">
-          <End Type="db_max_instModel.KpiDefinition" Role="KpiDefinition" Multiplicity="0..1" />
-          <End Type="db_max_instModel.KpiInstance" Role="KpiInstance" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="KpiDefinition">
-              <PropertyRef Name="Oid" />
-            </Principal>
-            <Dependent Role="KpiInstance">
-              <PropertyRef Name="KpiDefinition" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <EntityType Name="TBL_LECT_TECH_COURS">
-          <Key>
-            <PropertyRef Name="TECH_LECT_ID" />
-          </Key>
-          <Property Name="TECH_LECT_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="LECT_ID" Type="Int32" />
-          <Property Name="COURS_ID" Type="Int32" />
-          <Property Name="LECT_START_DATE" Type="DateTime" Precision="0" />
-          <Property Name="LECT_END_DATE" Type="DateTime" Precision="0" />
-          <Property Name="TECHER_ID" Type="Int32" />
-          <Property Name="TECHER_SALARY" Type="Int32" />
-          <Property Name="GROUP_NAME" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="LECT_TIME" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="STATE" Type="Boolean" />
-          <NavigationProperty Name="TBL_LECT_MARK" Relationship="db_max_instModel.FK_TBL_LECT_MARK_TBL_LECT_TECH_COURS" FromRole="TBL_LECT_TECH_COURS" ToRole="TBL_LECT_MARK" />
-          <NavigationProperty Name="TBL_SEND_TECT_LECT" Relationship="db_max_instModel.FK_TBL_SEND_TECT_LECT_TBL_LECT_STUD_TECH" FromRole="TBL_LECT_TECH_COURS" ToRole="TBL_SEND_TECT_LECT" />
-          <NavigationProperty Name="TBL_STUD_LECT" Relationship="db_max_instModel.FK_TBL_STUD_LECT_TBL_LECT_TECH_COURS" FromRole="TBL_LECT_TECH_COURS" ToRole="TBL_STUD_LECT" />
-          <NavigationProperty Name="TBL_LECTUER" Relationship="db_max_instModel.FK_TBL_LECT_TECH_COURS_TBL_LECTUER" FromRole="TBL_LECT_TECH_COURS" ToRole="TBL_LECTUER" />
-          <NavigationProperty Name="TBL_EMPLOYEES" Relationship="db_max_instModel.FK_TBL_LECT_TECH_COURS_TBL_EMPLOYEES" FromRole="TBL_LECT_TECH_COURS" ToRole="TBL_EMPLOYEES" />
-          <NavigationProperty Name="TBL_SEND_STUD_LECT" Relationship="db_max_instModel.FK_TBL_SEND_STUD_LECT_TBL_LECT_TECH_COURS" FromRole="TBL_LECT_TECH_COURS" ToRole="TBL_SEND_STUD_LECT" />
-        </EntityType>
-        <Association Name="FK_TBL_LECT_MARK_TBL_LECT_TECH_COURS">
-          <End Type="db_max_instModel.TBL_LECT_TECH_COURS" Role="TBL_LECT_TECH_COURS" Multiplicity="0..1">
-            <OnDelete Action="Cascade" />
-          </End>
-          <End Type="db_max_instModel.TBL_LECT_MARK" Role="TBL_LECT_MARK" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="TBL_LECT_TECH_COURS">
-              <PropertyRef Name="TECH_LECT_ID" />
-            </Principal>
-            <Dependent Role="TBL_LECT_MARK">
-              <PropertyRef Name="LECT_TECH_ID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_TBL_SEND_TECT_LECT_TBL_LECT_STUD_TECH">
-          <End Type="db_max_instModel.TBL_LECT_TECH_COURS" Role="TBL_LECT_TECH_COURS" Multiplicity="0..1" />
-          <End Type="db_max_instModel.TBL_SEND_TECT_LECT" Role="TBL_SEND_TECT_LECT" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="TBL_LECT_TECH_COURS">
-              <PropertyRef Name="TECH_LECT_ID" />
-            </Principal>
-            <Dependent Role="TBL_SEND_TECT_LECT">
-              <PropertyRef Name="TECH_LECT_ID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_TBL_STUD_LECT_TBL_LECT_TECH_COURS">
-          <End Type="db_max_instModel.TBL_LECT_TECH_COURS" Role="TBL_LECT_TECH_COURS" Multiplicity="0..1" />
-          <End Type="db_max_instModel.TBL_STUD_LECT" Role="TBL_STUD_LECT" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="TBL_LECT_TECH_COURS">
-              <PropertyRef Name="TECH_LECT_ID" />
-            </Principal>
-            <Dependent Role="TBL_STUD_LECT">
-              <PropertyRef Name="LECT_TECH_ID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_TBL_LECT_TECH_COURS_TBL_LECTUER">
-          <End Type="db_max_instModel.TBL_LECTUER" Role="TBL_LECTUER" Multiplicity="0..1" />
-          <End Type="db_max_instModel.TBL_LECT_TECH_COURS" Role="TBL_LECT_TECH_COURS" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="TBL_LECTUER">
-              <PropertyRef Name="LECT_ID" />
-            </Principal>
-            <Dependent Role="TBL_LECT_TECH_COURS">
-              <PropertyRef Name="LECT_ID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_TBL_LECT_TECH_COURS_TBL_EMPLOYEES">
-          <End Type="db_max_instModel.TBL_EMPLOYEES" Role="TBL_EMPLOYEES" Multiplicity="0..1" />
-          <End Type="db_max_instModel.TBL_LECT_TECH_COURS" Role="TBL_LECT_TECH_COURS" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="TBL_EMPLOYEES">
-              <PropertyRef Name="EMP_ID" />
-            </Principal>
-            <Dependent Role="TBL_LECT_TECH_COURS">
-              <PropertyRef Name="TECHER_ID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <EntityType Name="TBL_SEND_STUD_LECT">
-          <Key>
-            <PropertyRef Name="SEND_STUD_ID" />
-          </Key>
-          <Property Name="SEND_STUD_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="STUD_ID" Type="Int32" />
-          <Property Name="STUD_LECT_ID" Type="Int32" />
-          <Property Name="PAID_UP" Type="Int32" />
-          <Property Name="LECT_ID" Type="Int32" />
-          <Property Name="REST" Type="Int32" />
-          <Property Name="SEND_STUD_DATE" Type="DateTime" Precision="0" />
-          <NavigationProperty Name="TBL_LECTUER" Relationship="db_max_instModel.FK_TBL_SEND_STUD_LECT_TBL_LECTUER" FromRole="TBL_SEND_STUD_LECT" ToRole="TBL_LECTUER" />
-          <NavigationProperty Name="TBL_STUD_LECT" Relationship="db_max_instModel.FK_TBL_SEND_STUD_LECT_TBL_LECT_STUD_TECH" FromRole="TBL_SEND_STUD_LECT" ToRole="TBL_STUD_LECT" />
-          <NavigationProperty Name="TBL_STUDENTS" Relationship="db_max_instModel.FK_TBL_SEND_STUD_LECT_TBL_STUDENTS" FromRole="TBL_SEND_STUD_LECT" ToRole="TBL_STUDENTS" />
-          <Property Name="INST_ID" Type="Int32" />
-          <NavigationProperty Name="TBL_INST" Relationship="db_max_instModel.FK_TBL_SEND_STUD_LECT_TBL_INST" FromRole="TBL_SEND_STUD_LECT" ToRole="TBL_INST" />
-          <Property Name="TECH_LECT_ID" Type="Int32" />
-          <NavigationProperty Name="TBL_LECT_TECH_COURS" Relationship="db_max_instModel.FK_TBL_SEND_STUD_LECT_TBL_LECT_TECH_COURS" FromRole="TBL_SEND_STUD_LECT" ToRole="TBL_LECT_TECH_COURS" />
-        </EntityType>
-        <Association Name="FK_TBL_SEND_STUD_LECT_TBL_LECTUER">
-          <End Type="db_max_instModel.TBL_LECTUER" Role="TBL_LECTUER" Multiplicity="0..1" />
-          <End Type="db_max_instModel.TBL_SEND_STUD_LECT" Role="TBL_SEND_STUD_LECT" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="TBL_LECTUER">
-              <PropertyRef Name="LECT_ID" />
-            </Principal>
-            <Dependent Role="TBL_SEND_STUD_LECT">
-              <PropertyRef Name="LECT_ID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_TBL_SEND_STUD_LECT_TBL_LECT_STUD_TECH">
-          <End Type="db_max_instModel.TBL_STUD_LECT" Role="TBL_STUD_LECT" Multiplicity="0..1" />
-          <End Type="db_max_instModel.TBL_SEND_STUD_LECT" Role="TBL_SEND_STUD_LECT" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="TBL_STUD_LECT">
-              <PropertyRef Name="LECT_STUD_ID" />
-            </Principal>
-            <Dependent Role="TBL_SEND_STUD_LECT">
-              <PropertyRef Name="STUD_LECT_ID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_TBL_SEND_STUD_LECT_TBL_STUDENTS">
-          <End Type="db_max_instModel.TBL_STUDENTS" Role="TBL_STUDENTS" Multiplicity="0..1" />
-          <End Type="db_max_instModel.TBL_SEND_STUD_LECT" Role="TBL_SEND_STUD_LECT" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="TBL_STUDENTS">
-              <PropertyRef Name="STUD_ID" />
-            </Principal>
-            <Dependent Role="TBL_SEND_STUD_LECT">
-              <PropertyRef Name="STUD_ID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_TBL_SEND_STUD_LECT_TBL_INST">
-          <End Type="db_max_instModel.TBL_INST" Role="TBL_INST" Multiplicity="0..1" />
-          <End Type="db_max_instModel.TBL_SEND_STUD_LECT" Role="TBL_SEND_STUD_LECT" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="TBL_INST">
-              <PropertyRef Name="INST_ID" />
-            </Principal>
-            <Dependent Role="TBL_SEND_STUD_LECT">
-              <PropertyRef Name="INST_ID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_TBL_SEND_TECT_LECT_TBL_INST">
-          <End Type="db_max_instModel.TBL_INST" Role="TBL_INST" Multiplicity="0..1" />
-          <End Type="db_max_instModel.TBL_SEND_TECT_LECT" Role="TBL_SEND_TECT_LECT" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="TBL_INST">
-              <PropertyRef Name="INST_ID" />
-            </Principal>
-            <Dependent Role="TBL_SEND_TECT_LECT">
-              <PropertyRef Name="INST_ID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <ComplexType Name="get_send_stud_query_Result">
-          <Property Type="Int32" Name="PAID_UP" Nullable="true" />
-          <Property Type="Int32" Name="REST" Nullable="true" />
-          <Property Type="DateTime" Name="SEND_STUD_DATE" Nullable="true" />
-          <Property Type="String" Name="LECT_NAME" Nullable="true" MaxLength="50" />
-          <Property Type="Int32" Name="LECT_PRICE" Nullable="true" />
-          <Property Type="String" Name="GROUP_NAME" Nullable="true" MaxLength="50" />
-          <Property Type="String" Name="STUD_NAME" Nullable="false" MaxLength="50" />
-          <Property Type="String" Name="STUD_LNAME" Nullable="true" MaxLength="50" />
-          <Property Type="String" Name="EMP_NAME" Nullable="false" MaxLength="50" />
-          <Property Type="String" Name="INST_NAME" Nullable="false" MaxLength="50" />
-          <Property Type="String" Name="INST_DESC" Nullable="true" />
-          <Property Type="String" Name="INST_LOCATION" Nullable="true" />
-          <Property Type="Binary" Name="INST_LOGO" Nullable="true" MaxLength="Max" />
-        </ComplexType>
-        <Association Name="FK_TBL_SEND_STUD_LECT_TBL_LECT_TECH_COURS">
-          <End Type="db_max_instModel.TBL_LECT_TECH_COURS" Role="TBL_LECT_TECH_COURS" Multiplicity="0..1" />
-          <End Type="db_max_instModel.TBL_SEND_STUD_LECT" Role="TBL_SEND_STUD_LECT" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="TBL_LECT_TECH_COURS">
-              <PropertyRef Name="TECH_LECT_ID" />
-            </Principal>
-            <Dependent Role="TBL_SEND_STUD_LECT">
-              <PropertyRef Name="TECH_LECT_ID" />
+            <Dependent Role="TBL_ROULLS_LECTUER">
+              <PropertyRef Name="USER_ID" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -2688,6 +2744,35 @@
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
         <EntityContainerMapping StorageEntityContainer="db_max_instModelStoreContainer" CdmEntityContainer="db_max_instEntities">
+          <FunctionImportMapping FunctionImportName="get_send_stud_query" FunctionName="db_max_instModel.Store.get_send_stud_query">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="db_max_instModel.get_send_stud_query_Result">
+                <ScalarProperty Name="PAID_UP" ColumnName="PAID_UP" />
+                <ScalarProperty Name="REST" ColumnName="REST" />
+                <ScalarProperty Name="SEND_STUD_DATE" ColumnName="SEND_STUD_DATE" />
+                <ScalarProperty Name="LECT_NAME" ColumnName="LECT_NAME" />
+                <ScalarProperty Name="LECT_PRICE" ColumnName="LECT_PRICE" />
+                <ScalarProperty Name="GROUP_NAME" ColumnName="GROUP_NAME" />
+                <ScalarProperty Name="STUD_NAME" ColumnName="STUD_NAME" />
+                <ScalarProperty Name="STUD_LNAME" ColumnName="STUD_LNAME" />
+                <ScalarProperty Name="EMP_NAME" ColumnName="EMP_NAME" />
+                <ScalarProperty Name="INST_NAME" ColumnName="INST_NAME" />
+                <ScalarProperty Name="INST_DESC" ColumnName="INST_DESC" />
+                <ScalarProperty Name="INST_LOCATION" ColumnName="INST_LOCATION" />
+                <ScalarProperty Name="INST_LOGO" ColumnName="INST_LOGO" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <EntitySetMapping Name="TBL_ACTIVE_SYSTEM">
+            <EntityTypeMapping TypeName="db_max_instModel.TBL_ACTIVE_SYSTEM">
+              <MappingFragment StoreEntitySet="TBL_ACTIVE_SYSTEM">
+                <ScalarProperty Name="Added_date" ColumnName="Added_date" />
+                <ScalarProperty Name="Key" ColumnName="Key" />
+                <ScalarProperty Name="Mack_address" ColumnName="Mack_address" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
           <EntitySetMapping Name="TBL_ATTENDS">
             <EntityTypeMapping TypeName="db_max_instModel.TBL_ATTENDS">
               <MappingFragment StoreEntitySet="TBL_ATTENDS">
@@ -2696,15 +2781,6 @@
                 <ScalarProperty Name="ATTEND_GO" ColumnName="ATTEND_GO" />
                 <ScalarProperty Name="ATTEND_GIT" ColumnName="ATTEND_GIT" />
                 <ScalarProperty Name="ATTEND_ID" ColumnName="ATTEND_ID" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="TBL_BOX">
-            <EntityTypeMapping TypeName="db_max_instModel.TBL_BOX">
-              <MappingFragment StoreEntitySet="TBL_BOX">
-                <ScalarProperty Name="INST_ID" ColumnName="INST_ID" />
-                <ScalarProperty Name="BOX_AMOUNT" ColumnName="BOX_AMOUNT" />
-                <ScalarProperty Name="BOX_ID" ColumnName="BOX_ID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -2842,6 +2918,22 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <EntitySetMapping Name="TBL_LECT_TECH_COURS">
+            <EntityTypeMapping TypeName="db_max_instModel.TBL_LECT_TECH_COURS">
+              <MappingFragment StoreEntitySet="TBL_LECT_TECH_COURS">
+                <ScalarProperty Name="STATE" ColumnName="STATE" />
+                <ScalarProperty Name="LECT_TIME" ColumnName="LECT_TIME" />
+                <ScalarProperty Name="GROUP_NAME" ColumnName="GROUP_NAME" />
+                <ScalarProperty Name="TECHER_SALARY" ColumnName="TECHER_SALARY" />
+                <ScalarProperty Name="TECHER_ID" ColumnName="TECHER_ID" />
+                <ScalarProperty Name="LECT_END_DATE" ColumnName="LECT_END_DATE" />
+                <ScalarProperty Name="LECT_START_DATE" ColumnName="LECT_START_DATE" />
+                <ScalarProperty Name="COURS_ID" ColumnName="COURS_ID" />
+                <ScalarProperty Name="LECT_ID" ColumnName="LECT_ID" />
+                <ScalarProperty Name="TECH_LECT_ID" ColumnName="TECH_LECT_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
           <EntitySetMapping Name="TBL_LECTUER">
             <EntityTypeMapping TypeName="db_max_instModel.TBL_LECTUER">
               <MappingFragment StoreEntitySet="TBL_LECTUER">
@@ -2877,9 +2969,21 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <EntitySetMapping Name="TBL_OPRATION">
+            <EntityTypeMapping TypeName="db_max_instModel.TBL_OPRATION">
+              <MappingFragment StoreEntitySet="TBL_OPRATION">
+                <ScalarProperty Name="INST_ID" ColumnName="INST_ID" />
+                <ScalarProperty Name="PORATION_DATE" ColumnName="PORATION_DATE" />
+                <ScalarProperty Name="PORATION_AMOUNT" ColumnName="PORATION_AMOUNT" />
+                <ScalarProperty Name="OPRATION_TYPE" ColumnName="OPRATION_TYPE" />
+                <ScalarProperty Name="OPRATION_ID" ColumnName="OPRATION_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
           <EntitySetMapping Name="TBL_PART_SALARY">
             <EntityTypeMapping TypeName="db_max_instModel.TBL_PART_SALARY">
               <MappingFragment StoreEntitySet="TBL_PART_SALARY">
+                <ScalarProperty Name="OPRATION_ID" ColumnName="OPRATION_ID" />
                 <ScalarProperty Name="SLAARY_DATE" ColumnName="SLAARY_DATE" />
                 <ScalarProperty Name="EMP_ID" ColumnName="EMP_ID" />
                 <ScalarProperty Name="PART_YEAR" ColumnName="PART_YEAR" />
@@ -2902,9 +3006,26 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <EntitySetMapping Name="TBL_SEND_STUD_LECT">
+            <EntityTypeMapping TypeName="db_max_instModel.TBL_SEND_STUD_LECT">
+              <MappingFragment StoreEntitySet="TBL_SEND_STUD_LECT">
+                <ScalarProperty Name="OPRATIN_ID" ColumnName="OPRATIN_ID" />
+                <ScalarProperty Name="TECH_LECT_ID" ColumnName="TECH_LECT_ID" />
+                <ScalarProperty Name="INST_ID" ColumnName="INST_ID" />
+                <ScalarProperty Name="SEND_STUD_DATE" ColumnName="SEND_STUD_DATE" />
+                <ScalarProperty Name="REST" ColumnName="REST" />
+                <ScalarProperty Name="LECT_ID" ColumnName="LECT_ID" />
+                <ScalarProperty Name="PAID_UP" ColumnName="PAID_UP" />
+                <ScalarProperty Name="STUD_LECT_ID" ColumnName="STUD_LECT_ID" />
+                <ScalarProperty Name="STUD_ID" ColumnName="STUD_ID" />
+                <ScalarProperty Name="SEND_STUD_ID" ColumnName="SEND_STUD_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
           <EntitySetMapping Name="TBL_SEND_TECT_LECT">
             <EntityTypeMapping TypeName="db_max_instModel.TBL_SEND_TECT_LECT">
               <MappingFragment StoreEntitySet="TBL_SEND_TECT_LECT">
+                <ScalarProperty Name="OPRATION_ID" ColumnName="OPRATION_ID" />
                 <ScalarProperty Name="INST_ID" ColumnName="INST_ID" />
                 <ScalarProperty Name="SEND_TECH_DATE" ColumnName="SEND_TECH_DATE" />
                 <ScalarProperty Name="REST" ColumnName="REST" />
@@ -3016,95 +3137,33 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="KpiDefinitions">
-            <EntityTypeMapping TypeName="db_max_instModel.KpiDefinition">
-              <MappingFragment StoreEntitySet="KpiDefinition">
-                <ScalarProperty Name="GCRecord" ColumnName="GCRecord" />
-                <ScalarProperty Name="OptimisticLockField" ColumnName="OptimisticLockField" />
-                <ScalarProperty Name="EnableCustomizeRepresentation" ColumnName="EnableCustomizeRepresentation" />
-                <ScalarProperty Name="SuppressedSeries" ColumnName="SuppressedSeries" />
-                <ScalarProperty Name="ChangedOn" ColumnName="ChangedOn" />
-                <ScalarProperty Name="Direction" ColumnName="Direction" />
-                <ScalarProperty Name="MeasurementMode" ColumnName="MeasurementMode" />
-                <ScalarProperty Name="MeasurementFrequency" ColumnName="MeasurementFrequency" />
-                <ScalarProperty Name="RangeToCompare" ColumnName="RangeToCompare" />
-                <ScalarProperty Name="Compare" ColumnName="Compare" />
-                <ScalarProperty Name="Range" ColumnName="Range" />
-                <ScalarProperty Name="RedZone" ColumnName="RedZone" />
-                <ScalarProperty Name="GreenZone" ColumnName="GreenZone" />
-                <ScalarProperty Name="Expression" ColumnName="Expression" />
-                <ScalarProperty Name="Criteria" ColumnName="Criteria" />
-                <ScalarProperty Name="Active" ColumnName="Active" />
-                <ScalarProperty Name="Name" ColumnName="Name" />
-                <ScalarProperty Name="KpiInstance" ColumnName="KpiInstance" />
-                <ScalarProperty Name="Changed" ColumnName="Changed" />
-                <ScalarProperty Name="TargetObjectType" ColumnName="TargetObjectType" />
-                <ScalarProperty Name="Oid" ColumnName="Oid" />
+          <EntitySetMapping Name="TBL_ROULLS_LECTUER">
+            <EntityTypeMapping TypeName="db_max_instModel.TBL_ROULLS_LECTUER">
+              <MappingFragment StoreEntitySet="TBL_ROULLS_LECTUER">
+                <ScalarProperty Name="ch_tech_lec" ColumnName="ch_tech_lec" />
+                <ScalarProperty Name="ch_stud" ColumnName="ch_stud" />
+                <ScalarProperty Name="ch_sett" ColumnName="ch_sett" />
+                <ScalarProperty Name="ch_send_tech" ColumnName="ch_send_tech" />
+                <ScalarProperty Name="ch_send_stud" ColumnName="ch_send_stud" />
+                <ScalarProperty Name="ch_sala" ColumnName="ch_sala" />
+                <ScalarProperty Name="ch_report" ColumnName="ch_report" />
+                <ScalarProperty Name="ch_matrila" ColumnName="ch_matrila" />
+                <ScalarProperty Name="ch_mark" ColumnName="ch_mark" />
+                <ScalarProperty Name="ch_main" ColumnName="ch_main" />
+                <ScalarProperty Name="ch_lect_stud" ColumnName="ch_lect_stud" />
+                <ScalarProperty Name="ch_lect" ColumnName="ch_lect" />
+                <ScalarProperty Name="ch_job" ColumnName="ch_job" />
+                <ScalarProperty Name="ch_emp" ColumnName="ch_emp" />
+                <ScalarProperty Name="ch_dept" ColumnName="ch_dept" />
+                <ScalarProperty Name="ch_cours_lect" ColumnName="ch_cours_lect" />
+                <ScalarProperty Name="ch_attend" ColumnName="ch_attend" />
+                <ScalarProperty Name="ch_apu" ColumnName="ch_apu" />
+                <ScalarProperty Name="ch_admin" ColumnName="ch_admin" />
+                <ScalarProperty Name="ch_activ" ColumnName="ch_activ" />
+                <ScalarProperty Name="USER_ID" ColumnName="USER_ID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="KpiInstances">
-            <EntityTypeMapping TypeName="db_max_instModel.KpiInstance">
-              <MappingFragment StoreEntitySet="KpiInstance">
-                <ScalarProperty Name="GCRecord" ColumnName="GCRecord" />
-                <ScalarProperty Name="OptimisticLockField" ColumnName="OptimisticLockField" />
-                <ScalarProperty Name="Settings" ColumnName="Settings" />
-                <ScalarProperty Name="KpiDefinition" ColumnName="KpiDefinition" />
-                <ScalarProperty Name="ForceMeasurementDateTime" ColumnName="ForceMeasurementDateTime" />
-                <ScalarProperty Name="Oid" ColumnName="Oid" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="TBL_LECT_TECH_COURS">
-            <EntityTypeMapping TypeName="db_max_instModel.TBL_LECT_TECH_COURS">
-              <MappingFragment StoreEntitySet="TBL_LECT_TECH_COURS">
-                <ScalarProperty Name="STATE" ColumnName="STATE" />
-                <ScalarProperty Name="LECT_TIME" ColumnName="LECT_TIME" />
-                <ScalarProperty Name="GROUP_NAME" ColumnName="GROUP_NAME" />
-                <ScalarProperty Name="TECHER_SALARY" ColumnName="TECHER_SALARY" />
-                <ScalarProperty Name="TECHER_ID" ColumnName="TECHER_ID" />
-                <ScalarProperty Name="LECT_END_DATE" ColumnName="LECT_END_DATE" />
-                <ScalarProperty Name="LECT_START_DATE" ColumnName="LECT_START_DATE" />
-                <ScalarProperty Name="COURS_ID" ColumnName="COURS_ID" />
-                <ScalarProperty Name="LECT_ID" ColumnName="LECT_ID" />
-                <ScalarProperty Name="TECH_LECT_ID" ColumnName="TECH_LECT_ID" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="TBL_SEND_STUD_LECT">
-            <EntityTypeMapping TypeName="db_max_instModel.TBL_SEND_STUD_LECT">
-              <MappingFragment StoreEntitySet="TBL_SEND_STUD_LECT">
-                <ScalarProperty Name="TECH_LECT_ID" ColumnName="TECH_LECT_ID" />
-                <ScalarProperty Name="INST_ID" ColumnName="INST_ID" />
-                <ScalarProperty Name="SEND_STUD_DATE" ColumnName="SEND_STUD_DATE" />
-                <ScalarProperty Name="REST" ColumnName="REST" />
-                <ScalarProperty Name="LECT_ID" ColumnName="LECT_ID" />
-                <ScalarProperty Name="PAID_UP" ColumnName="PAID_UP" />
-                <ScalarProperty Name="STUD_LECT_ID" ColumnName="STUD_LECT_ID" />
-                <ScalarProperty Name="STUD_ID" ColumnName="STUD_ID" />
-                <ScalarProperty Name="SEND_STUD_ID" ColumnName="SEND_STUD_ID" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <FunctionImportMapping FunctionImportName="get_send_stud_query" FunctionName="db_max_instModel.Store.get_send_stud_query">
-            <ResultMapping>
-              <ComplexTypeMapping TypeName="db_max_instModel.get_send_stud_query_Result">
-                <ScalarProperty Name="PAID_UP" ColumnName="PAID_UP" />
-                <ScalarProperty Name="REST" ColumnName="REST" />
-                <ScalarProperty Name="SEND_STUD_DATE" ColumnName="SEND_STUD_DATE" />
-                <ScalarProperty Name="LECT_NAME" ColumnName="LECT_NAME" />
-                <ScalarProperty Name="LECT_PRICE" ColumnName="LECT_PRICE" />
-                <ScalarProperty Name="GROUP_NAME" ColumnName="GROUP_NAME" />
-                <ScalarProperty Name="STUD_NAME" ColumnName="STUD_NAME" />
-                <ScalarProperty Name="STUD_LNAME" ColumnName="STUD_LNAME" />
-                <ScalarProperty Name="EMP_NAME" ColumnName="EMP_NAME" />
-                <ScalarProperty Name="INST_NAME" ColumnName="INST_NAME" />
-                <ScalarProperty Name="INST_DESC" ColumnName="INST_DESC" />
-                <ScalarProperty Name="INST_LOCATION" ColumnName="INST_LOCATION" />
-                <ScalarProperty Name="INST_LOGO" ColumnName="INST_LOGO" />
-              </ComplexTypeMapping>
-            </ResultMapping>
-          </FunctionImportMapping>
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

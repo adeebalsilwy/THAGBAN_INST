@@ -171,7 +171,7 @@ namespace THAGBAN_INST.FORM.FRM_LECTUER_MANG.lect_students
             // colCOURS_ID
             // 
             this.colCOURS_ID.Caption = "الكورس";
-            this.colCOURS_ID.FieldName = "TBL_LECT_COURS.LECT_COURS_NAME";
+            this.colCOURS_ID.FieldName = "TBL_LECTUER.TBL_LECT_COURS.LECT_COURS_NAME";
             this.colCOURS_ID.Name = "colCOURS_ID";
             this.colCOURS_ID.Visible = true;
             this.colCOURS_ID.VisibleIndex = 3;

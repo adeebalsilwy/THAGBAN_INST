@@ -1,4 +1,5 @@
 ﻿using DevExpress.XtraEditors;
+using DevExpress.XtraReports.UI;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -21,6 +22,7 @@ namespace THAGBAN_INST.FORM.FRM_EMP_MANEGER.part_salary
 
         db_max_instEntities con = new db_max_instEntities();
         tost toast = new tost();
+        int print_id = 0;
         dialge dialge = new dialge();
         public int emp_id = 0;
         public int part_id = 0;
@@ -35,9 +37,7 @@ namespace THAGBAN_INST.FORM.FRM_EMP_MANEGER.part_salary
 
 
         public DateTime part_date;
-
-
-
+        private TBL_INST inst;
 
         public frm_add_part()
         {
@@ -125,6 +125,20 @@ namespace THAGBAN_INST.FORM.FRM_EMP_MANEGER.part_salary
 
         }
 
+        void get_inst_data(int opri_id)
+        {
+            int temp_oprid = opri_id;
+            TBL_OPRATION opra = con.TBL_OPRATION.Find(temp_oprid);
+             inst = con.TBL_INST.Find(opra.INST_ID);
+            long total = Convert.ToInt64(inst.INST_TOTAL);
+            total = Convert.ToInt64(total + opra.PORATION_AMOUNT);
+            inst.INST_TOTAL = total.ToString();
+            MessageBox.Show(inst.INST_TOTAL);
+            inst.INST_ID = opra.INST_ID;
+           // con.TBL_INST.AddOrUpdate(inst);
+            //con.SaveChanges();
+
+        }
         void add_part_of_salary()
         {
 
@@ -144,10 +158,26 @@ namespace THAGBAN_INST.FORM.FRM_EMP_MANEGER.part_salary
                     cl.SLAARY_DATE = part_date;
                     cl.PAID_REST = part_rest;
 
+                    TBL_OPRATION opration = new TBL_OPRATION();
+                    opration.PORATION_AMOUNT = Convert.ToInt32(cl.PART_PAID);
+                    opration.PORATION_DATE = cl.SLAARY_DATE;
+                    opration.OPRATION_TYPE = "سحب";
+                    opration.INST_ID = Convert.ToInt32(THAGBAN_INST.Properties.Settings.Default.inst_id);
+
+                    inst = con.TBL_INST.Find(opration.INST_ID);
+                    long total = Convert.ToInt64(inst.INST_TOTAL);
+                    total = Convert.ToInt64((total - Convert.ToInt32(opration.PORATION_AMOUNT)));
+                    inst.INST_TOTAL = total.ToString();
+                    inst.INST_ID = Convert.ToInt32(opration.INST_ID);
+                    con.TBL_INST.AddOrUpdate(inst);
+
+
                     if (part_id != 0)
                     {
                         //add 
                         cl.PART_ID = Convert.ToInt32(part_id);
+                        opration.OPRATION_ID = Convert.ToInt32(cl.OPRATION_ID);
+                        con.TBL_OPRATION.AddOrUpdate(opration);
                         con.TBL_PART_SALARY.AddOrUpdate(cl);
                         con.SaveChanges();
 
@@ -159,6 +189,8 @@ namespace THAGBAN_INST.FORM.FRM_EMP_MANEGER.part_salary
                     else
                     {
                         //update 
+                        con.TBL_OPRATION.Add(opration);
+                        cl.OPRATION_ID = Convert.ToInt32(opration.OPRATION_ID);
                         con.TBL_PART_SALARY.AddOrUpdate(cl);
                         con.SaveChanges();
                         adl.NotifictionUser notifiction = new adl.NotifictionUser(THAGBAN_INST.Properties.Resources.AddNotificationText, THAGBAN_INST.Properties.Resources.Delete_32px);
@@ -166,6 +198,7 @@ namespace THAGBAN_INST.FORM.FRM_EMP_MANEGER.part_salary
                         clear();
 
                     }
+                    print_id = cl.PART_ID;
                 }
                 catch (Exception ex)
                 {
@@ -209,9 +242,12 @@ namespace THAGBAN_INST.FORM.FRM_EMP_MANEGER.part_salary
                 txt_part_month.Value = data_form.PART_MONTH ;
                 txt_part_paid.Text = data_form.PART_PAID.ToString();
                 txt_part_rest.Text = data_form.PAID_REST.ToString();
-                
-                
-               
+
+                int temp_oprid = (int)data_form.OPRATION_ID;
+                get_inst_data(temp_oprid);
+
+
+
                 get_salary();
                 //holiday_type_id = Convert.ToInt32(com_holiday_type.SelectedValue.ToString());
                 //stud_id= Convert.ToInt32(com_emp_name.SelectedValue.ToString());
@@ -328,6 +364,18 @@ void get_salary()
         private void txt_part_paid_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void simpleButton2_Click(object sender, EventArgs e)
+        {
+            add_part_of_salary();
+            reports_part_salary report = new reports_part_salary();
+           TBL_PART_SALARY part = con.TBL_PART_SALARY.Find(print_id);
+            report.DataSource = con.TBL_PART_SALARY.Where(w => w.PART_YEAR == part.PART_YEAR 
+            && w.PART_MONTH == part.PART_MONTH
+            &&w.EMP_ID==part.EMP_ID).ToList(); 
+            report.DataMember = "";
+            report.ShowRibbonPreview();
         }
     }
 }

@@ -19,11 +19,11 @@ namespace THAGBAN_INST.DATA
         {
             this.TBL_ATTENDS = new HashSet<TBL_ATTENDS>();
             this.TBL_HOLIDAYS = new HashSet<TBL_HOLIDAYS>();
+            this.TBL_LECT_TECH_COURS = new HashSet<TBL_LECT_TECH_COURS>();
             this.TBL_PART_SALARY = new HashSet<TBL_PART_SALARY>();
             this.TBL_SALARY = new HashSet<TBL_SALARY>();
             this.TBL_SEND_TECT_LECT = new HashSet<TBL_SEND_TECT_LECT>();
             this.TBL_USERS = new HashSet<TBL_USERS>();
-            this.TBL_LECT_TECH_COURS = new HashSet<TBL_LECT_TECH_COURS>();
         }
     
         public int EMP_ID { get; set; }
@@ -43,6 +43,8 @@ namespace THAGBAN_INST.DATA
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<TBL_HOLIDAYS> TBL_HOLIDAYS { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<TBL_LECT_TECH_COURS> TBL_LECT_TECH_COURS { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<TBL_PART_SALARY> TBL_PART_SALARY { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<TBL_SALARY> TBL_SALARY { get; set; }
@@ -50,7 +52,5 @@ namespace THAGBAN_INST.DATA
         public virtual ICollection<TBL_SEND_TECT_LECT> TBL_SEND_TECT_LECT { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<TBL_USERS> TBL_USERS { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<TBL_LECT_TECH_COURS> TBL_LECT_TECH_COURS { get; set; }
     }
 }
