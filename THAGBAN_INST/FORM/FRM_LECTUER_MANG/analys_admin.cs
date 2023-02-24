@@ -304,6 +304,8 @@ namespace THAGBAN_INST.FORM.FRM_LECTUER_MANG
             Get_piad();
             get_seles();
             get_data();
+            load_good_pad();
+
         }
 
         private void com_lect_SelectedIndexChanged(object sender, EventArgs e)

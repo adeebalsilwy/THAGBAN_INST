@@ -68,51 +68,51 @@
             // 
             // labelControl2
             // 
-            this.labelControl2.Appearance.Font = new System.Drawing.Font("ae_AlArabiya", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl2.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl2.Appearance.Options.UseFont = true;
             this.labelControl2.Location = new System.Drawing.Point(616, 65);
             this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(57, 19);
+            this.labelControl2.Size = new System.Drawing.Size(55, 16);
             this.labelControl2.TabIndex = 47;
             this.labelControl2.Text = "اسم الموظف";
             // 
             // labelControl3
             // 
-            this.labelControl3.Appearance.Font = new System.Drawing.Font("ae_AlArabiya", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl3.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl3.Appearance.Options.UseFont = true;
             this.labelControl3.Location = new System.Drawing.Point(626, 150);
             this.labelControl3.Name = "labelControl3";
-            this.labelControl3.Size = new System.Drawing.Size(47, 19);
+            this.labelControl3.Size = new System.Drawing.Size(51, 16);
             this.labelControl3.TabIndex = 50;
             this.labelControl3.Text = "رقم الهاتف";
             // 
             // labelControl4
             // 
-            this.labelControl4.Appearance.Font = new System.Drawing.Font("ae_AlArabiya", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl4.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl4.Appearance.Options.UseFont = true;
             this.labelControl4.Location = new System.Drawing.Point(613, 235);
             this.labelControl4.Name = "labelControl4";
-            this.labelControl4.Size = new System.Drawing.Size(60, 19);
+            this.labelControl4.Size = new System.Drawing.Size(65, 16);
             this.labelControl4.TabIndex = 52;
             this.labelControl4.Text = "عنوان الموظف";
             // 
             // labelControl6
             // 
-            this.labelControl6.Appearance.Font = new System.Drawing.Font("ae_AlArabiya", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl6.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl6.Appearance.Options.UseFont = true;
             this.labelControl6.Location = new System.Drawing.Point(270, 55);
             this.labelControl6.Name = "labelControl6";
-            this.labelControl6.Size = new System.Drawing.Size(61, 19);
+            this.labelControl6.Size = new System.Drawing.Size(68, 16);
             this.labelControl6.TabIndex = 65;
             this.labelControl6.Text = "تاريخ التوظيف";
             // 
             // labelControl7
             // 
-            this.labelControl7.Appearance.Font = new System.Drawing.Font("ae_AlArabiya", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl7.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl7.Appearance.Options.UseFont = true;
             this.labelControl7.Location = new System.Drawing.Point(262, 137);
             this.labelControl7.Name = "labelControl7";
-            this.labelControl7.Size = new System.Drawing.Size(28, 19);
+            this.labelControl7.Size = new System.Drawing.Size(32, 16);
             this.labelControl7.TabIndex = 67;
             this.labelControl7.Text = "الجنس";
             // 
@@ -174,7 +174,7 @@
             // 
             this.ch_fmel.Location = new System.Drawing.Point(144, 173);
             this.ch_fmel.Name = "ch_fmel";
-            this.ch_fmel.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ch_fmel.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
             this.ch_fmel.Properties.Appearance.Options.UseFont = true;
             this.ch_fmel.Properties.Caption = "    انثى ";
             this.ch_fmel.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -187,7 +187,7 @@
             this.ch_mal.EditValue = true;
             this.ch_mal.Location = new System.Drawing.Point(230, 173);
             this.ch_mal.Name = "ch_mal";
-            this.ch_mal.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ch_mal.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
             this.ch_mal.Properties.Appearance.Options.UseFont = true;
             this.ch_mal.Properties.Caption = "    ذكر";
             this.ch_mal.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -238,7 +238,7 @@
             this.txt_emp_address.BorderThickness = 3;
             this.txt_emp_address.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txt_emp_address.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txt_emp_address.DefaultFont = new System.Drawing.Font("ae_AlArabiya", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.txt_emp_address.DefaultFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.txt_emp_address.DefaultText = "";
             this.txt_emp_address.FillColor = System.Drawing.Color.White;
             this.txt_emp_address.HideSelection = true;
@@ -274,7 +274,7 @@
             stateProperties4.ForeColor = System.Drawing.Color.Empty;
             stateProperties4.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.txt_emp_address.OnIdleState = stateProperties4;
-            this.txt_emp_address.Padding = new System.Windows.Forms.Padding(3);
+            this.txt_emp_address.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
             this.txt_emp_address.PasswordChar = '\0';
             this.txt_emp_address.PlaceholderForeColor = System.Drawing.Color.DarkGray;
             this.txt_emp_address.PlaceholderText = "ادخل عنوان الموظف";
@@ -284,7 +284,7 @@
             this.txt_emp_address.SelectionLength = 0;
             this.txt_emp_address.SelectionStart = 0;
             this.txt_emp_address.ShortcutsEnabled = true;
-            this.txt_emp_address.Size = new System.Drawing.Size(311, 54);
+            this.txt_emp_address.Size = new System.Drawing.Size(311, 51);
             this.txt_emp_address.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txt_emp_address.TabIndex = 53;
             this.txt_emp_address.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -312,7 +312,7 @@
             this.txt_emp_phone.BorderThickness = 3;
             this.txt_emp_phone.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txt_emp_phone.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txt_emp_phone.DefaultFont = new System.Drawing.Font("ae_AlArabiya", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.txt_emp_phone.DefaultFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.txt_emp_phone.DefaultText = "";
             this.txt_emp_phone.FillColor = System.Drawing.Color.White;
             this.txt_emp_phone.HideSelection = true;
@@ -348,7 +348,7 @@
             stateProperties8.ForeColor = System.Drawing.Color.Empty;
             stateProperties8.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.txt_emp_phone.OnIdleState = stateProperties8;
-            this.txt_emp_phone.Padding = new System.Windows.Forms.Padding(3);
+            this.txt_emp_phone.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
             this.txt_emp_phone.PasswordChar = '\0';
             this.txt_emp_phone.PlaceholderForeColor = System.Drawing.Color.DarkGray;
             this.txt_emp_phone.PlaceholderText = "ادخل رقم الهاتف";
@@ -358,7 +358,7 @@
             this.txt_emp_phone.SelectionLength = 0;
             this.txt_emp_phone.SelectionStart = 0;
             this.txt_emp_phone.ShortcutsEnabled = true;
-            this.txt_emp_phone.Size = new System.Drawing.Size(311, 54);
+            this.txt_emp_phone.Size = new System.Drawing.Size(311, 51);
             this.txt_emp_phone.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txt_emp_phone.TabIndex = 51;
             this.txt_emp_phone.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -386,7 +386,7 @@
             this.txt_emp_name.BorderThickness = 3;
             this.txt_emp_name.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txt_emp_name.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txt_emp_name.DefaultFont = new System.Drawing.Font("ae_AlArabiya", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.txt_emp_name.DefaultFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.txt_emp_name.DefaultText = "";
             this.txt_emp_name.FillColor = System.Drawing.Color.White;
             this.txt_emp_name.HideSelection = true;
@@ -422,7 +422,7 @@
             stateProperties12.ForeColor = System.Drawing.Color.Empty;
             stateProperties12.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.txt_emp_name.OnIdleState = stateProperties12;
-            this.txt_emp_name.Padding = new System.Windows.Forms.Padding(3);
+            this.txt_emp_name.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
             this.txt_emp_name.PasswordChar = '\0';
             this.txt_emp_name.PlaceholderForeColor = System.Drawing.Color.DarkGray;
             this.txt_emp_name.PlaceholderText = "ادخل اسم الموظف";
@@ -432,7 +432,7 @@
             this.txt_emp_name.SelectionLength = 0;
             this.txt_emp_name.SelectionStart = 0;
             this.txt_emp_name.ShortcutsEnabled = true;
-            this.txt_emp_name.Size = new System.Drawing.Size(311, 54);
+            this.txt_emp_name.Size = new System.Drawing.Size(311, 51);
             this.txt_emp_name.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txt_emp_name.TabIndex = 49;
             this.txt_emp_name.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -475,11 +475,11 @@
             // 
             // labelControl1
             // 
-            this.labelControl1.Appearance.Font = new System.Drawing.Font("ae_AlArabiya", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl1.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl1.Appearance.Options.UseFont = true;
             this.labelControl1.Location = new System.Drawing.Point(195, 5);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(229, 26);
+            this.labelControl1.Size = new System.Drawing.Size(203, 24);
             this.labelControl1.TabIndex = 43;
             this.labelControl1.Text = "شاشه اضافه وتعديل الموظفين";
             // 
@@ -488,7 +488,7 @@
             this.txt_emp_desc.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
             this.txt_emp_desc.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.txt_emp_desc.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.txt_emp_desc.Font = new System.Drawing.Font("ae_AlArabiya", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_emp_desc.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_emp_desc.FormattingEnabled = true;
             this.txt_emp_desc.Items.AddRange(new object[] {
             "مدرس",
@@ -496,16 +496,16 @@
             "مدير"});
             this.txt_emp_desc.Location = new System.Drawing.Point(26, 271);
             this.txt_emp_desc.Name = "txt_emp_desc";
-            this.txt_emp_desc.Size = new System.Drawing.Size(279, 34);
+            this.txt_emp_desc.Size = new System.Drawing.Size(279, 32);
             this.txt_emp_desc.TabIndex = 75;
             // 
             // labelControl8
             // 
-            this.labelControl8.Appearance.Font = new System.Drawing.Font("ae_AlArabiya", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl8.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl8.Appearance.Options.UseFont = true;
             this.labelControl8.Location = new System.Drawing.Point(262, 232);
             this.labelControl8.Name = "labelControl8";
-            this.labelControl8.Size = new System.Drawing.Size(44, 22);
+            this.labelControl8.Size = new System.Drawing.Size(39, 20);
             this.labelControl8.TabIndex = 74;
             this.labelControl8.Text = "الوظيفه";
             // 

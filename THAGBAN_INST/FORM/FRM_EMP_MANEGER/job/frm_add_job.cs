@@ -34,6 +34,26 @@ namespace THAGBAN_INST.FORM.FRM_EMP_MANEGER.job
             InitializeComponent();
         }
 
+        void get_job_first()
+        {
+            try
+            {
+                AutoCompleteStringCollection source = new AutoCompleteStringCollection();
+                var temp = con.TBL_LECT_MATRIAL.ToList();
+                if (temp.Count > 0)
+                {
+                    foreach (var item in temp)
+                    {
+                        source.Add(item.MATRIAL_LECT_NAME);
+                    }
+                }
+                txt_job_name.AutoCompleteCustomSource = source;
+            }
+            catch (Exception ex)
+            {
+
+            }
+        }
         private void btn_delete_Click(object sender, EventArgs e)
         {
             this.Close();

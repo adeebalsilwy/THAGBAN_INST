@@ -29,22 +29,22 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_setting));
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties9 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties10 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties11 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties12 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties13 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties14 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties15 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties16 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            DevExpress.Utils.SuperToolTip superToolTip5 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipItem toolTipItem5 = new DevExpress.Utils.ToolTipItem();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties1 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties2 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties3 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties4 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties5 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties6 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties7 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties8 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             DevExpress.Utils.SuperToolTip superToolTip1 = new DevExpress.Utils.SuperToolTip();
             DevExpress.Utils.ToolTipItem toolTipItem1 = new DevExpress.Utils.ToolTipItem();
             DevExpress.Utils.SuperToolTip superToolTip2 = new DevExpress.Utils.SuperToolTip();
             DevExpress.Utils.ToolTipItem toolTipItem2 = new DevExpress.Utils.ToolTipItem();
-            DevExpress.Utils.SuperToolTip superToolTip6 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipItem toolTipItem6 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.SuperToolTip superToolTip3 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipItem toolTipItem3 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.SuperToolTip superToolTip4 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipItem toolTipItem4 = new DevExpress.Utils.ToolTipItem();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
             this.group_server = new System.Windows.Forms.GroupBox();
@@ -104,6 +104,9 @@
             this.txt_inst_desc = new System.Windows.Forms.RichTextBox();
             this.navigationFrame1 = new DevExpress.XtraBars.Navigation.NavigationFrame();
             this.nav_page_home = new DevExpress.XtraBars.Navigation.NavigationPage();
+            this.txt_inst_admin = new System.Windows.Forms.TextBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.txt_totoal_inst = new System.Windows.Forms.Label();
             this.comb_primarycur = new System.Windows.Forms.ComboBox();
             this.label14 = new System.Windows.Forms.Label();
             this.btn_save_inst = new DevExpress.XtraEditors.SimpleButton();
@@ -134,9 +137,6 @@
             this.btn_groups = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.btn_categories = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accordionControlElement1 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
-            this.txt_totoal_inst = new System.Windows.Forms.Label();
-            this.txt_inst_admin = new System.Windows.Forms.TextBox();
-            this.label15 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.group_server.SuspendLayout();
             this.nav_page_rouls.SuspendLayout();
@@ -363,7 +363,7 @@
             this.nav_page_rouls.Controls.Add(this.panel2);
             this.nav_page_rouls.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.nav_page_rouls.Name = "nav_page_rouls";
-            this.nav_page_rouls.Size = new System.Drawing.Size(902, 518);
+            this.nav_page_rouls.Size = new System.Drawing.Size(902, 417);
             this.nav_page_rouls.Paint += new System.Windows.Forms.PaintEventHandler(this.navigationPage3_Paint);
             // 
             // panel4
@@ -447,7 +447,7 @@
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Padding = new System.Windows.Forms.Padding(4);
+            this.flowLayoutPanel1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.flowLayoutPanel1.Size = new System.Drawing.Size(776, 274);
             this.flowLayoutPanel1.TabIndex = 1;
             // 
@@ -711,7 +711,7 @@
             // panel3
             // 
             this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel3.Location = new System.Drawing.Point(0, 469);
+            this.panel3.Location = new System.Drawing.Point(0, 368);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(902, 49);
             this.panel3.TabIndex = 71;
@@ -767,27 +767,27 @@
             this.txt_user_name.Modified = false;
             this.txt_user_name.Multiline = true;
             this.txt_user_name.Name = "txt_user_name";
-            stateProperties9.BorderColor = System.Drawing.Color.DodgerBlue;
-            stateProperties9.FillColor = System.Drawing.Color.Empty;
-            stateProperties9.ForeColor = System.Drawing.Color.Empty;
-            stateProperties9.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txt_user_name.OnActiveState = stateProperties9;
-            stateProperties10.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            stateProperties10.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            stateProperties10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            stateProperties10.PlaceholderForeColor = System.Drawing.Color.DarkGray;
-            this.txt_user_name.OnDisabledState = stateProperties10;
-            stateProperties11.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            stateProperties11.FillColor = System.Drawing.Color.Empty;
-            stateProperties11.ForeColor = System.Drawing.Color.Empty;
-            stateProperties11.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txt_user_name.OnHoverState = stateProperties11;
-            stateProperties12.BorderColor = System.Drawing.Color.Black;
-            stateProperties12.FillColor = System.Drawing.Color.White;
-            stateProperties12.ForeColor = System.Drawing.Color.Empty;
-            stateProperties12.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txt_user_name.OnIdleState = stateProperties12;
-            this.txt_user_name.Padding = new System.Windows.Forms.Padding(3);
+            stateProperties1.BorderColor = System.Drawing.Color.DodgerBlue;
+            stateProperties1.FillColor = System.Drawing.Color.Empty;
+            stateProperties1.ForeColor = System.Drawing.Color.Empty;
+            stateProperties1.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txt_user_name.OnActiveState = stateProperties1;
+            stateProperties2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            stateProperties2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            stateProperties2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            stateProperties2.PlaceholderForeColor = System.Drawing.Color.DarkGray;
+            this.txt_user_name.OnDisabledState = stateProperties2;
+            stateProperties3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            stateProperties3.FillColor = System.Drawing.Color.Empty;
+            stateProperties3.ForeColor = System.Drawing.Color.Empty;
+            stateProperties3.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txt_user_name.OnHoverState = stateProperties3;
+            stateProperties4.BorderColor = System.Drawing.Color.Black;
+            stateProperties4.FillColor = System.Drawing.Color.White;
+            stateProperties4.ForeColor = System.Drawing.Color.Empty;
+            stateProperties4.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txt_user_name.OnIdleState = stateProperties4;
+            this.txt_user_name.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
             this.txt_user_name.PasswordChar = '\0';
             this.txt_user_name.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.txt_user_name.PlaceholderText = "ادخل كلمه المرور ";
@@ -858,27 +858,27 @@
             this.txt_user_pass.Modified = false;
             this.txt_user_pass.Multiline = true;
             this.txt_user_pass.Name = "txt_user_pass";
-            stateProperties13.BorderColor = System.Drawing.Color.DodgerBlue;
-            stateProperties13.FillColor = System.Drawing.Color.Empty;
-            stateProperties13.ForeColor = System.Drawing.Color.Empty;
-            stateProperties13.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txt_user_pass.OnActiveState = stateProperties13;
-            stateProperties14.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            stateProperties14.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            stateProperties14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            stateProperties14.PlaceholderForeColor = System.Drawing.Color.DarkGray;
-            this.txt_user_pass.OnDisabledState = stateProperties14;
-            stateProperties15.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            stateProperties15.FillColor = System.Drawing.Color.Empty;
-            stateProperties15.ForeColor = System.Drawing.Color.Empty;
-            stateProperties15.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txt_user_pass.OnHoverState = stateProperties15;
-            stateProperties16.BorderColor = System.Drawing.Color.Black;
-            stateProperties16.FillColor = System.Drawing.Color.White;
-            stateProperties16.ForeColor = System.Drawing.Color.Empty;
-            stateProperties16.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txt_user_pass.OnIdleState = stateProperties16;
-            this.txt_user_pass.Padding = new System.Windows.Forms.Padding(3);
+            stateProperties5.BorderColor = System.Drawing.Color.DodgerBlue;
+            stateProperties5.FillColor = System.Drawing.Color.Empty;
+            stateProperties5.ForeColor = System.Drawing.Color.Empty;
+            stateProperties5.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txt_user_pass.OnActiveState = stateProperties5;
+            stateProperties6.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            stateProperties6.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            stateProperties6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            stateProperties6.PlaceholderForeColor = System.Drawing.Color.DarkGray;
+            this.txt_user_pass.OnDisabledState = stateProperties6;
+            stateProperties7.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            stateProperties7.FillColor = System.Drawing.Color.Empty;
+            stateProperties7.ForeColor = System.Drawing.Color.Empty;
+            stateProperties7.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txt_user_pass.OnHoverState = stateProperties7;
+            stateProperties8.BorderColor = System.Drawing.Color.Black;
+            stateProperties8.FillColor = System.Drawing.Color.White;
+            stateProperties8.ForeColor = System.Drawing.Color.Empty;
+            stateProperties8.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txt_user_pass.OnIdleState = stateProperties8;
+            this.txt_user_pass.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
             this.txt_user_pass.PasswordChar = '\0';
             this.txt_user_pass.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.txt_user_pass.PlaceholderText = "ادخل كلمه المرور ";
@@ -888,7 +888,7 @@
             this.txt_user_pass.SelectionLength = 0;
             this.txt_user_pass.SelectionStart = 0;
             this.txt_user_pass.ShortcutsEnabled = true;
-            this.txt_user_pass.Size = new System.Drawing.Size(130, 43);
+            this.txt_user_pass.Size = new System.Drawing.Size(130, 63);
             this.txt_user_pass.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txt_user_pass.TabIndex = 75;
             this.txt_user_pass.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -901,21 +901,21 @@
             // 
             // labelControl3
             // 
-            this.labelControl3.Appearance.Font = new System.Drawing.Font("ae_AlArabiya", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl3.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl3.Appearance.Options.UseFont = true;
             this.labelControl3.Location = new System.Drawing.Point(353, 53);
             this.labelControl3.Name = "labelControl3";
-            this.labelControl3.Size = new System.Drawing.Size(43, 19);
+            this.labelControl3.Size = new System.Drawing.Size(46, 16);
             this.labelControl3.TabIndex = 74;
             this.labelControl3.Text = "كلمه السر";
             // 
             // labelControl2
             // 
-            this.labelControl2.Appearance.Font = new System.Drawing.Font("ae_AlArabiya", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl2.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl2.Appearance.Options.UseFont = true;
             this.labelControl2.Location = new System.Drawing.Point(569, 53);
             this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(66, 19);
+            this.labelControl2.Size = new System.Drawing.Size(63, 16);
             this.labelControl2.TabIndex = 72;
             this.labelControl2.Text = "اسم المستخدم";
             // 
@@ -924,11 +924,11 @@
             this.com_emp.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
             this.com_emp.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.com_emp.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.com_emp.Font = new System.Drawing.Font("ae_AlArabiya", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.com_emp.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.com_emp.FormattingEnabled = true;
             this.com_emp.Location = new System.Drawing.Point(655, 40);
             this.com_emp.Name = "com_emp";
-            this.com_emp.Size = new System.Drawing.Size(226, 41);
+            this.com_emp.Size = new System.Drawing.Size(226, 37);
             this.com_emp.TabIndex = 71;
             this.com_emp.SelectedIndexChanged += new System.EventHandler(this.com_emp_SelectedIndexChanged);
             this.com_emp.SelectionChangeCommitted += new System.EventHandler(this.com_emp_SelectedIndexChanged);
@@ -936,11 +936,11 @@
             // 
             // labelControl5
             // 
-            this.labelControl5.Appearance.Font = new System.Drawing.Font("ae_AlArabiya", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl5.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl5.Appearance.Options.UseFont = true;
             this.labelControl5.Location = new System.Drawing.Point(810, 12);
             this.labelControl5.Name = "labelControl5";
-            this.labelControl5.Size = new System.Drawing.Size(71, 22);
+            this.labelControl5.Size = new System.Drawing.Size(63, 20);
             this.labelControl5.TabIndex = 70;
             this.labelControl5.Text = "اسم الموظف";
             // 
@@ -961,7 +961,7 @@
             this.navigationPage4.Controls.Add(this.label12);
             this.navigationPage4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.navigationPage4.Name = "navigationPage4";
-            this.navigationPage4.Size = new System.Drawing.Size(902, 518);
+            this.navigationPage4.Size = new System.Drawing.Size(902, 417);
             // 
             // btn_currencysave
             // 
@@ -970,7 +970,7 @@
             this.btn_currencysave.Appearance.Options.UseFont = true;
             this.btn_currencysave.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_currencysave.ImageOptions.Image")));
             this.btn_currencysave.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleRight;
-            this.btn_currencysave.Location = new System.Drawing.Point(742, 433);
+            this.btn_currencysave.Location = new System.Drawing.Point(592, 257);
             this.btn_currencysave.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_currencysave.Name = "btn_currencysave";
             this.btn_currencysave.Size = new System.Drawing.Size(143, 38);
@@ -1014,7 +1014,7 @@
             this.nav_page_rouls,
             this.navigationPage4});
             this.navigationFrame1.SelectedPage = this.nav_page_home;
-            this.navigationFrame1.Size = new System.Drawing.Size(902, 518);
+            this.navigationFrame1.Size = new System.Drawing.Size(902, 417);
             this.navigationFrame1.TabIndex = 5;
             this.navigationFrame1.Text = "navigationFrame1";
             // 
@@ -1038,8 +1038,40 @@
             this.nav_page_home.Controls.Add(this.label1);
             this.nav_page_home.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.nav_page_home.Name = "nav_page_home";
-            this.nav_page_home.Size = new System.Drawing.Size(902, 518);
+            this.nav_page_home.Size = new System.Drawing.Size(902, 417);
             this.nav_page_home.Paint += new System.Windows.Forms.PaintEventHandler(this.navigationPage1_Paint);
+            // 
+            // txt_inst_admin
+            // 
+            this.txt_inst_admin.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_inst_admin.Location = new System.Drawing.Point(41, 244);
+            this.txt_inst_admin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txt_inst_admin.Name = "txt_inst_admin";
+            this.txt_inst_admin.Size = new System.Drawing.Size(559, 28);
+            this.txt_inst_admin.TabIndex = 15;
+            this.txt_inst_admin.Text = "اكتب اسم عميد المعهد ";
+            this.txt_inst_admin.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(628, 248);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(89, 24);
+            this.label15.TabIndex = 14;
+            this.label15.Text = "عميد المعهد";
+            // 
+            // txt_totoal_inst
+            // 
+            this.txt_totoal_inst.AutoSize = true;
+            this.txt_totoal_inst.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_totoal_inst.Location = new System.Drawing.Point(113, 350);
+            this.txt_totoal_inst.Name = "txt_totoal_inst";
+            this.txt_totoal_inst.Size = new System.Drawing.Size(231, 13);
+            this.txt_totoal_inst.TabIndex = 13;
+            this.txt_totoal_inst.Text = "انقر كلك ايمن على الصورة ثم اختر الشعار";
+            this.txt_totoal_inst.Visible = false;
             // 
             // comb_primarycur
             // 
@@ -1085,7 +1117,7 @@
             this.btn_save_inst.Appearance.Options.UseFont = true;
             this.btn_save_inst.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_save_inst.ImageOptions.Image")));
             this.btn_save_inst.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleRight;
-            this.btn_save_inst.Location = new System.Drawing.Point(497, 378);
+            this.btn_save_inst.Location = new System.Drawing.Point(347, 203);
             this.btn_save_inst.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_save_inst.Name = "btn_save_inst";
             this.btn_save_inst.Size = new System.Drawing.Size(143, 38);
@@ -1189,13 +1221,14 @@
             // 
             // nav_page_server
             // 
+            this.nav_page_server.Caption = "nav_page_server";
             this.nav_page_server.Controls.Add(this.groupBox3);
             this.nav_page_server.Controls.Add(this.groupBox1);
             this.nav_page_server.Controls.Add(this.label6);
             this.nav_page_server.Controls.Add(this.simpleButton1);
             this.nav_page_server.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.nav_page_server.Name = "nav_page_server";
-            this.nav_page_server.Size = new System.Drawing.Size(902, 518);
+            this.nav_page_server.Size = new System.Drawing.Size(902, 417);
             // 
             // groupBox3
             // 
@@ -1249,7 +1282,7 @@
             this.simpleButton1.Appearance.Options.UseFont = true;
             this.simpleButton1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
             this.simpleButton1.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleRight;
-            this.simpleButton1.Location = new System.Drawing.Point(857, 477);
+            this.simpleButton1.Location = new System.Drawing.Point(707, 302);
             this.simpleButton1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.simpleButton1.Name = "simpleButton1";
             this.simpleButton1.Size = new System.Drawing.Size(143, 38);
@@ -1260,7 +1293,7 @@
             // 
             this.panel1.Controls.Add(this.accordionControl1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 479);
+            this.panel1.Location = new System.Drawing.Point(0, 378);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(902, 39);
             this.panel1.TabIndex = 6;
@@ -1319,9 +1352,9 @@
             this.btn_home.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btn_home.ImageOptions.SvgImage")));
             this.btn_home.Name = "btn_home";
             this.btn_home.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            toolTipItem5.Text = "اعدادات عامة";
-            superToolTip5.Items.Add(toolTipItem5);
-            this.btn_home.SuperTip = superToolTip5;
+            toolTipItem1.Text = "اعدادات عامة";
+            superToolTip1.Items.Add(toolTipItem1);
+            this.btn_home.SuperTip = superToolTip1;
             this.btn_home.Text = "عام";
             this.btn_home.Click += new System.EventHandler(this.btn_home_Click);
             // 
@@ -1363,9 +1396,9 @@
             this.btn_groups.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btn_groups.ImageOptions.SvgImage")));
             this.btn_groups.Name = "btn_groups";
             this.btn_groups.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            toolTipItem1.Text = "قواعد البيانات\r\n";
-            superToolTip1.Items.Add(toolTipItem1);
-            this.btn_groups.SuperTip = superToolTip1;
+            toolTipItem2.Text = "قواعد البيانات\r\n";
+            superToolTip2.Items.Add(toolTipItem2);
+            this.btn_groups.SuperTip = superToolTip2;
             this.btn_groups.Text = "قاعدة البيانات";
             this.btn_groups.Click += new System.EventHandler(this.btn_groups_Click);
             // 
@@ -1381,9 +1414,9 @@
             this.btn_categories.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btn_categories.ImageOptions.SvgImage")));
             this.btn_categories.Name = "btn_categories";
             this.btn_categories.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            toolTipItem2.Text = "صلاحيات المستخدمين";
-            superToolTip2.Items.Add(toolTipItem2);
-            this.btn_categories.SuperTip = superToolTip2;
+            toolTipItem3.Text = "صلاحيات المستخدمين";
+            superToolTip3.Items.Add(toolTipItem3);
+            this.btn_categories.SuperTip = superToolTip3;
             this.btn_categories.Text = "الصلاحيات";
             this.btn_categories.Click += new System.EventHandler(this.btn_categories_Click);
             // 
@@ -1392,43 +1425,11 @@
             this.accordionControlElement1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("accordionControlElement1.ImageOptions.Image")));
             this.accordionControlElement1.Name = "accordionControlElement1";
             this.accordionControlElement1.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            toolTipItem6.Text = "العملة";
-            superToolTip6.Items.Add(toolTipItem6);
-            this.accordionControlElement1.SuperTip = superToolTip6;
+            toolTipItem4.Text = "العملة";
+            superToolTip4.Items.Add(toolTipItem4);
+            this.accordionControlElement1.SuperTip = superToolTip4;
             this.accordionControlElement1.Text = "العملة";
             this.accordionControlElement1.Click += new System.EventHandler(this.accordionControlElement1_Click);
-            // 
-            // txt_totoal_inst
-            // 
-            this.txt_totoal_inst.AutoSize = true;
-            this.txt_totoal_inst.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_totoal_inst.Location = new System.Drawing.Point(113, 350);
-            this.txt_totoal_inst.Name = "txt_totoal_inst";
-            this.txt_totoal_inst.Size = new System.Drawing.Size(231, 13);
-            this.txt_totoal_inst.TabIndex = 13;
-            this.txt_totoal_inst.Text = "انقر كلك ايمن على الصورة ثم اختر الشعار";
-            this.txt_totoal_inst.Visible = false;
-            // 
-            // txt_inst_admin
-            // 
-            this.txt_inst_admin.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_inst_admin.Location = new System.Drawing.Point(41, 244);
-            this.txt_inst_admin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txt_inst_admin.Name = "txt_inst_admin";
-            this.txt_inst_admin.Size = new System.Drawing.Size(559, 28);
-            this.txt_inst_admin.TabIndex = 15;
-            this.txt_inst_admin.Text = "اكتب اسم عميد المعهد ";
-            this.txt_inst_admin.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(628, 248);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(89, 24);
-            this.label15.TabIndex = 14;
-            this.label15.Text = "عميد المعهد";
             // 
             // frm_setting
             // 
@@ -1438,7 +1439,7 @@
             this.Appearance.Options.UseForeColor = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(902, 518);
+            this.ClientSize = new System.Drawing.Size(902, 417);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.navigationFrame1);
             this.FormBorderEffect = DevExpress.XtraEditors.FormBorderEffect.Glow;

@@ -114,18 +114,18 @@ namespace THAGBAN_INST.FORM.FRM_LECTUER_MANG.lect_salary
             // gridView2
             // 
             this.gridView2.Appearance.EvenRow.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.gridView2.Appearance.EvenRow.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gridView2.Appearance.EvenRow.Font = new System.Drawing.Font("Tahoma", 9.75F);
             this.gridView2.Appearance.EvenRow.Options.UseBackColor = true;
             this.gridView2.Appearance.EvenRow.Options.UseFont = true;
-            this.gridView2.Appearance.HeaderPanel.Font = new System.Drawing.Font("ae_AlArabiya", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gridView2.Appearance.HeaderPanel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gridView2.Appearance.HeaderPanel.Options.UseFont = true;
             this.gridView2.Appearance.OddRow.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.gridView2.Appearance.OddRow.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gridView2.Appearance.OddRow.Font = new System.Drawing.Font("Tahoma", 9.75F);
             this.gridView2.Appearance.OddRow.Options.UseBackColor = true;
             this.gridView2.Appearance.OddRow.Options.UseFont = true;
             this.gridView2.Appearance.Row.Options.UseTextOptions = true;
             this.gridView2.Appearance.Row.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Near;
-            this.gridView2.Appearance.ViewCaption.Font = new System.Drawing.Font("ae_AlArabiya", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gridView2.Appearance.ViewCaption.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gridView2.Appearance.ViewCaption.Options.UseFont = true;
             this.gridView2.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.colLECT_ID,
@@ -241,11 +241,11 @@ namespace THAGBAN_INST.FORM.FRM_LECTUER_MANG.lect_salary
             this.com_lect.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
             this.com_lect.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.com_lect.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.com_lect.Font = new System.Drawing.Font("ae_AlArabiya", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.com_lect.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.com_lect.FormattingEnabled = true;
             this.com_lect.Location = new System.Drawing.Point(534, 18);
             this.com_lect.Name = "com_lect";
-            this.com_lect.Size = new System.Drawing.Size(185, 41);
+            this.com_lect.Size = new System.Drawing.Size(185, 37);
             this.com_lect.TabIndex = 120;
             this.com_lect.SelectedIndexChanged += new System.EventHandler(this.com_lect_SelectedIndexChanged);
             this.com_lect.SelectionChangeCommitted += new System.EventHandler(this.com_lect_SelectionChangeCommitted);
@@ -256,11 +256,11 @@ namespace THAGBAN_INST.FORM.FRM_LECTUER_MANG.lect_salary
             this.com_group.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
             this.com_group.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.com_group.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.com_group.Font = new System.Drawing.Font("ae_AlArabiya", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.com_group.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.com_group.FormattingEnabled = true;
             this.com_group.Location = new System.Drawing.Point(184, 18);
             this.com_group.Name = "com_group";
-            this.com_group.Size = new System.Drawing.Size(132, 41);
+            this.com_group.Size = new System.Drawing.Size(132, 37);
             this.com_group.TabIndex = 119;
             this.com_group.SelectionChangeCommitted += new System.EventHandler(this.com_group_SelectionChangeCommitted);
             // 
@@ -282,7 +282,7 @@ namespace THAGBAN_INST.FORM.FRM_LECTUER_MANG.lect_salary
             this.simpleButton2.AccessibleRole = System.Windows.Forms.AccessibleRole.Border;
             this.simpleButton2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.simpleButton2.Appearance.BackColor = System.Drawing.Color.Transparent;
-            this.simpleButton2.Appearance.Font = new System.Drawing.Font("ae_AlArabiya", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.simpleButton2.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.simpleButton2.Appearance.Options.UseBackColor = true;
             this.simpleButton2.Appearance.Options.UseBorderColor = true;
             this.simpleButton2.Appearance.Options.UseFont = true;
@@ -300,7 +300,7 @@ namespace THAGBAN_INST.FORM.FRM_LECTUER_MANG.lect_salary
             this.simpleButton1.AccessibleRole = System.Windows.Forms.AccessibleRole.Border;
             this.simpleButton1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.simpleButton1.Appearance.BackColor = System.Drawing.Color.Transparent;
-            this.simpleButton1.Appearance.Font = new System.Drawing.Font("ae_AlArabiya", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.simpleButton1.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.simpleButton1.Appearance.Options.UseBackColor = true;
             this.simpleButton1.Appearance.Options.UseBorderColor = true;
             this.simpleButton1.Appearance.Options.UseFont = true;
@@ -318,7 +318,7 @@ namespace THAGBAN_INST.FORM.FRM_LECTUER_MANG.lect_salary
             this.btn_delete.AccessibleRole = System.Windows.Forms.AccessibleRole.Border;
             this.btn_delete.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btn_delete.Appearance.BackColor = System.Drawing.Color.Transparent;
-            this.btn_delete.Appearance.Font = new System.Drawing.Font("ae_AlArabiya", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_delete.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_delete.Appearance.Options.UseBackColor = true;
             this.btn_delete.Appearance.Options.UseBorderColor = true;
             this.btn_delete.Appearance.Options.UseFont = true;
@@ -336,7 +336,7 @@ namespace THAGBAN_INST.FORM.FRM_LECTUER_MANG.lect_salary
             this.btn_edite.AccessibleRole = System.Windows.Forms.AccessibleRole.Border;
             this.btn_edite.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btn_edite.Appearance.BackColor = System.Drawing.Color.Transparent;
-            this.btn_edite.Appearance.Font = new System.Drawing.Font("ae_AlArabiya", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_edite.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_edite.Appearance.Options.UseBackColor = true;
             this.btn_edite.Appearance.Options.UseBorderColor = true;
             this.btn_edite.Appearance.Options.UseFont = true;
@@ -356,7 +356,7 @@ namespace THAGBAN_INST.FORM.FRM_LECTUER_MANG.lect_salary
             this.btn_save.Appearance.BackColor = System.Drawing.Color.Transparent;
             this.btn_save.Appearance.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btn_save.Appearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.btn_save.Appearance.Font = new System.Drawing.Font("ae_AlArabiya", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_save.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_save.Appearance.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.ForwardDiagonal;
             this.btn_save.Appearance.Options.UseBackColor = true;
             this.btn_save.Appearance.Options.UseBorderColor = true;

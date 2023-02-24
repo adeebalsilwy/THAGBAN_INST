@@ -108,7 +108,7 @@ namespace THAGBAN_INST.FORM.FRM_LECTUER_MANG.cours
                         con.TBL_LECT_COURS.AddOrUpdate(cl);
                         con.SaveChanges();
                         // toast.Width = this.Width;
-                        NotifictionUser notifiction = new NotifictionUser("تم الاضافه ينجاح  بنجاح",THAGBAN_INST.Properties.Resources.add_32px);
+                        NotifictionUser notifiction = new NotifictionUser(THAGBAN_INST.Properties.Resources.AddNotificationText,THAGBAN_INST.Properties.Resources.add_32px);
 
                         notifiction.Show();
                        

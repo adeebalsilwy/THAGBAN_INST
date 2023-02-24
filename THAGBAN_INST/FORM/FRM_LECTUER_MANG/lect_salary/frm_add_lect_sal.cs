@@ -200,7 +200,6 @@ namespace THAGBAN_INST.FORM.FRM_LECTUER_MANG.lect_salary
                         print_id = Convert.ToInt32(cl.SEND_STUD_ID);
                         adl.NotifictionUser notifiction = new adl.NotifictionUser(THAGBAN_INST.Properties.Resources.EditNotificationText, THAGBAN_INST.Properties.Resources.edit_32px);
                         notifiction.Show();
-
                         //clear();
                         //MessageBox.Show("تم التعديل بنجاح ");
                     }
@@ -590,7 +589,7 @@ void get_salary()
                 erp_send_tech report = new erp_send_tech();
                 // var temp =con.TBL_SEND_TECT_LECT.Where(w=>w.SEND_STUD_ID==print_id).ToList();
                
-                report.DataSource =con.TBL_SEND_TECT_LECT.ToList();
+                report.DataSource =con.TBL_SEND_TECT_LECT.Where(w=>w.SEND_STUD_ID==print_id).ToList();
                 report.DataMember = "";
                 report.ShowRibbonPreview();
             }catch(Exception ex) { }

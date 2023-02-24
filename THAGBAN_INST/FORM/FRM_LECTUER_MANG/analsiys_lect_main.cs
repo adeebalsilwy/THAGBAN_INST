@@ -443,6 +443,15 @@ namespace THAGBAN_INST.FORM.FRM_LECTUER_MANG
 
                     _Lect.DataSource = temp_lec.ToList();
 
+                    
+                    int ints_id = THAGBAN_INST.Properties.Settings.Default.inst_id;
+                    _Lect.lbl_inst_name.Text = con.TBL_INST.Find(ints_id).INST_NAME.ToString();
+                    adl.method method = new adl.method();
+                    method.data = con.TBL_INST.Find(ints_id).INST_LOGO;
+                    _Lect.inst_logo.Image = Image.FromStream(method.convert_image());
+                    _Lect.Watermark.Image = Image.FromStream(method.convert_image());
+                    _Lect.lbl_inst_desc.Text = con.TBL_INST.Find(ints_id).INST_DESC;
+                    _Lect.lbl_inst_locationn.Text = con.TBL_INST.Find(ints_id).INST_LOCATION;
 
 
                     _Lect.DataMember = "";
@@ -469,6 +478,15 @@ namespace THAGBAN_INST.FORM.FRM_LECTUER_MANG
                 {
                     _Lect.DataSource = temp_tech;
                     _Lect.DataMember = "";
+
+                    int ints_id = THAGBAN_INST.Properties.Settings.Default.inst_id;
+                    _Lect.lbl_inst_name.Text = con.TBL_INST.Find(ints_id).INST_NAME.ToString();
+                    adl.method method = new adl.method();
+                    method.data = con.TBL_INST.Find(ints_id).INST_LOGO;
+                    _Lect.inst_logo.Image = Image.FromStream(method.convert_image());
+                    _Lect.Watermark.Image = Image.FromStream(method.convert_image());
+                    _Lect.lbl_inst_desc.Text = con.TBL_INST.Find(ints_id).INST_DESC;
+                    _Lect.lbl_inst_locationn.Text = con.TBL_INST.Find(ints_id).INST_LOCATION;
                     _Lect.ShowPreview();
                     //_Lect.ShowRibbonPreview();
                 }
@@ -491,6 +509,15 @@ namespace THAGBAN_INST.FORM.FRM_LECTUER_MANG
                 {
                     _Lect.DataSource = temp;
                     _Lect.DataMember = "";
+
+                    int ints_id = THAGBAN_INST.Properties.Settings.Default.inst_id;
+                    _Lect.lbl_inst_name.Text = con.TBL_INST.Find(ints_id).INST_NAME.ToString();
+                    adl.method method = new adl.method();
+                    method.data = con.TBL_INST.Find(ints_id).INST_LOGO;
+                    _Lect.inst_logo.Image = Image.FromStream(method.convert_image());
+                    _Lect.Watermark.Image = Image.FromStream(method.convert_image());
+                    _Lect.lbl_inst_desc.Text = con.TBL_INST.Find(ints_id).INST_DESC;
+                    _Lect.lbl_inst_locationn.Text = con.TBL_INST.Find(ints_id).INST_LOCATION;
                     _Lect.ShowPreview();
                     //_Lect.ShowRibbonPreview();
                 }
@@ -513,6 +540,15 @@ namespace THAGBAN_INST.FORM.FRM_LECTUER_MANG
                 {
                     _Lect.DataSource = temp;
                     _Lect.DataMember = "";
+
+                    int ints_id = THAGBAN_INST.Properties.Settings.Default.inst_id;
+                    _Lect.lbl_inst_name.Text = con.TBL_INST.Find(ints_id).INST_NAME.ToString();
+                    adl.method method = new adl.method();
+                    method.data = con.TBL_INST.Find(ints_id).INST_LOGO;
+                    _Lect.inst_logo.Image = Image.FromStream(method.convert_image());
+                    _Lect.Watermark.Image = Image.FromStream(method.convert_image());
+                    _Lect.lbl_inst_desc.Text = con.TBL_INST.Find(ints_id).INST_DESC;
+                    _Lect.lbl_inst_locationn.Text = con.TBL_INST.Find(ints_id).INST_LOCATION;
                     _Lect.ShowPreview();
                     //_Lect.ShowRibbonPreview();
                 }
@@ -533,6 +569,14 @@ namespace THAGBAN_INST.FORM.FRM_LECTUER_MANG
                 {
                     _Lect.DataSource = temp1;
                     _Lect.DataMember = "";
+                    int ints_id = THAGBAN_INST.Properties.Settings.Default.inst_id;
+                    _Lect.lbl_inst_name.Text = con.TBL_INST.Find(ints_id).INST_NAME.ToString();
+                    adl.method method = new adl.method();
+                    method.data = con.TBL_INST.Find(ints_id).INST_LOGO;
+                    _Lect.inst_logo.Image = Image.FromStream(method.convert_image());
+                    _Lect.Watermark.Image = Image.FromStream(method.convert_image());
+                    _Lect.lbl_inst_desc.Text = con.TBL_INST.Find(ints_id).INST_DESC;
+                    _Lect.lbl_inst_locationn.Text = con.TBL_INST.Find(ints_id).INST_LOCATION;
                     _Lect.ShowPreview();
                     // _Lect.ShowRibbonPreview();
                 }
@@ -553,6 +597,14 @@ namespace THAGBAN_INST.FORM.FRM_LECTUER_MANG
                 {
                     _Lect.DataSource = temp1;
                     _Lect.DataMember = "";
+                    int ints_id = THAGBAN_INST.Properties.Settings.Default.inst_id;
+                    _Lect.lbl_inst_name.Text = con.TBL_INST.Find(ints_id).INST_NAME.ToString();
+                    adl.method method = new adl.method();
+                    method.data = con.TBL_INST.Find(ints_id).INST_LOGO;
+                    _Lect.inst_logo.Image = Image.FromStream(method.convert_image());
+                    _Lect.Watermark.Image = Image.FromStream(method.convert_image());
+                    _Lect.lbl_inst_desc.Text = con.TBL_INST.Find(ints_id).INST_DESC;
+                    _Lect.lbl_inst_locationn.Text = con.TBL_INST.Find(ints_id).INST_LOCATION;
                     _Lect.ShowPreview();
                     // _Lect.ShowRibbonPreview();
                 }
@@ -574,6 +626,14 @@ namespace THAGBAN_INST.FORM.FRM_LECTUER_MANG
                 if (temp1.Count > 0)
                 {
                     // _Lect.ShowPreview();
+                    int ints_id = THAGBAN_INST.Properties.Settings.Default.inst_id;
+                    _Lect.lbl_inst_name.Text = con.TBL_INST.Find(ints_id).INST_NAME.ToString();
+                    adl.method method = new adl.method();
+                    method.data = con.TBL_INST.Find(ints_id).INST_LOGO;
+                    _Lect.inst_logo.Image = Image.FromStream(method.convert_image());
+                    _Lect.Watermark.Image = Image.FromStream(method.convert_image());
+                    _Lect.lbl_inst_desc.Text = con.TBL_INST.Find(ints_id).INST_DESC;
+                    _Lect.lbl_inst_locationn.Text = con.TBL_INST.Find(ints_id).INST_LOCATION;
 
                     _Lect.ShowRibbonPreview();
                 }

@@ -12,6 +12,7 @@ using THAGBAN_INST.FORM.FRM_EMP_MANEGER;
 using THAGBAN_INST.FORM;
 using System.Data.Entity.Migrations;
 using THAGBAN_INST.DATA;
+using THAGBAN_INST.adl;
 
 namespace THAGBAN_INST.FORM.FRM_EMP_MANEGER
 {
@@ -92,9 +93,9 @@ namespace THAGBAN_INST.FORM.FRM_EMP_MANEGER
                         //update 
                         con.TBL_DEPT.AddOrUpdate(cl);
                         con.SaveChanges();
-                        toast.Width = this.Width;
-                        toast.lbl_mess.Text = "تم الاضافه ينجاح  بنجاح";
-                        toast.Show();
+                        NotifictionUser notifiction = new NotifictionUser(THAGBAN_INST.Properties.Resources.AddNotificationText, THAGBAN_INST.Properties.Resources.add_32px);
+
+                        notifiction.Show();
 
                     }
                 }

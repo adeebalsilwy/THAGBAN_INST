@@ -33,11 +33,11 @@ namespace THAGBAN_INST.FORM.FRM_SYSTEM
             DevExpress.Utils.Animation.Transition transition1 = new DevExpress.Utils.Animation.Transition();
             DevExpress.Utils.Animation.PushFadeTransition pushFadeTransition1 = new DevExpress.Utils.Animation.PushFadeTransition();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             this.btn_no = new DevExpress.XtraEditors.SimpleButton();
             this.btn_exit = new DevExpress.XtraEditors.SimpleButton();
             this.lb_state = new System.Windows.Forms.Label();
             this.transitionManager1 = new DevExpress.Utils.Animation.TransitionManager(this.components);
-            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -53,6 +53,23 @@ namespace THAGBAN_INST.FORM.FRM_SYSTEM
             this.panel1.Size = new System.Drawing.Size(761, 330);
             this.panel1.TabIndex = 0;
             this.panel1.Visible = false;
+            // 
+            // simpleButton1
+            // 
+            this.simpleButton1.Appearance.BackColor = DevExpress.LookAndFeel.DXSkinColors.FillColors.Success;
+            this.simpleButton1.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.simpleButton1.Appearance.ForeColor = System.Drawing.Color.White;
+            this.simpleButton1.Appearance.Options.UseBackColor = true;
+            this.simpleButton1.Appearance.Options.UseFont = true;
+            this.simpleButton1.Appearance.Options.UseForeColor = true;
+            this.simpleButton1.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleRight;
+            this.simpleButton1.Location = new System.Drawing.Point(287, 206);
+            this.simpleButton1.Margin = new System.Windows.Forms.Padding(10, 20, 10, 20);
+            this.simpleButton1.Name = "simpleButton1";
+            this.simpleButton1.Size = new System.Drawing.Size(174, 73);
+            this.simpleButton1.TabIndex = 13;
+            this.simpleButton1.Text = "دخول";
+            this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click_1);
             // 
             // btn_no
             // 
@@ -119,23 +136,6 @@ namespace THAGBAN_INST.FORM.FRM_SYSTEM
             transition1.WaitingIndicatorProperties.Caption = "";
             transition1.WaitingIndicatorProperties.Description = "";
             this.transitionManager1.Transitions.Add(transition1);
-            // 
-            // simpleButton1
-            // 
-            this.simpleButton1.Appearance.BackColor = DevExpress.LookAndFeel.DXSkinColors.FillColors.Success;
-            this.simpleButton1.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.simpleButton1.Appearance.ForeColor = System.Drawing.Color.White;
-            this.simpleButton1.Appearance.Options.UseBackColor = true;
-            this.simpleButton1.Appearance.Options.UseFont = true;
-            this.simpleButton1.Appearance.Options.UseForeColor = true;
-            this.simpleButton1.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleRight;
-            this.simpleButton1.Location = new System.Drawing.Point(287, 206);
-            this.simpleButton1.Margin = new System.Windows.Forms.Padding(10, 20, 10, 20);
-            this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(174, 73);
-            this.simpleButton1.TabIndex = 13;
-            this.simpleButton1.Text = "دخول";
-            this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click_1);
             // 
             // FRM_CLOCE
             // 

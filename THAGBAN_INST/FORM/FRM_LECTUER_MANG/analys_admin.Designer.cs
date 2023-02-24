@@ -79,10 +79,10 @@
             this.lb_benfit2 = new System.Windows.Forms.Label();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.panel13 = new System.Windows.Forms.Panel();
-            this.chartControl1 = new DevExpress.XtraCharts.ChartControl();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.btn_add = new DevExpress.XtraEditors.SimpleButton();
+            this.chartControl1 = new DevExpress.XtraCharts.ChartControl();
             this.panel14.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ch_lect.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ch_grou.Properties)).BeginInit();
@@ -101,9 +101,9 @@
             this.panel11.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.panel13.SuspendLayout();
+            this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chartControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(xyDiagram1)).BeginInit();
-            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel14
@@ -147,11 +147,11 @@
             this.com_lect.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
             this.com_lect.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.com_lect.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.com_lect.Font = new System.Drawing.Font("ae_AlArabiya", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.com_lect.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.com_lect.FormattingEnabled = true;
             this.com_lect.Location = new System.Drawing.Point(534, 18);
             this.com_lect.Name = "com_lect";
-            this.com_lect.Size = new System.Drawing.Size(185, 41);
+            this.com_lect.Size = new System.Drawing.Size(185, 37);
             this.com_lect.TabIndex = 120;
             this.com_lect.SelectedIndexChanged += new System.EventHandler(this.com_lect_SelectedIndexChanged);
             // 
@@ -160,11 +160,11 @@
             this.com_group.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
             this.com_group.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.com_group.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.com_group.Font = new System.Drawing.Font("ae_AlArabiya", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.com_group.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.com_group.FormattingEnabled = true;
             this.com_group.Location = new System.Drawing.Point(184, 18);
             this.com_group.Name = "com_group";
-            this.com_group.Size = new System.Drawing.Size(132, 41);
+            this.com_group.Size = new System.Drawing.Size(132, 37);
             this.com_group.TabIndex = 119;
             this.com_group.SelectedIndexChanged += new System.EventHandler(this.com_group_SelectedIndexChanged);
             // 
@@ -506,7 +506,7 @@
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(127, 79);
             this.label10.TabIndex = 5;
-            this.label10.Text = "الخارج";
+            this.label10.Text = "اجمالي الدخل ";
             this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lb_sell1
@@ -578,7 +578,7 @@
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(144, 79);
             this.label13.TabIndex = 5;
-            this.label13.Text = "الارباح";
+            this.label13.Text = "اجمالي الخارج";
             this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lb_benfit1
@@ -638,6 +638,43 @@
             this.panel13.Size = new System.Drawing.Size(956, 256);
             this.panel13.TabIndex = 9;
             // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.label1);
+            this.panel3.Controls.Add(this.btn_add);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel3.Location = new System.Drawing.Point(0, 209);
+            this.panel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(956, 47);
+            this.panel3.TabIndex = 7;
+            // 
+            // label1
+            // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.Location = new System.Drawing.Point(3, 8);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(720, 37);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "تحتاج الى تحديث كافة البيانات في الصفحات البرنامج لجلب البيانات بشكل الصحيح";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // btn_add
+            // 
+            this.btn_add.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.btn_add.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_add.Appearance.Options.UseFont = true;
+            this.btn_add.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.TopCenter;
+            this.btn_add.Location = new System.Drawing.Point(729, 6);
+            this.btn_add.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_add.Name = "btn_add";
+            this.btn_add.Size = new System.Drawing.Size(224, 38);
+            this.btn_add.TabIndex = 1;
+            this.btn_add.Text = "تحديث البيانات";
+            this.btn_add.Click += new System.EventHandler(this.btn_add_Click);
+            // 
             // chartControl1
             // 
             this.chartControl1.AppearanceNameSerializable = "Dark Flat";
@@ -680,43 +717,6 @@
             this.chartControl1.Size = new System.Drawing.Size(956, 209);
             this.chartControl1.TabIndex = 8;
             // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.label1);
-            this.panel3.Controls.Add(this.btn_add);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel3.Location = new System.Drawing.Point(0, 209);
-            this.panel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(956, 47);
-            this.panel3.TabIndex = 7;
-            // 
-            // label1
-            // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(3, 8);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(720, 37);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "تحتاج الى تحديث كافة البيانات في الصفحات البرنامج لجلب البيانات بشكل الصحيح";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // btn_add
-            // 
-            this.btn_add.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.btn_add.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_add.Appearance.Options.UseFont = true;
-            this.btn_add.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.TopCenter;
-            this.btn_add.Location = new System.Drawing.Point(729, 6);
-            this.btn_add.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btn_add.Name = "btn_add";
-            this.btn_add.Size = new System.Drawing.Size(224, 38);
-            this.btn_add.TabIndex = 1;
-            this.btn_add.Text = "تحديث البيانات";
-            this.btn_add.Click += new System.EventHandler(this.btn_add_Click);
-            // 
             // analys_admin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -743,9 +743,9 @@
             this.panel11.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.panel13.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(xyDiagram1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartControl1)).EndInit();
-            this.panel3.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

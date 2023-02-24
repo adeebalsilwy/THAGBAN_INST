@@ -32,6 +32,7 @@ namespace THAGBAN_INST.FORM.FRM_LECTUER_MANG.matrial
         public frm_add_matrial()
         {
             InitializeComponent();
+            get_matriaL();
         }
 
         
@@ -105,6 +106,25 @@ namespace THAGBAN_INST.FORM.FRM_LECTUER_MANG.matrial
             else
                 return true;
 
+        }
+        void get_matriaL()
+        {
+            try
+            {
+                AutoCompleteStringCollection source = new AutoCompleteStringCollection();
+                var temp = con.TBL_LECT_MATRIAL.ToList();
+                if (temp.Count > 0)
+                {
+                    foreach (var item in temp)
+                    {
+                        source.Add(item.MATRIAL_LECT_NAME);
+                    }
+                }
+                txt_matrial_name.AutoCompleteCustomSource = source;
+            }catch(Exception ex)
+            {
+
+            }
         }
 
         void add_terms()

@@ -46,6 +46,7 @@ namespace THAGBAN_INST.DATA
         public virtual DbSet<TBL_MARKS> TBL_MARKS { get; set; }
         public virtual DbSet<TBL_OPRATION> TBL_OPRATION { get; set; }
         public virtual DbSet<TBL_PART_SALARY> TBL_PART_SALARY { get; set; }
+        public virtual DbSet<TBL_ROULLS_LECTUER> TBL_ROULLS_LECTUER { get; set; }
         public virtual DbSet<TBL_SALARY> TBL_SALARY { get; set; }
         public virtual DbSet<TBL_SEND_STUD_LECT> TBL_SEND_STUD_LECT { get; set; }
         public virtual DbSet<TBL_SEND_TECT_LECT> TBL_SEND_TECT_LECT { get; set; }
@@ -58,7 +59,6 @@ namespace THAGBAN_INST.DATA
         public virtual DbSet<TBL_TERMS> TBL_TERMS { get; set; }
         public virtual DbSet<TBL_USERS> TBL_USERS { get; set; }
         public virtual DbSet<TBL_YEARS> TBL_YEARS { get; set; }
-        public virtual DbSet<TBL_ROULLS_LECTUER> TBL_ROULLS_LECTUER { get; set; }
     
         public virtual ObjectResult<get_send_stud_query_Result> get_send_stud_query()
         {

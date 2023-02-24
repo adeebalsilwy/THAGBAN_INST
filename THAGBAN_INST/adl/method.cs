@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 using System.IO;
 using THAGBAN_INST.DATA;
 using System.Data.Entity;
+using DevExpress.XtraCharts.Native;
+using Microsoft.Win32;
 
 namespace THAGBAN_INST.adl
 {
@@ -39,6 +41,8 @@ namespace THAGBAN_INST.adl
             }
             return cournt;
         }
+       
+       
       
     }
 }

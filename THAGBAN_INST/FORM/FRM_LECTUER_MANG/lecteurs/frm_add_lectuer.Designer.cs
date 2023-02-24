@@ -63,40 +63,40 @@
             this.com_cours.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
             this.com_cours.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.com_cours.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.com_cours.Font = new System.Drawing.Font("ae_AlArabiya", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.com_cours.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.com_cours.FormattingEnabled = true;
             this.com_cours.Location = new System.Drawing.Point(29, 238);
             this.com_cours.Name = "com_cours";
-            this.com_cours.Size = new System.Drawing.Size(247, 41);
+            this.com_cours.Size = new System.Drawing.Size(247, 37);
             this.com_cours.TabIndex = 59;
             // 
             // labelControl4
             // 
-            this.labelControl4.Appearance.Font = new System.Drawing.Font("ae_AlArabiya", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl4.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl4.Appearance.Options.UseFont = true;
             this.labelControl4.Location = new System.Drawing.Point(291, 255);
             this.labelControl4.Name = "labelControl4";
-            this.labelControl4.Size = new System.Drawing.Size(72, 22);
+            this.labelControl4.Size = new System.Drawing.Size(63, 20);
             this.labelControl4.TabIndex = 58;
             this.labelControl4.Text = "اسم الكورس";
             // 
             // labelControl3
             // 
-            this.labelControl3.Appearance.Font = new System.Drawing.Font("ae_AlArabiya", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl3.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl3.Appearance.Options.UseFont = true;
             this.labelControl3.Location = new System.Drawing.Point(291, 144);
             this.labelControl3.Name = "labelControl3";
-            this.labelControl3.Size = new System.Drawing.Size(55, 19);
+            this.labelControl3.Size = new System.Drawing.Size(58, 16);
             this.labelControl3.TabIndex = 57;
             this.labelControl3.Text = "وصف الدوره";
             // 
             // labelControl2
             // 
-            this.labelControl2.Appearance.Font = new System.Drawing.Font("ae_AlArabiya", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl2.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl2.Appearance.Options.UseFont = true;
             this.labelControl2.Location = new System.Drawing.Point(298, 59);
             this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(48, 19);
+            this.labelControl2.Size = new System.Drawing.Size(49, 16);
             this.labelControl2.TabIndex = 54;
             this.labelControl2.Text = "اسم الدوره";
             // 
@@ -111,7 +111,7 @@
             this.bunifuPanel1.BorderThickness = 2;
             this.bunifuPanel1.Controls.Add(this.btn_save);
             this.bunifuPanel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.bunifuPanel1.Location = new System.Drawing.Point(0, 386);
+            this.bunifuPanel1.Location = new System.Drawing.Point(0, 365);
             this.bunifuPanel1.Name = "bunifuPanel1";
             this.bunifuPanel1.ShowBorders = true;
             this.bunifuPanel1.Size = new System.Drawing.Size(371, 62);
@@ -171,11 +171,11 @@
             // 
             // labelControl1
             // 
-            this.labelControl1.Appearance.Font = new System.Drawing.Font("ae_AlArabiya", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl1.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl1.Appearance.Options.UseFont = true;
             this.labelControl1.Location = new System.Drawing.Point(99, 14);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(221, 26);
+            this.labelControl1.Size = new System.Drawing.Size(199, 24);
             this.labelControl1.TabIndex = 43;
             this.labelControl1.Text = "شاشه اضافه وتعديل الوظائف";
             // 
@@ -234,7 +234,7 @@
             stateProperties4.ForeColor = System.Drawing.Color.Empty;
             stateProperties4.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.txt_lect_desc.OnIdleState = stateProperties4;
-            this.txt_lect_desc.Padding = new System.Windows.Forms.Padding(3);
+            this.txt_lect_desc.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
             this.txt_lect_desc.PasswordChar = '\0';
             this.txt_lect_desc.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.txt_lect_desc.PlaceholderText = "ادخل وصف الدوره";
@@ -272,7 +272,7 @@
             this.txt_lect_name.BorderThickness = 3;
             this.txt_lect_name.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txt_lect_name.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txt_lect_name.DefaultFont = new System.Drawing.Font("ae_AlArabiya", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.txt_lect_name.DefaultFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.txt_lect_name.DefaultText = "";
             this.txt_lect_name.FillColor = System.Drawing.Color.White;
             this.txt_lect_name.HideSelection = true;
@@ -308,7 +308,7 @@
             stateProperties8.ForeColor = System.Drawing.Color.Empty;
             stateProperties8.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.txt_lect_name.OnIdleState = stateProperties8;
-            this.txt_lect_name.Padding = new System.Windows.Forms.Padding(3);
+            this.txt_lect_name.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
             this.txt_lect_name.PasswordChar = '\0';
             this.txt_lect_name.PlaceholderForeColor = System.Drawing.Color.DarkGray;
             this.txt_lect_name.PlaceholderText = "ادخل اسم الدوره";
@@ -318,7 +318,7 @@
             this.txt_lect_name.SelectionLength = 0;
             this.txt_lect_name.SelectionStart = 0;
             this.txt_lect_name.ShortcutsEnabled = true;
-            this.txt_lect_name.Size = new System.Drawing.Size(319, 54);
+            this.txt_lect_name.Size = new System.Drawing.Size(319, 51);
             this.txt_lect_name.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txt_lect_name.TabIndex = 56;
             this.txt_lect_name.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -384,7 +384,7 @@
             stateProperties12.ForeColor = System.Drawing.Color.Empty;
             stateProperties12.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.txt_lect_price.OnIdleState = stateProperties12;
-            this.txt_lect_price.Padding = new System.Windows.Forms.Padding(3);
+            this.txt_lect_price.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
             this.txt_lect_price.PasswordChar = '\0';
             this.txt_lect_price.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.txt_lect_price.PlaceholderText = "ادخل سعر الدوره";
@@ -407,11 +407,11 @@
             // 
             // labelControl5
             // 
-            this.labelControl5.Appearance.Font = new System.Drawing.Font("ae_AlArabiya", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl5.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl5.Appearance.Options.UseFont = true;
             this.labelControl5.Location = new System.Drawing.Point(287, 332);
             this.labelControl5.Name = "labelControl5";
-            this.labelControl5.Size = new System.Drawing.Size(61, 22);
+            this.labelControl5.Size = new System.Drawing.Size(59, 20);
             this.labelControl5.TabIndex = 63;
             this.labelControl5.Text = "سعر الدوره";
             // 
@@ -419,7 +419,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(371, 448);
+            this.ClientSize = new System.Drawing.Size(371, 427);
             this.Controls.Add(this.labelControl5);
             this.Controls.Add(this.txt_lect_price);
             this.Controls.Add(this.bunifuPanel1);

@@ -1,10 +1,14 @@
 ﻿using DevExpress.XtraRichEdit.Model;
+using DeviceId;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Mail;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using THAGBAN_INST.DATA;
+using THAGBAN_INST.FORM;
 using THAGBAN_INST.FORM.FRM_SYSTEM;
 
 namespace THAGBAN_INST.adl
@@ -12,12 +16,28 @@ namespace THAGBAN_INST.adl
     public class Active_System
     {
         private readonly FRM_Start main;
+        string mac_address;
+        db_max_instEntities con = new db_max_instEntities();
+        DeviceIdBuilder DEVIECE = new DeviceIdBuilder();
+         
+        string address_test;
+
         public Active_System(FRM_Start main) {
            this.main = main;
-           
+          
+
         }
         public void cheak_trial()
         {
+            DeviceIdBuilder DEVIECE = new DeviceIdBuilder();
+
+            mac_address = DEVIECE.AddMacAddress(excludeWireless: true).ToString();
+
+
+
+            string t = new string(mac_address.Where(char.IsDigit).ToArray());
+
+            address_test = t;
             if (Properties.Settings.Default.IsFirstOpen != true)
 
             {
@@ -26,39 +46,87 @@ namespace THAGBAN_INST.adl
                 Properties.Settings.Default.End_Date = cournt_date.AddDays(30);
                 Properties.Settings.Default.IsFirstOpen = true;
                 Properties.Settings.Default.Save();
-                Properties.Settings.Default.Save(); ;
                 MessageBox.Show("انت تستخدم النسخع التجريبيه حتى تاريخ  '" + Properties.Settings.Default.End_Date.ToString() + "'  ");
             }
             else
             {
-                if (DateTime.Now > Properties.Settings.Default.End_Date && Properties.Settings.Default.ISActive == false)
-                {
 
-                   
-                   main.Enabled = false;
-                    FRM_A frm = new FRM_A();
-                    frm.Show();
+                try {
+                    var active_system = con.TBL_ACTIVE_SYSTEM.Find(address_test);
 
-
-                }
-                else
-                {
-                    if (Properties.Settings.Default.ISActive)
+                    if (active_system != null)
                     {
-                        //FRM_LOGIN frm = new FRM_LOGIN();
-                        //frm.Show();
+                        var test_date = active_system.Added_date.Value;
+
+                        TimeSpan timeSpan = test_date - DateTime.Now;
+
+                        int day = Convert.ToInt32(timeSpan.TotalDays);
+                        if (day >=0)
+                        {
+                            if (active_system.FLUL_ACTIVE != true)
+                            {
+                                var curnt_date = active_system.Added_date.Value.AddYears(1);
+                                //  MessageBox.Show(curnt_date.ToString());
+                                DateTime dateTime = DateTime.Now;
+                                switch (active_system.SUB_ACTIVE)
+                                {
+                                    case true:
+
+                                        if (dateTime > curnt_date)
+                                        {
+                                            main.Enabled = false;
+                                            FRM_A frm = new FRM_A();
+                                            frm.Show();
+
+                                            break;
+                                        }
+
+                                        break;
+                                    case false:
+
+                                        if (dateTime > curnt_date)
+                                        {
+                                            main.Enabled = false;
+                                            FRM_A frm = new FRM_A();
+                                            frm.Show();
+                                            break;
+                                        }
+
+                                        break;
+
+                                }
+
+
+                            }
+                        }
+                        else
+                        {
+                            main.Enabled = false;
+                            FRM_A frm = new FRM_A();
+                            frm.Show();
+                        }
+                        
                     }
+
                     else
                     {
-                        var day = Properties.Settings.Default.End_Date.Day - Properties.Settings.Default.Start_Date.Day;
+                        var test_date = THAGBAN_INST.Properties.Settings.Default.End_Date;
 
-                        MessageBox.Show("متبقي لك من الايام  (" + day.ToString() + ") ");
-                        FRM_LOGIN frm = new FRM_LOGIN();
+                        TimeSpan timeSpan = test_date - DateTime.Now;
 
-                       frm.Show();
+                        int day = Convert.ToInt32(timeSpan.TotalDays);
+                        if (day < 0)
+                        {
+                            main.Enabled = false;
+                            FRM_A frm = new FRM_A();
+                            frm.Show();
+
+                        }
+
                     }
                 }
-            }
+                catch { }
+                }
 
         }
 

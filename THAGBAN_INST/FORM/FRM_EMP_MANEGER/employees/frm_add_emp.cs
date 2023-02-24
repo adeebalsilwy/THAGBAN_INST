@@ -211,19 +211,12 @@ namespace THAGBAN_INST.FORM.FRM_EMP_MANEGER.employees
             if (ch_mal.Checked == true)
             {
 
-                ch_fmel.Checked = false;
+              
                 emp_gender = "ذكر";
             }
             else
-                ch_fmel.Checked = true;
-            if (ch_fmel.Checked == true)
-            {
-
-                ch_mal.Checked = false;
                 emp_gender = "انثى";
-            }
-            else
-                ch_mal.Checked = true;
+
         }
         private void frm_add_emp_Load(object sender, EventArgs e)
         {
@@ -244,7 +237,7 @@ namespace THAGBAN_INST.FORM.FRM_EMP_MANEGER.employees
                 if(emp_gender=="ذكر")
                     ch_mal.Checked=true;
                 else
-                ch_fmel.Checked=true;
+                radioButton1.Checked=true;
                 
             }
 
@@ -344,6 +337,40 @@ namespace THAGBAN_INST.FORM.FRM_EMP_MANEGER.employees
             {
                 job_id = Convert.ToInt32(com_job.SelectedValue);
             }
+        }
+
+        private void ch_mal_CheckedChanged_1(object sender, EventArgs e)
+        {
+            cheack();
+        }
+
+        private void ch_fmel_CheckedChanged_1(object sender, EventArgs e)
+        {
+            cheack();
+        }
+
+        private void frm_add_emp_KeyDown(object sender, KeyEventArgs e)
+        {
+        }
+
+        private void ch_mal_CheckedChanged_2(object sender, EventArgs e)
+        {
+            cheack();
+        }
+
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+            cheack();
+        }
+
+        private void txt_emp_name_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                SendKeys.Send("{TAB}");
+            }
+            else
+                return;
         }
     }
 }

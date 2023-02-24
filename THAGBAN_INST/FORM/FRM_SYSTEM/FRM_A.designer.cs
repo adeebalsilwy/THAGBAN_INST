@@ -35,6 +35,7 @@ namespace THAGBAN_INST.FORM.FRM_SYSTEM
             this.pic_key = new System.Windows.Forms.PictureBox();
             this.pic_done = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
             this.lbl_key = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.btn_add = new DevExpress.XtraEditors.SimpleButton();
@@ -42,7 +43,6 @@ namespace THAGBAN_INST.FORM.FRM_SYSTEM
             this.label3 = new System.Windows.Forms.Label();
             this.txt_name = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic_key)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_done)).BeginInit();
@@ -113,12 +113,21 @@ namespace THAGBAN_INST.FORM.FRM_SYSTEM
             this.panel2.Size = new System.Drawing.Size(764, 285);
             this.panel2.TabIndex = 1;
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(348, 77);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(38, 13);
+            this.label4.TabIndex = 5;
+            this.label4.Text = "label4";
+            // 
             // lbl_key
             // 
             this.lbl_key.AutoSize = true;
             this.lbl_key.Location = new System.Drawing.Point(348, 138);
             this.lbl_key.Name = "lbl_key";
-            this.lbl_key.Size = new System.Drawing.Size(35, 13);
+            this.lbl_key.Size = new System.Drawing.Size(38, 13);
             this.lbl_key.TabIndex = 4;
             this.lbl_key.Text = "label4";
             // 
@@ -195,20 +204,11 @@ namespace THAGBAN_INST.FORM.FRM_SYSTEM
             this.label2.Text = "السريال";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(348, 77);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(35, 13);
-            this.label4.TabIndex = 5;
-            this.label4.Text = "label4";
-            // 
             // FRM_A
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(870, 527);
+            this.ClientSize = new System.Drawing.Size(870, 417);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderEffect = DevExpress.XtraEditors.FormBorderEffect.Glow;
@@ -222,6 +222,7 @@ namespace THAGBAN_INST.FORM.FRM_SYSTEM
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "التفعيل";
             this.TopMost = true;
+            this.Load += new System.EventHandler(this.FRM_A_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pic_key)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_done)).EndInit();

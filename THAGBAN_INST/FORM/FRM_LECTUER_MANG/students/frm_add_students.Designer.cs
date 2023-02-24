@@ -76,51 +76,51 @@
             // 
             // labelControl2
             // 
-            this.labelControl2.Appearance.Font = new System.Drawing.Font("ae_AlArabiya", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl2.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl2.Appearance.Options.UseFont = true;
             this.labelControl2.Location = new System.Drawing.Point(471, 48);
             this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(52, 19);
+            this.labelControl2.Size = new System.Drawing.Size(50, 16);
             this.labelControl2.TabIndex = 47;
             this.labelControl2.Text = "اسم الطالب";
             // 
             // labelControl3
             // 
-            this.labelControl3.Appearance.Font = new System.Drawing.Font("ae_AlArabiya", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl3.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl3.Appearance.Options.UseFont = true;
             this.labelControl3.Location = new System.Drawing.Point(481, 133);
             this.labelControl3.Name = "labelControl3";
-            this.labelControl3.Size = new System.Drawing.Size(47, 19);
+            this.labelControl3.Size = new System.Drawing.Size(51, 16);
             this.labelControl3.TabIndex = 50;
             this.labelControl3.Text = "رقم الهاتف";
             // 
             // labelControl4
             // 
-            this.labelControl4.Appearance.Font = new System.Drawing.Font("ae_AlArabiya", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl4.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl4.Appearance.Options.UseFont = true;
             this.labelControl4.Location = new System.Drawing.Point(468, 218);
             this.labelControl4.Name = "labelControl4";
-            this.labelControl4.Size = new System.Drawing.Size(55, 19);
+            this.labelControl4.Size = new System.Drawing.Size(60, 16);
             this.labelControl4.TabIndex = 52;
             this.labelControl4.Text = "عنوان الطالب";
             // 
             // labelControl6
             // 
-            this.labelControl6.Appearance.Font = new System.Drawing.Font("ae_AlArabiya", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl6.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl6.Appearance.Options.UseFont = true;
             this.labelControl6.Location = new System.Drawing.Point(131, 218);
             this.labelControl6.Name = "labelControl6";
-            this.labelControl6.Size = new System.Drawing.Size(51, 19);
+            this.labelControl6.Size = new System.Drawing.Size(60, 16);
             this.labelControl6.TabIndex = 65;
             this.labelControl6.Text = "تاريخ الميلاد";
             // 
             // labelControl7
             // 
-            this.labelControl7.Appearance.Font = new System.Drawing.Font("ae_AlArabiya", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl7.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl7.Appearance.Options.UseFont = true;
             this.labelControl7.Location = new System.Drawing.Point(165, 133);
             this.labelControl7.Name = "labelControl7";
-            this.labelControl7.Size = new System.Drawing.Size(28, 19);
+            this.labelControl7.Size = new System.Drawing.Size(32, 16);
             this.labelControl7.TabIndex = 67;
             this.labelControl7.Text = "الجنس";
             // 
@@ -129,7 +129,7 @@
             this.panel1.Controls.Add(this.simpleButton1);
             this.panel1.Controls.Add(this.btn_save);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 423);
+            this.panel1.Location = new System.Drawing.Point(0, 369);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(572, 58);
             this.panel1.TabIndex = 73;
@@ -174,9 +174,10 @@
             this.btn_save.Name = "btn_save";
             this.btn_save.ShowFocusRectangle = DevExpress.Utils.DefaultBoolean.True;
             this.btn_save.Size = new System.Drawing.Size(102, 43);
-            this.btn_save.TabIndex = 74;
+            this.btn_save.TabIndex = 0;
             this.btn_save.Text = "اضافة";
             this.btn_save.Click += new System.EventHandler(this.btn_save_Click);
+            this.btn_save.KeyDown += new System.Windows.Forms.KeyEventHandler(this.btn_save_KeyDown);
             // 
             // txt_stud_date
             // 
@@ -201,8 +202,9 @@
             this.txt_stud_date.MinimumSize = new System.Drawing.Size(4, 32);
             this.txt_stud_date.Name = "txt_stud_date";
             this.txt_stud_date.Size = new System.Drawing.Size(181, 32);
-            this.txt_stud_date.TabIndex = 64;
+            this.txt_stud_date.TabIndex = 4;
             this.txt_stud_date.Value = new System.DateTime(2022, 12, 27, 2, 14, 19, 0);
+            this.txt_stud_date.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_stud_name_KeyDown);
             // 
             // txt_stud_phone
             // 
@@ -221,7 +223,7 @@
             this.txt_stud_phone.BorderThickness = 3;
             this.txt_stud_phone.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txt_stud_phone.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txt_stud_phone.DefaultFont = new System.Drawing.Font("ae_AlArabiya", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.txt_stud_phone.DefaultFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.txt_stud_phone.DefaultText = "";
             this.txt_stud_phone.FillColor = System.Drawing.Color.White;
             this.txt_stud_phone.HideSelection = true;
@@ -257,7 +259,7 @@
             stateProperties4.ForeColor = System.Drawing.Color.Empty;
             stateProperties4.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.txt_stud_phone.OnIdleState = stateProperties4;
-            this.txt_stud_phone.Padding = new System.Windows.Forms.Padding(3);
+            this.txt_stud_phone.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
             this.txt_stud_phone.PasswordChar = '\0';
             this.txt_stud_phone.PlaceholderForeColor = System.Drawing.Color.DarkGray;
             this.txt_stud_phone.PlaceholderText = "ادخل رقم الهاتف";
@@ -267,9 +269,9 @@
             this.txt_stud_phone.SelectionLength = 0;
             this.txt_stud_phone.SelectionStart = 0;
             this.txt_stud_phone.ShortcutsEnabled = true;
-            this.txt_stud_phone.Size = new System.Drawing.Size(311, 54);
+            this.txt_stud_phone.Size = new System.Drawing.Size(311, 51);
             this.txt_stud_phone.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
-            this.txt_stud_phone.TabIndex = 51;
+            this.txt_stud_phone.TabIndex = 1;
             this.txt_stud_phone.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txt_stud_phone.TextMarginBottom = 0;
             this.txt_stud_phone.TextMarginLeft = 3;
@@ -277,6 +279,7 @@
             this.txt_stud_phone.TextPlaceholder = "ادخل رقم الهاتف";
             this.txt_stud_phone.UseSystemPasswordChar = false;
             this.txt_stud_phone.WordWrap = true;
+            this.txt_stud_phone.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_stud_name_KeyDown);
             // 
             // txt_stud_name
             // 
@@ -295,7 +298,7 @@
             this.txt_stud_name.BorderThickness = 3;
             this.txt_stud_name.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txt_stud_name.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txt_stud_name.DefaultFont = new System.Drawing.Font("ae_AlArabiya", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.txt_stud_name.DefaultFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.txt_stud_name.DefaultText = "";
             this.txt_stud_name.FillColor = System.Drawing.Color.White;
             this.txt_stud_name.HideSelection = true;
@@ -331,7 +334,7 @@
             stateProperties8.ForeColor = System.Drawing.Color.Empty;
             stateProperties8.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.txt_stud_name.OnIdleState = stateProperties8;
-            this.txt_stud_name.Padding = new System.Windows.Forms.Padding(3);
+            this.txt_stud_name.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
             this.txt_stud_name.PasswordChar = '\0';
             this.txt_stud_name.PlaceholderForeColor = System.Drawing.Color.DarkGray;
             this.txt_stud_name.PlaceholderText = "ادخل اسم الطالب";
@@ -341,9 +344,9 @@
             this.txt_stud_name.SelectionLength = 0;
             this.txt_stud_name.SelectionStart = 0;
             this.txt_stud_name.ShortcutsEnabled = true;
-            this.txt_stud_name.Size = new System.Drawing.Size(311, 54);
+            this.txt_stud_name.Size = new System.Drawing.Size(311, 51);
             this.txt_stud_name.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
-            this.txt_stud_name.TabIndex = 49;
+            this.txt_stud_name.TabIndex = 0;
             this.txt_stud_name.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txt_stud_name.TextMarginBottom = 0;
             this.txt_stud_name.TextMarginLeft = 3;
@@ -351,6 +354,7 @@
             this.txt_stud_name.TextPlaceholder = "ادخل اسم الطالب";
             this.txt_stud_name.UseSystemPasswordChar = false;
             this.txt_stud_name.WordWrap = true;
+            this.txt_stud_name.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_stud_name_KeyDown);
             // 
             // bunifuPanel2
             // 
@@ -384,11 +388,11 @@
             // 
             // labelControl1
             // 
-            this.labelControl1.Appearance.Font = new System.Drawing.Font("ae_AlArabiya", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl1.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl1.Appearance.Options.UseFont = true;
             this.labelControl1.Location = new System.Drawing.Point(195, 5);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(213, 26);
+            this.labelControl1.Size = new System.Drawing.Size(190, 24);
             this.labelControl1.TabIndex = 43;
             this.labelControl1.Text = "شاشه اضافه وتعديل الطلاب";
             // 
@@ -409,7 +413,7 @@
             this.txt_stud_lname.BorderThickness = 3;
             this.txt_stud_lname.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txt_stud_lname.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txt_stud_lname.DefaultFont = new System.Drawing.Font("ae_AlArabiya", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.txt_stud_lname.DefaultFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.txt_stud_lname.DefaultText = "";
             this.txt_stud_lname.FillColor = System.Drawing.Color.White;
             this.txt_stud_lname.HideSelection = true;
@@ -445,7 +449,7 @@
             stateProperties12.ForeColor = System.Drawing.Color.Empty;
             stateProperties12.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.txt_stud_lname.OnIdleState = stateProperties12;
-            this.txt_stud_lname.Padding = new System.Windows.Forms.Padding(3);
+            this.txt_stud_lname.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
             this.txt_stud_lname.PasswordChar = '\0';
             this.txt_stud_lname.PlaceholderForeColor = System.Drawing.Color.DarkGray;
             this.txt_stud_lname.PlaceholderText = "ادخل لقب الطالب";
@@ -455,9 +459,9 @@
             this.txt_stud_lname.SelectionLength = 0;
             this.txt_stud_lname.SelectionStart = 0;
             this.txt_stud_lname.ShortcutsEnabled = true;
-            this.txt_stud_lname.Size = new System.Drawing.Size(151, 54);
+            this.txt_stud_lname.Size = new System.Drawing.Size(151, 51);
             this.txt_stud_lname.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
-            this.txt_stud_lname.TabIndex = 78;
+            this.txt_stud_lname.TabIndex = 3;
             this.txt_stud_lname.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txt_stud_lname.TextMarginBottom = 0;
             this.txt_stud_lname.TextMarginLeft = 3;
@@ -465,14 +469,15 @@
             this.txt_stud_lname.TextPlaceholder = "ادخل لقب الطالب";
             this.txt_stud_lname.UseSystemPasswordChar = false;
             this.txt_stud_lname.WordWrap = true;
+            this.txt_stud_lname.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_stud_name_KeyDown);
             // 
             // labelControl5
             // 
-            this.labelControl5.Appearance.Font = new System.Drawing.Font("ae_AlArabiya", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl5.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl5.Appearance.Options.UseFont = true;
             this.labelControl5.Location = new System.Drawing.Point(170, 48);
             this.labelControl5.Name = "labelControl5";
-            this.labelControl5.Size = new System.Drawing.Size(23, 19);
+            this.labelControl5.Size = new System.Drawing.Size(23, 16);
             this.labelControl5.TabIndex = 79;
             this.labelControl5.Text = "اللقب";
             // 
@@ -511,6 +516,7 @@
             this.rdb_m.TabStop = true;
             this.rdb_m.Text = "ذكر";
             this.rdb_m.UseVisualStyleBackColor = true;
+            this.rdb_m.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_stud_name_KeyDown);
             // 
             // com_spiacl
             // 
@@ -518,23 +524,23 @@
             this.com_spiacl.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.com_spiacl.Enabled = false;
             this.com_spiacl.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.com_spiacl.Font = new System.Drawing.Font("ae_AlArabiya", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.com_spiacl.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.com_spiacl.FormattingEnabled = true;
             this.com_spiacl.Location = new System.Drawing.Point(217, 342);
             this.com_spiacl.Name = "com_spiacl";
-            this.com_spiacl.Size = new System.Drawing.Size(247, 41);
+            this.com_spiacl.Size = new System.Drawing.Size(247, 37);
             this.com_spiacl.TabIndex = 83;
             this.com_spiacl.Visible = false;
             this.com_spiacl.SelectionChangeCommitted += new System.EventHandler(this.com_spiacl_SelectionChangeCommitted);
             // 
             // labelControl8
             // 
-            this.labelControl8.Appearance.Font = new System.Drawing.Font("ae_AlArabiya", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl8.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl8.Appearance.Options.UseFont = true;
             this.labelControl8.Enabled = false;
             this.labelControl8.Location = new System.Drawing.Point(471, 351);
             this.labelControl8.Name = "labelControl8";
-            this.labelControl8.Size = new System.Drawing.Size(76, 22);
+            this.labelControl8.Size = new System.Drawing.Size(72, 20);
             this.labelControl8.TabIndex = 82;
             this.labelControl8.Text = "اسم التخصص";
             this.labelControl8.Visible = false;
@@ -556,7 +562,7 @@
             this.txt_stud_address.BorderThickness = 3;
             this.txt_stud_address.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txt_stud_address.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txt_stud_address.DefaultFont = new System.Drawing.Font("ae_AlArabiya", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.txt_stud_address.DefaultFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.txt_stud_address.DefaultText = "";
             this.txt_stud_address.FillColor = System.Drawing.Color.White;
             this.txt_stud_address.HideSelection = true;
@@ -592,7 +598,7 @@
             stateProperties16.ForeColor = System.Drawing.Color.Empty;
             stateProperties16.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.txt_stud_address.OnIdleState = stateProperties16;
-            this.txt_stud_address.Padding = new System.Windows.Forms.Padding(3);
+            this.txt_stud_address.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
             this.txt_stud_address.PasswordChar = '\0';
             this.txt_stud_address.PlaceholderForeColor = System.Drawing.Color.DarkGray;
             this.txt_stud_address.PlaceholderText = "ادخل رقم الهاتف";
@@ -602,9 +608,9 @@
             this.txt_stud_address.SelectionLength = 0;
             this.txt_stud_address.SelectionStart = 0;
             this.txt_stud_address.ShortcutsEnabled = true;
-            this.txt_stud_address.Size = new System.Drawing.Size(311, 54);
+            this.txt_stud_address.Size = new System.Drawing.Size(311, 51);
             this.txt_stud_address.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
-            this.txt_stud_address.TabIndex = 85;
+            this.txt_stud_address.TabIndex = 2;
             this.txt_stud_address.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txt_stud_address.TextMarginBottom = 0;
             this.txt_stud_address.TextMarginLeft = 3;
@@ -613,14 +619,15 @@
             this.txt_stud_address.UseSystemPasswordChar = false;
             this.txt_stud_address.WordWrap = true;
             this.txt_stud_address.TextChanged += new System.EventHandler(this.txt_stud_address_TextChanged_1);
+            this.txt_stud_address.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_stud_name_KeyDown);
             // 
             // labelControl11
             // 
-            this.labelControl11.Appearance.Font = new System.Drawing.Font("ae_AlArabiya", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl11.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl11.Appearance.Options.UseFont = true;
             this.labelControl11.Location = new System.Drawing.Point(131, 314);
             this.labelControl11.Name = "labelControl11";
-            this.labelControl11.Size = new System.Drawing.Size(62, 19);
+            this.labelControl11.Size = new System.Drawing.Size(69, 16);
             this.labelControl11.TabIndex = 92;
             this.labelControl11.Text = "تاريخ التسجيل";
             // 
@@ -647,14 +654,15 @@
             this.txt_stud_spec_date.MinimumSize = new System.Drawing.Size(4, 32);
             this.txt_stud_spec_date.Name = "txt_stud_spec_date";
             this.txt_stud_spec_date.Size = new System.Drawing.Size(181, 32);
-            this.txt_stud_spec_date.TabIndex = 91;
+            this.txt_stud_spec_date.TabIndex = 5;
             this.txt_stud_spec_date.Value = new System.DateTime(2022, 12, 27, 2, 14, 19, 0);
+            this.txt_stud_spec_date.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_stud_name_KeyDown);
             // 
             // frm_add_students
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(572, 481);
+            this.ClientSize = new System.Drawing.Size(572, 427);
             this.Controls.Add(this.labelControl11);
             this.Controls.Add(this.txt_stud_spec_date);
             this.Controls.Add(this.txt_stud_address);

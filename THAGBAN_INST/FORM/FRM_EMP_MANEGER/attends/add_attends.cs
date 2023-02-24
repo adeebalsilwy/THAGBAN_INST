@@ -10,6 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using THAGBAN_INST.adl;
 using THAGBAN_INST.DATA;
 using THAGBAN_INST.FORM.FRM_EMP_MANEGER.job;
 using THAGBAN_INST.FORM.FRM_EMP_MANEGER.lsits;
@@ -146,8 +147,9 @@ namespace THAGBAN_INST.FORM.FRM_EMP_MANEGER.attends
                         //update 
                         con.TBL_ATTENDS.AddOrUpdate(cl);
                         con.SaveChanges();
-                        toast.lbl_mess.Text = "تم الاضافه ينجاح  بنجاح";
-                        toast.Show();
+                        NotifictionUser notifiction = new NotifictionUser(THAGBAN_INST.Properties.Resources.AddNotificationText, THAGBAN_INST.Properties.Resources.add_32px);
+
+                        notifiction.Show();
                         clear();
 
                     }

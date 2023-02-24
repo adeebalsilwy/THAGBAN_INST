@@ -27,7 +27,7 @@ namespace THAGBAN_INST.FORM.FRM_SYSTEM
             InitializeComponent();
             this.labelCopyright.Text = "Copyright © 2021-" + DateTime.Now.Year.ToString();
             active_System = new Active_System(this);
-           active_System.cheak_trial();
+          active_System.cheak_trial();
         }
 
         #region Overrides
@@ -53,87 +53,105 @@ namespace THAGBAN_INST.FORM.FRM_SYSTEM
             await Task.Run(() => Thread.Sleep(1500));
 
             // Check Login 
-
-            lb_state.Text = "... الاتصال بقاعدة البيانات";
-            int state = await Task.Run(() => CheckLogin());
-            if (state == 1)
-            {
-                // active_System.cheak_trial();
-                FRM_LOGIN _Login = new FRM_LOGIN();
-                _Login.Show();
-
-                Hide();
-            }
-            else if (state == 0)
-            {
-                // active_System.cheak_trial();
-               
-                db_max_instEntities con=new db_max_instEntities();
-                var temp = con.TBL_EMPLOYEES.ToList();
-                if(temp.Count <= 0)
-                {
-                    frm_add_emp page = new frm_add_emp();
-                    page.btn_save.Text = "تسجيل واعادة تشغيل";
-                    page.ShowDialog();
-                    int emp_id = page.emp_id;
-                    frm_setting user = new frm_setting();
-                    user.emp_id = emp_id;
-                    user.navigationFrame1.SelectedPage = user.nav_page_rouls;
-                    user.ch_admin.Checked = true;
-                    user.ch_sett.Checked = true;
-                    user.ShowDialog(this);
-                    Application.Restart();
-
-
-
-
-
-                }
-                else
+          
+              
+                lb_state.Text = "... الاتصال بقاعدة البيانات";
+                int state = await Task.Run(() => CheckLogin());
+                if (state == 1)
                 {
                   
-                    frm_setting user = new frm_setting();
-                    user.emp_id = temp.FirstOrDefault().EMP_ID;
-                    user.navigationFrame1.SelectedPage = user.nav_page_rouls;
-                    user.ch_admin.Checked = true;
-                    user.ch_sett.Checked = true;
+                    if (this.Enabled == true)
+                    {
+                        FRM_LOGIN _Login = new FRM_LOGIN();
+                        _Login.Show();
 
-                    user.ShowDialog(this);
-                    Application.Restart();
-
-
-
+                        Hide();
+                    }
                 }
-              
-               
-               
-
-
-               
-            }
-             else  
-            {
-
-                DialogResult res = MessageBox.Show("خطأ في الاتصال في قاعدة البيانات , يبدو ان لديك مشكلة في عملية تثبيت البرنامج ", "هل تريد ضبط اعدادات الاتصال ", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
-                if (res == DialogResult.OK)
+                else if (state == 0)
                 {
-                    
-                    frm_setting user = new frm_setting();
-                    user.navigationFrame1.SelectedPage = user.nav_page_server;
-                   
-                    user.ShowDialog();
-                   Application.Restart();
+
+                    db_max_instEntities con = new db_max_instEntities();
+                    var temp = con.TBL_EMPLOYEES.ToList();
+                if (this.Enabled == true)
+                {
+
+                    if (temp.Count <= 0)
+                    {
+                        frm_setting inst = new frm_setting();
+
+                        inst.navigationFrame1.SelectedPage = inst.nav_page_home;
+                        inst.ShowDialog(this);
+
+                         frm_add_emp page = new frm_add_emp();
+                        page.btn_save.Text = "تسجيل واعادة تشغيل";
+                        page.ShowDialog(this);
+                        int emp_id = page.emp_id;
+                        frm_setting user = new frm_setting();
+                        user.emp_id = emp_id;
+                        user.navigationFrame1.SelectedPage = user.nav_page_rouls;
+                        user.ch_admin.Checked = true;
+                        user.ch_sett.Checked = true;
+                        user.ShowDialog(this);
+                        Application.Restart();
+
+
+                    }
+
+
+
+
+
                 }
                 else
                 {
-                    Application.Exit();
-                }
-                
-               
-            }
-           
+                    if (this.Enabled == true)
+                    {
 
-        }
+                        frm_setting user = new frm_setting();
+                        user.emp_id = temp.FirstOrDefault().EMP_ID;
+                        user.navigationFrame1.SelectedPage = user.nav_page_rouls;
+                        user.ch_admin.Checked = true;
+                        user.ch_sett.Checked = true;
+
+                        user.ShowDialog(this);
+                        Application.Restart();
+                    }
+                }
+
+
+
+                    
+
+
+
+
+
+
+                }
+                else
+                {
+
+                    DialogResult res = MessageBox.Show("خطأ في الاتصال في قاعدة البيانات , يبدو ان لديك مشكلة في عملية تثبيت البرنامج ", "هل تريد ضبط اعدادات الاتصال ", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
+                    if (res == DialogResult.OK)
+                    {
+
+                        frm_setting user = new frm_setting();
+                        user.navigationFrame1.SelectedPage = user.nav_page_server;
+
+                        user.ShowDialog();
+                        Application.Restart();
+                    }
+                    else
+                    {
+                    Application.ExitThread();
+                    Application.Exit();
+                    }
+
+
+                }
+            }
+        
 
         private int CheckLogin()
         {

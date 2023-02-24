@@ -189,6 +189,10 @@ namespace THAGBAN_INST.FORM
                         pic_logo.Image = Image.FromStream(methods.convert_image());
 
                 }
+                else
+                {
+                    txt_totoal_inst.Text =0+"";
+                }
             }catch(Exception ex)
             {
 
@@ -268,9 +272,9 @@ namespace THAGBAN_INST.FORM
                 {
                     db_max_instEntities db = new db_max_instEntities();
                     string dbname = db.Database.Connection.Database;
-                    string dbBackUp = "EPSback" + DateTime.Now.ToString("yyyyMMddHHmm");
+                    string dbBackUp = "db_max_inst" + DateTime.Now.ToString("yyyy-MM-dd-HH-mm");
                     var fullpath = folder.SelectedPath.ToString() + dbBackUp + ".bak";
-                    string sqlCommand = @"BACKUP DATABASE [{0}] TO  DISK = '" + fullpath + "' WITH NOFORMAT, NOINIT,  NAME = N'DBEPS', SKIP, NOREWIND, NOUNLOAD,  STATS = 10";
+                    string sqlCommand = @"BACKUP DATABASE [{0}] TO  DISK = '" + fullpath + "' WITH NOFORMAT, NOINIT,  NAME = N'"+ dbname + "', SKIP, NOREWIND, NOUNLOAD,  STATS = 10";
                     int path = db.Database.ExecuteSqlCommand(System.Data.Entity.TransactionalBehavior.DoNotEnsureTransaction, string.Format(sqlCommand, dbname, dbBackUp));
                     MessageBox.Show("تم النسخ الاحتياطي بنجاح");
                 }
@@ -284,6 +288,10 @@ namespace THAGBAN_INST.FORM
 
         private void simpleButton3_Click(object sender, EventArgs e)
         {
+
+
+
+
             try
             {
                 OpenFileDialog folder = new OpenFileDialog();
@@ -293,7 +301,8 @@ namespace THAGBAN_INST.FORM
                     db_max_instEntities db = new db_max_instEntities();
 
                     string dbname = db.Database.Connection.Database;
-                    string dbBackUp = "EPSback" + DateTime.Now.ToString("yyyyMMddHHmm");
+                    string dbBackUp = "db_max_inst" + DateTime.Now.ToString("yyyy-MM-dd-HH-mm");
+                   // MessageBox.Show(folder.FileName);
                     string sqlCommand = @"Use master;Restore DATABASE [{0}] From  DISK = '" + folder.FileName + "'";
                     int path = db.Database.ExecuteSqlCommand(System.Data.Entity.TransactionalBehavior.DoNotEnsureTransaction, string.Format(sqlCommand, dbname));
                     MessageBox.Show("تم استعادة النسخة الاحتياطية بنجاح");

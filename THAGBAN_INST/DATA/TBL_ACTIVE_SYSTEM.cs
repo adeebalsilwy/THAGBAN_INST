@@ -14,9 +14,11 @@ namespace THAGBAN_INST.DATA
     
     public partial class TBL_ACTIVE_SYSTEM
     {
-        public int ID { get; set; }
         public string Mack_address { get; set; }
         public string Key { get; set; }
         public Nullable<System.DateTime> Added_date { get; set; }
+        public Nullable<bool> FLUL_ACTIVE { get; set; }
+        public string FULT_ACTIVE_KEY { get; set; }
+        public Nullable<bool> SUB_ACTIVE { get; set; }
     }
 }

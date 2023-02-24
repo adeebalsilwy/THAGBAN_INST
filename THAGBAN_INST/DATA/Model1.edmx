@@ -7,12 +7,14 @@
     <Schema Namespace="db_max_instModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="TBL_ACTIVE_SYSTEM">
           <Key>
-            <PropertyRef Name="ID" />
+            <PropertyRef Name="Mack_address" />
           </Key>
-          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="Mack_address" Type="nvarchar(max)" />
+          <Property Name="Mack_address" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="Key" Type="nvarchar(max)" />
-          <Property Name="Added_date" Type="date" />
+          <Property Name="Added_date" Type="datetime" />
+          <Property Name="FLUL_ACTIVE" Type="bit" />
+          <Property Name="FULT_ACTIVE_KEY" Type="nvarchar" MaxLength="50" />
+          <Property Name="SUB_ACTIVE" Type="bit" />
         </EntityType>
         <EntityType Name="TBL_ATTENDS">
           <Key>
@@ -364,7 +366,7 @@
             <PropertyRef Name="USER_ID" />
           </Key>
           <Property Name="USER_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="USER_NAME" Type="varchar(max)" Nullable="false" />
+          <Property Name="USER_NAME" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="USER_PASS" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="EMP_ID" Type="int" Nullable="false" />
         </EntityType>
@@ -1052,7 +1054,6 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Function Name="get_send_stud_query" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
         <EntityContainer Name="db_max_instModelStoreContainer">
           <EntitySet Name="TBL_ACTIVE_SYSTEM" EntityType="Self.TBL_ACTIVE_SYSTEM" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TBL_ATTENDS" EntityType="Self.TBL_ATTENDS" Schema="dbo" store:Type="Tables" />
@@ -1332,6 +1333,7 @@
           <EntitySet Name="TBL_MARKS" EntityType="db_max_instModel.TBL_MARKS" />
           <EntitySet Name="TBL_OPRATION" EntityType="db_max_instModel.TBL_OPRATION" />
           <EntitySet Name="TBL_PART_SALARY" EntityType="db_max_instModel.TBL_PART_SALARY" />
+          <EntitySet Name="TBL_ROULLS_LECTUER" EntityType="db_max_instModel.TBL_ROULLS_LECTUER" />
           <EntitySet Name="TBL_SALARY" EntityType="db_max_instModel.TBL_SALARY" />
           <EntitySet Name="TBL_SEND_STUD_LECT" EntityType="db_max_instModel.TBL_SEND_STUD_LECT" />
           <EntitySet Name="TBL_SEND_TECT_LECT" EntityType="db_max_instModel.TBL_SEND_TECT_LECT" />
@@ -1504,6 +1506,10 @@
             <End Role="TBL_OPRATION" EntitySet="TBL_OPRATION" />
             <End Role="TBL_SEND_TECT_LECT" EntitySet="TBL_SEND_TECT_LECT" />
           </AssociationSet>
+          <AssociationSet Name="FK_TBL_ROULLS_LECTUER_TBL_USERS" Association="db_max_instModel.FK_TBL_ROULLS_LECTUER_TBL_USERS">
+            <End Role="TBL_USERS" EntitySet="TBL_USERS" />
+            <End Role="TBL_ROULLS_LECTUER" EntitySet="TBL_ROULLS_LECTUER" />
+          </AssociationSet>
           <AssociationSet Name="FK_TBL_SEND_STUD_LECT_TBL_LECT_STUD_TECH" Association="db_max_instModel.FK_TBL_SEND_STUD_LECT_TBL_LECT_STUD_TECH">
             <End Role="TBL_STUD_LECT" EntitySet="TBL_STUD_LECT" />
             <End Role="TBL_SEND_STUD_LECT" EntitySet="TBL_SEND_STUD_LECT" />
@@ -1560,11 +1566,6 @@
             <End Role="TBL_YEARS" EntitySet="TBL_YEARS" />
             <End Role="TBL_TERMS" EntitySet="TBL_TERMS" />
           </AssociationSet>
-          <EntitySet Name="TBL_ROULLS_LECTUER" EntityType="db_max_instModel.TBL_ROULLS_LECTUER" />
-          <AssociationSet Name="FK_TBL_ROULLS_LECTUER_TBL_USERS" Association="db_max_instModel.FK_TBL_ROULLS_LECTUER_TBL_USERS">
-            <End Role="TBL_USERS" EntitySet="TBL_USERS" />
-            <End Role="TBL_ROULLS_LECTUER" EntitySet="TBL_ROULLS_LECTUER" />
-          </AssociationSet>
           </EntityContainer>
         <ComplexType Name="get_send_stud_query_Result">
           <Property Type="Int32" Name="PAID_UP" Nullable="true" />
@@ -1583,12 +1584,14 @@
         </ComplexType>
         <EntityType Name="TBL_ACTIVE_SYSTEM">
           <Key>
-            <PropertyRef Name="ID" />
+            <PropertyRef Name="Mack_address" />
           </Key>
-          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Mack_address" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Mack_address" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="Key" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="Added_date" Type="DateTime" Precision="0" />
+          <Property Name="Added_date" Type="DateTime" Precision="3" />
+          <Property Name="FLUL_ACTIVE" Type="Boolean" />
+          <Property Name="FULT_ACTIVE_KEY" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="SUB_ACTIVE" Type="Boolean" />
         </EntityType>
         <EntityType Name="TBL_ATTENDS">
           <Key>
@@ -1852,6 +1855,33 @@
           <NavigationProperty Name="TBL_EMPLOYEES" Relationship="db_max_instModel.FK_TBL_PART_SALARY_TBL_EMPLOYEES" FromRole="TBL_PART_SALARY" ToRole="TBL_EMPLOYEES" />
           <NavigationProperty Name="TBL_OPRATION" Relationship="db_max_instModel.FK_TBL_PART_SALARY_TBL_OPRATION" FromRole="TBL_PART_SALARY" ToRole="TBL_OPRATION" />
         </EntityType>
+        <EntityType Name="TBL_ROULLS_LECTUER">
+          <Key>
+            <PropertyRef Name="USER_ID" />
+          </Key>
+          <Property Name="USER_ID" Type="Int32" Nullable="false" />
+          <Property Name="ch_activ" Type="Boolean" />
+          <Property Name="ch_admin" Type="Boolean" />
+          <Property Name="ch_apu" Type="Boolean" />
+          <Property Name="ch_attend" Type="Boolean" />
+          <Property Name="ch_cours_lect" Type="Boolean" />
+          <Property Name="ch_dept" Type="Boolean" />
+          <Property Name="ch_emp" Type="Boolean" />
+          <Property Name="ch_job" Type="Boolean" />
+          <Property Name="ch_lect" Type="Boolean" />
+          <Property Name="ch_lect_stud" Type="Boolean" />
+          <Property Name="ch_main" Type="Boolean" />
+          <Property Name="ch_mark" Type="Boolean" />
+          <Property Name="ch_matrila" Type="Boolean" />
+          <Property Name="ch_report" Type="Boolean" />
+          <Property Name="ch_sala" Type="Boolean" />
+          <Property Name="ch_send_stud" Type="Boolean" />
+          <Property Name="ch_send_tech" Type="Boolean" />
+          <Property Name="ch_sett" Type="Boolean" />
+          <Property Name="ch_stud" Type="Boolean" />
+          <Property Name="ch_tech_lec" Type="Boolean" />
+          <NavigationProperty Name="TBL_USERS" Relationship="db_max_instModel.FK_TBL_ROULLS_LECTUER_TBL_USERS" FromRole="TBL_ROULLS_LECTUER" ToRole="TBL_USERS" />
+        </EntityType>
         <EntityType Name="TBL_SALARY">
           <Key>
             <PropertyRef Name="SAL_ID" />
@@ -2017,7 +2047,7 @@
             <PropertyRef Name="USER_ID" />
           </Key>
           <Property Name="USER_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="USER_NAME" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="USER_NAME" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="USER_PASS" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="EMP_ID" Type="Int32" Nullable="false" />
           <NavigationProperty Name="TBL_EMPLOYEES" Relationship="db_max_instModel.FK_USERS_TBL_EMPLOYEES" FromRole="TBL_USERS" ToRole="TBL_EMPLOYEES" />
@@ -2529,6 +2559,18 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_TBL_ROULLS_LECTUER_TBL_USERS">
+          <End Type="db_max_instModel.TBL_USERS" Role="TBL_USERS" Multiplicity="1" />
+          <End Type="db_max_instModel.TBL_ROULLS_LECTUER" Role="TBL_ROULLS_LECTUER" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="TBL_USERS">
+              <PropertyRef Name="USER_ID" />
+            </Principal>
+            <Dependent Role="TBL_ROULLS_LECTUER">
+              <PropertyRef Name="USER_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_TBL_SEND_STUD_LECT_TBL_LECT_STUD_TECH">
           <End Type="db_max_instModel.TBL_STUD_LECT" Role="TBL_STUD_LECT" Multiplicity="0..1" />
           <End Type="db_max_instModel.TBL_SEND_STUD_LECT" Role="TBL_SEND_STUD_LECT" Multiplicity="*" />
@@ -2699,77 +2741,21 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityType Name="TBL_ROULLS_LECTUER">
-          <Key>
-            <PropertyRef Name="USER_ID" />
-          </Key>
-          <Property Name="USER_ID" Type="Int32" Nullable="false" />
-          <Property Name="ch_activ" Type="Boolean" />
-          <Property Name="ch_admin" Type="Boolean" />
-          <Property Name="ch_apu" Type="Boolean" />
-          <Property Name="ch_attend" Type="Boolean" />
-          <Property Name="ch_cours_lect" Type="Boolean" />
-          <Property Name="ch_dept" Type="Boolean" />
-          <Property Name="ch_emp" Type="Boolean" />
-          <Property Name="ch_job" Type="Boolean" />
-          <Property Name="ch_lect" Type="Boolean" />
-          <Property Name="ch_lect_stud" Type="Boolean" />
-          <Property Name="ch_main" Type="Boolean" />
-          <Property Name="ch_mark" Type="Boolean" />
-          <Property Name="ch_matrila" Type="Boolean" />
-          <Property Name="ch_report" Type="Boolean" />
-          <Property Name="ch_sala" Type="Boolean" />
-          <Property Name="ch_send_stud" Type="Boolean" />
-          <Property Name="ch_send_tech" Type="Boolean" />
-          <Property Name="ch_sett" Type="Boolean" />
-          <Property Name="ch_stud" Type="Boolean" />
-          <Property Name="ch_tech_lec" Type="Boolean" />
-          <NavigationProperty Name="TBL_USERS" Relationship="db_max_instModel.FK_TBL_ROULLS_LECTUER_TBL_USERS" FromRole="TBL_ROULLS_LECTUER" ToRole="TBL_USERS" />
-        </EntityType>
-        <Association Name="FK_TBL_ROULLS_LECTUER_TBL_USERS">
-          <End Type="db_max_instModel.TBL_USERS" Role="TBL_USERS" Multiplicity="1" />
-          <End Type="db_max_instModel.TBL_ROULLS_LECTUER" Role="TBL_ROULLS_LECTUER" Multiplicity="0..1" />
-          <ReferentialConstraint>
-            <Principal Role="TBL_USERS">
-              <PropertyRef Name="USER_ID" />
-            </Principal>
-            <Dependent Role="TBL_ROULLS_LECTUER">
-              <PropertyRef Name="USER_ID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
-      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="db_max_instModelStoreContainer" CdmEntityContainer="db_max_instEntities">
-          <FunctionImportMapping FunctionImportName="get_send_stud_query" FunctionName="db_max_instModel.Store.get_send_stud_query">
-            <ResultMapping>
-              <ComplexTypeMapping TypeName="db_max_instModel.get_send_stud_query_Result">
-                <ScalarProperty Name="PAID_UP" ColumnName="PAID_UP" />
-                <ScalarProperty Name="REST" ColumnName="REST" />
-                <ScalarProperty Name="SEND_STUD_DATE" ColumnName="SEND_STUD_DATE" />
-                <ScalarProperty Name="LECT_NAME" ColumnName="LECT_NAME" />
-                <ScalarProperty Name="LECT_PRICE" ColumnName="LECT_PRICE" />
-                <ScalarProperty Name="GROUP_NAME" ColumnName="GROUP_NAME" />
-                <ScalarProperty Name="STUD_NAME" ColumnName="STUD_NAME" />
-                <ScalarProperty Name="STUD_LNAME" ColumnName="STUD_LNAME" />
-                <ScalarProperty Name="EMP_NAME" ColumnName="EMP_NAME" />
-                <ScalarProperty Name="INST_NAME" ColumnName="INST_NAME" />
-                <ScalarProperty Name="INST_DESC" ColumnName="INST_DESC" />
-                <ScalarProperty Name="INST_LOCATION" ColumnName="INST_LOCATION" />
-                <ScalarProperty Name="INST_LOGO" ColumnName="INST_LOGO" />
-              </ComplexTypeMapping>
-            </ResultMapping>
-          </FunctionImportMapping>
+    <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="db_max_instModelStoreContainer" CdmEntityContainer="db_max_instEntities">
           <EntitySetMapping Name="TBL_ACTIVE_SYSTEM">
             <EntityTypeMapping TypeName="db_max_instModel.TBL_ACTIVE_SYSTEM">
               <MappingFragment StoreEntitySet="TBL_ACTIVE_SYSTEM">
+                <ScalarProperty Name="SUB_ACTIVE" ColumnName="SUB_ACTIVE" />
+                <ScalarProperty Name="FULT_ACTIVE_KEY" ColumnName="FULT_ACTIVE_KEY" />
+                <ScalarProperty Name="FLUL_ACTIVE" ColumnName="FLUL_ACTIVE" />
                 <ScalarProperty Name="Added_date" ColumnName="Added_date" />
                 <ScalarProperty Name="Key" ColumnName="Key" />
                 <ScalarProperty Name="Mack_address" ColumnName="Mack_address" />
-                <ScalarProperty Name="ID" ColumnName="ID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -2994,6 +2980,33 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <EntitySetMapping Name="TBL_ROULLS_LECTUER">
+            <EntityTypeMapping TypeName="db_max_instModel.TBL_ROULLS_LECTUER">
+              <MappingFragment StoreEntitySet="TBL_ROULLS_LECTUER">
+                <ScalarProperty Name="ch_tech_lec" ColumnName="ch_tech_lec" />
+                <ScalarProperty Name="ch_stud" ColumnName="ch_stud" />
+                <ScalarProperty Name="ch_sett" ColumnName="ch_sett" />
+                <ScalarProperty Name="ch_send_tech" ColumnName="ch_send_tech" />
+                <ScalarProperty Name="ch_send_stud" ColumnName="ch_send_stud" />
+                <ScalarProperty Name="ch_sala" ColumnName="ch_sala" />
+                <ScalarProperty Name="ch_report" ColumnName="ch_report" />
+                <ScalarProperty Name="ch_matrila" ColumnName="ch_matrila" />
+                <ScalarProperty Name="ch_mark" ColumnName="ch_mark" />
+                <ScalarProperty Name="ch_main" ColumnName="ch_main" />
+                <ScalarProperty Name="ch_lect_stud" ColumnName="ch_lect_stud" />
+                <ScalarProperty Name="ch_lect" ColumnName="ch_lect" />
+                <ScalarProperty Name="ch_job" ColumnName="ch_job" />
+                <ScalarProperty Name="ch_emp" ColumnName="ch_emp" />
+                <ScalarProperty Name="ch_dept" ColumnName="ch_dept" />
+                <ScalarProperty Name="ch_cours_lect" ColumnName="ch_cours_lect" />
+                <ScalarProperty Name="ch_attend" ColumnName="ch_attend" />
+                <ScalarProperty Name="ch_apu" ColumnName="ch_apu" />
+                <ScalarProperty Name="ch_admin" ColumnName="ch_admin" />
+                <ScalarProperty Name="ch_activ" ColumnName="ch_activ" />
+                <ScalarProperty Name="USER_ID" ColumnName="USER_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
           <EntitySetMapping Name="TBL_SALARY">
             <EntityTypeMapping TypeName="db_max_instModel.TBL_SALARY">
               <MappingFragment StoreEntitySet="TBL_SALARY">
@@ -3137,36 +3150,8 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="TBL_ROULLS_LECTUER">
-            <EntityTypeMapping TypeName="db_max_instModel.TBL_ROULLS_LECTUER">
-              <MappingFragment StoreEntitySet="TBL_ROULLS_LECTUER">
-                <ScalarProperty Name="ch_tech_lec" ColumnName="ch_tech_lec" />
-                <ScalarProperty Name="ch_stud" ColumnName="ch_stud" />
-                <ScalarProperty Name="ch_sett" ColumnName="ch_sett" />
-                <ScalarProperty Name="ch_send_tech" ColumnName="ch_send_tech" />
-                <ScalarProperty Name="ch_send_stud" ColumnName="ch_send_stud" />
-                <ScalarProperty Name="ch_sala" ColumnName="ch_sala" />
-                <ScalarProperty Name="ch_report" ColumnName="ch_report" />
-                <ScalarProperty Name="ch_matrila" ColumnName="ch_matrila" />
-                <ScalarProperty Name="ch_mark" ColumnName="ch_mark" />
-                <ScalarProperty Name="ch_main" ColumnName="ch_main" />
-                <ScalarProperty Name="ch_lect_stud" ColumnName="ch_lect_stud" />
-                <ScalarProperty Name="ch_lect" ColumnName="ch_lect" />
-                <ScalarProperty Name="ch_job" ColumnName="ch_job" />
-                <ScalarProperty Name="ch_emp" ColumnName="ch_emp" />
-                <ScalarProperty Name="ch_dept" ColumnName="ch_dept" />
-                <ScalarProperty Name="ch_cours_lect" ColumnName="ch_cours_lect" />
-                <ScalarProperty Name="ch_attend" ColumnName="ch_attend" />
-                <ScalarProperty Name="ch_apu" ColumnName="ch_apu" />
-                <ScalarProperty Name="ch_admin" ColumnName="ch_admin" />
-                <ScalarProperty Name="ch_activ" ColumnName="ch_activ" />
-                <ScalarProperty Name="USER_ID" ColumnName="USER_ID" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
         </EntityContainerMapping>
-      </Mapping>
-    </edmx:Mappings>
+</Mapping></edmx:Mappings>
   </edmx:Runtime>
   <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
   <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
@@ -3180,7 +3165,7 @@
         <DesignerProperty Name="ValidateOnBuild" Value="true" />
         <DesignerProperty Name="EnablePluralization" Value="true" />
         <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
-        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="UseLegacyProvider" Value="False" />
         <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
       </DesignerInfoPropertySet>
     </Options>

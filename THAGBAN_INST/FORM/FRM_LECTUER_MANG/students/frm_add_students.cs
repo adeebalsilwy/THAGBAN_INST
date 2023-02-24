@@ -278,5 +278,19 @@ namespace THAGBAN_INST.FORM.FRM_LECTUER_MANG.students
                 spical_id=Convert.ToInt32(com_spiacl.SelectedValue.ToString());
             }
         }
+
+        private void txt_stud_name_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                SendKeys.Send("{TAB}");
+            }
+           
+        }
+
+        private void btn_save_KeyDown(object sender, KeyEventArgs e)
+        {
+            add_stud();
+        }
     }
 }
