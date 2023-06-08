@@ -218,6 +218,12 @@
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
+    <Reference Include="FastMember, Version=1.5.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\FastMember.1.5.0\lib\net461\FastMember.dll</HintPath>
+    </Reference>
+    <Reference Include="MiniExcel, Version=1.30.2.0, Culture=neutral, PublicKeyToken=e7310002a53eac39, processorArchitecture=MSIL">
+      <HintPath>..\packages\MiniExcel.1.30.2\lib\net45\MiniExcel.dll</HintPath>
+    </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
@@ -228,6 +234,7 @@
     <Reference Include="System.Data.OracleClient" />
     <Reference Include="System.Design" />
     <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.IO.Compression" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Runtime.Serialization.Formatters.Soap" />
     <Reference Include="System.Security" />
@@ -249,7 +256,7 @@
     <Compile Include="adl\FRM_LOADING.Designer.cs">
       <DependentUpon>FRM_LOADING.cs</DependentUpon>
     </Compile>
-    <Compile Include="adl\Interface1.cs" />
+    <Compile Include="adl\IDataHelper.cs" />
     <Compile Include="adl\method.cs" />
     <Compile Include="adl\NotificaitonPanel.cs">
       <SubType>UserControl</SubType>
@@ -265,74 +272,62 @@
     </Compile>
     <Compile Include="adl\send_stud_report.cs" />
     <Compile Include="adl\students_class_impoet.cs" />
-    <Compile Include="DATA\get_send_stud_query_Result.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
-    </Compile>
     <Compile Include="DATA\Model1.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Model1.Context.tt</DependentUpon>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
     <Compile Include="DATA\Model1.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Model1.tt</DependentUpon>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
     <Compile Include="DATA\Model1.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Model1.edmx</DependentUpon>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
+    <Compile Include="DATA\OP_DB\SEND_STUD_HEPLER.cs" />
     <Compile Include="DATA\stud_send.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>stud_send.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DATA\sysdiagram.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="DATA\TBL_ACTIVE_SYSTEM.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="DATA\TBL_ATTENDS.cs">
       <DependentUpon>Model1.tt</DependentUpon>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
     <Compile Include="DATA\TBL_COURS.cs">
       <DependentUpon>Model1.tt</DependentUpon>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
     <Compile Include="DATA\TBL_DEPT.cs">
       <DependentUpon>Model1.tt</DependentUpon>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
     <Compile Include="DATA\TBL_EMPLOYEES.cs">
       <DependentUpon>Model1.tt</DependentUpon>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
     <Compile Include="DATA\TBL_FOLDER.cs">
       <DependentUpon>Model1.tt</DependentUpon>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
     <Compile Include="DATA\TBL_HOLIDAYS.cs">
       <DependentUpon>Model1.tt</DependentUpon>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
     <Compile Include="DATA\TBL_HOLIDAY_TYPE.cs">
       <DependentUpon>Model1.tt</DependentUpon>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
     <Compile Include="DATA\TBL_INST.cs">
       <DependentUpon>Model1.tt</DependentUpon>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
     <Compile Include="DATA\TBL_JOB.cs">
       <DependentUpon>Model1.tt</DependentUpon>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
     <Compile Include="DATA\TBL_LECTUER.cs">
       <DependentUpon>Model1.tt</DependentUpon>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
     <Compile Include="DATA\TBL_LECT_COURS.cs">
       <DependentUpon>Model1.tt</DependentUpon>
@@ -348,67 +343,75 @@
     </Compile>
     <Compile Include="DATA\TBL_LEVLE.cs">
       <DependentUpon>Model1.tt</DependentUpon>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
     <Compile Include="DATA\TBL_MARKS.cs">
       <DependentUpon>Model1.tt</DependentUpon>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
     <Compile Include="DATA\TBL_OPRATION.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="DATA\TBL_PART_SALARY.cs">
       <DependentUpon>Model1.tt</DependentUpon>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
     <Compile Include="DATA\TBL_ROULLS_LECTUER.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="DATA\TBL_SALARY.cs">
       <DependentUpon>Model1.tt</DependentUpon>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
     <Compile Include="DATA\TBL_SEND_STUD_LECT.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DATA\TBL_SEND_STUD__COURS.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="DATA\TBL_SEND_TECT_LECT.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="DATA\TBL_SIRYAL_STUDENTS.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <Compile Include="DATA\TBL_SPECIAL.cs">
       <DependentUpon>Model1.tt</DependentUpon>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
     <Compile Include="DATA\TBL_SPE_COURS.cs">
       <DependentUpon>Model1.tt</DependentUpon>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
     <Compile Include="DATA\TBL_STUDENTS.cs">
       <DependentUpon>Model1.tt</DependentUpon>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
     <Compile Include="DATA\TBL_STUD_LECT.cs">
       <DependentUpon>Model1.tt</DependentUpon>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
     <Compile Include="DATA\TBL_STUD_SPEC.cs">
       <DependentUpon>Model1.tt</DependentUpon>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
     <Compile Include="DATA\TBL_STUD_STUDY_COURS.cs">
       <DependentUpon>Model1.tt</DependentUpon>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
     <Compile Include="DATA\TBL_TERMS.cs">
       <DependentUpon>Model1.tt</DependentUpon>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
     <Compile Include="DATA\TBL_USERS.cs">
       <DependentUpon>Model1.tt</DependentUpon>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
     <Compile Include="DATA\TBL_YEARS.cs">
       <DependentUpon>Model1.tt</DependentUpon>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="DATA\TBL_YEARS_MARK.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FORM\FORM_MANG_STUD\cours_send_stud\frm_add_cours_send_send_stud.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM\FORM_MANG_STUD\cours_send_stud\frm_add_cours_send_send_stud.Designer.cs">
+      <DependentUpon>frm_add_cours_send_send_stud.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM\FORM_MANG_STUD\cours_send_stud\frm_mang_cours_send_send_stud.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FORM\FORM_MANG_STUD\cours_send_stud\frm_mang_cours_send_send_stud.Designer.cs">
+      <DependentUpon>frm_mang_cours_send_send_stud.cs</DependentUpon>
     </Compile>
     <Compile Include="FORM\FORM_MANG_STUD\marks\frm_add_mark.cs">
       <SubType>Form</SubType>
@@ -451,6 +454,24 @@
     </Compile>
     <Compile Include="FORM\FORM_MANG_STUD\cours\frm_mange_cours.Designer.cs">
       <DependentUpon>frm_mange_cours.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM\FORM_MANG_STUD\reports\report_mark_stud_spice.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FORM\FORM_MANG_STUD\reports\report_mark_stud_spice.Designer.cs">
+      <DependentUpon>report_mark_stud_spice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM\FORM_MANG_STUD\reports\report_send_stud_cours.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FORM\FORM_MANG_STUD\reports\report_send_stud_cours.Designer.cs">
+      <DependentUpon>report_send_stud_cours.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM\FORM_MANG_STUD\reports\report_siryal.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FORM\FORM_MANG_STUD\reports\report_siryal.Designer.cs">
+      <DependentUpon>report_siryal.cs</DependentUpon>
     </Compile>
     <Compile Include="FORM\FORM_MANG_STUD\spical\frm_add_spical.cs">
       <SubType>Form</SubType>
@@ -511,6 +532,42 @@
     </Compile>
     <Compile Include="FORM\FORM_MANG_STUD\terms\frm_mang_terms.Designer.cs">
       <DependentUpon>frm_mang_terms.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM\FRM_CONTORL\analys_control_admin.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FORM\FRM_CONTORL\analys_control_admin.Designer.cs">
+      <DependentUpon>analys_control_admin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM\FRM_CONTORL\siryal_number\frm_add_siryal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM\FRM_CONTORL\siryal_number\frm_add_siryal.Designer.cs">
+      <DependentUpon>frm_add_siryal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM\FRM_CONTORL\siryal_number\frm_control_seryal_number.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FORM\FRM_CONTORL\siryal_number\frm_control_seryal_number.Designer.cs">
+      <DependentUpon>frm_control_seryal_number.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM\FRM_CONTORL\FRM_MAIN_CONTROL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM\FRM_CONTORL\FRM_MAIN_CONTROL.Designer.cs">
+      <DependentUpon>FRM_MAIN_CONTROL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM\FRM_CONTORL\siryal_number\FRM_YEARS_MARK_MANG.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FORM\FRM_CONTORL\siryal_number\FRM_YEARS_MARK_MANG.Designer.cs">
+      <DependentUpon>FRM_YEARS_MARK_MANG.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM\FRM_CONTORL\STUDENTS\frm_control_stud.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FORM\FRM_CONTORL\STUDENTS\frm_control_stud.Designer.cs">
+      <DependentUpon>frm_control_stud.cs</DependentUpon>
     </Compile>
     <Compile Include="FORM\FRM_EMP_MANEGER\employees\frm_add_emp.cs">
       <SubType>Form</SubType>
@@ -854,6 +911,12 @@
     <Compile Include="FORM\FRM_EMP_MANEGER\message\tost.Designer.cs">
       <DependentUpon>tost.cs</DependentUpon>
     </Compile>
+    <Compile Include="FORM\FRM_MONY\FRM_MAIN_MONY.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM\FRM_MONY\FRM_MAIN_MONY.Designer.cs">
+      <DependentUpon>FRM_MAIN_MONY.cs</DependentUpon>
+    </Compile>
     <Compile Include="FORM\frm_setting.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -925,6 +988,12 @@
     <EmbeddedResource Include="adl\NotifictionUser.resx">
       <DependentUpon>NotifictionUser.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FORM\FORM_MANG_STUD\cours_send_stud\frm_add_cours_send_send_stud.resx">
+      <DependentUpon>frm_add_cours_send_send_stud.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM\FORM_MANG_STUD\cours_send_stud\frm_mang_cours_send_send_stud.resx">
+      <DependentUpon>frm_mang_cours_send_send_stud.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FORM\FORM_MANG_STUD\marks\frm_add_mark.resx">
       <DependentUpon>frm_add_mark.cs</DependentUpon>
     </EmbeddedResource>
@@ -945,6 +1014,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FORM\FORM_MANG_STUD\cours\frm_mange_cours.resx">
       <DependentUpon>frm_mange_cours.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM\FORM_MANG_STUD\reports\report_mark_stud_spice.resx">
+      <DependentUpon>report_mark_stud_spice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM\FORM_MANG_STUD\reports\report_send_stud_cours.resx">
+      <DependentUpon>report_send_stud_cours.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM\FORM_MANG_STUD\reports\report_siryal.resx">
+      <DependentUpon>report_siryal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FORM\FORM_MANG_STUD\spical\frm_add_spical.resx">
       <DependentUpon>frm_add_spical.cs</DependentUpon>
@@ -975,6 +1053,24 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FORM\FORM_MANG_STUD\terms\frm_mang_terms.resx">
       <DependentUpon>frm_mang_terms.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM\FRM_CONTORL\analys_control_admin.resx">
+      <DependentUpon>analys_control_admin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM\FRM_CONTORL\siryal_number\frm_add_siryal.resx">
+      <DependentUpon>frm_add_siryal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM\FRM_CONTORL\siryal_number\frm_control_seryal_number.resx">
+      <DependentUpon>frm_control_seryal_number.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM\FRM_CONTORL\FRM_MAIN_CONTROL.resx">
+      <DependentUpon>FRM_MAIN_CONTROL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM\FRM_CONTORL\siryal_number\FRM_YEARS_MARK_MANG.resx">
+      <DependentUpon>FRM_YEARS_MARK_MANG.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM\FRM_CONTORL\STUDENTS\frm_control_stud.resx">
+      <DependentUpon>frm_control_stud.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FORM\FRM_EMP_MANEGER\employees\frm_add_emp.resx">
       <DependentUpon>frm_add_emp.cs</DependentUpon>
@@ -1147,6 +1243,9 @@
     <EmbeddedResource Include="FORM\FRM_EMP_MANEGER\message\tost.resx">
       <DependentUpon>tost.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FORM\FRM_MONY\FRM_MAIN_MONY.resx">
+      <DependentUpon>FRM_MAIN_MONY.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FORM\frm_setting.resx">
       <DependentUpon>frm_setting.cs</DependentUpon>
     </EmbeddedResource>
@@ -1191,11 +1290,9 @@
     <EntityDeploy Include="DATA\Model1.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>Model1.Designer.cs</LastGenOutput>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EntityDeploy>
     <None Include="DATA\Model1.edmx.diagram">
       <DependentUpon>Model1.edmx</DependentUpon>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="DATA\stud_send.xsc">
       <DependentUpon>stud_send.xsd</DependentUpon>
@@ -1234,7 +1331,9 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="adl\NewFolder1\" />
+  </ItemGroup>
   <ItemGroup>
     <None Include="Resources\panel_picture_frame_bg_pressed_blue.9.png" />
     <None Include="Resources\BtnSave.png" />
@@ -1248,14 +1347,12 @@
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>Model1.edmx</DependentUpon>
       <LastGenOutput>Model1.Context.cs</LastGenOutput>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="DATA\Model1.edmx.sql" />
     <Content Include="DATA\Model1.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>Model1.edmx</DependentUpon>
       <LastGenOutput>Model1.cs</LastGenOutput>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="icons8_course.ico" />
     <None Include="Resources\icons8_man_student_1.ico" />

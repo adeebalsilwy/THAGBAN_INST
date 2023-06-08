@@ -12,8 +12,6 @@ namespace THAGBAN_INST.DATA
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
-    using System.Data.Entity.Core.Objects;
-    using System.Linq;
     
     public partial class db_max_instEntities : DbContext
     {
@@ -27,6 +25,7 @@ namespace THAGBAN_INST.DATA
             throw new UnintentionalCodeFirstException();
         }
     
+        public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
         public virtual DbSet<TBL_ACTIVE_SYSTEM> TBL_ACTIVE_SYSTEM { get; set; }
         public virtual DbSet<TBL_ATTENDS> TBL_ATTENDS { get; set; }
         public virtual DbSet<TBL_COURS> TBL_COURS { get; set; }
@@ -48,8 +47,10 @@ namespace THAGBAN_INST.DATA
         public virtual DbSet<TBL_PART_SALARY> TBL_PART_SALARY { get; set; }
         public virtual DbSet<TBL_ROULLS_LECTUER> TBL_ROULLS_LECTUER { get; set; }
         public virtual DbSet<TBL_SALARY> TBL_SALARY { get; set; }
+        public virtual DbSet<TBL_SEND_STUD__COURS> TBL_SEND_STUD__COURS { get; set; }
         public virtual DbSet<TBL_SEND_STUD_LECT> TBL_SEND_STUD_LECT { get; set; }
         public virtual DbSet<TBL_SEND_TECT_LECT> TBL_SEND_TECT_LECT { get; set; }
+        public virtual DbSet<TBL_SIRYAL_STUDENTS> TBL_SIRYAL_STUDENTS { get; set; }
         public virtual DbSet<TBL_SPE_COURS> TBL_SPE_COURS { get; set; }
         public virtual DbSet<TBL_SPECIAL> TBL_SPECIAL { get; set; }
         public virtual DbSet<TBL_STUD_LECT> TBL_STUD_LECT { get; set; }
@@ -59,10 +60,6 @@ namespace THAGBAN_INST.DATA
         public virtual DbSet<TBL_TERMS> TBL_TERMS { get; set; }
         public virtual DbSet<TBL_USERS> TBL_USERS { get; set; }
         public virtual DbSet<TBL_YEARS> TBL_YEARS { get; set; }
-    
-        public virtual ObjectResult<get_send_stud_query_Result> get_send_stud_query()
-        {
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<get_send_stud_query_Result>("get_send_stud_query");
-        }
+        public virtual DbSet<TBL_YEARS_MARK> TBL_YEARS_MARK { get; set; }
     }
 }

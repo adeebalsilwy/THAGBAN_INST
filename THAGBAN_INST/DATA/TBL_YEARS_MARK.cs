@@ -12,28 +12,23 @@ namespace THAGBAN_INST.DATA
     using System;
     using System.Collections.Generic;
     
-    public partial class TBL_COURS
+    public partial class TBL_YEARS_MARK
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public TBL_COURS()
+        public TBL_YEARS_MARK()
         {
             this.TBL_MARKS = new HashSet<TBL_MARKS>();
-            this.TBL_SPE_COURS = new HashSet<TBL_SPE_COURS>();
-            this.TBL_STUD_STUDY_COURS = new HashSet<TBL_STUD_STUDY_COURS>();
+            this.TBL_SIRYAL_STUDENTS = new HashSet<TBL_SIRYAL_STUDENTS>();
         }
     
-        public int COURS_ID { get; set; }
-        public string COURS_NAME { get; set; }
-        public string COURS_DESC { get; set; }
-        public Nullable<int> NUMBER_HOURS { get; set; }
-        public Nullable<int> MIN_MARK { get; set; }
-        public Nullable<int> MAX_MARK { get; set; }
+        public int ID { get; set; }
+        public string YEARS_NAME { get; set; }
+        public string YEARS_DATA { get; set; }
+        public Nullable<bool> STATE { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<TBL_MARKS> TBL_MARKS { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<TBL_SPE_COURS> TBL_SPE_COURS { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<TBL_STUD_STUDY_COURS> TBL_STUD_STUDY_COURS { get; set; }
+        public virtual ICollection<TBL_SIRYAL_STUDENTS> TBL_SIRYAL_STUDENTS { get; set; }
     }
 }

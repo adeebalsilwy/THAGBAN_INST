@@ -10,21 +10,21 @@
 namespace THAGBAN_INST.DATA
 {
     using System;
+    using System.Collections.Generic;
     
-    public partial class get_send_stud_query_Result
+    public partial class TBL_SEND_STUD__COURS
     {
+        public int SEND_STUD_ID { get; set; }
+        public Nullable<int> STUD_ID { get; set; }
         public Nullable<int> PAID_UP { get; set; }
         public Nullable<int> REST { get; set; }
         public Nullable<System.DateTime> SEND_STUD_DATE { get; set; }
-        public string LECT_NAME { get; set; }
-        public Nullable<int> LECT_PRICE { get; set; }
-        public string GROUP_NAME { get; set; }
-        public string STUD_NAME { get; set; }
-        public string STUD_LNAME { get; set; }
-        public string EMP_NAME { get; set; }
-        public string INST_NAME { get; set; }
-        public string INST_DESC { get; set; }
-        public string INST_LOCATION { get; set; }
-        public byte[] INST_LOGO { get; set; }
+        public Nullable<int> OPRATIN_ID { get; set; }
+        public Nullable<int> STUD_SPEC_ID { get; set; }
+        public Nullable<bool> SEND_STATE_BANK { get; set; }
+    
+        public virtual TBL_OPRATION TBL_OPRATION { get; set; }
+        public virtual TBL_STUD_SPEC TBL_STUD_SPEC { get; set; }
+        public virtual TBL_STUDENTS TBL_STUDENTS { get; set; }
     }
 }

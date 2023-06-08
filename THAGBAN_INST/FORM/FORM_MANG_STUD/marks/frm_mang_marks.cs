@@ -13,6 +13,8 @@ using THAGBAN_INST.DATA;
 using THAGBAN_INST.FORM.FRM_MANG_STUD.spical;
 using DevExpress.XtraScheduler.UI;
 using DevExpress.XtraBars.Ribbon.Drawing;
+using THAGBAN_INST.FORM.FORM_MANG_STUD.reports;
+using DevExpress.XtraReports.UI;
 
 namespace THAGBAN_INST.FORM.FRM_MANG_STUD.marks
 {
@@ -76,7 +78,6 @@ namespace THAGBAN_INST.FORM.FRM_MANG_STUD.marks
             frm.id=id;
             //frm.cours_desc=cours_desc;
             frm.btn_save.Text = "تعديل";
-            frm.term_id = term_id;
             frm.ShowDialog();
             get_data();
         }
@@ -169,10 +170,27 @@ namespace THAGBAN_INST.FORM.FRM_MANG_STUD.marks
         
         private void simpleButton2_Click(object sender, EventArgs e)
         {
+
+            report_mark_stud_spice repors = new report_mark_stud_spice();
+            List<TBL_MARKS> list = new List<TBL_MARKS>();
+
+            for (int i = 0; i < gridView2.RowCount; i++)
+            {
+                list.Add(gridView2.GetRow(i) as TBL_MARKS);
+            }
+            repors.DataSource = list;
+            repors.DataMember = "";
+            int ints_id = THAGBAN_INST.Properties.Settings.Default.inst_id;
+            adl.method method = new adl.method();
+            method.data = con.TBL_INST.Find(ints_id).INST_LOGO;
             
-            gridControl1.ShowRibbonPrintPreview();
-            
-            
+            repors.Watermark.Image = Image.FromStream(method.convert_image());
+
+            repors.ShowRibbonPreview();
+
+
+
+
         }
     }
 }

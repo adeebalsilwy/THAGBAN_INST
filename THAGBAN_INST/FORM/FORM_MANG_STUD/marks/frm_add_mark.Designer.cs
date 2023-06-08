@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_add_mark));
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties1 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties2 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties3 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties4 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties9 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties10 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties11 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties12 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             this.com_spiacl = new System.Windows.Forms.ComboBox();
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
@@ -41,22 +41,17 @@
             this.bunifuPanel2 = new Bunifu.UI.WinForms.BunifuPanel();
             this.btn_delete = new DevExpress.XtraEditors.SimpleButton();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
-            this.com_term = new System.Windows.Forms.ComboBox();
-            this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
             this.com_cours = new System.Windows.Forms.ComboBox();
-            this.com_year = new System.Windows.Forms.ComboBox();
-            this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
             this.com_stud = new System.Windows.Forms.ComboBox();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txt_mark_value = new Bunifu.UI.WinForms.BunifuTextBox();
             this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl8 = new DevExpress.XtraEditors.LabelControl();
             this.txt_mark_date = new Bunifu.UI.WinForms.BunifuDatePicker();
-            this.ch_year = new System.Windows.Forms.CheckBox();
+            this.com_years_mark = new System.Windows.Forms.ComboBox();
+            this.labelControl9 = new DevExpress.XtraEditors.LabelControl();
             this.bunifuPanel1.SuspendLayout();
             this.bunifuPanel2.SuspendLayout();
-            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // com_spiacl
@@ -64,32 +59,33 @@
             this.com_spiacl.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
             this.com_spiacl.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.com_spiacl.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.com_spiacl.Font = new System.Drawing.Font("ae_AlArabiya", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.com_spiacl.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.com_spiacl.FormattingEnabled = true;
             this.com_spiacl.Location = new System.Drawing.Point(28, 76);
             this.com_spiacl.Name = "com_spiacl";
-            this.com_spiacl.Size = new System.Drawing.Size(227, 34);
+            this.com_spiacl.Size = new System.Drawing.Size(227, 32);
             this.com_spiacl.TabIndex = 59;
-            this.com_spiacl.SelectionChangeCommitted += new System.EventHandler(this.com_spiacl_SelectionChangeCommitted);
-            this.com_spiacl.SelectedValueChanged += new System.EventHandler(this.com_spiacl_SelectionChangeCommitted);
+            this.com_spiacl.SelectedIndexChanged += new System.EventHandler(this.com_spiacl_SelectedIndexChanged);
+            this.com_spiacl.SelectionChangeCommitted += new System.EventHandler(this.com_spiacl_SelectedIndexChanged);
+            this.com_spiacl.SelectedValueChanged += new System.EventHandler(this.com_spiacl_SelectedIndexChanged);
             // 
             // labelControl4
             // 
-            this.labelControl4.Appearance.Font = new System.Drawing.Font("ae_AlArabiya", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl4.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl4.Appearance.Options.UseFont = true;
             this.labelControl4.Location = new System.Drawing.Point(261, 87);
             this.labelControl4.Name = "labelControl4";
-            this.labelControl4.Size = new System.Drawing.Size(48, 22);
+            this.labelControl4.Size = new System.Drawing.Size(50, 20);
             this.labelControl4.TabIndex = 58;
             this.labelControl4.Text = "التخصص";
             // 
             // labelControl2
             // 
-            this.labelControl2.Appearance.Font = new System.Drawing.Font("ae_AlArabiya", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl2.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl2.Appearance.Options.UseFont = true;
             this.labelControl2.Location = new System.Drawing.Point(511, 138);
             this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(48, 19);
+            this.labelControl2.Size = new System.Drawing.Size(48, 16);
             this.labelControl2.TabIndex = 54;
             this.labelControl2.Text = "اسم الماده";
             // 
@@ -104,7 +100,7 @@
             this.bunifuPanel1.BorderThickness = 2;
             this.bunifuPanel1.Controls.Add(this.btn_save);
             this.bunifuPanel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.bunifuPanel1.Location = new System.Drawing.Point(0, 351);
+            this.bunifuPanel1.Location = new System.Drawing.Point(0, 283);
             this.bunifuPanel1.Name = "bunifuPanel1";
             this.bunifuPanel1.ShowBorders = true;
             this.bunifuPanel1.Size = new System.Drawing.Size(584, 62);
@@ -164,113 +160,52 @@
             // 
             // labelControl1
             // 
-            this.labelControl1.Appearance.Font = new System.Drawing.Font("ae_AlArabiya", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl1.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl1.Appearance.Options.UseFont = true;
             this.labelControl1.Location = new System.Drawing.Point(206, 14);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(219, 26);
+            this.labelControl1.Size = new System.Drawing.Size(199, 24);
             this.labelControl1.TabIndex = 43;
             this.labelControl1.Text = "شاشه اضافه وتعديل الدرجات";
-            // 
-            // com_term
-            // 
-            this.com_term.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
-            this.com_term.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.com_term.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.com_term.Font = new System.Drawing.Font("ae_AlArabiya", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.com_term.FormattingEnabled = true;
-            this.com_term.Location = new System.Drawing.Point(32, 48);
-            this.com_term.Name = "com_term";
-            this.com_term.Size = new System.Drawing.Size(227, 34);
-            this.com_term.TabIndex = 64;
-            this.com_term.SelectionChangeCommitted += new System.EventHandler(this.com_term_SelectionChangeCommitted);
-            this.com_term.DataSourceChanged += new System.EventHandler(this.com_term_DataSourceChanged);
-            this.com_term.SelectedValueChanged += new System.EventHandler(this.com_term_SelectedValueChanged);
-            // 
-            // labelControl6
-            // 
-            this.labelControl6.Appearance.Font = new System.Drawing.Font("ae_AlArabiya", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl6.Appearance.Options.UseFont = true;
-            this.labelControl6.Location = new System.Drawing.Point(253, 20);
-            this.labelControl6.Name = "labelControl6";
-            this.labelControl6.Size = new System.Drawing.Size(22, 22);
-            this.labelControl6.TabIndex = 63;
-            this.labelControl6.Text = "الترم";
             // 
             // com_cours
             // 
             this.com_cours.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
             this.com_cours.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.com_cours.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.com_cours.Font = new System.Drawing.Font("ae_AlArabiya", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.com_cours.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.com_cours.FormattingEnabled = true;
             this.com_cours.Location = new System.Drawing.Point(332, 163);
             this.com_cours.Name = "com_cours";
-            this.com_cours.Size = new System.Drawing.Size(227, 34);
+            this.com_cours.Size = new System.Drawing.Size(227, 32);
             this.com_cours.TabIndex = 65;
             this.com_cours.SelectionChangeCommitted += new System.EventHandler(this.com_cours_SelectionChangeCommitted);
             this.com_cours.SelectedValueChanged += new System.EventHandler(this.com_cours_SelectedValueChanged);
-            // 
-            // com_year
-            // 
-            this.com_year.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
-            this.com_year.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.com_year.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.com_year.Font = new System.Drawing.Font("ae_AlArabiya", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.com_year.FormattingEnabled = true;
-            this.com_year.Location = new System.Drawing.Point(302, 48);
-            this.com_year.Name = "com_year";
-            this.com_year.Size = new System.Drawing.Size(227, 34);
-            this.com_year.TabIndex = 62;
-            this.com_year.SelectionChangeCommitted += new System.EventHandler(this.com_year_SelectionChangeCommitted);
-            this.com_year.SelectedValueChanged += new System.EventHandler(this.com_year_SelectionChangeCommitted);
-            // 
-            // labelControl5
-            // 
-            this.labelControl5.Appearance.Font = new System.Drawing.Font("ae_AlArabiya", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl5.Appearance.Options.UseFont = true;
-            this.labelControl5.Location = new System.Drawing.Point(466, 20);
-            this.labelControl5.Name = "labelControl5";
-            this.labelControl5.Size = new System.Drawing.Size(37, 22);
-            this.labelControl5.TabIndex = 61;
-            this.labelControl5.Text = "السنه ";
             // 
             // com_stud
             // 
             this.com_stud.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
             this.com_stud.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.com_stud.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.com_stud.Font = new System.Drawing.Font("ae_AlArabiya", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.com_stud.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.com_stud.FormattingEnabled = true;
             this.com_stud.Location = new System.Drawing.Point(332, 87);
             this.com_stud.Name = "com_stud";
-            this.com_stud.Size = new System.Drawing.Size(227, 34);
+            this.com_stud.Size = new System.Drawing.Size(227, 32);
             this.com_stud.TabIndex = 67;
-            this.com_stud.SelectionChangeCommitted += new System.EventHandler(this.com_stud_SelectionChangeCommitted);
-            this.com_stud.SelectedValueChanged += new System.EventHandler(this.com_stud_SelectionChangeCommitted);
+            this.com_stud.SelectedIndexChanged += new System.EventHandler(this.com_stud_SelectedIndexChanged);
+            this.com_stud.SelectionChangeCommitted += new System.EventHandler(this.com_stud_SelectedIndexChanged);
+            this.com_stud.SelectedValueChanged += new System.EventHandler(this.com_stud_SelectedIndexChanged);
             // 
             // labelControl3
             // 
-            this.labelControl3.Appearance.Font = new System.Drawing.Font("ae_AlArabiya", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl3.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl3.Appearance.Options.UseFont = true;
             this.labelControl3.Location = new System.Drawing.Point(507, 59);
             this.labelControl3.Name = "labelControl3";
-            this.labelControl3.Size = new System.Drawing.Size(65, 22);
+            this.labelControl3.Size = new System.Drawing.Size(56, 20);
             this.labelControl3.TabIndex = 66;
             this.labelControl3.Text = "اسم الطالب";
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.com_year);
-            this.groupBox1.Controls.Add(this.com_term);
-            this.groupBox1.Controls.Add(this.labelControl6);
-            this.groupBox1.Controls.Add(this.labelControl5);
-            this.groupBox1.Enabled = false;
-            this.groupBox1.Location = new System.Drawing.Point(15, 245);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(544, 100);
-            this.groupBox1.TabIndex = 68;
-            this.groupBox1.TabStop = false;
             // 
             // txt_mark_value
             // 
@@ -307,26 +242,26 @@
             this.txt_mark_value.Modified = false;
             this.txt_mark_value.Multiline = true;
             this.txt_mark_value.Name = "txt_mark_value";
-            stateProperties1.BorderColor = System.Drawing.Color.DodgerBlue;
-            stateProperties1.FillColor = System.Drawing.Color.Empty;
-            stateProperties1.ForeColor = System.Drawing.Color.Empty;
-            stateProperties1.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txt_mark_value.OnActiveState = stateProperties1;
-            stateProperties2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            stateProperties2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            stateProperties2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            stateProperties2.PlaceholderForeColor = System.Drawing.Color.DarkGray;
-            this.txt_mark_value.OnDisabledState = stateProperties2;
-            stateProperties3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            stateProperties3.FillColor = System.Drawing.Color.Empty;
-            stateProperties3.ForeColor = System.Drawing.Color.Empty;
-            stateProperties3.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txt_mark_value.OnHoverState = stateProperties3;
-            stateProperties4.BorderColor = System.Drawing.Color.Black;
-            stateProperties4.FillColor = System.Drawing.Color.White;
-            stateProperties4.ForeColor = System.Drawing.Color.Empty;
-            stateProperties4.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txt_mark_value.OnIdleState = stateProperties4;
+            stateProperties9.BorderColor = System.Drawing.Color.DodgerBlue;
+            stateProperties9.FillColor = System.Drawing.Color.Empty;
+            stateProperties9.ForeColor = System.Drawing.Color.Empty;
+            stateProperties9.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txt_mark_value.OnActiveState = stateProperties9;
+            stateProperties10.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            stateProperties10.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            stateProperties10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            stateProperties10.PlaceholderForeColor = System.Drawing.Color.DarkGray;
+            this.txt_mark_value.OnDisabledState = stateProperties10;
+            stateProperties11.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            stateProperties11.FillColor = System.Drawing.Color.Empty;
+            stateProperties11.ForeColor = System.Drawing.Color.Empty;
+            stateProperties11.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txt_mark_value.OnHoverState = stateProperties11;
+            stateProperties12.BorderColor = System.Drawing.Color.Black;
+            stateProperties12.FillColor = System.Drawing.Color.White;
+            stateProperties12.ForeColor = System.Drawing.Color.Empty;
+            stateProperties12.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txt_mark_value.OnIdleState = stateProperties12;
             this.txt_mark_value.Padding = new System.Windows.Forms.Padding(3);
             this.txt_mark_value.PasswordChar = '\0';
             this.txt_mark_value.PlaceholderForeColor = System.Drawing.Color.Silver;
@@ -350,21 +285,21 @@
             // 
             // labelControl7
             // 
-            this.labelControl7.Appearance.Font = new System.Drawing.Font("ae_AlArabiya", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl7.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl7.Appearance.Options.UseFont = true;
             this.labelControl7.Location = new System.Drawing.Point(238, 163);
             this.labelControl7.Name = "labelControl7";
-            this.labelControl7.Size = new System.Drawing.Size(72, 19);
+            this.labelControl7.Size = new System.Drawing.Size(76, 16);
             this.labelControl7.TabIndex = 69;
             this.labelControl7.Text = "الدرجه المستحقه";
             // 
             // labelControl8
             // 
-            this.labelControl8.Appearance.Font = new System.Drawing.Font("ae_AlArabiya", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl8.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl8.Appearance.Options.UseFont = true;
-            this.labelControl8.Location = new System.Drawing.Point(268, 216);
+            this.labelControl8.Location = new System.Drawing.Point(261, 231);
             this.labelControl8.Name = "labelControl8";
-            this.labelControl8.Size = new System.Drawing.Size(25, 19);
+            this.labelControl8.Size = new System.Drawing.Size(34, 16);
             this.labelControl8.TabIndex = 86;
             this.labelControl8.Text = "التاريخ";
             // 
@@ -387,36 +322,47 @@
             this.txt_mark_date.IconColor = System.Drawing.Color.Gray;
             this.txt_mark_date.IconLocation = Bunifu.UI.WinForms.BunifuDatePicker.Indicator.Right;
             this.txt_mark_date.LeftTextMargin = 5;
-            this.txt_mark_date.Location = new System.Drawing.Point(47, 203);
+            this.txt_mark_date.Location = new System.Drawing.Point(42, 216);
             this.txt_mark_date.MinimumSize = new System.Drawing.Size(4, 32);
             this.txt_mark_date.Name = "txt_mark_date";
             this.txt_mark_date.Size = new System.Drawing.Size(191, 32);
             this.txt_mark_date.TabIndex = 85;
             this.txt_mark_date.Value = new System.DateTime(2022, 12, 27, 2, 14, 19, 0);
             // 
-            // ch_year
+            // com_years_mark
             // 
-            this.ch_year.AutoSize = true;
-            this.ch_year.Location = new System.Drawing.Point(362, 222);
-            this.ch_year.Name = "ch_year";
-            this.ch_year.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.ch_year.Size = new System.Drawing.Size(197, 17);
-            this.ch_year.TabIndex = 87;
-            this.ch_year.Text = "هل تريد تحديد السنه الدراسيه والترم ";
-            this.ch_year.UseVisualStyleBackColor = true;
-            this.ch_year.CheckedChanged += new System.EventHandler(this.ch_year_CheckedChanged);
+            this.com_years_mark.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.com_years_mark.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.com_years_mark.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.com_years_mark.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.com_years_mark.FormattingEnabled = true;
+            this.com_years_mark.Location = new System.Drawing.Point(332, 222);
+            this.com_years_mark.Name = "com_years_mark";
+            this.com_years_mark.Size = new System.Drawing.Size(163, 32);
+            this.com_years_mark.TabIndex = 89;
+            this.com_years_mark.SelectedIndexChanged += new System.EventHandler(this.com_years_mark_SelectedIndexChanged);
+            // 
+            // labelControl9
+            // 
+            this.labelControl9.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl9.Appearance.Options.UseFont = true;
+            this.labelControl9.Location = new System.Drawing.Point(511, 238);
+            this.labelControl9.Name = "labelControl9";
+            this.labelControl9.Size = new System.Drawing.Size(64, 16);
+            this.labelControl9.TabIndex = 88;
+            this.labelControl9.Text = "العام الدراسي";
             // 
             // frm_add_mark
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(584, 413);
-            this.Controls.Add(this.ch_year);
+            this.ClientSize = new System.Drawing.Size(584, 345);
+            this.Controls.Add(this.com_years_mark);
+            this.Controls.Add(this.labelControl9);
             this.Controls.Add(this.labelControl8);
             this.Controls.Add(this.txt_mark_date);
             this.Controls.Add(this.txt_mark_value);
             this.Controls.Add(this.labelControl7);
-            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.com_stud);
             this.Controls.Add(this.labelControl3);
             this.Controls.Add(this.com_cours);
@@ -434,8 +380,6 @@
             this.bunifuPanel1.ResumeLayout(false);
             this.bunifuPanel2.ResumeLayout(false);
             this.bunifuPanel2.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -451,18 +395,14 @@
         public System.Windows.Forms.ComboBox com_spiacl;
         private DevExpress.XtraEditors.LabelControl labelControl4;
         private DevExpress.XtraEditors.LabelControl labelControl2;
-        public System.Windows.Forms.ComboBox com_term;
-        private DevExpress.XtraEditors.LabelControl labelControl6;
         public System.Windows.Forms.ComboBox com_cours;
-        public System.Windows.Forms.ComboBox com_year;
-        private DevExpress.XtraEditors.LabelControl labelControl5;
         public System.Windows.Forms.ComboBox com_stud;
         private DevExpress.XtraEditors.LabelControl labelControl3;
-        private System.Windows.Forms.GroupBox groupBox1;
         public Bunifu.UI.WinForms.BunifuTextBox txt_mark_value;
         private DevExpress.XtraEditors.LabelControl labelControl7;
         private DevExpress.XtraEditors.LabelControl labelControl8;
         private Bunifu.UI.WinForms.BunifuDatePicker txt_mark_date;
-        private System.Windows.Forms.CheckBox ch_year;
+        public System.Windows.Forms.ComboBox com_years_mark;
+        private DevExpress.XtraEditors.LabelControl labelControl9;
     }
 }

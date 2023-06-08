@@ -55,14 +55,15 @@ namespace THAGBAN_INST.FORM.FRM_MANG_STUD.marks
                 // txt_cours_name.Text = tbl.COURS_NAME.ToString();
 
                 stud_id = Convert.ToInt32(tbl.STUD_ID);
-                spaicla_id= Convert.ToInt32(tbl.STUD_ID);
+                spaicla_id= Convert.ToInt32(tbl.SPEC_ID);
                 txt_mark_date.Text=tbl.MARK_YEAR.ToString();
                 txt_mark_value.Text=tbl.MARK_COURS.ToString();
                 cours_id = Convert.ToInt32(tbl.COURS_ID);
-                MessageBox.Show(cours_id.ToString());
+                year_id= Convert.ToInt32(tbl.YEARS_ID);
+               // MessageBox.Show(cours_id.ToString());
 
                 get_info();
-                MessageBox.Show(cours_id.ToString());
+               // MessageBox.Show(cours_id.ToString());
             }
             else
             {
@@ -80,7 +81,7 @@ namespace THAGBAN_INST.FORM.FRM_MANG_STUD.marks
             dbContext.TBL_STUDENTS.LoadAsync().ContinueWith(loadTask =>
             {
                 // Bind data to control when loading complete
-                com_stud.DataSource = dbContext.TBL_STUDENTS.Local.ToBindingList();
+                com_stud.DataSource = dbContext.TBL_STUDENTS.Where(w=>w.STUD_STATE==true).ToList();
                 com_stud.DisplayMember = "STUD_NAME";
                 com_stud.ValueMember = "STUD_ID";
             }, System.Threading.Tasks.TaskScheduler.FromCurrentSynchronizationContext());
@@ -88,6 +89,11 @@ namespace THAGBAN_INST.FORM.FRM_MANG_STUD.marks
             //com_cours.DisplayMember = "COURS_NAME";
             //com_cours.ValueMember = "COURS_ID";
 
+            com_years_mark.DataSource = con.TBL_YEARS_MARK.Where(w => w.STATE == true).OrderByDescending(w => w.YEARS_DATA).ToList();
+            com_years_mark.DisplayMember = "YEARS_DATA";
+            com_years_mark.ValueMember = "ID";
+            if (id != 0)
+                com_years_mark.SelectedValue = year_id;
         }
         void clear()
         {
@@ -95,8 +101,7 @@ namespace THAGBAN_INST.FORM.FRM_MANG_STUD.marks
             id = 0;
             com_cours.Text = "";
             com_spiacl.Text = "";
-            com_term.Text="";
-            com_year.Text = "";
+           
             cours_id = 0;
             stud_id = 0;
             txt_mark_value.Text = "";
@@ -118,14 +123,16 @@ namespace THAGBAN_INST.FORM.FRM_MANG_STUD.marks
         {
 
 
-            com_stud.DataSource = con.TBL_STUDENTS.ToList();
+            com_stud.DataSource = con.TBL_STUDENTS.Where(w=>w.STUD_STATE==true).ToList();
             com_stud.DisplayMember = "STUD_NAME";
             com_stud.ValueMember = "STUD_ID";
+            if (id != 0)
             com_stud.SelectedValue = stud_id;
 
             /////
             ///
 
+         
             var temp1 = con.TBL_SPECIAL.Join(con.TBL_STUD_SPEC.Where(w => w.STUD_ID == stud_id), sp => sp.SPEC_ID, stud_spe => stud_spe.TBL_SPECIAL.SPEC_ID, (spiec, stud_spic) => new
             {
                 spiec.SPEC_NAME,
@@ -143,37 +150,25 @@ namespace THAGBAN_INST.FORM.FRM_MANG_STUD.marks
             else
             {
                 com_spiacl.Items.Clear();
-                //}
-                //var temp = con.TBL_COURS.Join(con.TBL_SPE_COURS.Where(w => w.SPEC_ID == lect_id),
-                //          c => c.COURS_ID,
-                //          sp => sp.TBL_COURS.COURS_ID,
-                //          (cours, cours_sp) =>
-                //           new {
-                //               cours.COURS_ID,
-                //               cours.COURS_NAME,
-
-                //           }).ToList();
-                //if (temp.Count > 0)
-                //{
-                //    com_cours.DataSource = temp.ToList();
-                //    com_cours.DisplayMember = "COURS_NAME";
-                //    com_cours.ValueMember = "COURS_ID";
-                //    com_cours.SelectedValue = stud_lect_id;
-                //}
-
-                //var data = con.TBL_YEARS.Where(w => w.SPEC_ID == lect_id).ToList();
-                //if (data.Count > 0)
-                //{
-                //    com_year.DataSource = data;
-                //    com_year.DisplayMember = "YEAR_NAME";
-                //    com_year.ValueMember = "YEAR_ID";
-                //}
-
-
+                
 
             }
 
+            com_years_mark.DataSource = con.TBL_YEARS_MARK.Where(w => w.STATE == true).OrderByDescending(w => w.YEARS_DATA).ToList();
+            com_years_mark.DisplayMember = "YEARS_DATA";
+            com_years_mark.ValueMember = "ID";
+            if (id != 0)
+                com_years_mark.SelectedValue = year_id;
+
+            com_cours.DataSource = con.TBL_COURS.ToList();
+            com_cours.DisplayMember = "COURS_NAME";
+            com_cours.ValueMember = "COURS_ID";
+            if (id != 0)
+            {
+                com_cours.SelectedValue = cours_id;
+            }
         }
+
         
         void add_marks()
         {
@@ -186,15 +181,16 @@ namespace THAGBAN_INST.FORM.FRM_MANG_STUD.marks
                 try
                 {
                     TBL_MARKS cl = new TBL_MARKS();
-                    cl.COURS_ID = cours_id ;
+                    cl.COURS_ID = Convert.ToInt32(com_cours.SelectedValue.ToString());
                     cl.SPEC_ID = spaicla_id;
                     cl.STUD_ID = stud_id;
                     cl.MARK_COURS=Convert.ToInt32(txt_mark_value.Text);
                     string aa = string.Format("{0:dd-MM-yyyy}", txt_mark_date.Value);
                     mark_date = DateTime.ParseExact(aa, "dd-MM-yyyy", null);
                     cl.MARK_YEAR = mark_date;
+                    
                   //  cl. =Convert.ToInt32(com_term.SelectedValue.ToString());
-                    //cl.YEAR_ID= Convert.ToInt32(com_year.SelectedValue.ToString());
+                    cl.YEARS_ID= Convert.ToInt32(com_years_mark.SelectedValue.ToString());
                     //cl.SPEC_ID= Convert.ToInt32(com_spiacl.SelectedValue.ToString());
 
                     if (id != 0)
@@ -207,7 +203,7 @@ namespace THAGBAN_INST.FORM.FRM_MANG_STUD.marks
 
                         adl.NotifictionUser notifiction = new adl.NotifictionUser(THAGBAN_INST.Properties.Resources.EditNotificationText, THAGBAN_INST.Properties.Resources.edit_32px);
                         notifiction.Show();
-                        clear();
+                        
                         //MessageBox.Show("تم التعديل بنجاح ");
                     }
                     else
@@ -215,10 +211,10 @@ namespace THAGBAN_INST.FORM.FRM_MANG_STUD.marks
                         //update 
                         con.TBL_MARKS.AddOrUpdate(cl);
                         con.SaveChanges();
-                       // toast.Width = this.Width;
-                        toast.lbl_mess.Text = "تم الاضافه ينجاح  بنجاح";
-                        toast.Show();
-                        clear();
+                        // toast.Width = this.Width;
+                        adl.NotifictionUser notifiction = new adl.NotifictionUser(THAGBAN_INST.Properties.Resources.AddNotificationText, THAGBAN_INST.Properties.Resources.add_32px);
+                        notifiction.Show();
+                     
 
                     }
                 }
@@ -229,7 +225,7 @@ namespace THAGBAN_INST.FORM.FRM_MANG_STUD.marks
                     dialge.lbl_mess.Text = ex.Message;
                     dialge.Show();
                 }
-                clear();
+             
             }
             else
             {
@@ -241,6 +237,7 @@ namespace THAGBAN_INST.FORM.FRM_MANG_STUD.marks
 
             }
 
+            get_cours_dest();
 
         }
 
@@ -251,154 +248,24 @@ namespace THAGBAN_INST.FORM.FRM_MANG_STUD.marks
 
         private void com_spiacl_SelectionChangeCommitted(object sender, EventArgs e)
         {
-            if(com_spiacl.SelectedValue!= null)
-            {
-                try
-                {
-                   
-                    spaicla_id = Convert.ToInt32(com_spiacl.SelectedValue.ToString());
-                  var data  = con.TBL_YEARS.Where(w => w.SPEC_ID == spaicla_id).ToList();
-                    if (data.Count > 0)
-                    {
-                        com_year.DataSource = data;
-                        com_year.DisplayMember = "YEAR_NAME";
-                        com_year.ValueMember = "YEAR_ID";
-                        if (id != 0)
-                            com_cours.SelectedValue = cours_id;
-                    }
-                    else
-                    {
-                       // dialge.lbl_mess.Text = "لايوجد ";
-                        com_year.Items.Clear();
-                    }
-                }catch(Exception ex)
-                {
 
-                }
-
-            }
-           
         }
 
         private void com_year_SelectionChangeCommitted(object sender, EventArgs e)
         {
-            if (com_year.SelectedValue != null)
-            {
-                try
-                {
-                     year_id = Convert.ToInt32(com_year.SelectedValue.ToString());
-                    var data= con.TBL_TERMS.Where(w => w.YEAR_ID == year_id && w.SPEC_ID == spaicla_id).ToList();
-                    if (data.Count > 0)
-                    {
-                        com_term.DataSource = data.ToList();
-                        com_term.DisplayMember = "TERM_NAME";
-                        com_term.ValueMember = "TERM_ID";
-                        if (groupBox1.Enabled == true)
-                        {
-                            get_cours();
-                        }
-
-                    }
-                    else
-                    {
-                        dialge d = new dialge();
-                        com_term.Items.Clear();
-                        com_cours.DataSource = null;
-                        com_cours.Items.Clear();
-                        d.lbl_mess.Text = "ولايوجد مواد للسنه المحدده" +
-                            "لم يتم اضافه اترام لهذا التخصص";
-                        d.Show();
-                    }
-                }catch(Exception ex) { }
-
-            }
+           
          
         }
 
         private void ch_year_CheckedChanged(object sender, EventArgs e)
         {
-            if(ch_year.Checked) {
-                groupBox1.Enabled = true;
             
-            }
-            else
-            {
-                groupBox1.Enabled = false;
-            }
         }
 
         
         private void com_stud_SelectionChangeCommitted(object sender, EventArgs e)
         {
-            method methods=new method();
-            if(com_stud.SelectedValue!= null)
-            {
-                try
-                {
-                    //  List<TBL_STUD_SPEC> tbl = new List<TBL_STUD_SPEC>();
-                    stud_id = Convert.ToInt32(com_stud.SelectedValue.ToString());
-                    // tbl = con.TBL_STUD_SPEC.Where(w=>w.STUD_ID==stud_id).ToList();
 
-
-
-                    var temp1 = con.TBL_SPECIAL.Join(con.TBL_STUD_SPEC.Where(w => w.STUD_ID == stud_id ), sp => sp.SPEC_ID, stud_spe => stud_spe.TBL_SPECIAL.SPEC_ID, (spiec, stud_spic) => new
-                    {
-                        spiec.SPEC_NAME,
-                        spiec.SPEC_ID,
-
-                    }).ToList();
-                    if (temp1.Count > 0 )
-                    {
-                        com_spiacl.DataSource = temp1;
-                        com_spiacl.DisplayMember = "SPEC_NAME";
-                        com_spiacl.ValueMember = "SPEC_ID";
-                        if (id != 0)
-                        {
-                           
-
-                            com_spiacl.SelectedValue = spaicla_id;
-                        }
-                       
-                    }
-                    else
-                    {
-                        com_spiacl.Items.Clear();
-                    }
-                   
-                    var temp=con.TBL_COURS.Join(con.TBL_SPE_COURS.Where(w=>w.SPEC_ID==spaicla_id),
-                        c => c.COURS_ID,
-                        sp=>sp.TBL_COURS.COURS_ID,
-                        (cours,cours_sp)=>
-                         new {
-                             cours.COURS_ID,
-                             cours.COURS_NAME,
-
-                        }).ToList();
-                    if (temp.Count > 0)
-                    {
-                        com_cours.DataSource = temp.ToList();
-                        com_cours.DisplayMember = "COURS_NAME";
-                        com_cours.ValueMember = "COURS_ID";
-                        if (id != 0)
-                            com_cours.SelectedValue = cours_id;
-                    }
-                    else
-                    {
-                        dialge d = new dialge();
-                        com_cours.Items.Clear();
-                        d.lbl_mess.Text = "ولايوجد مواد للتخصص المحدد";
-
-                        d.Show();
-
-                    }
-                    // com_cours.SelectedValue = stud_lect_id;
-
-                }catch(Exception ex)
-                {
-
-                }
-
-            }
         }
 
         private void com_term_SelectionChangeCommitted(object sender, EventArgs e)
@@ -408,65 +275,13 @@ namespace THAGBAN_INST.FORM.FRM_MANG_STUD.marks
 
         }
 
-        void get_cours()
-        {
-            var data = con.TBL_COURS
-                       .Join(con.TBL_SPE_COURS.Where(w => w.SPEC_ID == spaicla_id && w.TERM_ID == term_id
-                       && w.YEAR_ID == year_id),
-                       c => c.COURS_ID,
-                       spc => spc.TBL_COURS.COURS_ID, (cours, sp_cours) => new
-                       {
-                           cours.COURS_ID,
-                           cours.COURS_NAME,
-                       }).ToList();
-
-            if (data.Count > 0)
-            {
-                com_cours.DataSource = data.ToList();
-                com_cours.DisplayMember = "COURS_NAME";
-                com_cours.ValueMember = "COURS_ID";
-                
-                com_cours.SelectedValue = cours_id;
-            }
-            else
-            {
-                com_cours.DataSource = null;
-                com_cours.Items.Clear();
-                dialge d = new dialge();
-
-                d.lbl_mess.Text = "ولايوجد مواد للترم المحدد";
-
-                d.Show();
-
-            }
-        }
         private void com_term_SelectedValueChanged(object sender, EventArgs e)
         {
-            if (com_term.SelectedValue != null)
-            {
-                try {
-                    term_id = Convert.ToInt32(com_term.SelectedValue.ToString());
-                    if (groupBox1.Enabled == true)
-                    {
-                        get_cours();
-                    }
-
-                }
-                catch(Exception ex) { }
-                }
         }
 
         private void com_term_DataSourceChanged(object sender, EventArgs e)
         {
-            try
-            {
-                if(groupBox1.Enabled==true)
-                {
-                    get_cours();
-                }
-              
-
-            }catch(Exception ex) { }
+          
         }
 
         private void com_cours_SelectedValueChanged(object sender, EventArgs e)
@@ -486,6 +301,101 @@ namespace THAGBAN_INST.FORM.FRM_MANG_STUD.marks
                 catch (Exception ex) { }
             }
 
+        }
+        void get_cours_dest()
+        {
+            var data_set = (from stud in con.TBL_STUDENTS.Where(w => w.STUD_ID == stud_id)
+                            join stud_sp in con.TBL_STUD_SPEC.Where(w => w.SPEC_ID == spaicla_id && w.STUD_ID==stud_id) on stud.STUD_ID equals stud_sp.STUD_ID
+                            join cours in con.TBL_SPE_COURS on stud_sp.SPEC_ID equals cours.SPEC_ID
+                            join stud_cours in con.TBL_MARKS.Where(w=>w.STUD_ID==stud_id && w.SPEC_ID==spaicla_id)
+                                on cours.TBL_COURS.COURS_ID equals stud_cours.COURS_ID
+                                into studCoursGroup
+                            from stud_cours in studCoursGroup.DefaultIfEmpty()
+                            where stud_cours == null || stud_cours.MARK_COURS == null
+                            select new
+                            {
+                                cours.TBL_COURS.COURS_NAME,
+                                cours.TBL_COURS.COURS_ID
+                            }).ToList();
+
+            if (data_set.Count > 0)
+            {
+                com_cours.DataSource = data_set.ToList();
+                com_cours.DisplayMember = "COURS_NAME";
+                com_cours.ValueMember = "COURS_ID";
+                if (id != 0)
+                {
+                    com_cours.SelectedValue = cours_id;
+                }
+            }
+            else
+            {
+                dialge d = new dialge();
+               // com_cours.Items.Clear();
+                d.lbl_mess.Text = "لا يوجد مواد للتخصص المحدد";
+                d.Show();
+            }
+        }
+
+
+        private void com_years_mark_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void com_stud_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                if (id == 0)
+                {
+                    stud_id = Convert.ToInt32(com_stud.SelectedValue.ToString());
+               
+                    get_spic();
+                    get_cours_dest();
+                }
+                get_spic();
+            }
+            catch(Exception ex) { }
+        }
+
+        void get_spic()
+        {
+
+            var temp1 = con.TBL_SPECIAL.Join(con.TBL_STUD_SPEC.Where(w => w.STUD_ID == stud_id), sp => sp.SPEC_ID, stud_spe => stud_spe.TBL_SPECIAL.SPEC_ID, (spiec, stud_spic) => new
+            {
+                spiec.SPEC_NAME,
+                spiec.SPEC_ID,
+
+            }).ToList();
+            if (temp1.Count > 0)
+            {
+                com_spiacl.DataSource = temp1;
+                com_spiacl.DisplayMember = "SPEC_NAME";
+                com_spiacl.ValueMember = "SPEC_ID";
+                if (id != 0)
+                    com_spiacl.SelectedValue = spaicla_id;
+            }
+            else
+            {
+                com_spiacl.Items.Clear();
+
+
+            }
+        }
+        private void com_spiacl_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                if (id == 0)
+                {
+                    spaicla_id = Convert.ToInt32(com_spiacl.SelectedValue.ToString());
+              
+                    get_cours_dest();
+                }
+            }
+            catch (Exception ex) { }
+           
         }
     }
 }

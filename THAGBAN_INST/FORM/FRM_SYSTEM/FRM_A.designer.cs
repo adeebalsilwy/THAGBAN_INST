@@ -110,7 +110,7 @@ namespace THAGBAN_INST.FORM.FRM_SYSTEM
             this.panel2.Location = new System.Drawing.Point(43, 177);
             this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(764, 285);
+            this.panel2.Size = new System.Drawing.Size(764, 319);
             this.panel2.TabIndex = 1;
             // 
             // label4
@@ -151,7 +151,7 @@ namespace THAGBAN_INST.FORM.FRM_SYSTEM
             this.btn_add.Appearance.Options.UseBackColor = true;
             this.btn_add.Appearance.Options.UseFont = true;
             this.btn_add.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.TopCenter;
-            this.btn_add.Location = new System.Drawing.Point(120, 237);
+            this.btn_add.Location = new System.Drawing.Point(120, 254);
             this.btn_add.Name = "btn_add";
             this.btn_add.Size = new System.Drawing.Size(441, 45);
             this.btn_add.TabIndex = 2;
@@ -208,7 +208,7 @@ namespace THAGBAN_INST.FORM.FRM_SYSTEM
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(870, 417);
+            this.ClientSize = new System.Drawing.Size(870, 533);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderEffect = DevExpress.XtraEditors.FormBorderEffect.Glow;

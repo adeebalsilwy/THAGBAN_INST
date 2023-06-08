@@ -16,13 +16,15 @@ namespace THAGBAN_INST.DATA
     {
         public int MARK_ID { get; set; }
         public double MARK_COURS { get; set; }
+        public Nullable<System.DateTime> MARK_YEAR { get; set; }
+        public Nullable<int> YEARS_ID { get; set; }
         public Nullable<int> COURS_ID { get; set; }
         public Nullable<int> STUD_ID { get; set; }
-        public Nullable<System.DateTime> MARK_YEAR { get; set; }
         public Nullable<int> SPEC_ID { get; set; }
     
         public virtual TBL_COURS TBL_COURS { get; set; }
         public virtual TBL_SPECIAL TBL_SPECIAL { get; set; }
         public virtual TBL_STUDENTS TBL_STUDENTS { get; set; }
+        public virtual TBL_YEARS_MARK TBL_YEARS_MARK { get; set; }
     }
 }
