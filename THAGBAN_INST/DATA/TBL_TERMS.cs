@@ -23,14 +23,10 @@ namespace THAGBAN_INST.DATA
     
         public int TERM_ID { get; set; }
         public string TERM_NAME { get; set; }
-        public Nullable<int> YEAR_ID { get; set; }
-        public Nullable<int> SPEC_ID { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<TBL_SPE_COURS> TBL_SPE_COURS { get; set; }
-        public virtual TBL_SPECIAL TBL_SPECIAL { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<TBL_STUD_STUDY_COURS> TBL_STUD_STUDY_COURS { get; set; }
-        public virtual TBL_YEARS TBL_YEARS { get; set; }
     }
 }

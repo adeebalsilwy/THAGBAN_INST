@@ -120,8 +120,8 @@ namespace THAGBAN_INST.FORM.FRM_CONTORL
 
         private void btn_users_Click(object sender, EventArgs e)
         {
-            frm_mang_attends frm = new frm_mang_attends();
-            SelectPage(frm, " سجل الدوام  ");
+            frm_mange_grievance frm = new frm_mange_grievance();
+            SelectPage(frm, "التظلمات");
         }
 
         private void btn_help_Click(object sender, EventArgs e)

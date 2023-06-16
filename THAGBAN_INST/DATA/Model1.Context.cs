@@ -57,9 +57,14 @@ namespace THAGBAN_INST.DATA
         public virtual DbSet<TBL_STUD_SPEC> TBL_STUD_SPEC { get; set; }
         public virtual DbSet<TBL_STUD_STUDY_COURS> TBL_STUD_STUDY_COURS { get; set; }
         public virtual DbSet<TBL_STUDENTS> TBL_STUDENTS { get; set; }
-        public virtual DbSet<TBL_TERMS> TBL_TERMS { get; set; }
         public virtual DbSet<TBL_USERS> TBL_USERS { get; set; }
-        public virtual DbSet<TBL_YEARS> TBL_YEARS { get; set; }
         public virtual DbSet<TBL_YEARS_MARK> TBL_YEARS_MARK { get; set; }
+        public virtual DbSet<TBL_TERMS> TBL_TERMS { get; set; }
+        public virtual DbSet<TBL_YEARS> TBL_YEARS { get; set; }
+        public virtual DbSet<TBL_GREIVANCES> TBL_GREIVANCES { get; set; }
+        public virtual DbSet<TB_BUY> TB_BUY { get; set; }
+        public virtual DbSet<TBL_CATEGORIES> TBL_CATEGORIES { get; set; }
+        public virtual DbSet<TBL_SUPPLIERS> TBL_SUPPLIERS { get; set; }
+        public virtual DbSet<TBL_SuppliersPayments> TBL_SuppliersPayments { get; set; }
     }
 }

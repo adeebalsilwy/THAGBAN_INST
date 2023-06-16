@@ -5,9 +5,6 @@
     <Setting Name="color" Type="System.Drawing.Color" Scope="User">
       <Value Profile="(Default)">Black</Value>
     </Setting>
-    <Setting Name="font" Type="System.Drawing.Font" Scope="User">
-      <Value Profile="(Default)">ACS  Yaqout Bold, 11.25pt</Value>
-    </Setting>
     <Setting Name="server_name" Type="System.String" Scope="User">
       <Value Profile="(Default)">.\sqlexpress</Value>
     </Setting>
@@ -57,6 +54,9 @@
     </Setting>
     <Setting Name="ISfull_ACTIVE" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="font" Type="System.Drawing.Font" Scope="User">
+      <Value Profile="(Default)">Microsoft Sans Serif, 11.25pt</Value>
     </Setting>
   </Settings>
 </SettingsFile>

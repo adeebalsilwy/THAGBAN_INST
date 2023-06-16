@@ -302,6 +302,9 @@
     <Compile Include="DATA\TBL_ATTENDS.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="DATA\TBL_CATEGORIES.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <Compile Include="DATA\TBL_COURS.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -312,6 +315,9 @@
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="DATA\TBL_FOLDER.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DATA\TBL_GREIVANCES.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="DATA\TBL_HOLIDAYS.cs">
@@ -389,6 +395,12 @@
     <Compile Include="DATA\TBL_STUD_STUDY_COURS.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="DATA\TBL_SUPPLIERS.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DATA\TBL_SuppliersPayments.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <Compile Include="DATA\TBL_TERMS.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -401,6 +413,70 @@
     <Compile Include="DATA\TBL_YEARS_MARK.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="DATA\TB_BUY.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FORM\BUY\Add_Buy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM\BUY\Add_Buy.designer.cs">
+      <DependentUpon>Add_Buy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM\BUY\Add_Categories.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM\BUY\Add_Categories.designer.cs">
+      <DependentUpon>Add_Categories.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM\BUY\Add_Suppliers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM\BUY\Add_Suppliers.designer.cs">
+      <DependentUpon>Add_Suppliers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM\BUY\BuyPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FORM\BUY\BuyPage.designer.cs">
+      <DependentUpon>BuyPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM\BUY\buyReportAction.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FORM\BUY\buyReportAction.designer.cs">
+      <DependentUpon>buyReportAction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM\BUY\CategoriesPage .cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FORM\BUY\CategoriesPage .designer.cs">
+      <DependentUpon>CategoriesPage .cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM\BUY\FRM_MAIN_BUY.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM\BUY\FRM_MAIN_BUY.Designer.cs">
+      <DependentUpon>FRM_MAIN_BUY.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM\BUY\FRM_PamymnetsLogSuppliers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM\BUY\FRM_PamymnetsLogSuppliers.designer.cs">
+      <DependentUpon>FRM_PamymnetsLogSuppliers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM\BUY\SetDateForPrintReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM\BUY\SetDateForPrintReport.designer.cs">
+      <DependentUpon>SetDateForPrintReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM\BUY\SuppliersPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FORM\BUY\SuppliersPage.designer.cs">
+      <DependentUpon>SuppliersPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM\BUY\UpdateData.cs" />
     <Compile Include="FORM\FORM_MANG_STUD\cours_send_stud\frm_add_cours_send_send_stud.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -538,6 +614,18 @@
     </Compile>
     <Compile Include="FORM\FRM_CONTORL\analys_control_admin.Designer.cs">
       <DependentUpon>analys_control_admin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM\FRM_CONTORL\grievance\FRM_ADD_grievance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM\FRM_CONTORL\grievance\FRM_ADD_grievance.Designer.cs">
+      <DependentUpon>FRM_ADD_grievance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM\FRM_CONTORL\grievance\frm_mange_grievance.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FORM\FRM_CONTORL\grievance\frm_mange_grievance.Designer.cs">
+      <DependentUpon>frm_mange_grievance.cs</DependentUpon>
     </Compile>
     <Compile Include="FORM\FRM_CONTORL\siryal_number\frm_add_siryal.cs">
       <SubType>Form</SubType>
@@ -967,6 +1055,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="reports\control_report\report_gerive.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="reports\control_report\report_gerive.Designer.cs">
+      <DependentUpon>report_gerive.cs</DependentUpon>
+    </Compile>
     <Compile Include="reports\emp_reports\frm_mang_reptort_emp.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -987,6 +1081,36 @@
     </EmbeddedResource>
     <EmbeddedResource Include="adl\NotifictionUser.resx">
       <DependentUpon>NotifictionUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM\BUY\Add_Buy.resx">
+      <DependentUpon>Add_Buy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM\BUY\Add_Categories.resx">
+      <DependentUpon>Add_Categories.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM\BUY\Add_Suppliers.resx">
+      <DependentUpon>Add_Suppliers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM\BUY\BuyPage.resx">
+      <DependentUpon>BuyPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM\BUY\buyReportAction.resx">
+      <DependentUpon>buyReportAction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM\BUY\CategoriesPage .resx">
+      <DependentUpon>CategoriesPage .cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM\BUY\FRM_MAIN_BUY.resx">
+      <DependentUpon>FRM_MAIN_BUY.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM\BUY\FRM_PamymnetsLogSuppliers.resx">
+      <DependentUpon>FRM_PamymnetsLogSuppliers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM\BUY\SetDateForPrintReport.resx">
+      <DependentUpon>SetDateForPrintReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM\BUY\SuppliersPage.resx">
+      <DependentUpon>SuppliersPage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FORM\FORM_MANG_STUD\cours_send_stud\frm_add_cours_send_send_stud.resx">
       <DependentUpon>frm_add_cours_send_send_stud.cs</DependentUpon>
@@ -1056,6 +1180,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FORM\FRM_CONTORL\analys_control_admin.resx">
       <DependentUpon>analys_control_admin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM\FRM_CONTORL\grievance\FRM_ADD_grievance.resx">
+      <DependentUpon>FRM_ADD_grievance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM\FRM_CONTORL\grievance\frm_mange_grievance.resx">
+      <DependentUpon>frm_mange_grievance.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FORM\FRM_CONTORL\siryal_number\frm_add_siryal.resx">
       <DependentUpon>frm_add_siryal.cs</DependentUpon>
@@ -1281,6 +1411,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="reports\control_report\report_gerive.resx">
+      <DependentUpon>report_gerive.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="reports\emp_reports\frm_mang_reptort_emp.resx">
       <DependentUpon>frm_mang_reptort_emp.cs</DependentUpon>
     </EmbeddedResource>

@@ -45,6 +45,8 @@
             this.colTBL_STUD_SPEC2 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colTBL_STUD_SPEC3 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.com_years = new System.Windows.Forms.ComboBox();
+            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.lbl_count = new DevExpress.XtraEditors.LabelControl();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.com_spical = new System.Windows.Forms.ComboBox();
@@ -235,6 +237,8 @@
             // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.com_years);
+            this.panel3.Controls.Add(this.labelControl1);
             this.panel3.Controls.Add(this.lbl_count);
             this.panel3.Controls.Add(this.labelControl2);
             this.panel3.Controls.Add(this.com_spical);
@@ -244,6 +248,28 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(925, 51);
             this.panel3.TabIndex = 9;
+            // 
+            // com_years
+            // 
+            this.com_years.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.com_years.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.com_years.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.com_years.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.com_years.FormattingEnabled = true;
+            this.com_years.Location = new System.Drawing.Point(341, 7);
+            this.com_years.Name = "com_years";
+            this.com_years.Size = new System.Drawing.Size(197, 37);
+            this.com_years.TabIndex = 67;
+            // 
+            // labelControl1
+            // 
+            this.labelControl1.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl1.Appearance.Options.UseFont = true;
+            this.labelControl1.Location = new System.Drawing.Point(568, 17);
+            this.labelControl1.Name = "labelControl1";
+            this.labelControl1.Size = new System.Drawing.Size(29, 20);
+            this.labelControl1.TabIndex = 66;
+            this.labelControl1.Text = "الدفعه";
             // 
             // lbl_count
             // 
@@ -278,6 +304,7 @@
             this.com_spical.Name = "com_spical";
             this.com_spical.Size = new System.Drawing.Size(197, 37);
             this.com_spical.TabIndex = 61;
+            this.com_spical.SelectedIndexChanged += new System.EventHandler(this.com_spical_SelectedIndexChanged);
             this.com_spical.SelectionChangeCommitted += new System.EventHandler(this.com_spical_SelectionChangeCommitted);
             // 
             // labelControl4
@@ -476,5 +503,7 @@
         private DevExpress.XtraEditors.LabelControl labelControl2;
         public System.Windows.Forms.ComboBox com_spical;
         private DevExpress.XtraEditors.LabelControl labelControl4;
+        public System.Windows.Forms.ComboBox com_years;
+        private DevExpress.XtraEditors.LabelControl labelControl1;
     }
 }

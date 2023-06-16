@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="db_max_instModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="db_max_instModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="sysdiagrams">
           <Key>
             <PropertyRef Name="diagram_id" />
@@ -14,6 +14,21 @@
           <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="version" Type="int" />
           <Property Name="definition" Type="varbinary(max)" />
+        </EntityType>
+        <EntityType Name="TB_BUY">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ID_Catgeory" Type="int" />
+          <Property Name="ID_Supplier" Type="int" />
+          <Property Name="Name" Type="nvarchar(max)" />
+          <Property Name="Quantity" Type="float" />
+          <Property Name="SupplierPyment" Type="float" />
+          <Property Name="BuyPrice" Type="float" />
+          <Property Name="BuyAllValue" Type="float" />
+          <Property Name="DateAdd" Type="datetime" />
+          <Property Name="Description" Type="nvarchar(max)" />
         </EntityType>
         <EntityType Name="TBL_ACTIVE_SYSTEM">
           <Key>
@@ -35,6 +50,15 @@
           <Property Name="ATTEND_GO" Type="int" Nullable="false" />
           <Property Name="ATTEND_DATE" Type="date" Nullable="false" />
           <Property Name="EMP_ID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="TBL_CATEGORIES">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CatName" Type="nvarchar" MaxLength="50" />
+          <Property Name="CatDes" Type="nvarchar(max)" />
+          <Property Name="CatQuantity" Type="float" />
         </EntityType>
         <EntityType Name="TBL_COURS">
           <Key>
@@ -85,6 +109,17 @@
           <Property Name="INST_NOTE_CHEAK" Type="bit" />
           <Property Name="INST_NOTE_IMG" Type="image" />
           <Property Name="STUD_ID" Type="int" />
+        </EntityType>
+        <EntityType Name="TBL_GREIVANCES">
+          <Key>
+            <PropertyRef Name="GREIVANCE_ID" />
+          </Key>
+          <Property Name="GREIVANCE_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="GREIVANCE_DATE" Type="date" />
+          <Property Name="MARK_ID" Type="int" />
+          <Property Name="NOTE" Type="nvarchar" MaxLength="50" />
+          <Property Name="STATE" Type="bit" />
+          <Property Name="PRICE" Type="float" />
         </EntityType>
         <EntityType Name="TBL_HOLIDAY_TYPE">
           <Key>
@@ -388,14 +423,33 @@
           <Property Name="STUD_STATE" Type="bit" Nullable="false" />
           <Property Name="STUD_DATE" Type="date" Nullable="false" />
         </EntityType>
+        <EntityType Name="TBL_SUPPLIERS">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="SupplierName" Type="nvarchar(max)" />
+          <Property Name="SupplierPhone" Type="bigint" />
+          <Property Name="SupplierAddress" Type="nvarchar(max)" />
+          <Property Name="SupplierDate" Type="datetime" />
+          <Property Name="SupplierBalance" Type="float" />
+          <Property Name="SupplierBalancePrim" Type="float" />
+        </EntityType>
+        <EntityType Name="TBL_SuppliersPayments">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="SUPLAYER_ID" Type="int" />
+          <Property Name="Pamnent" Type="float" />
+          <Property Name="Date" Type="datetime" />
+        </EntityType>
         <EntityType Name="TBL_TERMS">
           <Key>
             <PropertyRef Name="TERM_ID" />
           </Key>
           <Property Name="TERM_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="TERM_NAME" Type="nvarchar" MaxLength="50" />
-          <Property Name="YEAR_ID" Type="int" />
-          <Property Name="SPEC_ID" Type="int" />
         </EntityType>
         <EntityType Name="TBL_USERS">
           <Key>
@@ -412,7 +466,6 @@
           </Key>
           <Property Name="YEAR_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="YEAR_NAME" Type="nvarchar" MaxLength="50" />
-          <Property Name="SPEC_ID" Type="int" />
         </EntityType>
         <EntityType Name="TBL_YEARS_MARK">
           <Key>
@@ -423,6 +476,42 @@
           <Property Name="YEARS_DATA" Type="nvarchar" MaxLength="50" />
           <Property Name="STATE" Type="bit" />
         </EntityType>
+        <Association Name="FK_GREIVANCES_TBL_STUDENTS">
+          <End Role="TBL_MARKS" Type="Self.TBL_MARKS" Multiplicity="0..1" />
+          <End Role="TBL_GREIVANCES" Type="Self.TBL_GREIVANCES" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TBL_MARKS">
+              <PropertyRef Name="MARK_ID" />
+            </Principal>
+            <Dependent Role="TBL_GREIVANCES">
+              <PropertyRef Name="MARK_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TB_BUY_TBL_CATEGORIES">
+          <End Role="TBL_CATEGORIES" Type="Self.TBL_CATEGORIES" Multiplicity="0..1" />
+          <End Role="TB_BUY" Type="Self.TB_BUY" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TBL_CATEGORIES">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="TB_BUY">
+              <PropertyRef Name="ID_Catgeory" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TB_BUY_TBL_SUPPLIERS">
+          <End Role="TBL_SUPPLIERS" Type="Self.TBL_SUPPLIERS" Multiplicity="0..1" />
+          <End Role="TB_BUY" Type="Self.TB_BUY" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TBL_SUPPLIERS">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="TB_BUY">
+              <PropertyRef Name="ID_Supplier" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_TBL_ATTENDS_TBL_EMPLOYEES">
           <End Role="TBL_EMPLOYEES" Type="Self.TBL_EMPLOYEES" Multiplicity="1" />
           <End Role="TBL_ATTENDS" Type="Self.TBL_ATTENDS" Multiplicity="*" />
@@ -1135,39 +1224,15 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_TBL_TERMS_TBL_SPECIAL1">
-          <End Role="TBL_SPECIAL" Type="Self.TBL_SPECIAL" Multiplicity="0..1" />
-          <End Role="TBL_TERMS" Type="Self.TBL_TERMS" Multiplicity="*" />
+        <Association Name="FK_TBL_SuppliersPayments_TBL_SUPPLIERS">
+          <End Role="TBL_SUPPLIERS" Type="Self.TBL_SUPPLIERS" Multiplicity="0..1" />
+          <End Role="TBL_SuppliersPayments" Type="Self.TBL_SuppliersPayments" Multiplicity="*" />
           <ReferentialConstraint>
-            <Principal Role="TBL_SPECIAL">
-              <PropertyRef Name="SPEC_ID" />
+            <Principal Role="TBL_SUPPLIERS">
+              <PropertyRef Name="ID" />
             </Principal>
-            <Dependent Role="TBL_TERMS">
-              <PropertyRef Name="SPEC_ID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_TBL_TERMS_TBL_years">
-          <End Role="TBL_YEARS" Type="Self.TBL_YEARS" Multiplicity="0..1" />
-          <End Role="TBL_TERMS" Type="Self.TBL_TERMS" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="TBL_YEARS">
-              <PropertyRef Name="YEAR_ID" />
-            </Principal>
-            <Dependent Role="TBL_TERMS">
-              <PropertyRef Name="YEAR_ID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_TBL_YEARS_TBL_SPECIAL">
-          <End Role="TBL_SPECIAL" Type="Self.TBL_SPECIAL" Multiplicity="0..1" />
-          <End Role="TBL_YEARS" Type="Self.TBL_YEARS" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="TBL_SPECIAL">
-              <PropertyRef Name="SPEC_ID" />
-            </Principal>
-            <Dependent Role="TBL_YEARS">
-              <PropertyRef Name="SPEC_ID" />
+            <Dependent Role="TBL_SuppliersPayments">
+              <PropertyRef Name="SUPLAYER_ID" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -1185,12 +1250,15 @@
         </Association>
         <EntityContainer Name="db_max_instModelStoreContainer">
           <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TB_BUY" EntityType="Self.TB_BUY" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TBL_ACTIVE_SYSTEM" EntityType="Self.TBL_ACTIVE_SYSTEM" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TBL_ATTENDS" EntityType="Self.TBL_ATTENDS" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TBL_CATEGORIES" EntityType="Self.TBL_CATEGORIES" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TBL_COURS" EntityType="Self.TBL_COURS" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TBL_DEPT" EntityType="Self.TBL_DEPT" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TBL_EMPLOYEES" EntityType="Self.TBL_EMPLOYEES" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TBL_FOLDER" EntityType="Self.TBL_FOLDER" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TBL_GREIVANCES" EntityType="Self.TBL_GREIVANCES" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TBL_HOLIDAY_TYPE" EntityType="Self.TBL_HOLIDAY_TYPE" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TBL_HOLIDAYS" EntityType="Self.TBL_HOLIDAYS" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TBL_INST" EntityType="Self.TBL_INST" Schema="dbo" store:Type="Tables" />
@@ -1216,10 +1284,24 @@
           <EntitySet Name="TBL_STUD_SPEC" EntityType="Self.TBL_STUD_SPEC" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TBL_STUD_STUDY_COURS" EntityType="Self.TBL_STUD_STUDY_COURS" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TBL_STUDENTS" EntityType="Self.TBL_STUDENTS" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TBL_SUPPLIERS" EntityType="Self.TBL_SUPPLIERS" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TBL_SuppliersPayments" EntityType="Self.TBL_SuppliersPayments" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TBL_TERMS" EntityType="Self.TBL_TERMS" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TBL_USERS" EntityType="Self.TBL_USERS" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TBL_YEARS" EntityType="Self.TBL_YEARS" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TBL_YEARS_MARK" EntityType="Self.TBL_YEARS_MARK" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_GREIVANCES_TBL_STUDENTS" Association="Self.FK_GREIVANCES_TBL_STUDENTS">
+            <End Role="TBL_MARKS" EntitySet="TBL_MARKS" />
+            <End Role="TBL_GREIVANCES" EntitySet="TBL_GREIVANCES" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TB_BUY_TBL_CATEGORIES" Association="Self.FK_TB_BUY_TBL_CATEGORIES">
+            <End Role="TBL_CATEGORIES" EntitySet="TBL_CATEGORIES" />
+            <End Role="TB_BUY" EntitySet="TB_BUY" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TB_BUY_TBL_SUPPLIERS" Association="Self.FK_TB_BUY_TBL_SUPPLIERS">
+            <End Role="TBL_SUPPLIERS" EntitySet="TBL_SUPPLIERS" />
+            <End Role="TB_BUY" EntitySet="TB_BUY" />
+          </AssociationSet>
           <AssociationSet Name="FK_TBL_ATTENDS_TBL_EMPLOYEES" Association="Self.FK_TBL_ATTENDS_TBL_EMPLOYEES">
             <End Role="TBL_EMPLOYEES" EntitySet="TBL_EMPLOYEES" />
             <End Role="TBL_ATTENDS" EntitySet="TBL_ATTENDS" />
@@ -1452,25 +1534,16 @@
             <End Role="TBL_YEARS" EntitySet="TBL_YEARS" />
             <End Role="TBL_STUD_STUDY_COURS" EntitySet="TBL_STUD_STUDY_COURS" />
           </AssociationSet>
-          <AssociationSet Name="FK_TBL_TERMS_TBL_SPECIAL1" Association="Self.FK_TBL_TERMS_TBL_SPECIAL1">
-            <End Role="TBL_SPECIAL" EntitySet="TBL_SPECIAL" />
-            <End Role="TBL_TERMS" EntitySet="TBL_TERMS" />
-          </AssociationSet>
-          <AssociationSet Name="FK_TBL_TERMS_TBL_years" Association="Self.FK_TBL_TERMS_TBL_years">
-            <End Role="TBL_YEARS" EntitySet="TBL_YEARS" />
-            <End Role="TBL_TERMS" EntitySet="TBL_TERMS" />
-          </AssociationSet>
-          <AssociationSet Name="FK_TBL_YEARS_TBL_SPECIAL" Association="Self.FK_TBL_YEARS_TBL_SPECIAL">
-            <End Role="TBL_SPECIAL" EntitySet="TBL_SPECIAL" />
-            <End Role="TBL_YEARS" EntitySet="TBL_YEARS" />
+          <AssociationSet Name="FK_TBL_SuppliersPayments_TBL_SUPPLIERS" Association="Self.FK_TBL_SuppliersPayments_TBL_SUPPLIERS">
+            <End Role="TBL_SUPPLIERS" EntitySet="TBL_SUPPLIERS" />
+            <End Role="TBL_SuppliersPayments" EntitySet="TBL_SuppliersPayments" />
           </AssociationSet>
           <AssociationSet Name="FK_USERS_TBL_EMPLOYEES" Association="Self.FK_USERS_TBL_EMPLOYEES">
             <End Role="TBL_EMPLOYEES" EntitySet="TBL_EMPLOYEES" />
             <End Role="TBL_USERS" EntitySet="TBL_USERS" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="db_max_instModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -1731,6 +1804,7 @@
           <NavigationProperty Name="TBL_SPECIAL" Relationship="Self.FK_TBL_MARKS_TBL_SPECIAL" FromRole="TBL_MARKS" ToRole="TBL_SPECIAL" />
           <NavigationProperty Name="TBL_STUDENTS" Relationship="Self.FK_TBL_MARKS_TBL_STUDENTS" FromRole="TBL_MARKS" ToRole="TBL_STUDENTS" />
           <NavigationProperty Name="TBL_YEARS_MARK" Relationship="Self.FK_TBL_MARKS_TBL_YEARS_MARK" FromRole="TBL_MARKS" ToRole="TBL_YEARS_MARK" />
+          <NavigationProperty Name="TBL_GREIVANCES" Relationship="db_max_instModel.FK_GREIVANCES_TBL_STUDENTS" FromRole="TBL_MARKS" ToRole="TBL_GREIVANCES" />
         </EntityType>
         <EntityType Name="TBL_OPRATION">
           <Key>
@@ -1880,9 +1954,9 @@
           <Property Name="YEAR_ID" Type="Int32" />
           <Property Name="SPEC_ID" Type="Int32" />
           <NavigationProperty Name="TBL_COURS" Relationship="Self.FK_TBL_SPE_COURS_TBL_COURS" FromRole="TBL_SPE_COURS" ToRole="TBL_COURS" />
-          <NavigationProperty Name="TBL_TERMS" Relationship="Self.FK_TBL_COURS_TBL_TERM" FromRole="TBL_SPE_COURS" ToRole="TBL_TERMS" />
           <NavigationProperty Name="TBL_SPECIAL" Relationship="Self.FK_TBL_SPE_COURS_TBL_SPECIAL" FromRole="TBL_SPE_COURS" ToRole="TBL_SPECIAL" />
-          <NavigationProperty Name="TBL_YEARS" Relationship="Self.FK_TBL_SPE_COURS_TBL_YEARS" FromRole="TBL_SPE_COURS" ToRole="TBL_YEARS" />
+          <NavigationProperty Name="TBL_TERMS" Relationship="db_max_instModel.FK_TBL_COURS_TBL_TERM" FromRole="TBL_SPE_COURS" ToRole="TBL_TERMS" />
+          <NavigationProperty Name="TBL_YEARS" Relationship="db_max_instModel.FK_TBL_SPE_COURS_TBL_YEARS" FromRole="TBL_SPE_COURS" ToRole="TBL_YEARS" />
         </EntityType>
         <EntityType Name="TBL_SPECIAL">
           <Key>
@@ -1900,8 +1974,6 @@
           <NavigationProperty Name="TBL_SIRYAL_STUDENTS" Relationship="Self.FK_TBL_SIRYAL_STUDENTS_TBL_SPECIAL" FromRole="TBL_SPECIAL" ToRole="TBL_SIRYAL_STUDENTS" />
           <NavigationProperty Name="TBL_SPE_COURS" Relationship="Self.FK_TBL_SPE_COURS_TBL_SPECIAL" FromRole="TBL_SPECIAL" ToRole="TBL_SPE_COURS" />
           <NavigationProperty Name="TBL_STUD_SPEC" Relationship="Self.FK_TBL_STUD_SPEC_TBL_SPECIAL" FromRole="TBL_SPECIAL" ToRole="TBL_STUD_SPEC" />
-          <NavigationProperty Name="TBL_TERMS" Relationship="Self.FK_TBL_TERMS_TBL_SPECIAL1" FromRole="TBL_SPECIAL" ToRole="TBL_TERMS" />
-          <NavigationProperty Name="TBL_YEARS" Relationship="Self.FK_TBL_YEARS_TBL_SPECIAL" FromRole="TBL_SPECIAL" ToRole="TBL_YEARS" />
         </EntityType>
         <EntityType Name="TBL_STUD_LECT">
           <Key>
@@ -1944,8 +2016,8 @@
           <Property Name="YEAR_ID" Type="Int32" />
           <NavigationProperty Name="TBL_COURS" Relationship="Self.FK_TBL_STUD_STUDY_COURS_TBL_COURS" FromRole="TBL_STUD_STUDY_COURS" ToRole="TBL_COURS" />
           <NavigationProperty Name="TBL_STUDENTS" Relationship="Self.FK_TBL_STUD_STUDY_COURS_TBL_STUDENTS" FromRole="TBL_STUD_STUDY_COURS" ToRole="TBL_STUDENTS" />
-          <NavigationProperty Name="TBL_TERMS" Relationship="Self.FK_TBL_STUD_STUDY_COURS_TBL_TERMS" FromRole="TBL_STUD_STUDY_COURS" ToRole="TBL_TERMS" />
-          <NavigationProperty Name="TBL_YEARS" Relationship="Self.FK_TBL_STUD_STUDY_COURS_TBL_YEARS" FromRole="TBL_STUD_STUDY_COURS" ToRole="TBL_YEARS" />
+          <NavigationProperty Name="TBL_TERMS" Relationship="db_max_instModel.FK_TBL_STUD_STUDY_COURS_TBL_TERMS" FromRole="TBL_STUD_STUDY_COURS" ToRole="TBL_TERMS" />
+          <NavigationProperty Name="TBL_YEARS" Relationship="db_max_instModel.FK_TBL_STUD_STUDY_COURS_TBL_YEARS" FromRole="TBL_STUD_STUDY_COURS" ToRole="TBL_YEARS" />
         </EntityType>
         <EntityType Name="TBL_STUDENTS">
           <Key>
@@ -1969,19 +2041,6 @@
           <NavigationProperty Name="TBL_STUD_SPEC" Relationship="Self.FK_TBL_STUD_SPEC_TBL_STUD_SPEC" FromRole="TBL_STUDENTS" ToRole="TBL_STUD_SPEC" />
           <NavigationProperty Name="TBL_STUD_STUDY_COURS" Relationship="Self.FK_TBL_STUD_STUDY_COURS_TBL_STUDENTS" FromRole="TBL_STUDENTS" ToRole="TBL_STUD_STUDY_COURS" />
         </EntityType>
-        <EntityType Name="TBL_TERMS">
-          <Key>
-            <PropertyRef Name="TERM_ID" />
-          </Key>
-          <Property Name="TERM_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="TERM_NAME" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="YEAR_ID" Type="Int32" />
-          <Property Name="SPEC_ID" Type="Int32" />
-          <NavigationProperty Name="TBL_SPE_COURS" Relationship="Self.FK_TBL_COURS_TBL_TERM" FromRole="TBL_TERMS" ToRole="TBL_SPE_COURS" />
-          <NavigationProperty Name="TBL_SPECIAL" Relationship="Self.FK_TBL_TERMS_TBL_SPECIAL1" FromRole="TBL_TERMS" ToRole="TBL_SPECIAL" />
-          <NavigationProperty Name="TBL_STUD_STUDY_COURS" Relationship="Self.FK_TBL_STUD_STUDY_COURS_TBL_TERMS" FromRole="TBL_TERMS" ToRole="TBL_STUD_STUDY_COURS" />
-          <NavigationProperty Name="TBL_YEARS" Relationship="Self.FK_TBL_TERMS_TBL_years" FromRole="TBL_TERMS" ToRole="TBL_YEARS" />
-        </EntityType>
         <EntityType Name="TBL_USERS">
           <Key>
             <PropertyRef Name="USER_ID" />
@@ -1992,18 +2051,6 @@
           <Property Name="EMP_ID" Type="Int32" Nullable="false" />
           <NavigationProperty Name="TBL_EMPLOYEES" Relationship="Self.FK_USERS_TBL_EMPLOYEES" FromRole="TBL_USERS" ToRole="TBL_EMPLOYEES" />
           <NavigationProperty Name="TBL_ROULLS_LECTUER" Relationship="Self.FK_TBL_ROULLS_LECTUER_TBL_USERS" FromRole="TBL_USERS" ToRole="TBL_ROULLS_LECTUER" />
-        </EntityType>
-        <EntityType Name="TBL_YEARS">
-          <Key>
-            <PropertyRef Name="YEAR_ID" />
-          </Key>
-          <Property Name="YEAR_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="YEAR_NAME" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="SPEC_ID" Type="Int32" />
-          <NavigationProperty Name="TBL_SPE_COURS" Relationship="Self.FK_TBL_SPE_COURS_TBL_YEARS" FromRole="TBL_YEARS" ToRole="TBL_SPE_COURS" />
-          <NavigationProperty Name="TBL_SPECIAL" Relationship="Self.FK_TBL_YEARS_TBL_SPECIAL" FromRole="TBL_YEARS" ToRole="TBL_SPECIAL" />
-          <NavigationProperty Name="TBL_STUD_STUDY_COURS" Relationship="Self.FK_TBL_STUD_STUDY_COURS_TBL_YEARS" FromRole="TBL_YEARS" ToRole="TBL_STUD_STUDY_COURS" />
-          <NavigationProperty Name="TBL_TERMS" Relationship="Self.FK_TBL_TERMS_TBL_years" FromRole="TBL_YEARS" ToRole="TBL_TERMS" />
         </EntityType>
         <EntityType Name="TBL_YEARS_MARK">
           <Key>
@@ -2630,20 +2677,6 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_TBL_COURS_TBL_TERM">
-          <End Role="TBL_TERMS" Type="Self.TBL_TERMS" Multiplicity="0..1">
-            <OnDelete Action="Cascade" />
-          </End>
-          <End Role="TBL_SPE_COURS" Type="Self.TBL_SPE_COURS" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="TBL_TERMS">
-              <PropertyRef Name="TERM_ID" />
-            </Principal>
-            <Dependent Role="TBL_SPE_COURS">
-              <PropertyRef Name="TERM_ID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <Association Name="FK_TBL_SPE_COURS_TBL_SPECIAL">
           <End Role="TBL_SPECIAL" Type="Self.TBL_SPECIAL" Multiplicity="0..1" />
           <End Role="TBL_SPE_COURS" Type="Self.TBL_SPE_COURS" Multiplicity="*" />
@@ -2656,18 +2689,6 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_TBL_SPE_COURS_TBL_YEARS">
-          <End Role="TBL_YEARS" Type="Self.TBL_YEARS" Multiplicity="0..1" />
-          <End Role="TBL_SPE_COURS" Type="Self.TBL_SPE_COURS" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="TBL_YEARS">
-              <PropertyRef Name="YEAR_ID" />
-            </Principal>
-            <Dependent Role="TBL_SPE_COURS">
-              <PropertyRef Name="YEAR_ID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <Association Name="FK_TBL_STUD_SPEC_TBL_SPECIAL">
           <End Role="TBL_SPECIAL" Type="Self.TBL_SPECIAL" Multiplicity="0..1" />
           <End Role="TBL_STUD_SPEC" Type="Self.TBL_STUD_SPEC" Multiplicity="*" />
@@ -2676,30 +2697,6 @@
               <PropertyRef Name="SPEC_ID" />
             </Principal>
             <Dependent Role="TBL_STUD_SPEC">
-              <PropertyRef Name="SPEC_ID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_TBL_TERMS_TBL_SPECIAL1">
-          <End Role="TBL_SPECIAL" Type="Self.TBL_SPECIAL" Multiplicity="0..1" />
-          <End Role="TBL_TERMS" Type="Self.TBL_TERMS" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="TBL_SPECIAL">
-              <PropertyRef Name="SPEC_ID" />
-            </Principal>
-            <Dependent Role="TBL_TERMS">
-              <PropertyRef Name="SPEC_ID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_TBL_YEARS_TBL_SPECIAL">
-          <End Role="TBL_SPECIAL" Type="Self.TBL_SPECIAL" Multiplicity="0..1" />
-          <End Role="TBL_YEARS" Type="Self.TBL_YEARS" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="TBL_SPECIAL">
-              <PropertyRef Name="SPEC_ID" />
-            </Principal>
-            <Dependent Role="TBL_YEARS">
               <PropertyRef Name="SPEC_ID" />
             </Dependent>
           </ReferentialConstraint>
@@ -2740,42 +2737,6 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_TBL_STUD_STUDY_COURS_TBL_TERMS">
-          <End Role="TBL_TERMS" Type="Self.TBL_TERMS" Multiplicity="0..1" />
-          <End Role="TBL_STUD_STUDY_COURS" Type="Self.TBL_STUD_STUDY_COURS" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="TBL_TERMS">
-              <PropertyRef Name="TERM_ID" />
-            </Principal>
-            <Dependent Role="TBL_STUD_STUDY_COURS">
-              <PropertyRef Name="TERM_ID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_TBL_STUD_STUDY_COURS_TBL_YEARS">
-          <End Role="TBL_YEARS" Type="Self.TBL_YEARS" Multiplicity="0..1" />
-          <End Role="TBL_STUD_STUDY_COURS" Type="Self.TBL_STUD_STUDY_COURS" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="TBL_YEARS">
-              <PropertyRef Name="YEAR_ID" />
-            </Principal>
-            <Dependent Role="TBL_STUD_STUDY_COURS">
-              <PropertyRef Name="TERM_ID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_TBL_TERMS_TBL_years">
-          <End Role="TBL_YEARS" Type="Self.TBL_YEARS" Multiplicity="0..1" />
-          <End Role="TBL_TERMS" Type="Self.TBL_TERMS" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="TBL_YEARS">
-              <PropertyRef Name="YEAR_ID" />
-            </Principal>
-            <Dependent Role="TBL_TERMS">
-              <PropertyRef Name="YEAR_ID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <EntityContainer Name="db_max_instEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
           <EntitySet Name="TBL_ACTIVE_SYSTEM" EntityType="Self.TBL_ACTIVE_SYSTEM" />
@@ -2809,9 +2770,7 @@
           <EntitySet Name="TBL_STUD_SPEC" EntityType="Self.TBL_STUD_SPEC" />
           <EntitySet Name="TBL_STUD_STUDY_COURS" EntityType="Self.TBL_STUD_STUDY_COURS" />
           <EntitySet Name="TBL_STUDENTS" EntityType="Self.TBL_STUDENTS" />
-          <EntitySet Name="TBL_TERMS" EntityType="Self.TBL_TERMS" />
           <EntitySet Name="TBL_USERS" EntityType="Self.TBL_USERS" />
-          <EntitySet Name="TBL_YEARS" EntityType="Self.TBL_YEARS" />
           <EntitySet Name="TBL_YEARS_MARK" EntityType="Self.TBL_YEARS_MARK" />
           <AssociationSet Name="FK_TBL_ATTENDS_TBL_EMPLOYEES" Association="Self.FK_TBL_ATTENDS_TBL_EMPLOYEES">
             <End Role="TBL_EMPLOYEES" EntitySet="TBL_EMPLOYEES" />
@@ -3013,29 +2972,13 @@
             <End Role="TBL_YEARS_MARK" EntitySet="TBL_YEARS_MARK" />
             <End Role="TBL_SIRYAL_STUDENTS" EntitySet="TBL_SIRYAL_STUDENTS" />
           </AssociationSet>
-          <AssociationSet Name="FK_TBL_COURS_TBL_TERM" Association="Self.FK_TBL_COURS_TBL_TERM">
-            <End Role="TBL_TERMS" EntitySet="TBL_TERMS" />
-            <End Role="TBL_SPE_COURS" EntitySet="TBL_SPE_COURS" />
-          </AssociationSet>
           <AssociationSet Name="FK_TBL_SPE_COURS_TBL_SPECIAL" Association="Self.FK_TBL_SPE_COURS_TBL_SPECIAL">
             <End Role="TBL_SPECIAL" EntitySet="TBL_SPECIAL" />
-            <End Role="TBL_SPE_COURS" EntitySet="TBL_SPE_COURS" />
-          </AssociationSet>
-          <AssociationSet Name="FK_TBL_SPE_COURS_TBL_YEARS" Association="Self.FK_TBL_SPE_COURS_TBL_YEARS">
-            <End Role="TBL_YEARS" EntitySet="TBL_YEARS" />
             <End Role="TBL_SPE_COURS" EntitySet="TBL_SPE_COURS" />
           </AssociationSet>
           <AssociationSet Name="FK_TBL_STUD_SPEC_TBL_SPECIAL" Association="Self.FK_TBL_STUD_SPEC_TBL_SPECIAL">
             <End Role="TBL_SPECIAL" EntitySet="TBL_SPECIAL" />
             <End Role="TBL_STUD_SPEC" EntitySet="TBL_STUD_SPEC" />
-          </AssociationSet>
-          <AssociationSet Name="FK_TBL_TERMS_TBL_SPECIAL1" Association="Self.FK_TBL_TERMS_TBL_SPECIAL1">
-            <End Role="TBL_SPECIAL" EntitySet="TBL_SPECIAL" />
-            <End Role="TBL_TERMS" EntitySet="TBL_TERMS" />
-          </AssociationSet>
-          <AssociationSet Name="FK_TBL_YEARS_TBL_SPECIAL" Association="Self.FK_TBL_YEARS_TBL_SPECIAL">
-            <End Role="TBL_SPECIAL" EntitySet="TBL_SPECIAL" />
-            <End Role="TBL_YEARS" EntitySet="TBL_YEARS" />
           </AssociationSet>
           <AssociationSet Name="FK_TBL_STUD_LECT_TBL_STUDENTS" Association="Self.FK_TBL_STUD_LECT_TBL_STUDENTS">
             <End Role="TBL_STUDENTS" EntitySet="TBL_STUDENTS" />
@@ -3049,19 +2992,225 @@
             <End Role="TBL_STUDENTS" EntitySet="TBL_STUDENTS" />
             <End Role="TBL_STUD_STUDY_COURS" EntitySet="TBL_STUD_STUDY_COURS" />
           </AssociationSet>
-          <AssociationSet Name="FK_TBL_STUD_STUDY_COURS_TBL_TERMS" Association="Self.FK_TBL_STUD_STUDY_COURS_TBL_TERMS">
+          <EntitySet Name="TBL_TERMS" EntityType="db_max_instModel.TBL_TERMS" />
+          <EntitySet Name="TBL_YEARS" EntityType="db_max_instModel.TBL_YEARS" />
+          <AssociationSet Name="FK_TBL_COURS_TBL_TERM" Association="db_max_instModel.FK_TBL_COURS_TBL_TERM">
+            <End Role="TBL_TERMS" EntitySet="TBL_TERMS" />
+            <End Role="TBL_SPE_COURS" EntitySet="TBL_SPE_COURS" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TBL_SPE_COURS_TBL_YEARS" Association="db_max_instModel.FK_TBL_SPE_COURS_TBL_YEARS">
+            <End Role="TBL_YEARS" EntitySet="TBL_YEARS" />
+            <End Role="TBL_SPE_COURS" EntitySet="TBL_SPE_COURS" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TBL_STUD_STUDY_COURS_TBL_TERMS" Association="db_max_instModel.FK_TBL_STUD_STUDY_COURS_TBL_TERMS">
             <End Role="TBL_TERMS" EntitySet="TBL_TERMS" />
             <End Role="TBL_STUD_STUDY_COURS" EntitySet="TBL_STUD_STUDY_COURS" />
           </AssociationSet>
-          <AssociationSet Name="FK_TBL_STUD_STUDY_COURS_TBL_YEARS" Association="Self.FK_TBL_STUD_STUDY_COURS_TBL_YEARS">
+          <AssociationSet Name="FK_TBL_STUD_STUDY_COURS_TBL_YEARS" Association="db_max_instModel.FK_TBL_STUD_STUDY_COURS_TBL_YEARS">
             <End Role="TBL_YEARS" EntitySet="TBL_YEARS" />
             <End Role="TBL_STUD_STUDY_COURS" EntitySet="TBL_STUD_STUDY_COURS" />
           </AssociationSet>
-          <AssociationSet Name="FK_TBL_TERMS_TBL_years" Association="Self.FK_TBL_TERMS_TBL_years">
-            <End Role="TBL_YEARS" EntitySet="TBL_YEARS" />
-            <End Role="TBL_TERMS" EntitySet="TBL_TERMS" />
+          <EntitySet Name="TBL_GREIVANCES" EntityType="db_max_instModel.TBL_GREIVANCES" />
+          <AssociationSet Name="FK_GREIVANCES_TBL_STUDENTS" Association="db_max_instModel.FK_GREIVANCES_TBL_STUDENTS">
+            <End Role="TBL_MARKS" EntitySet="TBL_MARKS" />
+            <End Role="TBL_GREIVANCES" EntitySet="TBL_GREIVANCES" />
+          </AssociationSet>
+          <EntitySet Name="TB_BUY" EntityType="db_max_instModel.TB_BUY" />
+          <EntitySet Name="TBL_CATEGORIES" EntityType="db_max_instModel.TBL_CATEGORIES" />
+          <EntitySet Name="TBL_SUPPLIERS" EntityType="db_max_instModel.TBL_SUPPLIERS" />
+          <AssociationSet Name="FK_TB_BUY_TBL_CATEGORIES" Association="db_max_instModel.FK_TB_BUY_TBL_CATEGORIES">
+            <End Role="TBL_CATEGORIES" EntitySet="TBL_CATEGORIES" />
+            <End Role="TB_BUY" EntitySet="TB_BUY" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TB_BUY_TBL_SUPPLIERS" Association="db_max_instModel.FK_TB_BUY_TBL_SUPPLIERS">
+            <End Role="TBL_SUPPLIERS" EntitySet="TBL_SUPPLIERS" />
+            <End Role="TB_BUY" EntitySet="TB_BUY" />
+          </AssociationSet>
+          <EntitySet Name="TBL_SuppliersPayments" EntityType="db_max_instModel.TBL_SuppliersPayments" />
+          <AssociationSet Name="FK_TBL_SuppliersPayments_TBL_SUPPLIERS" Association="db_max_instModel.FK_TBL_SuppliersPayments_TBL_SUPPLIERS">
+            <End Role="TBL_SUPPLIERS" EntitySet="TBL_SUPPLIERS" />
+            <End Role="TBL_SuppliersPayments" EntitySet="TBL_SuppliersPayments" />
           </AssociationSet>
         </EntityContainer>
+        <EntityType Name="TBL_TERMS">
+          <Key>
+            <PropertyRef Name="TERM_ID" />
+          </Key>
+          <Property Name="TERM_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TERM_NAME" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="TBL_SPE_COURS" Relationship="db_max_instModel.FK_TBL_COURS_TBL_TERM" FromRole="TBL_TERMS" ToRole="TBL_SPE_COURS" />
+          <NavigationProperty Name="TBL_STUD_STUDY_COURS" Relationship="db_max_instModel.FK_TBL_STUD_STUDY_COURS_TBL_TERMS" FromRole="TBL_TERMS" ToRole="TBL_STUD_STUDY_COURS" />
+        </EntityType>
+        <EntityType Name="TBL_YEARS">
+          <Key>
+            <PropertyRef Name="YEAR_ID" />
+          </Key>
+          <Property Name="YEAR_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="YEAR_NAME" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="TBL_SPE_COURS" Relationship="db_max_instModel.FK_TBL_SPE_COURS_TBL_YEARS" FromRole="TBL_YEARS" ToRole="TBL_SPE_COURS" />
+          <NavigationProperty Name="TBL_STUD_STUDY_COURS" Relationship="db_max_instModel.FK_TBL_STUD_STUDY_COURS_TBL_YEARS" FromRole="TBL_YEARS" ToRole="TBL_STUD_STUDY_COURS" />
+        </EntityType>
+        <Association Name="FK_TBL_COURS_TBL_TERM">
+          <End Type="db_max_instModel.TBL_TERMS" Role="TBL_TERMS" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Type="db_max_instModel.TBL_SPE_COURS" Role="TBL_SPE_COURS" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TBL_TERMS">
+              <PropertyRef Name="TERM_ID" />
+            </Principal>
+            <Dependent Role="TBL_SPE_COURS">
+              <PropertyRef Name="TERM_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TBL_SPE_COURS_TBL_YEARS">
+          <End Type="db_max_instModel.TBL_YEARS" Role="TBL_YEARS" Multiplicity="0..1" />
+          <End Type="db_max_instModel.TBL_SPE_COURS" Role="TBL_SPE_COURS" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TBL_YEARS">
+              <PropertyRef Name="YEAR_ID" />
+            </Principal>
+            <Dependent Role="TBL_SPE_COURS">
+              <PropertyRef Name="YEAR_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TBL_STUD_STUDY_COURS_TBL_TERMS">
+          <End Type="db_max_instModel.TBL_TERMS" Role="TBL_TERMS" Multiplicity="0..1" />
+          <End Type="db_max_instModel.TBL_STUD_STUDY_COURS" Role="TBL_STUD_STUDY_COURS" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TBL_TERMS">
+              <PropertyRef Name="TERM_ID" />
+            </Principal>
+            <Dependent Role="TBL_STUD_STUDY_COURS">
+              <PropertyRef Name="TERM_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TBL_STUD_STUDY_COURS_TBL_YEARS">
+          <End Type="db_max_instModel.TBL_YEARS" Role="TBL_YEARS" Multiplicity="0..1" />
+          <End Type="db_max_instModel.TBL_STUD_STUDY_COURS" Role="TBL_STUD_STUDY_COURS" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TBL_YEARS">
+              <PropertyRef Name="YEAR_ID" />
+            </Principal>
+            <Dependent Role="TBL_STUD_STUDY_COURS">
+              <PropertyRef Name="TERM_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="TBL_GREIVANCES">
+          <Key>
+            <PropertyRef Name="GREIVANCE_ID" />
+          </Key>
+          <Property Name="GREIVANCE_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="GREIVANCE_DATE" Type="DateTime" Precision="0" />
+          <Property Name="MARK_ID" Type="Int32" />
+          <Property Name="NOTE" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="STATE" Type="Boolean" />
+          <Property Name="PRICE" Type="Double" />
+          <NavigationProperty Name="TBL_MARKS" Relationship="db_max_instModel.FK_GREIVANCES_TBL_STUDENTS" FromRole="TBL_GREIVANCES" ToRole="TBL_MARKS" />
+        </EntityType>
+        <Association Name="FK_GREIVANCES_TBL_STUDENTS">
+          <End Type="db_max_instModel.TBL_MARKS" Role="TBL_MARKS" Multiplicity="0..1" />
+          <End Type="db_max_instModel.TBL_GREIVANCES" Role="TBL_GREIVANCES" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TBL_MARKS">
+              <PropertyRef Name="MARK_ID" />
+            </Principal>
+            <Dependent Role="TBL_GREIVANCES">
+              <PropertyRef Name="MARK_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="TB_BUY">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ID_Catgeory" Type="Int32" />
+          <Property Name="ID_Supplier" Type="Int32" />
+          <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Quantity" Type="Double" />
+          <Property Name="SupplierPyment" Type="Double" />
+          <Property Name="BuyPrice" Type="Double" />
+          <Property Name="BuyAllValue" Type="Double" />
+          <Property Name="DateAdd" Type="DateTime" Precision="3" />
+          <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="TBL_CATEGORIES" Relationship="db_max_instModel.FK_TB_BUY_TBL_CATEGORIES" FromRole="TB_BUY" ToRole="TBL_CATEGORIES" />
+          <NavigationProperty Name="TBL_SUPPLIERS" Relationship="db_max_instModel.FK_TB_BUY_TBL_SUPPLIERS" FromRole="TB_BUY" ToRole="TBL_SUPPLIERS" />
+        </EntityType>
+        <EntityType Name="TBL_CATEGORIES">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CatName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CatDes" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="CatQuantity" Type="Double" />
+          <NavigationProperty Name="TB_BUY" Relationship="db_max_instModel.FK_TB_BUY_TBL_CATEGORIES" FromRole="TBL_CATEGORIES" ToRole="TB_BUY" />
+        </EntityType>
+        <EntityType Name="TBL_SUPPLIERS">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="SupplierName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="SupplierPhone" Type="Int64" />
+          <Property Name="SupplierAddress" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="SupplierDate" Type="DateTime" Precision="3" />
+          <Property Name="SupplierBalance" Type="Double" />
+          <Property Name="SupplierBalancePrim" Type="Double" />
+          <NavigationProperty Name="TB_BUY" Relationship="db_max_instModel.FK_TB_BUY_TBL_SUPPLIERS" FromRole="TBL_SUPPLIERS" ToRole="TB_BUY" />
+          <NavigationProperty Name="TBL_SuppliersPayments" Relationship="db_max_instModel.FK_TBL_SuppliersPayments_TBL_SUPPLIERS" FromRole="TBL_SUPPLIERS" ToRole="TBL_SuppliersPayments" />
+        </EntityType>
+        <Association Name="FK_TB_BUY_TBL_CATEGORIES">
+          <End Type="db_max_instModel.TBL_CATEGORIES" Role="TBL_CATEGORIES" Multiplicity="0..1" />
+          <End Type="db_max_instModel.TB_BUY" Role="TB_BUY" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TBL_CATEGORIES">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="TB_BUY">
+              <PropertyRef Name="ID_Catgeory" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TB_BUY_TBL_SUPPLIERS">
+          <End Type="db_max_instModel.TBL_SUPPLIERS" Role="TBL_SUPPLIERS" Multiplicity="0..1" />
+          <End Type="db_max_instModel.TB_BUY" Role="TB_BUY" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TBL_SUPPLIERS">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="TB_BUY">
+              <PropertyRef Name="ID_Supplier" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="TBL_SuppliersPayments">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="SUPLAYER_ID" Type="Int32" />
+          <Property Name="Pamnent" Type="Double" />
+          <Property Name="Date" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="TBL_SUPPLIERS" Relationship="db_max_instModel.FK_TBL_SuppliersPayments_TBL_SUPPLIERS" FromRole="TBL_SuppliersPayments" ToRole="TBL_SUPPLIERS" />
+        </EntityType>
+        <Association Name="FK_TBL_SuppliersPayments_TBL_SUPPLIERS">
+          <End Type="db_max_instModel.TBL_SUPPLIERS" Role="TBL_SUPPLIERS" Multiplicity="0..1" />
+          <End Type="db_max_instModel.TBL_SuppliersPayments" Role="TBL_SuppliersPayments" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TBL_SUPPLIERS">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="TBL_SuppliersPayments">
+              <PropertyRef Name="SUPLAYER_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -3481,16 +3630,6 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="TBL_TERMS">
-            <EntityTypeMapping TypeName="db_max_instModel.TBL_TERMS">
-              <MappingFragment StoreEntitySet="TBL_TERMS">
-                <ScalarProperty Name="TERM_ID" ColumnName="TERM_ID" />
-                <ScalarProperty Name="TERM_NAME" ColumnName="TERM_NAME" />
-                <ScalarProperty Name="YEAR_ID" ColumnName="YEAR_ID" />
-                <ScalarProperty Name="SPEC_ID" ColumnName="SPEC_ID" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <EntitySetMapping Name="TBL_USERS">
             <EntityTypeMapping TypeName="db_max_instModel.TBL_USERS">
               <MappingFragment StoreEntitySet="TBL_USERS">
@@ -3501,15 +3640,6 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="TBL_YEARS">
-            <EntityTypeMapping TypeName="db_max_instModel.TBL_YEARS">
-              <MappingFragment StoreEntitySet="TBL_YEARS">
-                <ScalarProperty Name="YEAR_ID" ColumnName="YEAR_ID" />
-                <ScalarProperty Name="YEAR_NAME" ColumnName="YEAR_NAME" />
-                <ScalarProperty Name="SPEC_ID" ColumnName="SPEC_ID" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <EntitySetMapping Name="TBL_YEARS_MARK">
             <EntityTypeMapping TypeName="db_max_instModel.TBL_YEARS_MARK">
               <MappingFragment StoreEntitySet="TBL_YEARS_MARK">
@@ -3517,6 +3647,83 @@
                 <ScalarProperty Name="YEARS_NAME" ColumnName="YEARS_NAME" />
                 <ScalarProperty Name="YEARS_DATA" ColumnName="YEARS_DATA" />
                 <ScalarProperty Name="STATE" ColumnName="STATE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TBL_TERMS">
+            <EntityTypeMapping TypeName="db_max_instModel.TBL_TERMS">
+              <MappingFragment StoreEntitySet="TBL_TERMS">
+                <ScalarProperty Name="TERM_NAME" ColumnName="TERM_NAME" />
+                <ScalarProperty Name="TERM_ID" ColumnName="TERM_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TBL_YEARS">
+            <EntityTypeMapping TypeName="db_max_instModel.TBL_YEARS">
+              <MappingFragment StoreEntitySet="TBL_YEARS">
+                <ScalarProperty Name="YEAR_NAME" ColumnName="YEAR_NAME" />
+                <ScalarProperty Name="YEAR_ID" ColumnName="YEAR_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TBL_GREIVANCES">
+            <EntityTypeMapping TypeName="db_max_instModel.TBL_GREIVANCES">
+              <MappingFragment StoreEntitySet="TBL_GREIVANCES">
+                <ScalarProperty Name="PRICE" ColumnName="PRICE" />
+                <ScalarProperty Name="STATE" ColumnName="STATE" />
+                <ScalarProperty Name="NOTE" ColumnName="NOTE" />
+                <ScalarProperty Name="MARK_ID" ColumnName="MARK_ID" />
+                <ScalarProperty Name="GREIVANCE_DATE" ColumnName="GREIVANCE_DATE" />
+                <ScalarProperty Name="GREIVANCE_ID" ColumnName="GREIVANCE_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TB_BUY">
+            <EntityTypeMapping TypeName="db_max_instModel.TB_BUY">
+              <MappingFragment StoreEntitySet="TB_BUY">
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="DateAdd" ColumnName="DateAdd" />
+                <ScalarProperty Name="BuyAllValue" ColumnName="BuyAllValue" />
+                <ScalarProperty Name="BuyPrice" ColumnName="BuyPrice" />
+                <ScalarProperty Name="SupplierPyment" ColumnName="SupplierPyment" />
+                <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="ID_Supplier" ColumnName="ID_Supplier" />
+                <ScalarProperty Name="ID_Catgeory" ColumnName="ID_Catgeory" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TBL_CATEGORIES">
+            <EntityTypeMapping TypeName="db_max_instModel.TBL_CATEGORIES">
+              <MappingFragment StoreEntitySet="TBL_CATEGORIES">
+                <ScalarProperty Name="CatQuantity" ColumnName="CatQuantity" />
+                <ScalarProperty Name="CatDes" ColumnName="CatDes" />
+                <ScalarProperty Name="CatName" ColumnName="CatName" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TBL_SUPPLIERS">
+            <EntityTypeMapping TypeName="db_max_instModel.TBL_SUPPLIERS">
+              <MappingFragment StoreEntitySet="TBL_SUPPLIERS">
+                <ScalarProperty Name="SupplierBalancePrim" ColumnName="SupplierBalancePrim" />
+                <ScalarProperty Name="SupplierBalance" ColumnName="SupplierBalance" />
+                <ScalarProperty Name="SupplierDate" ColumnName="SupplierDate" />
+                <ScalarProperty Name="SupplierAddress" ColumnName="SupplierAddress" />
+                <ScalarProperty Name="SupplierPhone" ColumnName="SupplierPhone" />
+                <ScalarProperty Name="SupplierName" ColumnName="SupplierName" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TBL_SuppliersPayments">
+            <EntityTypeMapping TypeName="db_max_instModel.TBL_SuppliersPayments">
+              <MappingFragment StoreEntitySet="TBL_SuppliersPayments">
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="Pamnent" ColumnName="Pamnent" />
+                <ScalarProperty Name="SUPLAYER_ID" ColumnName="SUPLAYER_ID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

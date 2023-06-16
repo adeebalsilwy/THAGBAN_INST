@@ -80,6 +80,17 @@ namespace THAGBAN_INST.FORM.FRM_MANG_STUD.matrila
             com_cours.DisplayMember = "COURS_NAME";
             com_cours.ValueMember = "COURS_ID";
 
+
+            com_term.DataSource = con.TBL_TERMS.ToList();
+            com_term.DisplayMember = "TERM_NAME";
+            com_term.ValueMember = "TERM_ID";
+
+
+
+            com_year.DataSource = con.TBL_YEARS.ToList();
+            com_year.DisplayMember = "YEAR_NAME";
+            com_year.ValueMember = "YEAR_ID";
+
         }
         void clear()
         {
@@ -113,20 +124,20 @@ namespace THAGBAN_INST.FORM.FRM_MANG_STUD.matrila
             com_cours.SelectedValue = cours_id;
 
             TBL_TERMS te = con.TBL_TERMS.Find(term_id);
-            int year = Convert.ToInt32(te.YEAR_ID);
-            spaicla_id = Convert.ToInt32(con.TBL_TERMS.Find(term_id).SPEC_ID.ToString());
+           // int year = Convert.ToInt32(te.YEAR_ID);
+          //  spaicla_id = Convert.ToInt32(con.TBL_TERMS.Find(term_id).SPEC_ID.ToString());
             com_spiacl.DataSource = con.TBL_SPECIAL.ToList();
             com_spiacl.DisplayMember = "SPEC_NAME";
             com_spiacl.ValueMember = "SPEC_ID";
             com_spiacl.SelectedValue = spaicla_id;
 
-            com_year.DataSource = con.TBL_YEARS.Where(w => w.SPEC_ID == spaicla_id).ToList();
+            com_year.DataSource = con.TBL_YEARS.ToList();
             com_year.DisplayMember = "YEAR_NAME";
             com_year.ValueMember = "YEAR_ID";
-            com_year.SelectedValue = year;
+           // com_year.SelectedValue = year;
 
 
-            com_term.DataSource = con.TBL_TERMS.Where(w => w.YEAR_ID == year && w.SPEC_ID == spaicla_id).ToList();
+            com_term.DataSource = con.TBL_TERMS.ToList();
             com_term.DisplayMember = "TERM_NAME";
             com_term.ValueMember = "TERM_ID";
 
@@ -221,12 +232,16 @@ namespace THAGBAN_INST.FORM.FRM_MANG_STUD.matrila
 
         private void com_spiacl_SelectionChangeCommitted(object sender, EventArgs e)
         {
+
             if(com_spiacl.SelectedValue!= null)
             {
-                spaicla_id = Convert.ToInt32(com_spiacl.SelectedValue.ToString());
-                com_year.DataSource = con.TBL_YEARS.Where(w => w.SPEC_ID == spaicla_id).ToList();
-                com_year.DisplayMember = "YEAR_NAME";
-                com_year.ValueMember = "YEAR_ID";
+                try
+                {
+                    spaicla_id = Convert.ToInt32(com_spiacl.SelectedValue.ToString());
+                }catch (Exception ex) { }
+                //com_year.DataSource = con.TBL_YEARS.Where(w => w.SPEC_ID == spaicla_id).ToList();
+                //com_year.DisplayMember = "YEAR_NAME";
+                //com_year.ValueMember = "YEAR_ID";
 
             }
            
@@ -236,12 +251,20 @@ namespace THAGBAN_INST.FORM.FRM_MANG_STUD.matrila
         {
             if (com_year.SelectedValue != null)
             {
-                int year = Convert.ToInt32(com_year.SelectedValue);
-                com_term.DataSource = con.TBL_TERMS.Where(w => w.YEAR_ID == year && w.SPEC_ID==spaicla_id).ToList();
-                com_term.DisplayMember = "TERM_NAME";
-                com_term.ValueMember = "TERM_ID";
+                try
+                {
+                    int year = Convert.ToInt32(com_year.SelectedValue.ToString());
+                }catch(Exception ex) { }
+                //com_term.DataSource = con.TBL_TERMS.Where(w => w.YEAR_ID == year && w.SPEC_ID==spaicla_id).ToList();
+                //com_term.DisplayMember = "TERM_NAME";
+                //com_term.ValueMember = "TERM_ID";
             }
          
+        }
+
+        private void com_cours_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

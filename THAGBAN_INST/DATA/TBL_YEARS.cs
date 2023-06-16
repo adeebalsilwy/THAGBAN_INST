@@ -19,19 +19,14 @@ namespace THAGBAN_INST.DATA
         {
             this.TBL_SPE_COURS = new HashSet<TBL_SPE_COURS>();
             this.TBL_STUD_STUDY_COURS = new HashSet<TBL_STUD_STUDY_COURS>();
-            this.TBL_TERMS = new HashSet<TBL_TERMS>();
         }
     
         public int YEAR_ID { get; set; }
         public string YEAR_NAME { get; set; }
-        public Nullable<int> SPEC_ID { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<TBL_SPE_COURS> TBL_SPE_COURS { get; set; }
-        public virtual TBL_SPECIAL TBL_SPECIAL { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<TBL_STUD_STUDY_COURS> TBL_STUD_STUDY_COURS { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<TBL_TERMS> TBL_TERMS { get; set; }
     }
 }

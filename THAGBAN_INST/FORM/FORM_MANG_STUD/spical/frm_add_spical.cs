@@ -142,7 +142,7 @@ namespace THAGBAN_INST.FORM.FRM_MANG_STUD.spical
                     if (spical_id != 0)
                     {
                         //add 
-                        add_years(spical_id);
+                      //  add_years(spical_id);
                         cl.SPEC_ID = Convert.ToInt32(spical_id);
                         con.TBL_SPECIAL.AddOrUpdate(cl);
                         con.SaveChanges();
@@ -157,7 +157,7 @@ namespace THAGBAN_INST.FORM.FRM_MANG_STUD.spical
                     {
                         spical_id = cl.SPEC_ID;
                         //update 
-                        add_years(spical_id);
+                       // add_years(spical_id);
                         con.TBL_SPECIAL.AddOrUpdate(cl);
                         con.SaveChanges();
                         adl.NotifictionUser notifiction = new adl.NotifictionUser(THAGBAN_INST.Properties.Resources.AddNotificationText, THAGBAN_INST.Properties.Resources.add_32px);
@@ -200,19 +200,19 @@ namespace THAGBAN_INST.FORM.FRM_MANG_STUD.spical
                 {
 
 
-                    List<TBL_YEARS> tbl = con.TBL_YEARS.Where(w => w.SPEC_ID == spical_id).ToList();
-                    if (tbl.Count > 0)
-                    {
+                    //List<TBL_YEARS> tbl = con.TBL_YEARS.Where(w => w.SPEC_ID == spical_id).ToList();
+                    //if (tbl.Count > 0)
+                    //{
 
-                        con.TBL_YEARS.RemoveRange(tbl);
-                        con.SaveChanges();
+                    //    con.TBL_YEARS.RemoveRange(tbl);
+                    //    con.SaveChanges();
 
 
-                    }
+                    //}
                     for (int i = 0; i < number_of; i++)
                     {
                         TBL_YEARS yer = new TBL_YEARS();
-                        yer.SPEC_ID = spic_id;
+                      //  yer.SPEC_ID = spic_id;
                         yer.YEAR_NAME = years[i].ToString();
                         con.TBL_YEARS.Add(yer);
                         con.SaveChanges();

@@ -30,7 +30,7 @@ namespace THAGBAN_INST
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FRM_MAIN_CONTROL());
+            Application.Run(new FRM_MAIN_BUY());
         }
     }
 }

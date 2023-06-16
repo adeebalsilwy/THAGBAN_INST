@@ -36,10 +36,10 @@
             DevExpress.Utils.ToolTipItem toolTipItem2 = new DevExpress.Utils.ToolTipItem();
             DevExpress.Utils.SuperToolTip superToolTip3 = new DevExpress.Utils.SuperToolTip();
             DevExpress.Utils.ToolTipItem toolTipItem3 = new DevExpress.Utils.ToolTipItem();
-            DevExpress.Utils.SuperToolTip superToolTip5 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipItem toolTipItem5 = new DevExpress.Utils.ToolTipItem();
             DevExpress.Utils.SuperToolTip superToolTip4 = new DevExpress.Utils.SuperToolTip();
             DevExpress.Utils.ToolTipItem toolTipItem4 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.SuperToolTip superToolTip5 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipItem toolTipItem5 = new DevExpress.Utils.ToolTipItem();
             DevExpress.Utils.SuperToolTip superToolTip6 = new DevExpress.Utils.SuperToolTip();
             DevExpress.Utils.ToolTipItem toolTipItem6 = new DevExpress.Utils.ToolTipItem();
             DevExpress.Utils.SuperToolTip superToolTip7 = new DevExpress.Utils.SuperToolTip();
@@ -66,8 +66,8 @@
             this.btn_home = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.btn_groups = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.btn_categories = new DevExpress.XtraBars.Navigation.AccordionControlElement();
-            this.btn_suppliers = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.btn_buy = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.btn_suppliers = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.btn_customers = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.btn_users = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.btn_help = new DevExpress.XtraBars.Navigation.AccordionControlElement();
@@ -256,24 +256,6 @@
             this.btn_categories.Text = "حسابات الموظفين";
             this.btn_categories.Click += new System.EventHandler(this.btn_categories_Click);
             // 
-            // btn_suppliers
-            // 
-            this.btn_suppliers.Appearance.Default.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_suppliers.Appearance.Default.Options.UseFont = true;
-            this.btn_suppliers.HeaderTemplate.AddRange(new DevExpress.XtraBars.Navigation.HeaderElementInfo[] {
-            new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.HeaderControl),
-            new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.ContextButtons),
-            new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.Text, DevExpress.XtraBars.Navigation.HeaderElementAlignment.Right),
-            new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.Image, DevExpress.XtraBars.Navigation.HeaderElementAlignment.Right)});
-            this.btn_suppliers.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_suppliers.ImageOptions.Image")));
-            this.btn_suppliers.Name = "btn_suppliers";
-            this.btn_suppliers.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            toolTipItem5.Text = "الموظفين";
-            superToolTip5.Items.Add(toolTipItem5);
-            this.btn_suppliers.SuperTip = superToolTip5;
-            this.btn_suppliers.Text = "الايجارات";
-            this.btn_suppliers.Click += new System.EventHandler(this.btn_suppliers_Click);
-            // 
             // btn_buy
             // 
             this.btn_buy.Appearance.Default.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -291,6 +273,24 @@
             this.btn_buy.SuperTip = superToolTip4;
             this.btn_buy.Text = "انواع الايجارات";
             this.btn_buy.Click += new System.EventHandler(this.btn_buy_Click);
+            // 
+            // btn_suppliers
+            // 
+            this.btn_suppliers.Appearance.Default.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_suppliers.Appearance.Default.Options.UseFont = true;
+            this.btn_suppliers.HeaderTemplate.AddRange(new DevExpress.XtraBars.Navigation.HeaderElementInfo[] {
+            new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.HeaderControl),
+            new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.ContextButtons),
+            new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.Text, DevExpress.XtraBars.Navigation.HeaderElementAlignment.Right),
+            new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.Image, DevExpress.XtraBars.Navigation.HeaderElementAlignment.Right)});
+            this.btn_suppliers.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_suppliers.ImageOptions.Image")));
+            this.btn_suppliers.Name = "btn_suppliers";
+            this.btn_suppliers.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            toolTipItem5.Text = "الموظفين";
+            superToolTip5.Items.Add(toolTipItem5);
+            this.btn_suppliers.SuperTip = superToolTip5;
+            this.btn_suppliers.Text = "الايجارات";
+            this.btn_suppliers.Click += new System.EventHandler(this.btn_suppliers_Click);
             // 
             // btn_customers
             // 
@@ -418,7 +418,7 @@
             this.hom_page.AutoScroll = true;
             this.hom_page.Name = "hom_page";
             this.hom_page.ShowCloseButton = DevExpress.Utils.DefaultBoolean.False;
-            this.hom_page.Size = new System.Drawing.Size(866, 484);
+            this.hom_page.Size = new System.Drawing.Size(872, 487);
             this.hom_page.Text = "الرئيسية";
             // 
             // FRM_MAIN_MONY

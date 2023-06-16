@@ -70,32 +70,32 @@
             this.com_lect_cours.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
             this.com_lect_cours.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.com_lect_cours.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.com_lect_cours.Font = new System.Drawing.Font("ae_AlArabiya", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.com_lect_cours.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.com_lect_cours.FormattingEnabled = true;
             this.com_lect_cours.Location = new System.Drawing.Point(28, 76);
             this.com_lect_cours.Name = "com_lect_cours";
-            this.com_lect_cours.Size = new System.Drawing.Size(227, 34);
+            this.com_lect_cours.Size = new System.Drawing.Size(227, 32);
             this.com_lect_cours.TabIndex = 59;
             this.com_lect_cours.SelectionChangeCommitted += new System.EventHandler(this.com_spiacl_SelectionChangeCommitted);
             this.com_lect_cours.SelectedValueChanged += new System.EventHandler(this.com_spiacl_SelectionChangeCommitted);
             // 
             // labelControl4
             // 
-            this.labelControl4.Appearance.Font = new System.Drawing.Font("ae_AlArabiya", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl4.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl4.Appearance.Options.UseFont = true;
             this.labelControl4.Location = new System.Drawing.Point(261, 87);
             this.labelControl4.Name = "labelControl4";
-            this.labelControl4.Size = new System.Drawing.Size(44, 22);
+            this.labelControl4.Size = new System.Drawing.Size(41, 20);
             this.labelControl4.TabIndex = 58;
             this.labelControl4.Text = "الكورس";
             // 
             // labelControl2
             // 
-            this.labelControl2.Appearance.Font = new System.Drawing.Font("ae_AlArabiya", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl2.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl2.Appearance.Options.UseFont = true;
             this.labelControl2.Location = new System.Drawing.Point(511, 138);
             this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(25, 19);
+            this.labelControl2.Size = new System.Drawing.Size(29, 16);
             this.labelControl2.TabIndex = 54;
             this.labelControl2.Text = "الدوره";
             // 
@@ -170,11 +170,11 @@
             // 
             // labelControl1
             // 
-            this.labelControl1.Appearance.Font = new System.Drawing.Font("ae_AlArabiya", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl1.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl1.Appearance.Options.UseFont = true;
             this.labelControl1.Location = new System.Drawing.Point(206, 14);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(85, 26);
+            this.labelControl1.Size = new System.Drawing.Size(81, 24);
             this.labelControl1.TabIndex = 43;
             this.labelControl1.Text = "فتح دورات ";
             // 
@@ -183,11 +183,11 @@
             this.com_lect.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
             this.com_lect.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.com_lect.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.com_lect.Font = new System.Drawing.Font("ae_AlArabiya", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.com_lect.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.com_lect.FormattingEnabled = true;
             this.com_lect.Location = new System.Drawing.Point(332, 163);
             this.com_lect.Name = "com_lect";
-            this.com_lect.Size = new System.Drawing.Size(227, 34);
+            this.com_lect.Size = new System.Drawing.Size(227, 32);
             this.com_lect.TabIndex = 65;
             this.com_lect.SelectionChangeCommitted += new System.EventHandler(this.com_cours_SelectionChangeCommitted);
             // 
@@ -196,22 +196,22 @@
             this.com_tech.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
             this.com_tech.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.com_tech.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.com_tech.Font = new System.Drawing.Font("ae_AlArabiya", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.com_tech.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.com_tech.FormattingEnabled = true;
             this.com_tech.Location = new System.Drawing.Point(332, 87);
             this.com_tech.Name = "com_tech";
-            this.com_tech.Size = new System.Drawing.Size(227, 34);
+            this.com_tech.Size = new System.Drawing.Size(227, 32);
             this.com_tech.TabIndex = 67;
             this.com_tech.SelectionChangeCommitted += new System.EventHandler(this.com_stud_SelectionChangeCommitted);
             this.com_tech.SelectedValueChanged += new System.EventHandler(this.com_stud_SelectionChangeCommitted);
             // 
             // labelControl3
             // 
-            this.labelControl3.Appearance.Font = new System.Drawing.Font("ae_AlArabiya", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl3.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl3.Appearance.Options.UseFont = true;
             this.labelControl3.Location = new System.Drawing.Point(490, 59);
             this.labelControl3.Name = "labelControl3";
-            this.labelControl3.Size = new System.Drawing.Size(69, 22);
+            this.labelControl3.Size = new System.Drawing.Size(60, 20);
             this.labelControl3.TabIndex = 66;
             this.labelControl3.Text = "اسم المدرس";
             // 
@@ -293,21 +293,21 @@
             // 
             // labelControl7
             // 
-            this.labelControl7.Appearance.Font = new System.Drawing.Font("ae_AlArabiya", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl7.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl7.Appearance.Options.UseFont = true;
             this.labelControl7.Location = new System.Drawing.Point(490, 299);
             this.labelControl7.Name = "labelControl7";
-            this.labelControl7.Size = new System.Drawing.Size(56, 19);
+            this.labelControl7.Size = new System.Drawing.Size(62, 16);
             this.labelControl7.TabIndex = 69;
             this.labelControl7.Text = "راتب المدرس";
             // 
             // labelControl8
             // 
-            this.labelControl8.Appearance.Font = new System.Drawing.Font("ae_AlArabiya", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl8.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl8.Appearance.Options.UseFont = true;
             this.labelControl8.Location = new System.Drawing.Point(509, 203);
             this.labelControl8.Name = "labelControl8";
-            this.labelControl8.Size = new System.Drawing.Size(50, 19);
+            this.labelControl8.Size = new System.Drawing.Size(58, 16);
             this.labelControl8.TabIndex = 86;
             this.labelControl8.Text = "تاريخ البدايه";
             // 
@@ -339,11 +339,11 @@
             // 
             // labelControl9
             // 
-            this.labelControl9.Appearance.Font = new System.Drawing.Font("ae_AlArabiya", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl9.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl9.Appearance.Options.UseFont = true;
             this.labelControl9.Location = new System.Drawing.Point(240, 214);
             this.labelControl9.Name = "labelControl9";
-            this.labelControl9.Size = new System.Drawing.Size(52, 19);
+            this.labelControl9.Size = new System.Drawing.Size(61, 16);
             this.labelControl9.TabIndex = 91;
             this.labelControl9.Text = "تاريخ النهايه";
             // 
@@ -375,45 +375,45 @@
             // 
             // labelControl6
             // 
-            this.labelControl6.Appearance.Font = new System.Drawing.Font("ae_AlArabiya", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl6.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl6.Appearance.Options.UseFont = true;
             this.labelControl6.Location = new System.Drawing.Point(240, 171);
             this.labelControl6.Name = "labelControl6";
-            this.labelControl6.Size = new System.Drawing.Size(51, 19);
+            this.labelControl6.Size = new System.Drawing.Size(48, 16);
             this.labelControl6.TabIndex = 71;
             this.labelControl6.Text = "اسم الدفعه";
             // 
             // labelControl5
             // 
-            this.labelControl5.Appearance.Font = new System.Drawing.Font("ae_AlArabiya", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl5.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl5.Appearance.Options.UseFont = true;
             this.labelControl5.Location = new System.Drawing.Point(222, 299);
             this.labelControl5.Name = "labelControl5";
-            this.labelControl5.Size = new System.Drawing.Size(50, 19);
+            this.labelControl5.Size = new System.Drawing.Size(53, 16);
             this.labelControl5.TabIndex = 92;
             this.labelControl5.Text = "وقت الدوره";
             // 
             // labelControl10
             // 
-            this.labelControl10.Appearance.Font = new System.Drawing.Font("ae_AlArabiya", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl10.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl10.Appearance.ForeColor = System.Drawing.Color.Red;
             this.labelControl10.Appearance.Options.UseFont = true;
             this.labelControl10.Appearance.Options.UseForeColor = true;
             this.labelControl10.Location = new System.Drawing.Point(12, 130);
             this.labelControl10.Name = "labelControl10";
-            this.labelControl10.Size = new System.Drawing.Size(252, 19);
+            this.labelControl10.Size = new System.Drawing.Size(258, 16);
             this.labelControl10.TabIndex = 94;
             this.labelControl10.Text = "اسم الدوره واسم الكودرس واسم الدفعه لايجب ان يتكرر ";
             // 
             // labelControl11
             // 
-            this.labelControl11.Appearance.Font = new System.Drawing.Font("ae_AlArabiya", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl11.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl11.Appearance.ForeColor = System.Drawing.Color.Red;
             this.labelControl11.Appearance.Options.UseFont = true;
             this.labelControl11.Appearance.Options.UseForeColor = true;
             this.labelControl11.Location = new System.Drawing.Point(204, 113);
             this.labelControl11.Name = "labelControl11";
-            this.labelControl11.Size = new System.Drawing.Size(35, 19);
+            this.labelControl11.Size = new System.Drawing.Size(37, 16);
             this.labelControl11.TabIndex = 95;
             this.labelControl11.Text = "ملاحضه";
             // 
@@ -530,6 +530,7 @@
             this.Controls.Add(this.com_lect_cours);
             this.Controls.Add(this.labelControl4);
             this.Controls.Add(this.labelControl2);
+            this.Font = new System.Drawing.Font("Tahoma", 8.25F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frm_add_lect_tech";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;

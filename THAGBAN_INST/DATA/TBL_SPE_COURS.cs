@@ -21,8 +21,8 @@ namespace THAGBAN_INST.DATA
         public Nullable<int> SPEC_ID { get; set; }
     
         public virtual TBL_COURS TBL_COURS { get; set; }
-        public virtual TBL_TERMS TBL_TERMS { get; set; }
         public virtual TBL_SPECIAL TBL_SPECIAL { get; set; }
+        public virtual TBL_TERMS TBL_TERMS { get; set; }
         public virtual TBL_YEARS TBL_YEARS { get; set; }
     }
 }

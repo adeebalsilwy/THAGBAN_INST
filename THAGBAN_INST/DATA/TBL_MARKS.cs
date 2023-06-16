@@ -14,6 +14,12 @@ namespace THAGBAN_INST.DATA
     
     public partial class TBL_MARKS
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public TBL_MARKS()
+        {
+            this.TBL_GREIVANCES = new HashSet<TBL_GREIVANCES>();
+        }
+    
         public int MARK_ID { get; set; }
         public double MARK_COURS { get; set; }
         public Nullable<System.DateTime> MARK_YEAR { get; set; }
@@ -26,5 +32,7 @@ namespace THAGBAN_INST.DATA
         public virtual TBL_SPECIAL TBL_SPECIAL { get; set; }
         public virtual TBL_STUDENTS TBL_STUDENTS { get; set; }
         public virtual TBL_YEARS_MARK TBL_YEARS_MARK { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<TBL_GREIVANCES> TBL_GREIVANCES { get; set; }
     }
 }

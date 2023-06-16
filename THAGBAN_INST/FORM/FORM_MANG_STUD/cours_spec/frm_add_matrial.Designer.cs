@@ -51,31 +51,33 @@
             this.com_spiacl.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
             this.com_spiacl.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.com_spiacl.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.com_spiacl.Font = new System.Drawing.Font("ae_AlArabiya", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.com_spiacl.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.com_spiacl.FormattingEnabled = true;
             this.com_spiacl.Location = new System.Drawing.Point(28, 76);
             this.com_spiacl.Name = "com_spiacl";
-            this.com_spiacl.Size = new System.Drawing.Size(227, 41);
+            this.com_spiacl.Size = new System.Drawing.Size(227, 37);
             this.com_spiacl.TabIndex = 59;
+            this.com_spiacl.SelectedIndexChanged += new System.EventHandler(this.com_spiacl_SelectionChangeCommitted);
             this.com_spiacl.SelectionChangeCommitted += new System.EventHandler(this.com_spiacl_SelectionChangeCommitted);
+            this.com_spiacl.SelectedValueChanged += new System.EventHandler(this.com_spiacl_SelectionChangeCommitted);
             // 
             // labelControl4
             // 
-            this.labelControl4.Appearance.Font = new System.Drawing.Font("ae_AlArabiya", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl4.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl4.Appearance.Options.UseFont = true;
             this.labelControl4.Location = new System.Drawing.Point(261, 87);
             this.labelControl4.Name = "labelControl4";
-            this.labelControl4.Size = new System.Drawing.Size(48, 22);
+            this.labelControl4.Size = new System.Drawing.Size(50, 20);
             this.labelControl4.TabIndex = 58;
             this.labelControl4.Text = "التخصص";
             // 
             // labelControl2
             // 
-            this.labelControl2.Appearance.Font = new System.Drawing.Font("ae_AlArabiya", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl2.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl2.Appearance.Options.UseFont = true;
             this.labelControl2.Location = new System.Drawing.Point(506, 51);
             this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(48, 19);
+            this.labelControl2.Size = new System.Drawing.Size(48, 16);
             this.labelControl2.TabIndex = 54;
             this.labelControl2.Text = "اسم الماده";
             // 
@@ -150,11 +152,11 @@
             // 
             // labelControl1
             // 
-            this.labelControl1.Appearance.Font = new System.Drawing.Font("ae_AlArabiya", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl1.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl1.Appearance.Options.UseFont = true;
             this.labelControl1.Location = new System.Drawing.Point(99, 14);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(210, 26);
+            this.labelControl1.Size = new System.Drawing.Size(186, 24);
             this.labelControl1.TabIndex = 43;
             this.labelControl1.Text = "شاشه اضافه وتعديل المواد ";
             // 
@@ -163,21 +165,23 @@
             this.com_year.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
             this.com_year.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.com_year.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.com_year.Font = new System.Drawing.Font("ae_AlArabiya", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.com_year.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.com_year.FormattingEnabled = true;
             this.com_year.Location = new System.Drawing.Point(315, 162);
             this.com_year.Name = "com_year";
-            this.com_year.Size = new System.Drawing.Size(227, 41);
+            this.com_year.Size = new System.Drawing.Size(227, 37);
             this.com_year.TabIndex = 62;
+            this.com_year.SelectedIndexChanged += new System.EventHandler(this.com_year_SelectionChangeCommitted);
             this.com_year.SelectionChangeCommitted += new System.EventHandler(this.com_year_SelectionChangeCommitted);
+            this.com_year.SelectedValueChanged += new System.EventHandler(this.com_year_SelectionChangeCommitted);
             // 
             // labelControl5
             // 
-            this.labelControl5.Appearance.Font = new System.Drawing.Font("ae_AlArabiya", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl5.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl5.Appearance.Options.UseFont = true;
             this.labelControl5.Location = new System.Drawing.Point(535, 134);
             this.labelControl5.Name = "labelControl5";
-            this.labelControl5.Size = new System.Drawing.Size(37, 22);
+            this.labelControl5.Size = new System.Drawing.Size(31, 20);
             this.labelControl5.TabIndex = 61;
             this.labelControl5.Text = "السنه ";
             // 
@@ -186,20 +190,20 @@
             this.com_term.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
             this.com_term.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.com_term.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.com_term.Font = new System.Drawing.Font("ae_AlArabiya", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.com_term.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.com_term.FormattingEnabled = true;
             this.com_term.Location = new System.Drawing.Point(28, 162);
             this.com_term.Name = "com_term";
-            this.com_term.Size = new System.Drawing.Size(227, 41);
+            this.com_term.Size = new System.Drawing.Size(227, 37);
             this.com_term.TabIndex = 64;
             // 
             // labelControl6
             // 
-            this.labelControl6.Appearance.Font = new System.Drawing.Font("ae_AlArabiya", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl6.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl6.Appearance.Options.UseFont = true;
             this.labelControl6.Location = new System.Drawing.Point(270, 173);
             this.labelControl6.Name = "labelControl6";
-            this.labelControl6.Size = new System.Drawing.Size(22, 22);
+            this.labelControl6.Size = new System.Drawing.Size(24, 20);
             this.labelControl6.TabIndex = 63;
             this.labelControl6.Text = "الترم";
             // 
@@ -208,12 +212,15 @@
             this.com_cours.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
             this.com_cours.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.com_cours.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.com_cours.Font = new System.Drawing.Font("ae_AlArabiya", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.com_cours.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.com_cours.FormattingEnabled = true;
             this.com_cours.Location = new System.Drawing.Point(315, 87);
             this.com_cours.Name = "com_cours";
-            this.com_cours.Size = new System.Drawing.Size(227, 41);
+            this.com_cours.Size = new System.Drawing.Size(227, 37);
             this.com_cours.TabIndex = 65;
+            this.com_cours.SelectedIndexChanged += new System.EventHandler(this.com_cours_SelectedIndexChanged);
+            this.com_cours.SelectionChangeCommitted += new System.EventHandler(this.com_cours_SelectedIndexChanged);
+            this.com_cours.SelectedValueChanged += new System.EventHandler(this.com_cours_SelectedIndexChanged);
             // 
             // frm_add_matrial
             // 

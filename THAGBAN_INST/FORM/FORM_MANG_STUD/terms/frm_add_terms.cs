@@ -47,12 +47,10 @@ namespace THAGBAN_INST.FORM.FRM_MANG_STUD.terms
             {
                TBL_TERMS tbl= con.TBL_TERMS.Find(term_id);
                 txt_term_name.Text = tbl.TERM_NAME.ToString();
-                int year =Convert.ToInt32(tbl.YEAR_ID);
                 com_term_year.DataSource = con.TBL_YEARS.ToList();
                 com_term_year.DisplayMember = "YEAR_NAME";
                 com_term_year.ValueMember = "YEAR_ID";
-                com_term_year.SelectedValue = year;
-                spaicla_id = Convert.ToInt32(con.TBL_YEARS.Find(year).SPEC_ID);
+                //spaicla_id = Convert.ToInt32(con.TBL_YEARS.Find(year).SPEC_ID);
                 //   com_term_year.Text = con.TBL_TERMS.Find(tech_id).SPEC_YEAR.ToString();
                 com_spiacl.DataSource = con.TBL_SPECIAL.ToList();
                 com_spiacl.DisplayMember = "SPEC_NAME";
@@ -114,8 +112,8 @@ namespace THAGBAN_INST.FORM.FRM_MANG_STUD.terms
                 {
                     TBL_TERMS cl = new TBL_TERMS();
                     cl.TERM_NAME = txt_term_name.Text;
-                    cl.YEAR_ID =Convert.ToInt32(com_term_year.SelectedValue);
-                    cl.SPEC_ID = Convert.ToInt32(com_spiacl.SelectedValue);
+                    //cl.YEAR_ID =Convert.ToInt32(com_term_year.SelectedValue);
+                    //cl.SPEC_ID = Convert.ToInt32(com_spiacl.SelectedValue);
 
                     if (term_id != 0)
                     {
@@ -173,7 +171,7 @@ namespace THAGBAN_INST.FORM.FRM_MANG_STUD.terms
             if (com_spiacl.SelectedValue!= null)
             {
                 spaicla_id=Convert.ToInt32(com_spiacl.SelectedValue.ToString());
-               com_term_year.DataSource=con.TBL_YEARS.Where(w=>w.SPEC_ID==spaicla_id).ToList();
+              // com_term_year.DataSource=con.TBL_YEARS.Where(w=>w.SPEC_ID==spaicla_id).ToList();
                 com_term_year.DisplayMember = "YEAR_NAME";
                 com_term_year.ValueMember = "YEAR_ID";
                 

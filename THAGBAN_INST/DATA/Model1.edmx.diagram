@@ -37,9 +37,7 @@
         <EntityTypeShape EntityType="db_max_instModel.TBL_STUD_SPEC" Width="1.5" PointX="9" PointY="16.375" IsExpanded="true" />
         <EntityTypeShape EntityType="db_max_instModel.TBL_STUD_STUDY_COURS" Width="1.5" PointX="9" PointY="24.25" IsExpanded="true" />
         <EntityTypeShape EntityType="db_max_instModel.TBL_STUDENTS" Width="1.5" PointX="0.75" PointY="19.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="db_max_instModel.TBL_TERMS" Width="1.5" PointX="6.75" PointY="37.375" IsExpanded="true" />
         <EntityTypeShape EntityType="db_max_instModel.TBL_USERS" Width="1.5" PointX="3.75" PointY="45.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="db_max_instModel.TBL_YEARS" Width="1.5" PointX="4.5" PointY="37.375" IsExpanded="true" />
         <EntityTypeShape EntityType="db_max_instModel.TBL_YEARS_MARK" Width="1.5" PointX="0.75" PointY="24.5" IsExpanded="true" />
         <AssociationConnector Association="db_max_instModel.FK_TBL_ATTENDS_TBL_EMPLOYEES" ManuallyRouted="false" />
         <AssociationConnector Association="db_max_instModel.FK_TBL_MARKS_TBL_COURS" ManuallyRouted="false" />
@@ -91,18 +89,26 @@
         <AssociationConnector Association="db_max_instModel.FK_TBL_SIRYAL_STUDENTS_TBL_SPECIAL" ManuallyRouted="false" />
         <AssociationConnector Association="db_max_instModel.FK_TBL_SIRYAL_STUDENTS_TBL_STUDENTS" ManuallyRouted="false" />
         <AssociationConnector Association="db_max_instModel.FK_TBL_SIRYAL_STUDENTS_TBL_YEARS_MARK" ManuallyRouted="false" />
-        <AssociationConnector Association="db_max_instModel.FK_TBL_COURS_TBL_TERM" ManuallyRouted="false" />
         <AssociationConnector Association="db_max_instModel.FK_TBL_SPE_COURS_TBL_SPECIAL" ManuallyRouted="false" />
-        <AssociationConnector Association="db_max_instModel.FK_TBL_SPE_COURS_TBL_YEARS" ManuallyRouted="false" />
         <AssociationConnector Association="db_max_instModel.FK_TBL_STUD_SPEC_TBL_SPECIAL" ManuallyRouted="false" />
-        <AssociationConnector Association="db_max_instModel.FK_TBL_TERMS_TBL_SPECIAL1" ManuallyRouted="false" />
-        <AssociationConnector Association="db_max_instModel.FK_TBL_YEARS_TBL_SPECIAL" ManuallyRouted="false" />
         <AssociationConnector Association="db_max_instModel.FK_TBL_STUD_LECT_TBL_STUDENTS" ManuallyRouted="false" />
         <AssociationConnector Association="db_max_instModel.FK_TBL_STUD_SPEC_TBL_STUD_SPEC" ManuallyRouted="false" />
         <AssociationConnector Association="db_max_instModel.FK_TBL_STUD_STUDY_COURS_TBL_STUDENTS" ManuallyRouted="false" />
-        <AssociationConnector Association="db_max_instModel.FK_TBL_STUD_STUDY_COURS_TBL_TERMS" ManuallyRouted="false" />
-        <AssociationConnector Association="db_max_instModel.FK_TBL_STUD_STUDY_COURS_TBL_YEARS" ManuallyRouted="false" />
-        <AssociationConnector Association="db_max_instModel.FK_TBL_TERMS_TBL_years" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="db_max_instModel.TBL_TERMS" Width="1.5" PointX="6.75" PointY="27.75" />
+        <EntityTypeShape EntityType="db_max_instModel.TBL_YEARS" Width="1.5" PointX="9.375" PointY="6.875" />
+        <AssociationConnector Association="db_max_instModel.FK_TBL_COURS_TBL_TERM" />
+        <AssociationConnector Association="db_max_instModel.FK_TBL_SPE_COURS_TBL_YEARS" />
+        <AssociationConnector Association="db_max_instModel.FK_TBL_STUD_STUDY_COURS_TBL_TERMS" />
+        <AssociationConnector Association="db_max_instModel.FK_TBL_STUD_STUDY_COURS_TBL_YEARS" />
+        <EntityTypeShape EntityType="db_max_instModel.TBL_GREIVANCES" Width="1.5" PointX="5.25" PointY="37.5" />
+        <AssociationConnector Association="db_max_instModel.FK_GREIVANCES_TBL_STUDENTS" />
+        <EntityTypeShape EntityType="db_max_instModel.TB_BUY" Width="1.5" PointX="12.625" PointY="1" />
+        <EntityTypeShape EntityType="db_max_instModel.TBL_CATEGORIES" Width="1.5" PointX="10.375" PointY="32.625" />
+        <EntityTypeShape EntityType="db_max_instModel.TBL_SUPPLIERS" Width="1.5" PointX="10.375" PointY="1.375" />
+        <AssociationConnector Association="db_max_instModel.FK_TB_BUY_TBL_CATEGORIES" />
+        <AssociationConnector Association="db_max_instModel.FK_TB_BUY_TBL_SUPPLIERS" />
+        <EntityTypeShape EntityType="db_max_instModel.TBL_SuppliersPayments" Width="1.5" PointX="12.625" PointY="5.75" />
+        <AssociationConnector Association="db_max_instModel.FK_TBL_SuppliersPayments_TBL_SUPPLIERS" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
