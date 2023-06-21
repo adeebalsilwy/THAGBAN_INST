@@ -30,9 +30,9 @@
         {
             this.components = new System.ComponentModel.Container();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.txt_time = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.labl_inst_name = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -42,22 +42,10 @@
             this.pictureBox1.Location = new System.Drawing.Point(324, 3);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(271, 221);
+            this.pictureBox1.Size = new System.Drawing.Size(271, 220);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 7;
             this.pictureBox1.TabStop = false;
-            // 
-            // label1
-            // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.DimGray;
-            this.label1.Location = new System.Drawing.Point(111, 227);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(752, 114);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "EPS Pro";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // txt_time
             // 
@@ -76,12 +64,24 @@
             this.timer1.Enabled = true;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // labl_inst_name
+            // 
+            this.labl_inst_name.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.labl_inst_name.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labl_inst_name.ForeColor = System.Drawing.Color.DimGray;
+            this.labl_inst_name.Location = new System.Drawing.Point(110, 252);
+            this.labl_inst_name.Name = "labl_inst_name";
+            this.labl_inst_name.Size = new System.Drawing.Size(752, 79);
+            this.labl_inst_name.TabIndex = 8;
+            this.labl_inst_name.Text = "EPS Pro";
+            this.labl_inst_name.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
             // home_page
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.labl_inst_name);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.txt_time);
             this.Name = "home_page";
             this.Size = new System.Drawing.Size(974, 484);
@@ -94,8 +94,8 @@
         #endregion
 
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label txt_time;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Label labl_inst_name;
     }
 }

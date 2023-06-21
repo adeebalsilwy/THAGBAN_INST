@@ -138,7 +138,7 @@
             this.fluentDesignFormControl1.Manager = this.fluentFormDefaultManager1;
             this.fluentDesignFormControl1.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.fluentDesignFormControl1.Name = "fluentDesignFormControl1";
-            this.fluentDesignFormControl1.Size = new System.Drawing.Size(1124, 30);
+            this.fluentDesignFormControl1.Size = new System.Drawing.Size(1108, 30);
             this.fluentDesignFormControl1.TabIndex = 2;
             this.fluentDesignFormControl1.TabStop = false;
             this.fluentDesignFormControl1.TitleItemLinks.Add(this.barButtonItem2);
@@ -307,11 +307,11 @@
             this.btn_about,
             this.accordionControlElement9,
             this.btn_admin});
-            this.accordionControl1.Location = new System.Drawing.Point(874, 30);
+            this.accordionControl1.Location = new System.Drawing.Point(858, 30);
             this.accordionControl1.Margin = new System.Windows.Forms.Padding(14, 12, 14, 12);
             this.accordionControl1.Name = "accordionControl1";
             this.accordionControl1.ScrollBarMode = DevExpress.XtraBars.Navigation.ScrollBarMode.AutoCollapse;
-            this.accordionControl1.Size = new System.Drawing.Size(250, 510);
+            this.accordionControl1.Size = new System.Drawing.Size(250, 502);
             this.accordionControl1.TabIndex = 3;
             this.accordionControl1.ViewType = DevExpress.XtraBars.Navigation.AccordionControlViewType.HamburgerMenu;
             // 
@@ -806,7 +806,7 @@
             this.ا.Location = new System.Drawing.Point(0, 30);
             this.ا.Name = "ا";
             this.ا.RightToLeftLayout = DevExpress.Utils.DefaultBoolean.True;
-            this.ا.Size = new System.Drawing.Size(874, 510);
+            this.ا.Size = new System.Drawing.Size(858, 502);
             this.ا.TabIndex = 4;
             this.ا.CloseButtonClick += new System.EventHandler(this.xtraTabControl1_CloseButtonClick);
             this.ا.Click += new System.EventHandler(this.xtraTabControl1_Click);
@@ -859,7 +859,7 @@
             this.Appearance.Options.UseFont = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1124, 540);
+            this.ClientSize = new System.Drawing.Size(1108, 532);
             this.Controls.Add(this.ا);
             this.Controls.Add(this.accordionControl1);
             this.Controls.Add(this.fluentDesignFormControl1);

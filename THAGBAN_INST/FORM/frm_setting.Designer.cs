@@ -98,8 +98,12 @@
             this.com_emp = new System.Windows.Forms.ComboBox();
             this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
             this.label5 = new System.Windows.Forms.Label();
-            this.navigationPage4 = new DevExpress.XtraBars.Navigation.NavigationPage();
-            this.btn_currencysave = new DevExpress.XtraEditors.SimpleButton();
+            this.nav_page_admin_user = new DevExpress.XtraBars.Navigation.NavigationPage();
+            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.txt_admin_pass = new System.Windows.Forms.TextBox();
+            this.txt_admin_user_name = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.txt_inst_desc = new System.Windows.Forms.RichTextBox();
             this.navigationFrame1 = new DevExpress.XtraBars.Navigation.NavigationFrame();
@@ -123,7 +127,6 @@
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.simpleButton3 = new DevExpress.XtraEditors.SimpleButton();
             this.btn_backup = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             this.panel1 = new System.Windows.Forms.Panel();
             this.accordionControl1 = new DevExpress.XtraBars.Navigation.AccordionControl();
             this.accordionContentContainer1 = new DevExpress.XtraBars.Navigation.AccordionContentContainer();
@@ -136,7 +139,7 @@
             this.accordionControlSeparator5 = new DevExpress.XtraBars.Navigation.AccordionControlSeparator();
             this.btn_groups = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.btn_categories = new DevExpress.XtraBars.Navigation.AccordionControlElement();
-            this.accordionControlElement1 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.btn_admin = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.groupBox1.SuspendLayout();
             this.group_server.SuspendLayout();
             this.nav_page_rouls.SuspendLayout();
@@ -147,7 +150,7 @@
             this.panel6.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             this.panel2.SuspendLayout();
-            this.navigationPage4.SuspendLayout();
+            this.nav_page_admin_user.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.navigationFrame1)).BeginInit();
             this.navigationFrame1.SuspendLayout();
             this.nav_page_home.SuspendLayout();
@@ -357,13 +360,12 @@
             // 
             // nav_page_rouls
             // 
-            this.nav_page_rouls.Caption = "nav_page_rouls";
             this.nav_page_rouls.Controls.Add(this.panel4);
             this.nav_page_rouls.Controls.Add(this.panel3);
             this.nav_page_rouls.Controls.Add(this.panel2);
             this.nav_page_rouls.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.nav_page_rouls.Name = "nav_page_rouls";
-            this.nav_page_rouls.Size = new System.Drawing.Size(902, 417);
+            this.nav_page_rouls.Size = new System.Drawing.Size(910, 586);
             this.nav_page_rouls.Paint += new System.Windows.Forms.PaintEventHandler(this.navigationPage3_Paint);
             // 
             // panel4
@@ -393,16 +395,16 @@
             this.xtra_tab_lect_rouls.Controls.Add(this.panel6);
             this.xtra_tab_lect_rouls.Controls.Add(this.flowLayoutPanel1);
             this.xtra_tab_lect_rouls.Name = "xtra_tab_lect_rouls";
-            this.xtra_tab_lect_rouls.Size = new System.Drawing.Size(796, 316);
+            this.xtra_tab_lect_rouls.Size = new System.Drawing.Size(791, 313);
             this.xtra_tab_lect_rouls.Text = "صلاحيات نظام الدورات";
             // 
             // panel6
             // 
             this.panel6.Controls.Add(this.btn_rouls);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel6.Location = new System.Drawing.Point(0, 267);
+            this.panel6.Location = new System.Drawing.Point(0, 264);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(796, 49);
+            this.panel6.Size = new System.Drawing.Size(791, 49);
             this.panel6.TabIndex = 10;
             // 
             // btn_rouls
@@ -412,7 +414,7 @@
             this.btn_rouls.Appearance.Options.UseFont = true;
             this.btn_rouls.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_rouls.ImageOptions.Image")));
             this.btn_rouls.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleRight;
-            this.btn_rouls.Location = new System.Drawing.Point(229, 4);
+            this.btn_rouls.Location = new System.Drawing.Point(224, 4);
             this.btn_rouls.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_rouls.Name = "btn_rouls";
             this.btn_rouls.Size = new System.Drawing.Size(173, 38);
@@ -443,11 +445,11 @@
             this.flowLayoutPanel1.Controls.Add(this.ch_activ);
             this.flowLayoutPanel1.Controls.Add(this.ch_admin);
             this.flowLayoutPanel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.flowLayoutPanel1.ForeColor = System.Drawing.Color.Black;
+            this.flowLayoutPanel1.ForeColor = System.Drawing.Color.Transparent;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.flowLayoutPanel1.Padding = new System.Windows.Forms.Padding(4);
             this.flowLayoutPanel1.Size = new System.Drawing.Size(776, 274);
             this.flowLayoutPanel1.TabIndex = 1;
             // 
@@ -711,9 +713,9 @@
             // panel3
             // 
             this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel3.Location = new System.Drawing.Point(0, 368);
+            this.panel3.Location = new System.Drawing.Point(0, 537);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(902, 49);
+            this.panel3.Size = new System.Drawing.Size(910, 49);
             this.panel3.TabIndex = 71;
             // 
             // panel2
@@ -729,7 +731,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(902, 100);
+            this.panel2.Size = new System.Drawing.Size(910, 100);
             this.panel2.TabIndex = 70;
             // 
             // txt_user_name
@@ -787,7 +789,7 @@
             stateProperties4.ForeColor = System.Drawing.Color.Empty;
             stateProperties4.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.txt_user_name.OnIdleState = stateProperties4;
-            this.txt_user_name.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.txt_user_name.Padding = new System.Windows.Forms.Padding(3);
             this.txt_user_name.PasswordChar = '\0';
             this.txt_user_name.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.txt_user_name.PlaceholderText = "ادخل كلمه المرور ";
@@ -815,7 +817,7 @@
             this.btn_user.Appearance.Options.UseFont = true;
             this.btn_user.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_user.ImageOptions.Image")));
             this.btn_user.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleRight;
-            this.btn_user.Location = new System.Drawing.Point(61, 40);
+            this.btn_user.Location = new System.Drawing.Point(69, 40);
             this.btn_user.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_user.Name = "btn_user";
             this.btn_user.Size = new System.Drawing.Size(125, 38);
@@ -878,7 +880,7 @@
             stateProperties8.ForeColor = System.Drawing.Color.Empty;
             stateProperties8.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.txt_user_pass.OnIdleState = stateProperties8;
-            this.txt_user_pass.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.txt_user_pass.Padding = new System.Windows.Forms.Padding(3);
             this.txt_user_pass.PasswordChar = '\0';
             this.txt_user_pass.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.txt_user_pass.PlaceholderText = "ادخل كلمه المرور ";
@@ -888,7 +890,7 @@
             this.txt_user_pass.SelectionLength = 0;
             this.txt_user_pass.SelectionStart = 0;
             this.txt_user_pass.ShortcutsEnabled = true;
-            this.txt_user_pass.Size = new System.Drawing.Size(130, 63);
+            this.txt_user_pass.Size = new System.Drawing.Size(130, 43);
             this.txt_user_pass.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txt_user_pass.TabIndex = 75;
             this.txt_user_pass.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -954,28 +956,75 @@
             this.label5.TabIndex = 69;
             this.label5.Text = "اعدادت الصلاحيات";
             // 
-            // navigationPage4
+            // nav_page_admin_user
             // 
-            this.navigationPage4.Caption = "navigationPage4";
-            this.navigationPage4.Controls.Add(this.btn_currencysave);
-            this.navigationPage4.Controls.Add(this.label12);
-            this.navigationPage4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.navigationPage4.Name = "navigationPage4";
-            this.navigationPage4.Size = new System.Drawing.Size(902, 417);
+            this.nav_page_admin_user.Controls.Add(this.simpleButton1);
+            this.nav_page_admin_user.Controls.Add(this.label16);
+            this.nav_page_admin_user.Controls.Add(this.label17);
+            this.nav_page_admin_user.Controls.Add(this.txt_admin_pass);
+            this.nav_page_admin_user.Controls.Add(this.txt_admin_user_name);
+            this.nav_page_admin_user.Controls.Add(this.label12);
+            this.nav_page_admin_user.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.nav_page_admin_user.Name = "nav_page_admin_user";
+            this.nav_page_admin_user.Size = new System.Drawing.Size(910, 586);
             // 
-            // btn_currencysave
+            // simpleButton1
             // 
-            this.btn_currencysave.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.btn_currencysave.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_currencysave.Appearance.Options.UseFont = true;
-            this.btn_currencysave.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_currencysave.ImageOptions.Image")));
-            this.btn_currencysave.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleRight;
-            this.btn_currencysave.Location = new System.Drawing.Point(592, 257);
-            this.btn_currencysave.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btn_currencysave.Name = "btn_currencysave";
-            this.btn_currencysave.Size = new System.Drawing.Size(143, 38);
-            this.btn_currencysave.TabIndex = 10;
-            this.btn_currencysave.Text = "حفظ";
+            this.simpleButton1.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.simpleButton1.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.simpleButton1.Appearance.Options.UseFont = true;
+            this.simpleButton1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
+            this.simpleButton1.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleRight;
+            this.simpleButton1.Location = new System.Drawing.Point(357, 224);
+            this.simpleButton1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.simpleButton1.Name = "simpleButton1";
+            this.simpleButton1.Size = new System.Drawing.Size(125, 38);
+            this.simpleButton1.TabIndex = 77;
+            this.simpleButton1.Text = "حفظ";
+            this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Location = new System.Drawing.Point(646, 156);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(61, 17);
+            this.label16.TabIndex = 9;
+            this.label16.Text = "كلمة السر";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.Location = new System.Drawing.Point(624, 120);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(80, 17);
+            this.label17.TabIndex = 10;
+            this.label17.Text = "اسم المستخدم";
+            // 
+            // txt_admin_pass
+            // 
+            this.txt_admin_pass.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_admin_pass.Location = new System.Drawing.Point(174, 151);
+            this.txt_admin_pass.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txt_admin_pass.Name = "txt_admin_pass";
+            this.txt_admin_pass.Size = new System.Drawing.Size(380, 26);
+            this.txt_admin_pass.TabIndex = 11;
+            this.txt_admin_pass.Text = "admin";
+            this.txt_admin_pass.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txt_admin_user_name
+            // 
+            this.txt_admin_user_name.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_admin_user_name.Location = new System.Drawing.Point(188, 109);
+            this.txt_admin_user_name.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txt_admin_user_name.Multiline = true;
+            this.txt_admin_user_name.Name = "txt_admin_user_name";
+            this.txt_admin_user_name.Size = new System.Drawing.Size(366, 33);
+            this.txt_admin_user_name.TabIndex = 12;
+            this.txt_admin_user_name.Text = "admin";
+            this.txt_admin_user_name.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label12
             // 
@@ -983,9 +1032,9 @@
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.Location = new System.Drawing.Point(319, 10);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(110, 24);
+            this.label12.Size = new System.Drawing.Size(260, 24);
             this.label12.TabIndex = 8;
-            this.label12.Text = "اعدادات العملة";
+            this.label12.Text = "اعدادات تسجيل دخول مسؤول النظام";
             // 
             // txt_inst_desc
             // 
@@ -1003,7 +1052,7 @@
             this.navigationFrame1.Controls.Add(this.nav_page_home);
             this.navigationFrame1.Controls.Add(this.nav_page_server);
             this.navigationFrame1.Controls.Add(this.nav_page_rouls);
-            this.navigationFrame1.Controls.Add(this.navigationPage4);
+            this.navigationFrame1.Controls.Add(this.nav_page_admin_user);
             this.navigationFrame1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.navigationFrame1.Location = new System.Drawing.Point(0, 0);
             this.navigationFrame1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -1012,9 +1061,9 @@
             this.nav_page_home,
             this.nav_page_server,
             this.nav_page_rouls,
-            this.navigationPage4});
+            this.nav_page_admin_user});
             this.navigationFrame1.SelectedPage = this.nav_page_home;
-            this.navigationFrame1.Size = new System.Drawing.Size(902, 417);
+            this.navigationFrame1.Size = new System.Drawing.Size(910, 586);
             this.navigationFrame1.TabIndex = 5;
             this.navigationFrame1.Text = "navigationFrame1";
             // 
@@ -1038,7 +1087,7 @@
             this.nav_page_home.Controls.Add(this.label1);
             this.nav_page_home.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.nav_page_home.Name = "nav_page_home";
-            this.nav_page_home.Size = new System.Drawing.Size(902, 417);
+            this.nav_page_home.Size = new System.Drawing.Size(910, 586);
             this.nav_page_home.Paint += new System.Windows.Forms.PaintEventHandler(this.navigationPage1_Paint);
             // 
             // txt_inst_admin
@@ -1117,7 +1166,7 @@
             this.btn_save_inst.Appearance.Options.UseFont = true;
             this.btn_save_inst.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_save_inst.ImageOptions.Image")));
             this.btn_save_inst.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleRight;
-            this.btn_save_inst.Location = new System.Drawing.Point(347, 203);
+            this.btn_save_inst.Location = new System.Drawing.Point(456, 434);
             this.btn_save_inst.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_save_inst.Name = "btn_save_inst";
             this.btn_save_inst.Size = new System.Drawing.Size(143, 38);
@@ -1221,14 +1270,12 @@
             // 
             // nav_page_server
             // 
-            this.nav_page_server.Caption = "nav_page_server";
             this.nav_page_server.Controls.Add(this.groupBox3);
             this.nav_page_server.Controls.Add(this.groupBox1);
             this.nav_page_server.Controls.Add(this.label6);
-            this.nav_page_server.Controls.Add(this.simpleButton1);
             this.nav_page_server.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.nav_page_server.Name = "nav_page_server";
-            this.nav_page_server.Size = new System.Drawing.Size(902, 417);
+            this.nav_page_server.Size = new System.Drawing.Size(910, 586);
             // 
             // groupBox3
             // 
@@ -1275,27 +1322,13 @@
             this.btn_backup.Text = "اخذ نسخة احتياطية";
             this.btn_backup.Click += new System.EventHandler(this.btn_backup_Click);
             // 
-            // simpleButton1
-            // 
-            this.simpleButton1.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.simpleButton1.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.simpleButton1.Appearance.Options.UseFont = true;
-            this.simpleButton1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
-            this.simpleButton1.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleRight;
-            this.simpleButton1.Location = new System.Drawing.Point(707, 302);
-            this.simpleButton1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(143, 38);
-            this.simpleButton1.TabIndex = 5;
-            this.simpleButton1.Text = "حفظ";
-            // 
             // panel1
             // 
             this.panel1.Controls.Add(this.accordionControl1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 378);
+            this.panel1.Location = new System.Drawing.Point(0, 547);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(902, 39);
+            this.panel1.Size = new System.Drawing.Size(910, 39);
             this.panel1.TabIndex = 6;
             // 
             // accordionControl1
@@ -1307,14 +1340,14 @@
             this.btn_home,
             this.btn_groups,
             this.btn_categories,
-            this.accordionControlElement1});
+            this.btn_admin});
             this.accordionControl1.Location = new System.Drawing.Point(0, -513);
             this.accordionControl1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.accordionControl1.Name = "accordionControl1";
             this.accordionControl1.OptionsMinimizing.AllowMinimizeMode = DevExpress.Utils.DefaultBoolean.False;
             this.accordionControl1.RootDisplayMode = DevExpress.XtraBars.Navigation.AccordionControlRootDisplayMode.Footer;
             this.accordionControl1.ScrollBarMode = DevExpress.XtraBars.Navigation.ScrollBarMode.Touch;
-            this.accordionControl1.Size = new System.Drawing.Size(902, 552);
+            this.accordionControl1.Size = new System.Drawing.Size(910, 552);
             this.accordionControl1.TabIndex = 3;
             this.accordionControl1.ViewType = DevExpress.XtraBars.Navigation.AccordionControlViewType.HamburgerMenu;
             // 
@@ -1420,16 +1453,16 @@
             this.btn_categories.Text = "الصلاحيات";
             this.btn_categories.Click += new System.EventHandler(this.btn_categories_Click);
             // 
-            // accordionControlElement1
+            // btn_admin
             // 
-            this.accordionControlElement1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("accordionControlElement1.ImageOptions.Image")));
-            this.accordionControlElement1.Name = "accordionControlElement1";
-            this.accordionControlElement1.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.btn_admin.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("accordionControlElement1.ImageOptions.Image")));
+            this.btn_admin.Name = "btn_admin";
+            this.btn_admin.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
             toolTipItem4.Text = "العملة";
             superToolTip4.Items.Add(toolTipItem4);
-            this.accordionControlElement1.SuperTip = superToolTip4;
-            this.accordionControlElement1.Text = "العملة";
-            this.accordionControlElement1.Click += new System.EventHandler(this.accordionControlElement1_Click);
+            this.btn_admin.SuperTip = superToolTip4;
+            this.btn_admin.Text = "العملة";
+            this.btn_admin.Click += new System.EventHandler(this.accordionControlElement1_Click);
             // 
             // frm_setting
             // 
@@ -1439,7 +1472,7 @@
             this.Appearance.Options.UseForeColor = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(902, 417);
+            this.ClientSize = new System.Drawing.Size(910, 586);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.navigationFrame1);
             this.FormBorderEffect = DevExpress.XtraEditors.FormBorderEffect.Glow;
@@ -1466,8 +1499,8 @@
             this.flowLayoutPanel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            this.navigationPage4.ResumeLayout(false);
-            this.navigationPage4.PerformLayout();
+            this.nav_page_admin_user.ResumeLayout(false);
+            this.nav_page_admin_user.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.navigationFrame1)).EndInit();
             this.navigationFrame1.ResumeLayout(false);
             this.nav_page_home.ResumeLayout(false);
@@ -1498,8 +1531,6 @@
         private System.Windows.Forms.RadioButton rdb_inter;
         private System.Windows.Forms.RadioButton rdb_local;
         private System.Windows.Forms.Label label6;
-        public DevExpress.XtraEditors.SimpleButton simpleButton1;
-        public DevExpress.XtraEditors.SimpleButton btn_currencysave;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.RichTextBox txt_inst_desc;
         private System.Windows.Forms.Label label7;
@@ -1528,11 +1559,10 @@
         private DevExpress.XtraBars.Navigation.AccordionControlSeparator accordionControlSeparator5;
         private DevExpress.XtraBars.Navigation.AccordionControlElement btn_groups;
         private DevExpress.XtraBars.Navigation.AccordionControlElement btn_categories;
-        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement1;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement btn_admin;
         private System.Windows.Forms.ComboBox comb_primarycur;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Panel panel3;
-        public DevExpress.XtraEditors.SimpleButton btn_rouls;
         private System.Windows.Forms.Panel panel2;
         public Bunifu.UI.WinForms.BunifuTextBox txt_user_pass;
         private DevExpress.XtraEditors.LabelControl labelControl3;
@@ -1541,8 +1571,22 @@
         private DevExpress.XtraEditors.LabelControl labelControl5;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Panel panel4;
+        public DevExpress.XtraEditors.SimpleButton btn_user;
+        public Bunifu.UI.WinForms.BunifuTextBox txt_user_name;
+        public DevExpress.XtraBars.Navigation.NavigationPage nav_page_rouls;
+        public DevExpress.XtraBars.Navigation.NavigationPage nav_page_admin_user;
+        public DevExpress.XtraBars.Navigation.NavigationFrame navigationFrame1;
+        public DevExpress.XtraBars.Navigation.NavigationPage nav_page_home;
+        public DevExpress.XtraBars.Navigation.NavigationPage nav_page_server;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.TextBox txt_database_name;
+        private System.Windows.Forms.Label txt_totoal_inst;
+        private System.Windows.Forms.TextBox txt_inst_admin;
+        private System.Windows.Forms.Label label15;
         private DevExpress.XtraTab.XtraTabControl xtraTabControl1;
         private DevExpress.XtraTab.XtraTabPage xtra_tab_lect_rouls;
+        private System.Windows.Forms.Panel panel6;
+        public DevExpress.XtraEditors.SimpleButton btn_rouls;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.CheckBox ch_main;
         private System.Windows.Forms.CheckBox ch_cours_lect;
@@ -1559,23 +1603,15 @@
         private System.Windows.Forms.CheckBox ch_attend;
         private System.Windows.Forms.CheckBox ch_sala;
         private System.Windows.Forms.CheckBox ch_send_tech;
+        public System.Windows.Forms.CheckBox ch_sett;
         private System.Windows.Forms.CheckBox ch_report;
         private System.Windows.Forms.CheckBox ch_apu;
         private System.Windows.Forms.CheckBox ch_activ;
-        private System.Windows.Forms.Panel panel6;
-        public DevExpress.XtraEditors.SimpleButton btn_user;
-        public Bunifu.UI.WinForms.BunifuTextBox txt_user_name;
-        public DevExpress.XtraBars.Navigation.NavigationPage nav_page_rouls;
-        public DevExpress.XtraBars.Navigation.NavigationPage navigationPage4;
-        public DevExpress.XtraBars.Navigation.NavigationFrame navigationFrame1;
-        public DevExpress.XtraBars.Navigation.NavigationPage nav_page_home;
-        public DevExpress.XtraBars.Navigation.NavigationPage nav_page_server;
-        public System.Windows.Forms.CheckBox ch_sett;
         public System.Windows.Forms.CheckBox ch_admin;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.TextBox txt_database_name;
-        private System.Windows.Forms.Label txt_totoal_inst;
-        private System.Windows.Forms.TextBox txt_inst_admin;
-        private System.Windows.Forms.Label label15;
+        public DevExpress.XtraEditors.SimpleButton simpleButton1;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.TextBox txt_admin_pass;
+        private System.Windows.Forms.TextBox txt_admin_user_name;
     }
 }

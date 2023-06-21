@@ -202,12 +202,12 @@
             this.xrLabel25,
             this.xrLabel12,
             this.label1});
-            this.ReportHeader.HeightF = 97.50001F;
+            this.ReportHeader.HeightF = 86.04164F;
             this.ReportHeader.Name = "ReportHeader";
             // 
             // xrLabel7
             // 
-            this.xrLabel7.BackColor = System.Drawing.Color.DarkGoldenrod;
+            this.xrLabel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.xrLabel7.BorderColor = System.Drawing.Color.White;
             this.xrLabel7.Borders = DevExpress.XtraPrinting.BorderSide.Left;
             this.xrLabel7.BorderWidth = 2F;
@@ -277,7 +277,7 @@
             // 
             // xrLabel14
             // 
-            this.xrLabel14.BackColor = System.Drawing.Color.DarkGoldenrod;
+            this.xrLabel14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.xrLabel14.BorderColor = System.Drawing.Color.White;
             this.xrLabel14.Borders = DevExpress.XtraPrinting.BorderSide.Left;
             this.xrLabel14.BorderWidth = 2F;
@@ -324,7 +324,7 @@
             // 
             // xrLabel6
             // 
-            this.xrLabel6.BackColor = System.Drawing.Color.DarkGoldenrod;
+            this.xrLabel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.xrLabel6.BorderColor = System.Drawing.Color.White;
             this.xrLabel6.Borders = DevExpress.XtraPrinting.BorderSide.Left;
             this.xrLabel6.BorderWidth = 2F;
@@ -371,7 +371,7 @@
             // 
             // xrLabel11
             // 
-            this.xrLabel11.BackColor = System.Drawing.Color.DarkGoldenrod;
+            this.xrLabel11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.xrLabel11.BorderColor = System.Drawing.Color.White;
             this.xrLabel11.Borders = DevExpress.XtraPrinting.BorderSide.Left;
             this.xrLabel11.BorderWidth = 2F;
@@ -418,7 +418,7 @@
             // 
             // xrLabel12
             // 
-            this.xrLabel12.BackColor = System.Drawing.Color.DarkGoldenrod;
+            this.xrLabel12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.xrLabel12.BorderColor = System.Drawing.Color.White;
             this.xrLabel12.Borders = DevExpress.XtraPrinting.BorderSide.Left;
             this.xrLabel12.BorderWidth = 2F;

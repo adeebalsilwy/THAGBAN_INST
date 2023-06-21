@@ -81,18 +81,19 @@ namespace THAGBAN_INST.FORM.FRM_SYSTEM
                         frm_setting inst = new frm_setting();
 
                         inst.navigationFrame1.SelectedPage = inst.nav_page_home;
+                        
                         inst.ShowDialog(this);
 
                          frm_add_emp page = new frm_add_emp();
                         page.btn_save.Text = "تسجيل واعادة تشغيل";
                         page.ShowDialog(this);
                         int emp_id = page.emp_id;
-                        frm_setting user = new frm_setting();
-                        user.emp_id = emp_id;
-                        user.navigationFrame1.SelectedPage = user.nav_page_rouls;
-                        user.ch_admin.Checked = true;
-                        user.ch_sett.Checked = true;
-                        user.ShowDialog(this);
+                        //frm_setting user = new frm_setting();
+                        //user.emp_id = emp_id;
+                        //user.navigationFrame1.SelectedPage = user.nav_page_rouls;
+                        //user.ch_admin.Checked = true;
+                        //user.ch_sett.Checked = true;
+                        //user.ShowDialog(this);
                         Application.Restart();
 
 

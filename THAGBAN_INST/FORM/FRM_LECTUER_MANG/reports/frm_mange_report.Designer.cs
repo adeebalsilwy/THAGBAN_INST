@@ -140,20 +140,18 @@ namespace THAGBAN_INST.FORM.FRM_LECTUER_MANG.reports
             // 
             // gridView2
             // 
-            this.gridView2.Appearance.EvenRow.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.gridView2.Appearance.EvenRow.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gridView2.Appearance.EvenRow.Options.UseBackColor = true;
-            this.gridView2.Appearance.EvenRow.Options.UseFont = true;
-            this.gridView2.Appearance.HeaderPanel.Font = new System.Drawing.Font("ae_AlArabiya", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gridView2.Appearance.FocusedRow.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.gridView2.Appearance.FocusedRow.Options.UseFont = true;
+            this.gridView2.Appearance.HeaderPanel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.gridView2.Appearance.HeaderPanel.Options.UseFont = true;
-            this.gridView2.Appearance.OddRow.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.gridView2.Appearance.OddRow.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gridView2.Appearance.OddRow.Options.UseBackColor = true;
-            this.gridView2.Appearance.OddRow.Options.UseFont = true;
+            this.gridView2.Appearance.HeaderPanel.Options.UseTextOptions = true;
+            this.gridView2.Appearance.HeaderPanel.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridView2.Appearance.HeaderPanel.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridView2.Appearance.Row.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.gridView2.Appearance.Row.Options.UseFont = true;
             this.gridView2.Appearance.Row.Options.UseTextOptions = true;
-            this.gridView2.Appearance.Row.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Near;
-            this.gridView2.Appearance.ViewCaption.Font = new System.Drawing.Font("ae_AlArabiya", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gridView2.Appearance.ViewCaption.Options.UseFont = true;
+            this.gridView2.Appearance.Row.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridView2.Appearance.Row.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.gridView2.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.colSEND_STUD_DATE,
             this.colSEND_STUD_ID,
@@ -332,7 +330,7 @@ namespace THAGBAN_INST.FORM.FRM_LECTUER_MANG.reports
             // 
             this.simpleButton2.AccessibleRole = System.Windows.Forms.AccessibleRole.Border;
             this.simpleButton2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.simpleButton2.Appearance.Font = new System.Drawing.Font("ae_AlArabiya", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.simpleButton2.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.simpleButton2.Appearance.Options.UseBorderColor = true;
             this.simpleButton2.Appearance.Options.UseFont = true;
             this.simpleButton2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton2.ImageOptions.Image")));
@@ -346,11 +344,11 @@ namespace THAGBAN_INST.FORM.FRM_LECTUER_MANG.reports
             // 
             // labelControl1
             // 
-            this.labelControl1.Appearance.Font = new System.Drawing.Font("ae_AlArabiya", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl1.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl1.Appearance.Options.UseFont = true;
             this.labelControl1.Location = new System.Drawing.Point(390, 4);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(32, 22);
+            this.labelControl1.Size = new System.Drawing.Size(26, 20);
             this.labelControl1.TabIndex = 119;
             this.labelControl1.Text = "اللقب";
             // 
@@ -359,42 +357,42 @@ namespace THAGBAN_INST.FORM.FRM_LECTUER_MANG.reports
             this.com_lect.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
             this.com_lect.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.com_lect.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.com_lect.Font = new System.Drawing.Font("ae_AlArabiya", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.com_lect.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.com_lect.FormattingEnabled = true;
             this.com_lect.Location = new System.Drawing.Point(711, 20);
             this.com_lect.Name = "com_lect";
-            this.com_lect.Size = new System.Drawing.Size(185, 41);
+            this.com_lect.Size = new System.Drawing.Size(185, 37);
             this.com_lect.TabIndex = 118;
             this.com_lect.SelectionChangeCommitted += new System.EventHandler(this.com_lect_SelectionChangeCommitted);
             this.com_lect.SelectedValueChanged += new System.EventHandler(this.com_lect_SelectionChangeCommitted);
             // 
             // lbl_lect
             // 
-            this.lbl_lect.Appearance.Font = new System.Drawing.Font("ae_AlArabiya", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_lect.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_lect.Appearance.Options.UseFont = true;
             this.lbl_lect.Location = new System.Drawing.Point(842, 4);
             this.lbl_lect.Name = "lbl_lect";
-            this.lbl_lect.Size = new System.Drawing.Size(48, 19);
+            this.lbl_lect.Size = new System.Drawing.Size(49, 16);
             this.lbl_lect.TabIndex = 117;
             this.lbl_lect.Text = "اسم الدوره";
             // 
             // lbl_l_name
             // 
-            this.lbl_l_name.Appearance.Font = new System.Drawing.Font("ae_AlArabiya", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_l_name.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_l_name.Appearance.Options.UseFont = true;
             this.lbl_l_name.Location = new System.Drawing.Point(331, 5);
             this.lbl_l_name.Name = "lbl_l_name";
-            this.lbl_l_name.Size = new System.Drawing.Size(32, 22);
+            this.lbl_l_name.Size = new System.Drawing.Size(26, 20);
             this.lbl_l_name.TabIndex = 115;
             this.lbl_l_name.Text = "اللقب";
             // 
             // lbl_grou
             // 
-            this.lbl_grou.Appearance.Font = new System.Drawing.Font("ae_AlArabiya", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_grou.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_grou.Appearance.Options.UseFont = true;
             this.lbl_grou.Location = new System.Drawing.Point(628, 3);
             this.lbl_grou.Name = "lbl_grou";
-            this.lbl_grou.Size = new System.Drawing.Size(51, 19);
+            this.lbl_grou.Size = new System.Drawing.Size(48, 16);
             this.lbl_grou.TabIndex = 93;
             this.lbl_grou.Text = "اسم الدفعه";
             // 
@@ -403,11 +401,11 @@ namespace THAGBAN_INST.FORM.FRM_LECTUER_MANG.reports
             this.com_stud.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
             this.com_stud.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.com_stud.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.com_stud.Font = new System.Drawing.Font("ae_AlArabiya", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.com_stud.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.com_stud.FormattingEnabled = true;
             this.com_stud.Location = new System.Drawing.Point(320, 25);
             this.com_stud.Name = "com_stud";
-            this.com_stud.Size = new System.Drawing.Size(227, 34);
+            this.com_stud.Size = new System.Drawing.Size(227, 32);
             this.com_stud.TabIndex = 114;
             this.com_stud.SelectionChangeCommitted += new System.EventHandler(this.com_stud_SelectionChangeCommitted);
             this.com_stud.SelectedValueChanged += new System.EventHandler(this.com_stud_SelectionChangeCommitted);
@@ -417,22 +415,22 @@ namespace THAGBAN_INST.FORM.FRM_LECTUER_MANG.reports
             this.com_group.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
             this.com_group.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.com_group.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.com_group.Font = new System.Drawing.Font("ae_AlArabiya", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.com_group.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.com_group.FormattingEnabled = true;
             this.com_group.Location = new System.Drawing.Point(562, 22);
             this.com_group.Name = "com_group";
-            this.com_group.Size = new System.Drawing.Size(132, 41);
+            this.com_group.Size = new System.Drawing.Size(132, 37);
             this.com_group.TabIndex = 94;
             this.com_group.SelectionChangeCommitted += new System.EventHandler(this.com_group_SelectionChangeCommitted);
             this.com_group.SelectedValueChanged += new System.EventHandler(this.com_group_SelectionChangeCommitted);
             // 
             // lbl_stud
             // 
-            this.lbl_stud.Appearance.Font = new System.Drawing.Font("ae_AlArabiya", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_stud.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_stud.Appearance.Options.UseFont = true;
             this.lbl_stud.Location = new System.Drawing.Point(446, 3);
             this.lbl_stud.Name = "lbl_stud";
-            this.lbl_stud.Size = new System.Drawing.Size(65, 22);
+            this.lbl_stud.Size = new System.Drawing.Size(56, 20);
             this.lbl_stud.TabIndex = 113;
             this.lbl_stud.Text = "اسم الطالب";
             // 

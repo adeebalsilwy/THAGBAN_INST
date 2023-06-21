@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_add_lect_send_stud));
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties1 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties2 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties3 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
@@ -40,8 +41,8 @@
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties10 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties11 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties12 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_add_lect_send_stud));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             this.btn_save = new DevExpress.XtraEditors.SimpleButton();
             this.labelControl11 = new DevExpress.XtraEditors.LabelControl();
@@ -66,7 +67,6 @@
             this.com_stud = new System.Windows.Forms.ComboBox();
             this.labelControl9 = new DevExpress.XtraEditors.LabelControl();
             this.checkEdit1 = new DevExpress.XtraEditors.CheckEdit();
-            this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
             this.panel1.SuspendLayout();
             this.bunifuPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.checkEdit1.Properties)).BeginInit();
@@ -82,6 +82,28 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(519, 58);
             this.panel1.TabIndex = 73;
+            // 
+            // simpleButton2
+            // 
+            this.simpleButton2.AccessibleRole = System.Windows.Forms.AccessibleRole.Border;
+            this.simpleButton2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.simpleButton2.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.simpleButton2.Appearance.Options.UseBorderColor = true;
+            this.simpleButton2.Appearance.Options.UseFont = true;
+            this.simpleButton2.Appearance.Options.UseTextOptions = true;
+            this.simpleButton2.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.simpleButton2.Appearance.TextOptions.Trimming = DevExpress.Utils.Trimming.EllipsisCharacter;
+            this.simpleButton2.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.simpleButton2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton2.ImageOptions.Image")));
+            this.simpleButton2.Location = new System.Drawing.Point(180, 12);
+            this.simpleButton2.Name = "simpleButton2";
+            this.simpleButton2.ShowFocusRectangle = DevExpress.Utils.DefaultBoolean.True;
+            this.simpleButton2.Size = new System.Drawing.Size(136, 43);
+            this.simpleButton2.TabIndex = 105;
+            this.simpleButton2.Text = "حفظ وطباعه";
+            this.simpleButton2.Click += new System.EventHandler(this.simpleButton2_Click);
             // 
             // simpleButton1
             // 
@@ -129,13 +151,13 @@
             // 
             // labelControl11
             // 
-            this.labelControl11.Appearance.Font = new System.Drawing.Font("ae_AlArabiya", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl11.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl11.Appearance.Options.UseFont = true;
             this.labelControl11.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.labelControl11.LineVisible = true;
             this.labelControl11.Location = new System.Drawing.Point(48, 127);
             this.labelControl11.Name = "labelControl11";
-            this.labelControl11.Size = new System.Drawing.Size(71, 24);
+            this.labelControl11.Size = new System.Drawing.Size(62, 22);
             this.labelControl11.TabIndex = 78;
             this.labelControl11.Text = "اسم المدرس";
             // 
@@ -144,11 +166,11 @@
             this.com_emp_name.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
             this.com_emp_name.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.com_emp_name.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.com_emp_name.Font = new System.Drawing.Font("ae_AlArabiya", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.com_emp_name.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.com_emp_name.FormattingEnabled = true;
             this.com_emp_name.Location = new System.Drawing.Point(5, 157);
             this.com_emp_name.Name = "com_emp_name";
-            this.com_emp_name.Size = new System.Drawing.Size(213, 41);
+            this.com_emp_name.Size = new System.Drawing.Size(213, 37);
             this.com_emp_name.TabIndex = 79;
             this.com_emp_name.SelectionChangeCommitted += new System.EventHandler(this.com_emp_name_SelectionChangeCommitted);
             this.com_emp_name.SelectedValueChanged += new System.EventHandler(this.com_emp_name_SelectionChangeCommitted);
@@ -185,21 +207,21 @@
             // 
             // labelControl1
             // 
-            this.labelControl1.Appearance.Font = new System.Drawing.Font("ae_AlArabiya", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl1.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl1.Appearance.Options.UseFont = true;
             this.labelControl1.Location = new System.Drawing.Point(153, 3);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(120, 26);
+            this.labelControl1.Size = new System.Drawing.Size(114, 24);
             this.labelControl1.TabIndex = 43;
             this.labelControl1.Text = "حسابات الطلا ب";
             // 
             // labelControl2
             // 
-            this.labelControl2.Appearance.Font = new System.Drawing.Font("ae_AlArabiya", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl2.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl2.Appearance.Options.UseFont = true;
             this.labelControl2.Location = new System.Drawing.Point(133, 214);
             this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(52, 19);
+            this.labelControl2.Size = new System.Drawing.Size(58, 16);
             this.labelControl2.TabIndex = 82;
             this.labelControl2.Text = "تاربخ القسط";
             // 
@@ -308,21 +330,21 @@
             // 
             // labelControl5
             // 
-            this.labelControl5.Appearance.Font = new System.Drawing.Font("ae_AlArabiya", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl5.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl5.Appearance.Options.UseFont = true;
             this.labelControl5.Location = new System.Drawing.Point(421, 214);
             this.labelControl5.Name = "labelControl5";
-            this.labelControl5.Size = new System.Drawing.Size(48, 19);
+            this.labelControl5.Size = new System.Drawing.Size(53, 16);
             this.labelControl5.TabIndex = 90;
             this.labelControl5.Text = "سعر الدوره";
             // 
             // labelControl3
             // 
-            this.labelControl3.Appearance.Font = new System.Drawing.Font("ae_AlArabiya", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl3.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl3.Appearance.Options.UseFont = true;
             this.labelControl3.Location = new System.Drawing.Point(304, 214);
             this.labelControl3.Name = "labelControl3";
-            this.labelControl3.Size = new System.Drawing.Size(32, 19);
+            this.labelControl3.Size = new System.Drawing.Size(37, 16);
             this.labelControl3.TabIndex = 98;
             this.labelControl3.Text = "المدفوع";
             // 
@@ -406,11 +428,11 @@
             // 
             // labelControl4
             // 
-            this.labelControl4.Appearance.Font = new System.Drawing.Font("ae_AlArabiya", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl4.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl4.Appearance.Options.UseFont = true;
             this.labelControl4.Location = new System.Drawing.Point(440, 302);
             this.labelControl4.Name = "labelControl4";
-            this.labelControl4.Size = new System.Drawing.Size(54, 19);
+            this.labelControl4.Size = new System.Drawing.Size(60, 16);
             this.labelControl4.TabIndex = 100;
             this.labelControl4.Text = "المتبقي عليه ";
             // 
@@ -496,11 +518,11 @@
             this.com_group.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
             this.com_group.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.com_group.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.com_group.Font = new System.Drawing.Font("ae_AlArabiya", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.com_group.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.com_group.FormattingEnabled = true;
             this.com_group.Location = new System.Drawing.Point(247, 167);
             this.com_group.Name = "com_group";
-            this.com_group.Size = new System.Drawing.Size(247, 41);
+            this.com_group.Size = new System.Drawing.Size(247, 37);
             this.com_group.TabIndex = 107;
             this.com_group.SelectionChangeCommitted += new System.EventHandler(this.com_group_SelectionChangeCommitted);
             this.com_group.SelectedValueChanged += new System.EventHandler(this.com_group_SelectionChangeCommitted);
@@ -510,54 +532,54 @@
             this.com_lect.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
             this.com_lect.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.com_lect.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.com_lect.Font = new System.Drawing.Font("ae_AlArabiya", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.com_lect.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.com_lect.FormattingEnabled = true;
             this.com_lect.Location = new System.Drawing.Point(13, 80);
             this.com_lect.Name = "com_lect";
-            this.com_lect.Size = new System.Drawing.Size(208, 41);
+            this.com_lect.Size = new System.Drawing.Size(208, 37);
             this.com_lect.TabIndex = 106;
             this.com_lect.SelectionChangeCommitted += new System.EventHandler(this.com_lect_SelectionChangeCommitted);
             this.com_lect.SelectedValueChanged += new System.EventHandler(this.com_lect_SelectedValueChanged);
             // 
             // labelControl6
             // 
-            this.labelControl6.Appearance.Font = new System.Drawing.Font("ae_AlArabiya", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl6.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl6.Appearance.Options.UseFont = true;
             this.labelControl6.Location = new System.Drawing.Point(196, 55);
             this.labelControl6.Name = "labelControl6";
-            this.labelControl6.Size = new System.Drawing.Size(25, 19);
+            this.labelControl6.Size = new System.Drawing.Size(29, 16);
             this.labelControl6.TabIndex = 108;
             this.labelControl6.Text = "الدوره";
             // 
             // labelControl7
             // 
-            this.labelControl7.Appearance.Font = new System.Drawing.Font("ae_AlArabiya", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl7.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl7.Appearance.Options.UseFont = true;
             this.labelControl7.Location = new System.Drawing.Point(443, 127);
             this.labelControl7.Name = "labelControl7";
-            this.labelControl7.Size = new System.Drawing.Size(51, 19);
+            this.labelControl7.Size = new System.Drawing.Size(48, 16);
             this.labelControl7.TabIndex = 109;
             this.labelControl7.Text = "اسم الدفعه";
             // 
             // labelControl8
             // 
-            this.labelControl8.Appearance.Font = new System.Drawing.Font("ae_AlArabiya", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl8.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl8.Appearance.ForeColor = System.Drawing.Color.Red;
             this.labelControl8.Appearance.Options.UseFont = true;
             this.labelControl8.Appearance.Options.UseForeColor = true;
             this.labelControl8.Location = new System.Drawing.Point(345, 57);
             this.labelControl8.Name = "labelControl8";
-            this.labelControl8.Size = new System.Drawing.Size(5, 22);
+            this.labelControl8.Size = new System.Drawing.Size(4, 20);
             this.labelControl8.TabIndex = 113;
             this.labelControl8.Text = ".";
             // 
             // lbl_l_name
             // 
-            this.lbl_l_name.Appearance.Font = new System.Drawing.Font("ae_AlArabiya", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_l_name.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_l_name.Appearance.Options.UseFont = true;
             this.lbl_l_name.Location = new System.Drawing.Point(383, 57);
             this.lbl_l_name.Name = "lbl_l_name";
-            this.lbl_l_name.Size = new System.Drawing.Size(32, 22);
+            this.lbl_l_name.Size = new System.Drawing.Size(26, 20);
             this.lbl_l_name.TabIndex = 112;
             this.lbl_l_name.Text = "اللقب";
             // 
@@ -566,11 +588,11 @@
             this.com_stud.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
             this.com_stud.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.com_stud.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.com_stud.Font = new System.Drawing.Font("ae_AlArabiya", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.com_stud.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.com_stud.FormattingEnabled = true;
             this.com_stud.Location = new System.Drawing.Point(267, 85);
             this.com_stud.Name = "com_stud";
-            this.com_stud.Size = new System.Drawing.Size(227, 34);
+            this.com_stud.Size = new System.Drawing.Size(227, 32);
             this.com_stud.TabIndex = 111;
             this.com_stud.SelectedIndexChanged += new System.EventHandler(this.com_stud_SelectionChangeCommitted);
             this.com_stud.SelectionChangeCommitted += new System.EventHandler(this.com_stud_SelectionChangeCommitted);
@@ -578,11 +600,11 @@
             // 
             // labelControl9
             // 
-            this.labelControl9.Appearance.Font = new System.Drawing.Font("ae_AlArabiya", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl9.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl9.Appearance.Options.UseFont = true;
             this.labelControl9.Location = new System.Drawing.Point(442, 57);
             this.labelControl9.Name = "labelControl9";
-            this.labelControl9.Size = new System.Drawing.Size(65, 22);
+            this.labelControl9.Size = new System.Drawing.Size(56, 20);
             this.labelControl9.TabIndex = 110;
             this.labelControl9.Text = "اسم الطالب";
             // 
@@ -592,31 +614,9 @@
             this.checkEdit1.Name = "checkEdit1";
             this.checkEdit1.Properties.Caption = "تحديد المدرس";
             this.checkEdit1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.checkEdit1.Size = new System.Drawing.Size(75, 18);
+            this.checkEdit1.Size = new System.Drawing.Size(75, 20);
             this.checkEdit1.TabIndex = 114;
             this.checkEdit1.CheckedChanged += new System.EventHandler(this.checkEdit1_CheckedChanged);
-            // 
-            // simpleButton2
-            // 
-            this.simpleButton2.AccessibleRole = System.Windows.Forms.AccessibleRole.Border;
-            this.simpleButton2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.simpleButton2.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.simpleButton2.Appearance.Options.UseBorderColor = true;
-            this.simpleButton2.Appearance.Options.UseFont = true;
-            this.simpleButton2.Appearance.Options.UseTextOptions = true;
-            this.simpleButton2.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.simpleButton2.Appearance.TextOptions.Trimming = DevExpress.Utils.Trimming.EllipsisCharacter;
-            this.simpleButton2.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.simpleButton2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton2.ImageOptions.Image")));
-            this.simpleButton2.Location = new System.Drawing.Point(180, 12);
-            this.simpleButton2.Name = "simpleButton2";
-            this.simpleButton2.ShowFocusRectangle = DevExpress.Utils.DefaultBoolean.True;
-            this.simpleButton2.Size = new System.Drawing.Size(136, 43);
-            this.simpleButton2.TabIndex = 105;
-            this.simpleButton2.Text = "حفظ وطباعه";
-            this.simpleButton2.Click += new System.EventHandler(this.simpleButton2_Click);
             // 
             // frm_add_lect_send_stud
             // 

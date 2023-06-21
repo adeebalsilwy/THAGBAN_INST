@@ -29,14 +29,14 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_add_users));
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties9 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties10 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties11 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties12 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties13 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties14 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties15 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties16 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties1 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties2 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties3 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties4 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties5 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties6 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties7 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties8 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             this.com_dept = new System.Windows.Forms.ComboBox();
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
@@ -66,11 +66,11 @@
             this.com_dept.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
             this.com_dept.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.com_dept.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.com_dept.Font = new System.Drawing.Font("ae_AlArabiya", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.com_dept.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.com_dept.FormattingEnabled = true;
             this.com_dept.Location = new System.Drawing.Point(57, 68);
             this.com_dept.Name = "com_dept";
-            this.com_dept.Size = new System.Drawing.Size(226, 41);
+            this.com_dept.Size = new System.Drawing.Size(226, 37);
             this.com_dept.TabIndex = 59;
             this.com_dept.SelectedIndexChanged += new System.EventHandler(this.com_dept_SelectionChangeCommitted);
             this.com_dept.SelectionChangeCommitted += new System.EventHandler(this.com_dept_SelectionChangeCommitted);
@@ -78,31 +78,31 @@
             // 
             // labelControl4
             // 
-            this.labelControl4.Appearance.Font = new System.Drawing.Font("ae_AlArabiya", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl4.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl4.Appearance.Options.UseFont = true;
             this.labelControl4.Location = new System.Drawing.Point(298, 85);
             this.labelControl4.Name = "labelControl4";
-            this.labelControl4.Size = new System.Drawing.Size(68, 22);
+            this.labelControl4.Size = new System.Drawing.Size(52, 20);
             this.labelControl4.TabIndex = 58;
             this.labelControl4.Text = "اسم القسم ";
             // 
             // labelControl3
             // 
-            this.labelControl3.Appearance.Font = new System.Drawing.Font("ae_AlArabiya", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl3.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl3.Appearance.Options.UseFont = true;
             this.labelControl3.Location = new System.Drawing.Point(303, 356);
             this.labelControl3.Name = "labelControl3";
-            this.labelControl3.Size = new System.Drawing.Size(43, 19);
+            this.labelControl3.Size = new System.Drawing.Size(46, 16);
             this.labelControl3.TabIndex = 57;
             this.labelControl3.Text = "كلمه السر";
             // 
             // labelControl2
             // 
-            this.labelControl2.Appearance.Font = new System.Drawing.Font("ae_AlArabiya", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl2.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl2.Appearance.Options.UseFont = true;
             this.labelControl2.Location = new System.Drawing.Point(294, 265);
             this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(66, 19);
+            this.labelControl2.Size = new System.Drawing.Size(63, 16);
             this.labelControl2.TabIndex = 54;
             this.labelControl2.Text = "اسم المستخدم";
             // 
@@ -111,11 +111,11 @@
             this.com_emp.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
             this.com_emp.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.com_emp.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.com_emp.Font = new System.Drawing.Font("ae_AlArabiya", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.com_emp.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.com_emp.FormattingEnabled = true;
             this.com_emp.Location = new System.Drawing.Point(57, 193);
             this.com_emp.Name = "com_emp";
-            this.com_emp.Size = new System.Drawing.Size(226, 41);
+            this.com_emp.Size = new System.Drawing.Size(226, 37);
             this.com_emp.TabIndex = 62;
             this.com_emp.SelectedIndexChanged += new System.EventHandler(this.com_emp_SelectionChangeCommitted);
             this.com_emp.SelectionChangeCommitted += new System.EventHandler(this.com_emp_SelectionChangeCommitted);
@@ -123,21 +123,21 @@
             // 
             // labelControl5
             // 
-            this.labelControl5.Appearance.Font = new System.Drawing.Font("ae_AlArabiya", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl5.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl5.Appearance.Options.UseFont = true;
             this.labelControl5.Location = new System.Drawing.Point(289, 204);
             this.labelControl5.Name = "labelControl5";
-            this.labelControl5.Size = new System.Drawing.Size(71, 22);
+            this.labelControl5.Size = new System.Drawing.Size(63, 20);
             this.labelControl5.TabIndex = 61;
             this.labelControl5.Text = "اسم الموظف";
             // 
             // lbl_job_type
             // 
-            this.lbl_job_type.Appearance.Font = new System.Drawing.Font("ae_AlArabiya", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_job_type.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_job_type.Appearance.Options.UseFont = true;
             this.lbl_job_type.Location = new System.Drawing.Point(157, 258);
             this.lbl_job_type.Name = "lbl_job_type";
-            this.lbl_job_type.Size = new System.Drawing.Size(0, 19);
+            this.lbl_job_type.Size = new System.Drawing.Size(0, 16);
             this.lbl_job_type.TabIndex = 64;
             // 
             // bunifuPanel1
@@ -234,11 +234,11 @@
             // 
             // labelControl1
             // 
-            this.labelControl1.Appearance.Font = new System.Drawing.Font("ae_AlArabiya", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl1.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl1.Appearance.Options.UseFont = true;
             this.labelControl1.Location = new System.Drawing.Point(90, 14);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(247, 26);
+            this.labelControl1.Size = new System.Drawing.Size(219, 24);
             this.labelControl1.TabIndex = 43;
             this.labelControl1.Text = "شاشه اضافه وتعديل المستخدمين";
             // 
@@ -277,26 +277,26 @@
             this.txt_user_pass.Modified = false;
             this.txt_user_pass.Multiline = true;
             this.txt_user_pass.Name = "txt_user_pass";
-            stateProperties9.BorderColor = System.Drawing.Color.DodgerBlue;
-            stateProperties9.FillColor = System.Drawing.Color.Empty;
-            stateProperties9.ForeColor = System.Drawing.Color.Empty;
-            stateProperties9.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txt_user_pass.OnActiveState = stateProperties9;
-            stateProperties10.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            stateProperties10.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            stateProperties10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            stateProperties10.PlaceholderForeColor = System.Drawing.Color.DarkGray;
-            this.txt_user_pass.OnDisabledState = stateProperties10;
-            stateProperties11.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            stateProperties11.FillColor = System.Drawing.Color.Empty;
-            stateProperties11.ForeColor = System.Drawing.Color.Empty;
-            stateProperties11.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txt_user_pass.OnHoverState = stateProperties11;
-            stateProperties12.BorderColor = System.Drawing.Color.Black;
-            stateProperties12.FillColor = System.Drawing.Color.White;
-            stateProperties12.ForeColor = System.Drawing.Color.Empty;
-            stateProperties12.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txt_user_pass.OnIdleState = stateProperties12;
+            stateProperties1.BorderColor = System.Drawing.Color.DodgerBlue;
+            stateProperties1.FillColor = System.Drawing.Color.Empty;
+            stateProperties1.ForeColor = System.Drawing.Color.Empty;
+            stateProperties1.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txt_user_pass.OnActiveState = stateProperties1;
+            stateProperties2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            stateProperties2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            stateProperties2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            stateProperties2.PlaceholderForeColor = System.Drawing.Color.DarkGray;
+            this.txt_user_pass.OnDisabledState = stateProperties2;
+            stateProperties3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            stateProperties3.FillColor = System.Drawing.Color.Empty;
+            stateProperties3.ForeColor = System.Drawing.Color.Empty;
+            stateProperties3.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txt_user_pass.OnHoverState = stateProperties3;
+            stateProperties4.BorderColor = System.Drawing.Color.Black;
+            stateProperties4.FillColor = System.Drawing.Color.White;
+            stateProperties4.ForeColor = System.Drawing.Color.Empty;
+            stateProperties4.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txt_user_pass.OnIdleState = stateProperties4;
             this.txt_user_pass.Padding = new System.Windows.Forms.Padding(3);
             this.txt_user_pass.PasswordChar = '\0';
             this.txt_user_pass.PlaceholderForeColor = System.Drawing.Color.Silver;
@@ -335,7 +335,7 @@
             this.txt_user_name.BorderThickness = 3;
             this.txt_user_name.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txt_user_name.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txt_user_name.DefaultFont = new System.Drawing.Font("ae_AlArabiya", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.txt_user_name.DefaultFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.txt_user_name.DefaultText = "";
             this.txt_user_name.FillColor = System.Drawing.Color.White;
             this.txt_user_name.HideSelection = true;
@@ -351,26 +351,26 @@
             this.txt_user_name.Modified = false;
             this.txt_user_name.Multiline = false;
             this.txt_user_name.Name = "txt_user_name";
-            stateProperties13.BorderColor = System.Drawing.Color.DodgerBlue;
-            stateProperties13.FillColor = System.Drawing.Color.Empty;
-            stateProperties13.ForeColor = System.Drawing.Color.Empty;
-            stateProperties13.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txt_user_name.OnActiveState = stateProperties13;
-            stateProperties14.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            stateProperties14.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            stateProperties14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            stateProperties14.PlaceholderForeColor = System.Drawing.Color.DarkGray;
-            this.txt_user_name.OnDisabledState = stateProperties14;
-            stateProperties15.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            stateProperties15.FillColor = System.Drawing.Color.Empty;
-            stateProperties15.ForeColor = System.Drawing.Color.Empty;
-            stateProperties15.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txt_user_name.OnHoverState = stateProperties15;
-            stateProperties16.BorderColor = System.Drawing.Color.Black;
-            stateProperties16.FillColor = System.Drawing.Color.White;
-            stateProperties16.ForeColor = System.Drawing.Color.Empty;
-            stateProperties16.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txt_user_name.OnIdleState = stateProperties16;
+            stateProperties5.BorderColor = System.Drawing.Color.DodgerBlue;
+            stateProperties5.FillColor = System.Drawing.Color.Empty;
+            stateProperties5.ForeColor = System.Drawing.Color.Empty;
+            stateProperties5.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txt_user_name.OnActiveState = stateProperties5;
+            stateProperties6.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            stateProperties6.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            stateProperties6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            stateProperties6.PlaceholderForeColor = System.Drawing.Color.DarkGray;
+            this.txt_user_name.OnDisabledState = stateProperties6;
+            stateProperties7.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            stateProperties7.FillColor = System.Drawing.Color.Empty;
+            stateProperties7.ForeColor = System.Drawing.Color.Empty;
+            stateProperties7.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txt_user_name.OnHoverState = stateProperties7;
+            stateProperties8.BorderColor = System.Drawing.Color.Black;
+            stateProperties8.FillColor = System.Drawing.Color.White;
+            stateProperties8.ForeColor = System.Drawing.Color.Empty;
+            stateProperties8.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txt_user_name.OnIdleState = stateProperties8;
             this.txt_user_name.Padding = new System.Windows.Forms.Padding(3);
             this.txt_user_name.PasswordChar = '\0';
             this.txt_user_name.PlaceholderForeColor = System.Drawing.Color.DarkGray;
@@ -381,7 +381,7 @@
             this.txt_user_name.SelectionLength = 0;
             this.txt_user_name.SelectionStart = 0;
             this.txt_user_name.ShortcutsEnabled = true;
-            this.txt_user_name.Size = new System.Drawing.Size(319, 54);
+            this.txt_user_name.Size = new System.Drawing.Size(319, 51);
             this.txt_user_name.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txt_user_name.TabIndex = 56;
             this.txt_user_name.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -415,13 +415,13 @@
             // 
             // labelControl9
             // 
-            this.labelControl9.Appearance.Font = new System.Drawing.Font("ae_AlArabiya", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl9.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl9.Appearance.Options.UseFont = true;
             this.labelControl9.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.labelControl9.LineVisible = true;
             this.labelControl9.Location = new System.Drawing.Point(300, 140);
             this.labelControl9.Name = "labelControl9";
-            this.labelControl9.Size = new System.Drawing.Size(46, 24);
+            this.labelControl9.Size = new System.Drawing.Size(41, 22);
             this.labelControl9.TabIndex = 90;
             this.labelControl9.Text = "الوظيفه";
             // 
@@ -430,11 +430,11 @@
             this.com_job.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
             this.com_job.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.com_job.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.com_job.Font = new System.Drawing.Font("ae_AlArabiya", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.com_job.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.com_job.FormattingEnabled = true;
             this.com_job.Location = new System.Drawing.Point(57, 130);
             this.com_job.Name = "com_job";
-            this.com_job.Size = new System.Drawing.Size(226, 41);
+            this.com_job.Size = new System.Drawing.Size(226, 37);
             this.com_job.TabIndex = 89;
             this.com_job.SelectedIndexChanged += new System.EventHandler(this.com_job_SelectionChangeCommitted);
             this.com_job.SelectionChangeCommitted += new System.EventHandler(this.com_job_SelectionChangeCommitted);

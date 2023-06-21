@@ -49,6 +49,14 @@
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties18 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties19 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties20 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties21 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties22 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties23 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties24 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties25 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties26 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties27 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties28 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
@@ -79,9 +87,33 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.ch_mal = new System.Windows.Forms.RadioButton();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.txt_password = new Bunifu.UI.WinForms.BunifuTextBox();
+            this.txt_user_name = new Bunifu.UI.WinForms.BunifuTextBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.labelControl11 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl12 = new DevExpress.XtraEditors.LabelControl();
+            this.ch_frm_emp = new DevExpress.XtraEditors.CheckEdit();
+            this.ch_frm_stud = new DevExpress.XtraEditors.CheckEdit();
+            this.ch_frm_lect = new DevExpress.XtraEditors.CheckEdit();
+            this.ch_frm_mony = new DevExpress.XtraEditors.CheckEdit();
+            this.ch_frm_contr = new DevExpress.XtraEditors.CheckEdit();
+            this.ch_frm_buy = new DevExpress.XtraEditors.CheckEdit();
+            this.ch_roule = new DevExpress.XtraEditors.CheckEdit();
+            this.ch_setting = new DevExpress.XtraEditors.CheckEdit();
             this.panel1.SuspendLayout();
             this.bunifuPanel2.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            this.panel2.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ch_frm_emp.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ch_frm_stud.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ch_frm_lect.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ch_frm_mony.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ch_frm_contr.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ch_frm_buy.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ch_roule.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ch_setting.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // labelControl2
@@ -202,7 +234,7 @@
             this.panel1.Controls.Add(this.simpleButton1);
             this.panel1.Controls.Add(this.btn_save);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 369);
+            this.panel1.Location = new System.Drawing.Point(0, 607);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(695, 58);
             this.panel1.TabIndex = 73;
@@ -302,7 +334,7 @@
             this.simpleButton3.Location = new System.Drawing.Point(12, 360);
             this.simpleButton3.Name = "simpleButton3";
             this.simpleButton3.ShowFocusRectangle = DevExpress.Utils.DefaultBoolean.True;
-            this.simpleButton3.Size = new System.Drawing.Size(44, 41);
+            this.simpleButton3.Size = new System.Drawing.Size(44, 37);
             this.simpleButton3.TabIndex = 7;
             this.simpleButton3.Click += new System.EventHandler(this.simpleButton3_Click);
             this.simpleButton3.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_emp_name_KeyDown);
@@ -324,7 +356,7 @@
             this.btn_list_dept.Location = new System.Drawing.Point(365, 360);
             this.btn_list_dept.Name = "btn_list_dept";
             this.btn_list_dept.ShowFocusRectangle = DevExpress.Utils.DefaultBoolean.True;
-            this.btn_list_dept.Size = new System.Drawing.Size(44, 41);
+            this.btn_list_dept.Size = new System.Drawing.Size(44, 48);
             this.btn_list_dept.TabIndex = 4;
             this.btn_list_dept.Click += new System.EventHandler(this.btn_list_dept_Click);
             this.btn_list_dept.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_emp_name_KeyDown);
@@ -382,7 +414,7 @@
             stateProperties4.ForeColor = System.Drawing.Color.Empty;
             stateProperties4.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.txt_emp_salary.OnIdleState = stateProperties4;
-            this.txt_emp_salary.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.txt_emp_salary.Padding = new System.Windows.Forms.Padding(3);
             this.txt_emp_salary.PasswordChar = '\0';
             this.txt_emp_salary.PlaceholderForeColor = System.Drawing.Color.DarkGray;
             this.txt_emp_salary.PlaceholderText = "الراتب الخاص بالموظف";
@@ -486,7 +518,7 @@
             stateProperties8.ForeColor = System.Drawing.Color.Empty;
             stateProperties8.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.txt_emp_desc.OnIdleState = stateProperties8;
-            this.txt_emp_desc.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.txt_emp_desc.Padding = new System.Windows.Forms.Padding(3);
             this.txt_emp_desc.PasswordChar = '\0';
             this.txt_emp_desc.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.txt_emp_desc.PlaceholderText = "هل لديك ملاحضات اكتبها";
@@ -561,7 +593,7 @@
             stateProperties12.ForeColor = System.Drawing.Color.Empty;
             stateProperties12.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.txt_emp_address.OnIdleState = stateProperties12;
-            this.txt_emp_address.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.txt_emp_address.Padding = new System.Windows.Forms.Padding(3);
             this.txt_emp_address.PasswordChar = '\0';
             this.txt_emp_address.PlaceholderForeColor = System.Drawing.Color.DarkGray;
             this.txt_emp_address.PlaceholderText = "ادخل عنوان الموظف";
@@ -636,7 +668,7 @@
             stateProperties16.ForeColor = System.Drawing.Color.Empty;
             stateProperties16.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.txt_emp_phone.OnIdleState = stateProperties16;
-            this.txt_emp_phone.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.txt_emp_phone.Padding = new System.Windows.Forms.Padding(3);
             this.txt_emp_phone.PasswordChar = '\0';
             this.txt_emp_phone.PlaceholderForeColor = System.Drawing.Color.DarkGray;
             this.txt_emp_phone.PlaceholderText = "ادخل رقم الهاتف";
@@ -711,7 +743,7 @@
             stateProperties20.ForeColor = System.Drawing.Color.Empty;
             stateProperties20.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.txt_emp_name.OnIdleState = stateProperties20;
-            this.txt_emp_name.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.txt_emp_name.Padding = new System.Windows.Forms.Padding(3);
             this.txt_emp_name.PasswordChar = '\0';
             this.txt_emp_name.PlaceholderForeColor = System.Drawing.Color.DarkGray;
             this.txt_emp_name.PlaceholderText = "ادخل اسم الموظف";
@@ -810,11 +842,293 @@
             this.ch_mal.CheckedChanged += new System.EventHandler(this.ch_mal_CheckedChanged_2);
             this.ch_mal.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_emp_name_KeyDown);
             // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.labelControl12);
+            this.panel2.Controls.Add(this.labelControl11);
+            this.panel2.Controls.Add(this.txt_password);
+            this.panel2.Controls.Add(this.txt_user_name);
+            this.panel2.Controls.Add(this.groupBox2);
+            this.panel2.Enabled = false;
+            this.panel2.Location = new System.Drawing.Point(18, 440);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(637, 161);
+            this.panel2.TabIndex = 81;
+            // 
+            // txt_password
+            // 
+            this.txt_password.AcceptsReturn = false;
+            this.txt_password.AcceptsTab = false;
+            this.txt_password.AnimationSpeed = 200;
+            this.txt_password.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+            this.txt_password.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+            this.txt_password.BackColor = System.Drawing.Color.Transparent;
+            this.txt_password.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("txt_password.BackgroundImage")));
+            this.txt_password.BorderColorActive = System.Drawing.Color.DodgerBlue;
+            this.txt_password.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.txt_password.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.txt_password.BorderColorIdle = System.Drawing.Color.Black;
+            this.txt_password.BorderRadius = 8;
+            this.txt_password.BorderThickness = 3;
+            this.txt_password.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
+            this.txt_password.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txt_password.DefaultFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.txt_password.DefaultText = "";
+            this.txt_password.FillColor = System.Drawing.Color.White;
+            this.txt_password.HideSelection = true;
+            this.txt_password.IconLeft = null;
+            this.txt_password.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
+            this.txt_password.IconPadding = 10;
+            this.txt_password.IconRight = null;
+            this.txt_password.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
+            this.txt_password.Lines = new string[0];
+            this.txt_password.Location = new System.Drawing.Point(23, 3);
+            this.txt_password.MaxLength = 32767;
+            this.txt_password.MinimumSize = new System.Drawing.Size(1, 1);
+            this.txt_password.Modified = false;
+            this.txt_password.Multiline = false;
+            this.txt_password.Name = "txt_password";
+            stateProperties21.BorderColor = System.Drawing.Color.DodgerBlue;
+            stateProperties21.FillColor = System.Drawing.Color.Empty;
+            stateProperties21.ForeColor = System.Drawing.Color.Empty;
+            stateProperties21.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txt_password.OnActiveState = stateProperties21;
+            stateProperties22.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            stateProperties22.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            stateProperties22.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            stateProperties22.PlaceholderForeColor = System.Drawing.Color.DarkGray;
+            this.txt_password.OnDisabledState = stateProperties22;
+            stateProperties23.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            stateProperties23.FillColor = System.Drawing.Color.Empty;
+            stateProperties23.ForeColor = System.Drawing.Color.Empty;
+            stateProperties23.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txt_password.OnHoverState = stateProperties23;
+            stateProperties24.BorderColor = System.Drawing.Color.Black;
+            stateProperties24.FillColor = System.Drawing.Color.White;
+            stateProperties24.ForeColor = System.Drawing.Color.Empty;
+            stateProperties24.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txt_password.OnIdleState = stateProperties24;
+            this.txt_password.Padding = new System.Windows.Forms.Padding(3);
+            this.txt_password.PasswordChar = '\0';
+            this.txt_password.PlaceholderForeColor = System.Drawing.Color.DarkGray;
+            this.txt_password.PlaceholderText = "ادخل كلمه المرور";
+            this.txt_password.ReadOnly = false;
+            this.txt_password.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txt_password.SelectedText = "";
+            this.txt_password.SelectionLength = 0;
+            this.txt_password.SelectionStart = 0;
+            this.txt_password.ShortcutsEnabled = true;
+            this.txt_password.Size = new System.Drawing.Size(205, 51);
+            this.txt_password.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
+            this.txt_password.TabIndex = 85;
+            this.txt_password.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txt_password.TextMarginBottom = 0;
+            this.txt_password.TextMarginLeft = 3;
+            this.txt_password.TextMarginTop = 0;
+            this.txt_password.TextPlaceholder = "ادخل كلمه المرور";
+            this.txt_password.UseSystemPasswordChar = false;
+            this.txt_password.WordWrap = true;
+            // 
+            // txt_user_name
+            // 
+            this.txt_user_name.AcceptsReturn = false;
+            this.txt_user_name.AcceptsTab = false;
+            this.txt_user_name.AnimationSpeed = 200;
+            this.txt_user_name.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+            this.txt_user_name.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+            this.txt_user_name.BackColor = System.Drawing.Color.Transparent;
+            this.txt_user_name.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("txt_user_name.BackgroundImage")));
+            this.txt_user_name.BorderColorActive = System.Drawing.Color.DodgerBlue;
+            this.txt_user_name.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.txt_user_name.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.txt_user_name.BorderColorIdle = System.Drawing.Color.Black;
+            this.txt_user_name.BorderRadius = 8;
+            this.txt_user_name.BorderThickness = 3;
+            this.txt_user_name.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
+            this.txt_user_name.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txt_user_name.DefaultFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.txt_user_name.DefaultText = "";
+            this.txt_user_name.FillColor = System.Drawing.Color.White;
+            this.txt_user_name.HideSelection = true;
+            this.txt_user_name.IconLeft = null;
+            this.txt_user_name.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
+            this.txt_user_name.IconPadding = 10;
+            this.txt_user_name.IconRight = null;
+            this.txt_user_name.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
+            this.txt_user_name.Lines = new string[0];
+            this.txt_user_name.Location = new System.Drawing.Point(324, 4);
+            this.txt_user_name.MaxLength = 32767;
+            this.txt_user_name.MinimumSize = new System.Drawing.Size(1, 1);
+            this.txt_user_name.Modified = false;
+            this.txt_user_name.Multiline = false;
+            this.txt_user_name.Name = "txt_user_name";
+            stateProperties25.BorderColor = System.Drawing.Color.DodgerBlue;
+            stateProperties25.FillColor = System.Drawing.Color.Empty;
+            stateProperties25.ForeColor = System.Drawing.Color.Empty;
+            stateProperties25.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txt_user_name.OnActiveState = stateProperties25;
+            stateProperties26.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            stateProperties26.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            stateProperties26.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            stateProperties26.PlaceholderForeColor = System.Drawing.Color.DarkGray;
+            this.txt_user_name.OnDisabledState = stateProperties26;
+            stateProperties27.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            stateProperties27.FillColor = System.Drawing.Color.Empty;
+            stateProperties27.ForeColor = System.Drawing.Color.Empty;
+            stateProperties27.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txt_user_name.OnHoverState = stateProperties27;
+            stateProperties28.BorderColor = System.Drawing.Color.Black;
+            stateProperties28.FillColor = System.Drawing.Color.White;
+            stateProperties28.ForeColor = System.Drawing.Color.Empty;
+            stateProperties28.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txt_user_name.OnIdleState = stateProperties28;
+            this.txt_user_name.Padding = new System.Windows.Forms.Padding(3);
+            this.txt_user_name.PasswordChar = '\0';
+            this.txt_user_name.PlaceholderForeColor = System.Drawing.Color.DarkGray;
+            this.txt_user_name.PlaceholderText = "ادخل اسم المستخدم";
+            this.txt_user_name.ReadOnly = false;
+            this.txt_user_name.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txt_user_name.SelectedText = "";
+            this.txt_user_name.SelectionLength = 0;
+            this.txt_user_name.SelectionStart = 0;
+            this.txt_user_name.ShortcutsEnabled = true;
+            this.txt_user_name.Size = new System.Drawing.Size(205, 51);
+            this.txt_user_name.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
+            this.txt_user_name.TabIndex = 84;
+            this.txt_user_name.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txt_user_name.TextMarginBottom = 0;
+            this.txt_user_name.TextMarginLeft = 3;
+            this.txt_user_name.TextMarginTop = 0;
+            this.txt_user_name.TextPlaceholder = "ادخل اسم المستخدم";
+            this.txt_user_name.UseSystemPasswordChar = false;
+            this.txt_user_name.WordWrap = true;
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.ch_setting);
+            this.groupBox2.Controls.Add(this.ch_frm_buy);
+            this.groupBox2.Controls.Add(this.ch_frm_contr);
+            this.groupBox2.Controls.Add(this.ch_frm_mony);
+            this.groupBox2.Controls.Add(this.ch_frm_lect);
+            this.groupBox2.Controls.Add(this.ch_frm_stud);
+            this.groupBox2.Controls.Add(this.ch_frm_emp);
+            this.groupBox2.Location = new System.Drawing.Point(9, 61);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.groupBox2.Size = new System.Drawing.Size(618, 97);
+            this.groupBox2.TabIndex = 83;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "صلاحيات المستخدم";
+            // 
+            // labelControl11
+            // 
+            this.labelControl11.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl11.Appearance.Options.UseFont = true;
+            this.labelControl11.Location = new System.Drawing.Point(542, 21);
+            this.labelControl11.Name = "labelControl11";
+            this.labelControl11.Size = new System.Drawing.Size(63, 16);
+            this.labelControl11.TabIndex = 82;
+            this.labelControl11.Text = "اسم المتسخدم";
+            // 
+            // labelControl12
+            // 
+            this.labelControl12.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl12.Appearance.Options.UseFont = true;
+            this.labelControl12.Location = new System.Drawing.Point(253, 21);
+            this.labelControl12.Name = "labelControl12";
+            this.labelControl12.Size = new System.Drawing.Size(55, 16);
+            this.labelControl12.TabIndex = 86;
+            this.labelControl12.Text = "كلمه المرور";
+            // 
+            // ch_frm_emp
+            // 
+            this.ch_frm_emp.Location = new System.Drawing.Point(486, 21);
+            this.ch_frm_emp.Name = "ch_frm_emp";
+            this.ch_frm_emp.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
+            this.ch_frm_emp.Properties.Appearance.Options.UseFont = true;
+            this.ch_frm_emp.Properties.Caption = "شؤون الموظفين";
+            this.ch_frm_emp.Size = new System.Drawing.Size(117, 20);
+            this.ch_frm_emp.TabIndex = 88;
+            // 
+            // ch_frm_stud
+            // 
+            this.ch_frm_stud.Location = new System.Drawing.Point(311, 21);
+            this.ch_frm_stud.Name = "ch_frm_stud";
+            this.ch_frm_stud.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
+            this.ch_frm_stud.Properties.Appearance.Options.UseFont = true;
+            this.ch_frm_stud.Properties.Caption = "شؤون  الطلاب";
+            this.ch_frm_stud.Size = new System.Drawing.Size(117, 20);
+            this.ch_frm_stud.TabIndex = 89;
+            // 
+            // ch_frm_lect
+            // 
+            this.ch_frm_lect.Location = new System.Drawing.Point(153, 21);
+            this.ch_frm_lect.Name = "ch_frm_lect";
+            this.ch_frm_lect.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
+            this.ch_frm_lect.Properties.Appearance.Options.UseFont = true;
+            this.ch_frm_lect.Properties.Caption = "الدورات الخارجيه ";
+            this.ch_frm_lect.Size = new System.Drawing.Size(117, 20);
+            this.ch_frm_lect.TabIndex = 90;
+            // 
+            // ch_frm_mony
+            // 
+            this.ch_frm_mony.Location = new System.Drawing.Point(486, 71);
+            this.ch_frm_mony.Name = "ch_frm_mony";
+            this.ch_frm_mony.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
+            this.ch_frm_mony.Properties.Appearance.Options.UseFont = true;
+            this.ch_frm_mony.Properties.Caption = "الماليه";
+            this.ch_frm_mony.Size = new System.Drawing.Size(117, 20);
+            this.ch_frm_mony.TabIndex = 91;
+            // 
+            // ch_frm_contr
+            // 
+            this.ch_frm_contr.Location = new System.Drawing.Point(311, 71);
+            this.ch_frm_contr.Name = "ch_frm_contr";
+            this.ch_frm_contr.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
+            this.ch_frm_contr.Properties.Appearance.Options.UseFont = true;
+            this.ch_frm_contr.Properties.Caption = "الكنترول";
+            this.ch_frm_contr.Size = new System.Drawing.Size(117, 20);
+            this.ch_frm_contr.TabIndex = 92;
+            // 
+            // ch_frm_buy
+            // 
+            this.ch_frm_buy.Location = new System.Drawing.Point(109, 71);
+            this.ch_frm_buy.Name = "ch_frm_buy";
+            this.ch_frm_buy.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
+            this.ch_frm_buy.Properties.Appearance.Options.UseFont = true;
+            this.ch_frm_buy.Properties.Caption = "المشتريات المخازن";
+            this.ch_frm_buy.Size = new System.Drawing.Size(161, 20);
+            this.ch_frm_buy.TabIndex = 93;
+            // 
+            // ch_roule
+            // 
+            this.ch_roule.Location = new System.Drawing.Point(333, 412);
+            this.ch_roule.Name = "ch_roule";
+            this.ch_roule.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
+            this.ch_roule.Properties.Appearance.Options.UseFont = true;
+            this.ch_roule.Properties.Caption = "هل تريد منح الموظف صلاحيات الوصول للنظام";
+            this.ch_roule.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.ch_roule.Size = new System.Drawing.Size(312, 20);
+            this.ch_roule.TabIndex = 94;
+            this.ch_roule.CheckedChanged += new System.EventHandler(this.ch_roule_CheckedChanged);
+            // 
+            // ch_setting
+            // 
+            this.ch_setting.Location = new System.Drawing.Point(2, 21);
+            this.ch_setting.Name = "ch_setting";
+            this.ch_setting.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
+            this.ch_setting.Properties.Appearance.Options.UseFont = true;
+            this.ch_setting.Properties.Caption = "الاعدادات";
+            this.ch_setting.Size = new System.Drawing.Size(117, 20);
+            this.ch_setting.TabIndex = 94;
+            // 
             // frm_add_emp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(695, 427);
+            this.ClientSize = new System.Drawing.Size(695, 665);
+            this.Controls.Add(this.ch_roule);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.simpleButton3);
             this.Controls.Add(this.btn_list_dept);
@@ -850,6 +1164,17 @@
             this.bunifuPanel2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.ch_frm_emp.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ch_frm_stud.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ch_frm_lect.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ch_frm_mony.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ch_frm_contr.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ch_frm_buy.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ch_roule.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ch_setting.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -887,5 +1212,19 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.RadioButton ch_mal;
         private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.Panel panel2;
+        private DevExpress.XtraEditors.LabelControl labelControl12;
+        private DevExpress.XtraEditors.LabelControl labelControl11;
+        public Bunifu.UI.WinForms.BunifuTextBox txt_password;
+        public Bunifu.UI.WinForms.BunifuTextBox txt_user_name;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private DevExpress.XtraEditors.CheckEdit ch_frm_buy;
+        private DevExpress.XtraEditors.CheckEdit ch_frm_contr;
+        private DevExpress.XtraEditors.CheckEdit ch_frm_mony;
+        private DevExpress.XtraEditors.CheckEdit ch_frm_lect;
+        private DevExpress.XtraEditors.CheckEdit ch_frm_stud;
+        private DevExpress.XtraEditors.CheckEdit ch_frm_emp;
+        private DevExpress.XtraEditors.CheckEdit ch_roule;
+        private DevExpress.XtraEditors.CheckEdit ch_setting;
     }
 }

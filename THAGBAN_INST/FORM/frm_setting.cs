@@ -16,6 +16,7 @@ using System.Data.Entity.Migrations;
 using DevExpress.ClipboardSource.SpreadsheetML;
 using DevExpress.Utils.About;
 using static DevExpress.XtraEditors.Mask.MaskSettings;
+using THAGBAN_INST.Properties;
 
 namespace THAGBAN_INST.FORM
 {
@@ -185,6 +186,8 @@ namespace THAGBAN_INST.FORM
                     methods.data = list.FirstOrDefault().INST_LOGO;
                     txt_totoal_inst.Text= list.FirstOrDefault().INST_TOTAL;
                     txt_inst_admin.Text= list.FirstOrDefault().INST_ADMIN;
+                    txt_admin_user_name.Text = list.FirstOrDefault().INST_USER_ADMIN;
+                    txt_admin_pass.Text = list.FirstOrDefault().INST_USER_PASS;
                     if (methods.data != null)
                         pic_logo.Image = Image.FromStream(methods.convert_image());
 
@@ -254,7 +257,7 @@ namespace THAGBAN_INST.FORM
 
         private void accordionControlElement1_Click(object sender, EventArgs e)
         {
-            navigationFrame1.SelectedPage = navigationPage4;
+            navigationFrame1.SelectedPage = nav_page_admin_user;
         }
 
         private void btn_categories_Click(object sender, EventArgs e)
@@ -686,6 +689,27 @@ namespace THAGBAN_INST.FORM
                     notifiction.Show();
 
                 }
+            }
+        }
+
+        private void simpleButton1_Click(object sender, EventArgs e)
+        {
+            string admin_name = "";
+            if(txt_admin_pass.Text!="" && txt_admin_user_name.Text != "")
+            {
+
+                TBL_INST TBL = con.TBL_INST.Find(inst_id);
+                TBL.INST_USER_ADMIN = txt_admin_user_name.Text.Trim().ToString();
+                TBL.INST_USER_PASS = txt_admin_pass.Text.Trim().ToString();
+                con.TBL_INST.AddOrUpdate(TBL);
+                con.SaveChanges();
+               
+              
+
+            }
+            else
+            {
+
             }
         }
     }

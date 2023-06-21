@@ -133,7 +133,7 @@ namespace THAGBAN_INST.FORM.FRM_EMP_MANEGER.part_salary
             long total = Convert.ToInt64(inst.INST_TOTAL);
             total = Convert.ToInt64(total + opra.PORATION_AMOUNT);
             inst.INST_TOTAL = total.ToString();
-            MessageBox.Show(inst.INST_TOTAL);
+           // MessageBox.Show(inst.INST_TOTAL);
             inst.INST_ID = opra.INST_ID;
            // con.TBL_INST.AddOrUpdate(inst);
             //con.SaveChanges();
@@ -141,6 +141,7 @@ namespace THAGBAN_INST.FORM.FRM_EMP_MANEGER.part_salary
         }
         void add_part_of_salary()
         {
+            THAGBAN_INST.adl.method method = new adl.method();
 
             tost toast = new tost();
             dialge dialge = new dialge();
@@ -162,8 +163,10 @@ namespace THAGBAN_INST.FORM.FRM_EMP_MANEGER.part_salary
                     opration.PORATION_AMOUNT = Convert.ToInt32(cl.PART_PAID);
                     opration.PORATION_DATE = cl.SLAARY_DATE;
                     opration.OPRATION_TYPE = "سحب";
-                    opration.INST_ID = Convert.ToInt32(THAGBAN_INST.Properties.Settings.Default.inst_id);
+                    int inst_id = Convert.ToInt32(THAGBAN_INST.Properties.Settings.Default.inst_id);
 
+                    //  method.sub_to_box(inst_id,Convert.ToDouble(cl.PART_PAID));
+                    opration.INST_ID = inst_id;
                     inst = con.TBL_INST.Find(opration.INST_ID);
                     long total = Convert.ToInt64(inst.INST_TOTAL);
                     total = Convert.ToInt64((total - Convert.ToInt32(opration.PORATION_AMOUNT)));

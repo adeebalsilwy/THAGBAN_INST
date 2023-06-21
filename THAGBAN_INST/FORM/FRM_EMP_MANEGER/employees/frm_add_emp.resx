@@ -333,4 +333,34 @@
         Zz4NCjwvc3ZnPgs=
 </value>
   </data>
+  <data name="txt_password.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAM0AAAAzCAYAAAA0JIwAAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAHuSURBVHhe7d0hciJRFIVhJBKJRM4SRiJZRuTIkdkBcpaA
+        jGzJElq2RCKRyMie8/rCrVtzqMiJeP9X9atLx52CqF4BAPAtfqlB3dRM1Fl3dVbvaqO+tFOjevWHiHqs
+        fXHs1UtrNalXDxL1XPvm2SrzWy0fWq/X8/F4nMdxnIHeTNM0n06nebPZ1OF8KNN+wy0faIMBejcMQx3N
+        VZn2FbR84HK5PB4D+vbcxCOTRwCh7kKZPAIIdRfK5BFAqLtQJo8AQt2FMnkEEOoulMkjgFB3oUweAYS6
+        C2XyCCDUXSiTRwCh7kKZPAIIdRfK5BFAqLtQJo8AQt2FMnkEEOoulMkjgFB3oUweAYS6C2XyCCDUXSiT
+        RwCh7kKZPAIIdRfK5BFAqLtQJo8AQt2FMnkEEOoulMkjgFB3oUweAYS6C2XyCCDUXSiTRwCh7kKZPAII
+        dRfK5BFAqLtQJo8AQt2FMnkEEOoulMkjgFB3oUweAYS6C2XyCCDUXSiTRwCh7kKZPAIIdRfK5BFAqLtQ
+        5lMtx/v9/ngE6Ft70/lzF8pMajm2t9oCvbter3Uw7UXO5o9aPrDb7eZxHB+PAv253W7z4XCoozkrs1X5
+        WnSiXvvnJ9mzn+qlN5X/2xDRUvsV9qUfalCMh3qv/STbKwAA/pvV6i/NTu5+9DFOlgAAAABJRU5ErkJg
+        gg==
+</value>
+  </data>
+  <data name="txt_user_name.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAM0AAAAzCAYAAAA0JIwAAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAHuSURBVHhe7d0hciJRFIVhJBKJRM4SRiJZRuTIkdkBcpaA
+        jGzJElq2RCKRyMie8/rCrVtzqMiJeP9X9atLx52CqF4BAPAtfqlB3dRM1Fl3dVbvaqO+tFOjevWHiHqs
+        fXHs1UtrNalXDxL1XPvm2SrzWy0fWq/X8/F4nMdxnIHeTNM0n06nebPZ1OF8KNN+wy0faIMBejcMQx3N
+        VZn2FbR84HK5PB4D+vbcxCOTRwCh7kKZPAIIdRfK5BFAqLtQJo8AQt2FMnkEEOoulMkjgFB3oUweAYS6
+        C2XyCCDUXSiTRwCh7kKZPAIIdRfK5BFAqLtQJo8AQt2FMnkEEOoulMkjgFB3oUweAYS6C2XyCCDUXSiT
+        RwCh7kKZPAIIdRfK5BFAqLtQJo8AQt2FMnkEEOoulMkjgFB3oUweAYS6C2XyCCDUXSiTRwCh7kKZPAII
+        dRfK5BFAqLtQJo8AQt2FMnkEEOoulMkjgFB3oUweAYS6C2XyCCDUXSiTRwCh7kKZPAIIdRfK5BFAqLtQ
+        5lMtx/v9/ngE6Ft70/lzF8pMajm2t9oCvbter3Uw7UXO5o9aPrDb7eZxHB+PAv253W7z4XCoozkrs1X5
+        WnSiXvvnJ9mzn+qlN5X/2xDRUvsV9qUfalCMh3qv/STbKwAA/pvV6i/NTu5+9DFOlgAAAABJRU5ErkJg
+        gg==
+</value>
+  </data>
 </root>

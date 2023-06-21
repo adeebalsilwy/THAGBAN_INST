@@ -46,6 +46,11 @@ namespace THAGBAN_INST.FORM.FRM_LECTUER_MANG.lect_mark
             this.colLECT_TECH_ID = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colMATRIAL_ID = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colMARK_VALUE = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.ch_lect = new DevExpress.XtraEditors.CheckEdit();
+            this.ch_grou = new DevExpress.XtraEditors.CheckEdit();
+            this.com_lect = new System.Windows.Forms.ComboBox();
+            this.com_group = new System.Windows.Forms.ComboBox();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
@@ -53,21 +58,16 @@ namespace THAGBAN_INST.FORM.FRM_LECTUER_MANG.lect_mark
             this.btn_edite = new DevExpress.XtraEditors.SimpleButton();
             this.btn_save = new DevExpress.XtraEditors.SimpleButton();
             this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.com_group = new System.Windows.Forms.ComboBox();
-            this.com_lect = new System.Windows.Forms.ComboBox();
-            this.ch_grou = new DevExpress.XtraEditors.CheckEdit();
-            this.ch_lect = new DevExpress.XtraEditors.CheckEdit();
-            this.panel3 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
+            this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ch_lect.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ch_grou.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ch_grou.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ch_lect.Properties)).BeginInit();
-            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -120,20 +120,18 @@ namespace THAGBAN_INST.FORM.FRM_LECTUER_MANG.lect_mark
             // 
             // gridView2
             // 
-            this.gridView2.Appearance.EvenRow.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.gridView2.Appearance.EvenRow.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gridView2.Appearance.EvenRow.Options.UseBackColor = true;
-            this.gridView2.Appearance.EvenRow.Options.UseFont = true;
-            this.gridView2.Appearance.GroupRow.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gridView2.Appearance.GroupRow.Options.UseFont = true;
-            this.gridView2.Appearance.HeaderPanel.Font = new System.Drawing.Font("ae_AlArabiya", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gridView2.Appearance.FocusedRow.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.gridView2.Appearance.FocusedRow.Options.UseFont = true;
+            this.gridView2.Appearance.HeaderPanel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.gridView2.Appearance.HeaderPanel.Options.UseFont = true;
-            this.gridView2.Appearance.OddRow.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.gridView2.Appearance.OddRow.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gridView2.Appearance.OddRow.Options.UseBackColor = true;
-            this.gridView2.Appearance.OddRow.Options.UseFont = true;
-            this.gridView2.Appearance.ViewCaption.Font = new System.Drawing.Font("ae_AlArabiya", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gridView2.Appearance.ViewCaption.Options.UseFont = true;
+            this.gridView2.Appearance.HeaderPanel.Options.UseTextOptions = true;
+            this.gridView2.Appearance.HeaderPanel.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridView2.Appearance.HeaderPanel.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridView2.Appearance.Row.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.gridView2.Appearance.Row.Options.UseFont = true;
+            this.gridView2.Appearance.Row.Options.UseTextOptions = true;
+            this.gridView2.Appearance.Row.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridView2.Appearance.Row.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.gridView2.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.colMARK_ID,
             this.colSTUD_ID,
@@ -235,6 +233,72 @@ namespace THAGBAN_INST.FORM.FRM_LECTUER_MANG.lect_mark
             this.colMARK_VALUE.VisibleIndex = 8;
             this.colMARK_VALUE.Width = 69;
             // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.ch_lect);
+            this.panel3.Controls.Add(this.ch_grou);
+            this.panel3.Controls.Add(this.com_lect);
+            this.panel3.Controls.Add(this.com_group);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(925, 69);
+            this.panel3.TabIndex = 9;
+            // 
+            // ch_lect
+            // 
+            this.ch_lect.Location = new System.Drawing.Point(736, 23);
+            this.ch_lect.Name = "ch_lect";
+            this.ch_lect.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ch_lect.Properties.Appearance.Options.UseFont = true;
+            this.ch_lect.Properties.Caption = "اختيار الدوره ";
+            this.ch_lect.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.ch_lect.Size = new System.Drawing.Size(149, 28);
+            this.ch_lect.TabIndex = 135;
+            this.ch_lect.CheckedChanged += new System.EventHandler(this.ch_lect_CheckedChanged);
+            // 
+            // ch_grou
+            // 
+            this.ch_grou.Location = new System.Drawing.Point(362, 23);
+            this.ch_grou.Name = "ch_grou";
+            this.ch_grou.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ch_grou.Properties.Appearance.Options.UseFont = true;
+            this.ch_grou.Properties.Caption = "اختيار اسم الدفعه";
+            this.ch_grou.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.ch_grou.Size = new System.Drawing.Size(149, 28);
+            this.ch_grou.TabIndex = 134;
+            this.ch_grou.CheckedChanged += new System.EventHandler(this.ch_grou_CheckedChanged);
+            // 
+            // com_lect
+            // 
+            this.com_lect.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.com_lect.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.com_lect.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.com_lect.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.com_lect.FormattingEnabled = true;
+            this.com_lect.Location = new System.Drawing.Point(534, 18);
+            this.com_lect.Name = "com_lect";
+            this.com_lect.Size = new System.Drawing.Size(185, 37);
+            this.com_lect.TabIndex = 120;
+            this.com_lect.SelectedIndexChanged += new System.EventHandler(this.com_lect_SelectedIndexChanged);
+            this.com_lect.SelectionChangeCommitted += new System.EventHandler(this.com_lect_SelectedIndexChanged);
+            this.com_lect.SelectedValueChanged += new System.EventHandler(this.com_lect_SelectedIndexChanged);
+            // 
+            // com_group
+            // 
+            this.com_group.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.com_group.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.com_group.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.com_group.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.com_group.FormattingEnabled = true;
+            this.com_group.Location = new System.Drawing.Point(184, 18);
+            this.com_group.Name = "com_group";
+            this.com_group.Size = new System.Drawing.Size(132, 37);
+            this.com_group.TabIndex = 119;
+            this.com_group.SelectedIndexChanged += new System.EventHandler(this.com_group_SelectedIndexChanged);
+            this.com_group.SelectionChangeCommitted += new System.EventHandler(this.com_group_SelectedIndexChanged);
+            this.com_group.SelectedValueChanged += new System.EventHandler(this.com_group_SelectedIndexChanged);
+            // 
             // panelControl1
             // 
             this.panelControl1.Controls.Add(this.simpleButton2);
@@ -253,7 +317,7 @@ namespace THAGBAN_INST.FORM.FRM_LECTUER_MANG.lect_mark
             // 
             this.simpleButton2.AccessibleRole = System.Windows.Forms.AccessibleRole.Border;
             this.simpleButton2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.simpleButton2.Appearance.Font = new System.Drawing.Font("ae_AlArabiya", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.simpleButton2.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.simpleButton2.Appearance.Options.UseBorderColor = true;
             this.simpleButton2.Appearance.Options.UseFont = true;
             this.simpleButton2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton2.ImageOptions.Image")));
@@ -269,7 +333,7 @@ namespace THAGBAN_INST.FORM.FRM_LECTUER_MANG.lect_mark
             // 
             this.simpleButton1.AccessibleRole = System.Windows.Forms.AccessibleRole.Border;
             this.simpleButton1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.simpleButton1.Appearance.Font = new System.Drawing.Font("ae_AlArabiya", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.simpleButton1.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.simpleButton1.Appearance.Options.UseBorderColor = true;
             this.simpleButton1.Appearance.Options.UseFont = true;
             this.simpleButton1.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("simpleButton1.ImageOptions.SvgImage")));
@@ -285,7 +349,7 @@ namespace THAGBAN_INST.FORM.FRM_LECTUER_MANG.lect_mark
             // 
             this.btn_delete.AccessibleRole = System.Windows.Forms.AccessibleRole.Border;
             this.btn_delete.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btn_delete.Appearance.Font = new System.Drawing.Font("ae_AlArabiya", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_delete.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_delete.Appearance.Options.UseBorderColor = true;
             this.btn_delete.Appearance.Options.UseFont = true;
             this.btn_delete.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_delete.ImageOptions.Image")));
@@ -301,7 +365,7 @@ namespace THAGBAN_INST.FORM.FRM_LECTUER_MANG.lect_mark
             // 
             this.btn_edite.AccessibleRole = System.Windows.Forms.AccessibleRole.Border;
             this.btn_edite.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btn_edite.Appearance.Font = new System.Drawing.Font("ae_AlArabiya", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_edite.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_edite.Appearance.Options.UseBorderColor = true;
             this.btn_edite.Appearance.Options.UseFont = true;
             this.btn_edite.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_edite.ImageOptions.Image")));
@@ -317,7 +381,7 @@ namespace THAGBAN_INST.FORM.FRM_LECTUER_MANG.lect_mark
             // 
             this.btn_save.AccessibleRole = System.Windows.Forms.AccessibleRole.Border;
             this.btn_save.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btn_save.Appearance.Font = new System.Drawing.Font("ae_AlArabiya", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_save.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_save.Appearance.Options.UseBorderColor = true;
             this.btn_save.Appearance.Options.UseFont = true;
             this.btn_save.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_save.ImageOptions.Image")));
@@ -338,72 +402,6 @@ namespace THAGBAN_INST.FORM.FRM_LECTUER_MANG.lect_mark
             this.gridColumn1.VisibleIndex = 1;
             this.gridColumn1.Width = 163;
             // 
-            // com_group
-            // 
-            this.com_group.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
-            this.com_group.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.com_group.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.com_group.Font = new System.Drawing.Font("ae_AlArabiya", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.com_group.FormattingEnabled = true;
-            this.com_group.Location = new System.Drawing.Point(184, 18);
-            this.com_group.Name = "com_group";
-            this.com_group.Size = new System.Drawing.Size(132, 41);
-            this.com_group.TabIndex = 119;
-            this.com_group.SelectedIndexChanged += new System.EventHandler(this.com_group_SelectedIndexChanged);
-            this.com_group.SelectionChangeCommitted += new System.EventHandler(this.com_group_SelectedIndexChanged);
-            this.com_group.SelectedValueChanged += new System.EventHandler(this.com_group_SelectedIndexChanged);
-            // 
-            // com_lect
-            // 
-            this.com_lect.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
-            this.com_lect.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.com_lect.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.com_lect.Font = new System.Drawing.Font("ae_AlArabiya", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.com_lect.FormattingEnabled = true;
-            this.com_lect.Location = new System.Drawing.Point(534, 18);
-            this.com_lect.Name = "com_lect";
-            this.com_lect.Size = new System.Drawing.Size(185, 41);
-            this.com_lect.TabIndex = 120;
-            this.com_lect.SelectedIndexChanged += new System.EventHandler(this.com_lect_SelectedIndexChanged);
-            this.com_lect.SelectionChangeCommitted += new System.EventHandler(this.com_lect_SelectedIndexChanged);
-            this.com_lect.SelectedValueChanged += new System.EventHandler(this.com_lect_SelectedIndexChanged);
-            // 
-            // ch_grou
-            // 
-            this.ch_grou.Location = new System.Drawing.Point(362, 23);
-            this.ch_grou.Name = "ch_grou";
-            this.ch_grou.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ch_grou.Properties.Appearance.Options.UseFont = true;
-            this.ch_grou.Properties.Caption = "اختيار اسم الدفعه";
-            this.ch_grou.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.ch_grou.Size = new System.Drawing.Size(149, 28);
-            this.ch_grou.TabIndex = 134;
-            this.ch_grou.CheckedChanged += new System.EventHandler(this.ch_grou_CheckedChanged);
-            // 
-            // ch_lect
-            // 
-            this.ch_lect.Location = new System.Drawing.Point(736, 23);
-            this.ch_lect.Name = "ch_lect";
-            this.ch_lect.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ch_lect.Properties.Appearance.Options.UseFont = true;
-            this.ch_lect.Properties.Caption = "اختيار الدوره ";
-            this.ch_lect.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.ch_lect.Size = new System.Drawing.Size(149, 28);
-            this.ch_lect.TabIndex = 135;
-            this.ch_lect.CheckedChanged += new System.EventHandler(this.ch_lect_CheckedChanged);
-            // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.ch_lect);
-            this.panel3.Controls.Add(this.ch_grou);
-            this.panel3.Controls.Add(this.com_lect);
-            this.panel3.Controls.Add(this.com_group);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel3.Location = new System.Drawing.Point(0, 0);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(925, 69);
-            this.panel3.TabIndex = 9;
-            // 
             // frm_mang_lect_marks
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -416,11 +414,11 @@ namespace THAGBAN_INST.FORM.FRM_LECTUER_MANG.lect_mark
             this.panel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
+            this.panel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.ch_lect.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ch_grou.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.ch_grou.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ch_lect.Properties)).EndInit();
-            this.panel3.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

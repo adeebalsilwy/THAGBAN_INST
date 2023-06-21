@@ -234,8 +234,8 @@ namespace THAGBAN_INST.FORM.BUY
             // 
             // colCatDate
             // 
-            this.colCatDate.Caption = "تاريخ الاضافة";
-            this.colCatDate.FieldName = "CatDate";
+            this.colCatDate.Caption = "المخزن";
+            this.colCatDate.FieldName = "TBL_STORS.STOR_NAME";
             this.colCatDate.MinWidth = 21;
             this.colCatDate.Name = "colCatDate";
             this.colCatDate.OptionsColumn.AllowEdit = false;

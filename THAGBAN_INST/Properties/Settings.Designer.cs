@@ -223,5 +223,29 @@ namespace THAGBAN_INST.Properties {
                 this["font"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("admin")]
+        public string admin_user {
+            get {
+                return ((string)(this["admin_user"]));
+            }
+            set {
+                this["admin_user"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("admin")]
+        public string admin_pass {
+            get {
+                return ((string)(this["admin_pass"]));
+            }
+            set {
+                this["admin_pass"] = value;
+            }
+        }
     }
 }

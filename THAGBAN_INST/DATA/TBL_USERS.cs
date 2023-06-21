@@ -18,6 +18,13 @@ namespace THAGBAN_INST.DATA
         public string USER_NAME { get; set; }
         public string USER_PASS { get; set; }
         public int EMP_ID { get; set; }
+        public Nullable<bool> FRM_CONTROL { get; set; }
+        public Nullable<bool> FRM_EMP { get; set; }
+        public Nullable<bool> FRM_STUD { get; set; }
+        public Nullable<bool> FRM_MONY { get; set; }
+        public Nullable<bool> FRM_BUY { get; set; }
+        public Nullable<bool> FRM_LECTUER { get; set; }
+        public Nullable<bool> FRM_SETTING { get; set; }
     
         public virtual TBL_EMPLOYEES TBL_EMPLOYEES { get; set; }
         public virtual TBL_ROULLS_LECTUER TBL_ROULLS_LECTUER { get; set; }

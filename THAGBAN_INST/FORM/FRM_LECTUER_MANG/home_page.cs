@@ -34,7 +34,7 @@ namespace THAGBAN_INST.FORM.FRM_LECTUER_MANG
         {
             adl.method meth = new adl.method();
             int inst_id = THAGBAN_INST.Properties.Settings.Default.inst_id;
-            label1.Text = con.TBL_INST.Find(inst_id).INST_NAME;
+            labl_inst_name.Text = con.TBL_INST.Find(inst_id).INST_NAME;
             meth.data = con.TBL_INST.Find(inst_id).INST_LOGO;
             if (meth.data != null)
                 pictureBox1.Image = Image.FromStream(meth.convert_image());

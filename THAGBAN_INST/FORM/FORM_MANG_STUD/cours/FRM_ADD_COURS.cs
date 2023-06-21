@@ -52,7 +52,7 @@ namespace THAGBAN_INST.FORM.FRM_MANG_STUD
         }
         bool is_empty()
         {
-            if (txt_level_desc.Text != "" && txt_cours_name.Text != "" && txt_number_hours.Text!="")
+            if ( txt_min.Text!="" && txt_max.Text!=""&& txt_level_desc.Text != "" && txt_cours_name.Text != "" && txt_number_hours.Text!="")
             {
                 return false;
             }
@@ -75,7 +75,8 @@ namespace THAGBAN_INST.FORM.FRM_MANG_STUD
                     cl.COURS_NAME = txt_cours_name.Text;
                     cl.COURS_DESC = txt_level_desc.Text;
                     cl.NUMBER_HOURS = Convert.ToInt32(txt_number_hours.Text);
-                   
+                   cl.MIN_MARK=Convert.ToInt32(txt_min.Text);
+                    cl.MAX_MARK=Convert.ToInt32(txt_max.Text);
 
                     if (cours_id != 0)
                     {
@@ -156,6 +157,8 @@ namespace THAGBAN_INST.FORM.FRM_MANG_STUD
                     txt_level_desc.Text = tbl.COURS_DESC.ToString();
                     txt_cours_name.Text = tbl.COURS_NAME.ToString();
                     txt_number_hours.Text = tbl.NUMBER_HOURS.ToString();
+                    txt_max.Text = tbl.MAX_MARK.ToString();
+                    txt_min.Text=tbl.MIN_MARK.ToString();
                         }
 
              }

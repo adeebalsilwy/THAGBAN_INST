@@ -18,6 +18,7 @@ namespace THAGBAN_INST.DATA
         public TBL_SPECIAL()
         {
             this.TBL_MARKS = new HashSet<TBL_MARKS>();
+            this.TBL_SEND_STUD_SPEC = new HashSet<TBL_SEND_STUD_SPEC>();
             this.TBL_SIRYAL_STUDENTS = new HashSet<TBL_SIRYAL_STUDENTS>();
             this.TBL_SPE_COURS = new HashSet<TBL_SPE_COURS>();
             this.TBL_STUD_SPEC = new HashSet<TBL_STUD_SPEC>();
@@ -34,6 +35,8 @@ namespace THAGBAN_INST.DATA
         public virtual TBL_LEVLE TBL_LEVLE { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<TBL_MARKS> TBL_MARKS { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<TBL_SEND_STUD_SPEC> TBL_SEND_STUD_SPEC { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<TBL_SIRYAL_STUDENTS> TBL_SIRYAL_STUDENTS { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

@@ -46,6 +46,11 @@ namespace THAGBAN_INST.FORM.FRM_EMP_MANEGER.users
             this.btn_delete = new DevExpress.XtraEditors.SimpleButton();
             this.btn_edite = new DevExpress.XtraEditors.SimpleButton();
             this.btn_save = new DevExpress.XtraEditors.SimpleButton();
+            this.colFRM_MONY = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colFRM_LECTUER = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colFRM_CONTROL = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colFRM_BUY = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colFRM_SETTING = new DevExpress.XtraGrid.Columns.GridColumn();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
@@ -75,7 +80,7 @@ namespace THAGBAN_INST.FORM.FRM_EMP_MANEGER.users
             // 
             // gridControl1
             // 
-            this.gridControl1.DataSource = typeof(TBL_USERS);
+            this.gridControl1.DataSource = typeof(THAGBAN_INST.DATA.TBL_USERS);
             this.gridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gridControl1.Location = new System.Drawing.Point(0, 0);
             this.gridControl1.MainView = this.gridView2;
@@ -88,25 +93,30 @@ namespace THAGBAN_INST.FORM.FRM_EMP_MANEGER.users
             // 
             // gridView2
             // 
-            this.gridView2.Appearance.EvenRow.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.gridView2.Appearance.EvenRow.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gridView2.Appearance.EvenRow.Options.UseBackColor = true;
-            this.gridView2.Appearance.EvenRow.Options.UseFont = true;
-            this.gridView2.Appearance.HeaderPanel.Font = new System.Drawing.Font("ae_AlArabiya", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gridView2.Appearance.FocusedRow.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.gridView2.Appearance.FocusedRow.Options.UseFont = true;
+            this.gridView2.Appearance.HeaderPanel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.gridView2.Appearance.HeaderPanel.Options.UseFont = true;
-            this.gridView2.Appearance.OddRow.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.gridView2.Appearance.OddRow.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gridView2.Appearance.OddRow.Options.UseBackColor = true;
-            this.gridView2.Appearance.OddRow.Options.UseFont = true;
-            this.gridView2.Appearance.ViewCaption.Font = new System.Drawing.Font("ae_AlArabiya", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gridView2.Appearance.ViewCaption.Options.UseFont = true;
+            this.gridView2.Appearance.HeaderPanel.Options.UseTextOptions = true;
+            this.gridView2.Appearance.HeaderPanel.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridView2.Appearance.HeaderPanel.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridView2.Appearance.Row.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.gridView2.Appearance.Row.Options.UseFont = true;
+            this.gridView2.Appearance.Row.Options.UseTextOptions = true;
+            this.gridView2.Appearance.Row.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridView2.Appearance.Row.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.gridView2.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.colEMP_ID,
             this.colUSER_ID,
             this.colUSER_NAME,
             this.colUSER_PASS,
             this.colEMP_ID1,
-            this.colEMP_ID2});
+            this.colEMP_ID2,
+            this.colFRM_MONY,
+            this.colFRM_LECTUER,
+            this.colFRM_CONTROL,
+            this.colFRM_BUY,
+            this.colFRM_SETTING});
             this.gridView2.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
             this.gridView2.GridControl = this.gridControl1;
             this.gridView2.Name = "gridView2";
@@ -122,7 +132,7 @@ namespace THAGBAN_INST.FORM.FRM_EMP_MANEGER.users
             this.colEMP_ID.Name = "colEMP_ID";
             this.colEMP_ID.Visible = true;
             this.colEMP_ID.VisibleIndex = 1;
-            this.colEMP_ID.Width = 170;
+            this.colEMP_ID.Width = 121;
             // 
             // colUSER_ID
             // 
@@ -131,7 +141,7 @@ namespace THAGBAN_INST.FORM.FRM_EMP_MANEGER.users
             this.colUSER_ID.Name = "colUSER_ID";
             this.colUSER_ID.Visible = true;
             this.colUSER_ID.VisibleIndex = 0;
-            this.colUSER_ID.Width = 83;
+            this.colUSER_ID.Width = 59;
             // 
             // colUSER_NAME
             // 
@@ -140,7 +150,7 @@ namespace THAGBAN_INST.FORM.FRM_EMP_MANEGER.users
             this.colUSER_NAME.Name = "colUSER_NAME";
             this.colUSER_NAME.Visible = true;
             this.colUSER_NAME.VisibleIndex = 2;
-            this.colUSER_NAME.Width = 168;
+            this.colUSER_NAME.Width = 119;
             // 
             // colUSER_PASS
             // 
@@ -149,25 +159,25 @@ namespace THAGBAN_INST.FORM.FRM_EMP_MANEGER.users
             this.colUSER_PASS.Name = "colUSER_PASS";
             this.colUSER_PASS.Visible = true;
             this.colUSER_PASS.VisibleIndex = 3;
-            this.colUSER_PASS.Width = 158;
+            this.colUSER_PASS.Width = 112;
             // 
             // colEMP_ID1
             // 
-            this.colEMP_ID1.Caption = "الوظيفه ";
-            this.colEMP_ID1.FieldName = "TBL_EMPLOYEES.TBL_JOB.JOB_NAME";
+            this.colEMP_ID1.Caption = "شؤون الموظفين";
+            this.colEMP_ID1.FieldName = "FRM_EMP";
             this.colEMP_ID1.Name = "colEMP_ID1";
             this.colEMP_ID1.Visible = true;
             this.colEMP_ID1.VisibleIndex = 4;
-            this.colEMP_ID1.Width = 158;
+            this.colEMP_ID1.Width = 112;
             // 
             // colEMP_ID2
             // 
-            this.colEMP_ID2.Caption = "القسم ";
-            this.colEMP_ID2.FieldName = "TBL_EMPLOYEES.TBL_JOB.TBL_DEPT.DEPT_NAME";
+            this.colEMP_ID2.Caption = "شؤون الطلاب";
+            this.colEMP_ID2.FieldName = "FRM_STUD";
             this.colEMP_ID2.Name = "colEMP_ID2";
             this.colEMP_ID2.Visible = true;
             this.colEMP_ID2.VisibleIndex = 5;
-            this.colEMP_ID2.Width = 163;
+            this.colEMP_ID2.Width = 116;
             // 
             // panelControl1
             // 
@@ -185,7 +195,7 @@ namespace THAGBAN_INST.FORM.FRM_EMP_MANEGER.users
             // 
             this.simpleButton1.AccessibleRole = System.Windows.Forms.AccessibleRole.Border;
             this.simpleButton1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.simpleButton1.Appearance.Font = new System.Drawing.Font("ae_AlArabiya", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.simpleButton1.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.simpleButton1.Appearance.Options.UseBorderColor = true;
             this.simpleButton1.Appearance.Options.UseFont = true;
             this.simpleButton1.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("simpleButton1.ImageOptions.SvgImage")));
@@ -201,7 +211,7 @@ namespace THAGBAN_INST.FORM.FRM_EMP_MANEGER.users
             // 
             this.btn_delete.AccessibleRole = System.Windows.Forms.AccessibleRole.Border;
             this.btn_delete.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btn_delete.Appearance.Font = new System.Drawing.Font("ae_AlArabiya", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_delete.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_delete.Appearance.Options.UseBorderColor = true;
             this.btn_delete.Appearance.Options.UseFont = true;
             this.btn_delete.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_delete.ImageOptions.Image")));
@@ -217,7 +227,7 @@ namespace THAGBAN_INST.FORM.FRM_EMP_MANEGER.users
             // 
             this.btn_edite.AccessibleRole = System.Windows.Forms.AccessibleRole.Border;
             this.btn_edite.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btn_edite.Appearance.Font = new System.Drawing.Font("ae_AlArabiya", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_edite.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_edite.Appearance.Options.UseBorderColor = true;
             this.btn_edite.Appearance.Options.UseFont = true;
             this.btn_edite.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_edite.ImageOptions.Image")));
@@ -233,7 +243,7 @@ namespace THAGBAN_INST.FORM.FRM_EMP_MANEGER.users
             // 
             this.btn_save.AccessibleRole = System.Windows.Forms.AccessibleRole.Border;
             this.btn_save.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btn_save.Appearance.Font = new System.Drawing.Font("ae_AlArabiya", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_save.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_save.Appearance.Options.UseBorderColor = true;
             this.btn_save.Appearance.Options.UseFont = true;
             this.btn_save.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_save.ImageOptions.Image")));
@@ -244,6 +254,51 @@ namespace THAGBAN_INST.FORM.FRM_EMP_MANEGER.users
             this.btn_save.TabIndex = 33;
             this.btn_save.Text = "اضافة";
             this.btn_save.Click += new System.EventHandler(this.btn_save_Click);
+            // 
+            // colFRM_MONY
+            // 
+            this.colFRM_MONY.Caption = "الماليه";
+            this.colFRM_MONY.FieldName = "FRM_MONY";
+            this.colFRM_MONY.Name = "colFRM_MONY";
+            this.colFRM_MONY.Visible = true;
+            this.colFRM_MONY.VisibleIndex = 6;
+            this.colFRM_MONY.Width = 53;
+            // 
+            // colFRM_LECTUER
+            // 
+            this.colFRM_LECTUER.Caption = "الدورات الخارجيه";
+            this.colFRM_LECTUER.FieldName = "FRM_LECTUER";
+            this.colFRM_LECTUER.Name = "colFRM_LECTUER";
+            this.colFRM_LECTUER.Visible = true;
+            this.colFRM_LECTUER.VisibleIndex = 7;
+            this.colFRM_LECTUER.Width = 53;
+            // 
+            // colFRM_CONTROL
+            // 
+            this.colFRM_CONTROL.Caption = "الكنترول";
+            this.colFRM_CONTROL.FieldName = "FRM_CONTROL";
+            this.colFRM_CONTROL.Name = "colFRM_CONTROL";
+            this.colFRM_CONTROL.Visible = true;
+            this.colFRM_CONTROL.VisibleIndex = 8;
+            this.colFRM_CONTROL.Width = 52;
+            // 
+            // colFRM_BUY
+            // 
+            this.colFRM_BUY.Caption = "الماليه";
+            this.colFRM_BUY.FieldName = "FRM_BUY";
+            this.colFRM_BUY.Name = "colFRM_BUY";
+            this.colFRM_BUY.Visible = true;
+            this.colFRM_BUY.VisibleIndex = 9;
+            this.colFRM_BUY.Width = 52;
+            // 
+            // colFRM_SETTING
+            // 
+            this.colFRM_SETTING.Caption = "الاعدادت";
+            this.colFRM_SETTING.FieldName = "FRM_SETTING";
+            this.colFRM_SETTING.Name = "colFRM_SETTING";
+            this.colFRM_SETTING.Visible = true;
+            this.colFRM_SETTING.VisibleIndex = 10;
+            this.colFRM_SETTING.Width = 61;
             // 
             // frm_mang_users
             // 
@@ -279,5 +334,10 @@ namespace THAGBAN_INST.FORM.FRM_EMP_MANEGER.users
         private DevExpress.XtraGrid.Columns.GridColumn colUSER_PASS;
         private DevExpress.XtraGrid.Columns.GridColumn colEMP_ID1;
         private DevExpress.XtraGrid.Columns.GridColumn colEMP_ID2;
+        private DevExpress.XtraGrid.Columns.GridColumn colFRM_MONY;
+        private DevExpress.XtraGrid.Columns.GridColumn colFRM_LECTUER;
+        private DevExpress.XtraGrid.Columns.GridColumn colFRM_CONTROL;
+        private DevExpress.XtraGrid.Columns.GridColumn colFRM_BUY;
+        private DevExpress.XtraGrid.Columns.GridColumn colFRM_SETTING;
     }
 }

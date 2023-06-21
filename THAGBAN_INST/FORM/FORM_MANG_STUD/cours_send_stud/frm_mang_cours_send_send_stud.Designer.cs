@@ -45,6 +45,7 @@ namespace THAGBAN_INST.FORM.FRM_MANG_STUD.cours_send_stud
             this.colSTUD_SPEC_ID = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colTBL_OPRATION = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colTBL_OPRATION1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colTBL_OPRATION2 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
@@ -52,7 +53,6 @@ namespace THAGBAN_INST.FORM.FRM_MANG_STUD.cours_send_stud
             this.btn_edite = new DevExpress.XtraEditors.SimpleButton();
             this.btn_save = new DevExpress.XtraEditors.SimpleButton();
             this.behaviorManager1 = new DevExpress.Utils.Behaviors.BehaviorManager(this.components);
-            this.colTBL_OPRATION2 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
@@ -96,20 +96,18 @@ namespace THAGBAN_INST.FORM.FRM_MANG_STUD.cours_send_stud
             // 
             // gridView2
             // 
-            this.gridView2.Appearance.EvenRow.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.gridView2.Appearance.EvenRow.Font = new System.Drawing.Font("Tahoma", 9.75F);
-            this.gridView2.Appearance.EvenRow.Options.UseBackColor = true;
-            this.gridView2.Appearance.EvenRow.Options.UseFont = true;
-            this.gridView2.Appearance.HeaderPanel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gridView2.Appearance.FocusedRow.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.gridView2.Appearance.FocusedRow.Options.UseFont = true;
+            this.gridView2.Appearance.HeaderPanel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.gridView2.Appearance.HeaderPanel.Options.UseFont = true;
-            this.gridView2.Appearance.OddRow.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.gridView2.Appearance.OddRow.Font = new System.Drawing.Font("Tahoma", 9.75F);
-            this.gridView2.Appearance.OddRow.Options.UseBackColor = true;
-            this.gridView2.Appearance.OddRow.Options.UseFont = true;
+            this.gridView2.Appearance.HeaderPanel.Options.UseTextOptions = true;
+            this.gridView2.Appearance.HeaderPanel.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridView2.Appearance.HeaderPanel.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridView2.Appearance.Row.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.gridView2.Appearance.Row.Options.UseFont = true;
             this.gridView2.Appearance.Row.Options.UseTextOptions = true;
-            this.gridView2.Appearance.Row.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Near;
-            this.gridView2.Appearance.ViewCaption.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gridView2.Appearance.ViewCaption.Options.UseFont = true;
+            this.gridView2.Appearance.Row.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridView2.Appearance.Row.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.gridView2.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.colPAID_UP,
             this.colREST,
@@ -203,6 +201,14 @@ namespace THAGBAN_INST.FORM.FRM_MANG_STUD.cours_send_stud
             this.colTBL_OPRATION1.Name = "colTBL_OPRATION1";
             this.colTBL_OPRATION1.Visible = true;
             this.colTBL_OPRATION1.VisibleIndex = 2;
+            // 
+            // colTBL_OPRATION2
+            // 
+            this.colTBL_OPRATION2.Caption = "السعر ";
+            this.colTBL_OPRATION2.FieldName = "TBL_STUD_SPEC.TBL_SPECIAL.SPEC_PRICE";
+            this.colTBL_OPRATION2.Name = "colTBL_OPRATION2";
+            this.colTBL_OPRATION2.Visible = true;
+            this.colTBL_OPRATION2.VisibleIndex = 5;
             // 
             // panelControl1
             // 
@@ -309,14 +315,6 @@ namespace THAGBAN_INST.FORM.FRM_MANG_STUD.cours_send_stud
             this.btn_save.TabIndex = 38;
             this.btn_save.Text = "اضافة";
             this.btn_save.Click += new System.EventHandler(this.btn_save_Click);
-            // 
-            // colTBL_OPRATION2
-            // 
-            this.colTBL_OPRATION2.Caption = "السعر ";
-            this.colTBL_OPRATION2.FieldName = "TBL_STUD_SPEC.TBL_SPECIAL.SPEC_PRICE";
-            this.colTBL_OPRATION2.Name = "colTBL_OPRATION2";
-            this.colTBL_OPRATION2.Visible = true;
-            this.colTBL_OPRATION2.VisibleIndex = 5;
             // 
             // frm_mang_cours_send_send_stud
             // 

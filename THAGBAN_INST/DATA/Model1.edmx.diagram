@@ -4,42 +4,58 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="87ef385745e8473c8a14db7e15766fbc" Name="Diagram1">
-        <EntityTypeShape EntityType="db_max_instModel.sysdiagram" Width="1.5" PointX="5.75" PointY="2.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="db_max_instModel.TBL_ACTIVE_SYSTEM" Width="1.5" PointX="7.75" PointY="2.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="db_max_instModel.TBL_ATTENDS" Width="1.5" PointX="3.75" PointY="12.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="db_max_instModel.TBL_COURS" Width="1.5" PointX="0.75" PointY="13.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="db_max_instModel.TBL_DEPT" Width="1.5" PointX="1.5" PointY="1.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="db_max_instModel.TBL_EMPLOYEES" Width="1.5" PointX="1.5" PointY="8" IsExpanded="true" />
-        <EntityTypeShape EntityType="db_max_instModel.TBL_FOLDER" Width="1.5" PointX="3" PointY="20" IsExpanded="true" />
-        <EntityTypeShape EntityType="db_max_instModel.TBL_HOLIDAY_TYPE" Width="1.5" PointX="4.5" PointY="50.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="db_max_instModel.TBL_HOLIDAYS" Width="1.5" PointX="6.75" PointY="5.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="db_max_instModel.TBL_INST" Width="1.5" PointX="3.75" PointY="8.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="db_max_instModel.TBL_JOB" Width="1.5" PointX="1.5" PointY="4.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="db_max_instModel.TBL_LECT_COURS" Width="1.5" PointX="1.5" PointY="32.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="db_max_instModel.TBL_LECT_MARK" Width="1.5" PointX="6" PointY="19.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="db_max_instModel.TBL_LECT_MATRIAL" Width="1.5" PointX="3.75" PointY="33.375" IsExpanded="true" />
+      <Diagram DiagramId="9a8f56bcb8f84317aeae5702e5cbf6f3" Name="Diagram1">
+        <EntityTypeShape EntityType="db_max_instModel.TB_BUY" Width="1.5" PointX="10.25" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_max_instModel.TBL_ACTIVE_SYSTEM" Width="1.5" PointX="11.75" PointY="12.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_max_instModel.TBL_ATTENDS" Width="1.5" PointX="3.75" PointY="41.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_max_instModel.TBL_CATEGORIES" Width="1.5" PointX="8" PointY="4.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_max_instModel.TBL_COURS" Width="1.5" PointX="0.75" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_max_instModel.TBL_DEPT" Width="1.5" PointX="1.5" PointY="30" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_max_instModel.TBL_EMPLOYEES" Width="1.5" PointX="1.5" PointY="6" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_max_instModel.TBL_FOLDER" Width="1.5" PointX="3" PointY="22.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_max_instModel.TBL_GREIVANCES" Width="1.5" PointX="5.25" PointY="13.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_max_instModel.TBL_HOLIDAY_TYPE" Width="1.5" PointX="4.5" PointY="54.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_max_instModel.TBL_HOLIDAYS" Width="1.5" PointX="6.75" PointY="8.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_max_instModel.TBL_INST" Width="1.5" PointX="3.75" PointY="8.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_max_instModel.TBL_JOB" Width="1.5" PointX="1.5" PointY="2.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_max_instModel.TBL_LECT_COURS" Width="1.5" PointX="1.5" PointY="37.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_max_instModel.TBL_LECT_MARK" Width="1.5" PointX="6" PointY="21.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_max_instModel.TBL_LECT_MATRIAL" Width="1.5" PointX="3.75" PointY="35.5" IsExpanded="true" />
         <EntityTypeShape EntityType="db_max_instModel.TBL_LECT_TECH_COURS" Width="1.5" PointX="3.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="db_max_instModel.TBL_LECTUER" Width="1.5" PointX="1.5" PointY="28.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="db_max_instModel.TBL_LEVLE" Width="1.5" PointX="1.5" PointY="40.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="db_max_instModel.TBL_MARKS" Width="1.5" PointX="3" PointY="16" IsExpanded="true" />
-        <EntityTypeShape EntityType="db_max_instModel.TBL_OPRATION" Width="1.5" PointX="3.75" PointY="28.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="db_max_instModel.TBL_PART_SALARY" Width="1.5" PointX="9" PointY="12.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="db_max_instModel.TBL_ROULLS_LECTUER" Width="1.5" PointX="6" PointY="44.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="db_max_instModel.TBL_SALARY" Width="1.5" PointX="3.75" PointY="41" IsExpanded="true" />
-        <EntityTypeShape EntityType="db_max_instModel.TBL_SEND_STUD__COURS" Width="1.5" PointX="3" PointY="24" IsExpanded="true" />
-        <EntityTypeShape EntityType="db_max_instModel.TBL_SEND_STUD_LECT" Width="1.5" PointX="6" PointY="14.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="db_max_instModel.TBL_SEND_TECT_LECT" Width="1.5" PointX="6" PointY="9.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="db_max_instModel.TBL_SIRYAL_STUDENTS" Width="1.5" PointX="6" PointY="24.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="db_max_instModel.TBL_SPE_COURS" Width="1.5" PointX="9" PointY="28.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="db_max_instModel.TBL_SPECIAL" Width="1.5" PointX="0.75" PointY="36" IsExpanded="true" />
-        <EntityTypeShape EntityType="db_max_instModel.TBL_STUD_LECT" Width="1.5" PointX="9" PointY="20" IsExpanded="true" />
-        <EntityTypeShape EntityType="db_max_instModel.TBL_STUD_SPEC" Width="1.5" PointX="9" PointY="16.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="db_max_instModel.TBL_STUD_STUDY_COURS" Width="1.5" PointX="9" PointY="24.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="db_max_instModel.TBL_STUDENTS" Width="1.5" PointX="0.75" PointY="19.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="db_max_instModel.TBL_USERS" Width="1.5" PointX="3.75" PointY="45.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="db_max_instModel.TBL_YEARS_MARK" Width="1.5" PointX="0.75" PointY="24.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_max_instModel.TBL_LECTUER" Width="1.5" PointX="1.5" PointY="33.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_max_instModel.TBL_LEVLE" Width="1.5" PointX="1.5" PointY="45.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_max_instModel.TBL_MARKS" Width="1.5" PointX="3" PointY="18" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_max_instModel.TBL_OPRATION" Width="1.5" PointX="3.75" PointY="30.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_max_instModel.TBL_OUT_OPTION" Width="1.5" PointX="12.75" PointY="2.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_max_instModel.TBL_OutCome" Width="1.5" PointX="10.25" PointY="9.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_max_instModel.TBL_PART_SALARY" Width="1.5" PointX="9" PointY="13.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_max_instModel.TBL_ROULLS_LECTUER" Width="1.5" PointX="6" PointY="48.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_max_instModel.TBL_SALARY" Width="1.5" PointX="3.75" PointY="45.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_max_instModel.TBL_SEND_STUD__COURS" Width="1.5" PointX="3" PointY="26.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_max_instModel.TBL_SEND_STUD_LECT" Width="1.5" PointX="6" PointY="16.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_max_instModel.TBL_SEND_STUD_SPEC" Width="1.5" PointX="6" PointY="27.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_max_instModel.TBL_SEND_TECT_LECT" Width="1.5" PointX="12" PointY="16.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_max_instModel.TBL_SERVICE_TYPE" Width="1.5" PointX="3.75" PointY="38.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_max_instModel.TBL_SERVICES" Width="1.5" PointX="6" PointY="31" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_max_instModel.TBL_SIRYAL_STUDENTS" Width="1.5" PointX="9" PointY="22.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_max_instModel.TBL_SPE_COURS" Width="1.5" PointX="9" PointY="30" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_max_instModel.TBL_SPECIAL" Width="1.5" PointX="0.75" PointY="41.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_max_instModel.TBL_STORS" Width="1.5" PointX="5.75" PointY="5.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_max_instModel.TBL_STUD_LECT" Width="1.5" PointX="9" PointY="18.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_max_instModel.TBL_STUD_SPEC" Width="1.5" PointX="9" PointY="26.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_max_instModel.TBL_STUD_STUDY_COURS" Width="1.5" PointX="3" PointY="14.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_max_instModel.TBL_STUDENTS" Width="1.5" PointX="0.75" PointY="21.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_max_instModel.TBL_SUPPLIERS" Width="1.5" PointX="8" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_max_instModel.TBL_SuppliersPayments" Width="1.5" PointX="10.25" PointY="33.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_max_instModel.TBL_TERMS" Width="1.5" PointX="0.75" PointY="15.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_max_instModel.TBL_USERS" Width="1.5" PointX="3.75" PointY="49" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_max_instModel.TBL_YEARS" Width="1.5" PointX="0.75" PointY="17.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_max_instModel.TBL_YEARS_MARK" Width="1.5" PointX="0.75" PointY="26.625" IsExpanded="true" />
+        <AssociationConnector Association="db_max_instModel.FK_TB_BUY_TBL_CATEGORIES" ManuallyRouted="false" />
+        <AssociationConnector Association="db_max_instModel.FK_TB_BUY_TBL_SUPPLIERS" ManuallyRouted="false" />
         <AssociationConnector Association="db_max_instModel.FK_TBL_ATTENDS_TBL_EMPLOYEES" ManuallyRouted="false" />
+        <AssociationConnector Association="db_max_instModel.FK_TBL_CATEGORIES_TBL_STORS" ManuallyRouted="false" />
+        <AssociationConnector Association="db_max_instModel.FK_TBL_OutCome_TBL_CATEGORIES" ManuallyRouted="false" />
         <AssociationConnector Association="db_max_instModel.FK_TBL_MARKS_TBL_COURS" ManuallyRouted="false" />
         <AssociationConnector Association="db_max_instModel.FK_TBL_SPE_COURS_TBL_COURS" ManuallyRouted="false" />
         <AssociationConnector Association="db_max_instModel.FK_TBL_STUD_STUDY_COURS_TBL_COURS" ManuallyRouted="false" />
@@ -52,6 +68,7 @@
         <AssociationConnector Association="db_max_instModel.FK_TBL_SEND_TECT_LECT_TBL_LECT_TECHER" ManuallyRouted="false" />
         <AssociationConnector Association="db_max_instModel.FK_USERS_TBL_EMPLOYEES" ManuallyRouted="false" />
         <AssociationConnector Association="db_max_instModel.FK_TBL_FOLDER_TBL_STUDENTS" ManuallyRouted="false" />
+        <AssociationConnector Association="db_max_instModel.FK_GREIVANCES_TBL_STUDENTS" ManuallyRouted="false" />
         <AssociationConnector Association="db_max_instModel.FK_TBL_HOLIDAYS_HOLIDAY_TYPE" ManuallyRouted="false" />
         <AssociationConnector Association="db_max_instModel.FK_TBL_LEVLE_TBL_INST" ManuallyRouted="false" />
         <AssociationConnector Association="db_max_instModel.FK_TBL_OPRATION_TBL_INST" ManuallyRouted="false" />
@@ -80,35 +97,30 @@
         <AssociationConnector Association="db_max_instModel.FK_TBL_PART_SALARY_TBL_OPRATION" ManuallyRouted="false" />
         <AssociationConnector Association="db_max_instModel.FK_TBL_SEND_STUD__COURS_TBL_OPRATION" ManuallyRouted="false" />
         <AssociationConnector Association="db_max_instModel.FK_TBL_SEND_STUD_LECT_TBL_OPRATION" ManuallyRouted="false" />
+        <AssociationConnector Association="db_max_instModel.FK_TBL_SEND_STUD_SPEC_TBL_OPRATION" ManuallyRouted="false" />
         <AssociationConnector Association="db_max_instModel.FK_TBL_SEND_TECT_LECT_TBL_OPRATION" ManuallyRouted="false" />
+        <AssociationConnector Association="db_max_instModel.FK_TBL_SERVICES_TBL_OPRATION" ManuallyRouted="false" />
         <AssociationConnector Association="db_max_instModel.FK_TBL_ROULLS_LECTUER_TBL_USERS" ManuallyRouted="false" />
         <AssociationConnector Association="db_max_instModel.FK_TBL_SEND_STUD__COURS_TBL_STUD_SPEC" ManuallyRouted="false" />
         <AssociationConnector Association="db_max_instModel.FK_TBL_SEND_STUD__COURS_TBL_STUDENTS" ManuallyRouted="false" />
         <AssociationConnector Association="db_max_instModel.FK_TBL_SEND_STUD_LECT_TBL_LECT_STUD_TECH" ManuallyRouted="false" />
         <AssociationConnector Association="db_max_instModel.FK_TBL_SEND_STUD_LECT_TBL_STUDENTS" ManuallyRouted="false" />
+        <AssociationConnector Association="db_max_instModel.FK_TBL_SEND_STUD_SPEC_TBL_SPECIAL" ManuallyRouted="false" />
+        <AssociationConnector Association="db_max_instModel.FK_TBL_SEND_STUD_SPEC_TBL_STUDENTS" ManuallyRouted="false" />
+        <AssociationConnector Association="db_max_instModel.FK_TBL_SERVICES_TBL_SERVICE_TYPE" ManuallyRouted="false" />
         <AssociationConnector Association="db_max_instModel.FK_TBL_SIRYAL_STUDENTS_TBL_SPECIAL" ManuallyRouted="false" />
         <AssociationConnector Association="db_max_instModel.FK_TBL_SIRYAL_STUDENTS_TBL_STUDENTS" ManuallyRouted="false" />
         <AssociationConnector Association="db_max_instModel.FK_TBL_SIRYAL_STUDENTS_TBL_YEARS_MARK" ManuallyRouted="false" />
+        <AssociationConnector Association="db_max_instModel.FK_TBL_COURS_TBL_TERM" ManuallyRouted="false" />
         <AssociationConnector Association="db_max_instModel.FK_TBL_SPE_COURS_TBL_SPECIAL" ManuallyRouted="false" />
+        <AssociationConnector Association="db_max_instModel.FK_TBL_SPE_COURS_TBL_YEARS" ManuallyRouted="false" />
         <AssociationConnector Association="db_max_instModel.FK_TBL_STUD_SPEC_TBL_SPECIAL" ManuallyRouted="false" />
         <AssociationConnector Association="db_max_instModel.FK_TBL_STUD_LECT_TBL_STUDENTS" ManuallyRouted="false" />
         <AssociationConnector Association="db_max_instModel.FK_TBL_STUD_SPEC_TBL_STUD_SPEC" ManuallyRouted="false" />
         <AssociationConnector Association="db_max_instModel.FK_TBL_STUD_STUDY_COURS_TBL_STUDENTS" ManuallyRouted="false" />
-        <EntityTypeShape EntityType="db_max_instModel.TBL_TERMS" Width="1.5" PointX="6.75" PointY="27.75" />
-        <EntityTypeShape EntityType="db_max_instModel.TBL_YEARS" Width="1.5" PointX="9.375" PointY="6.875" />
-        <AssociationConnector Association="db_max_instModel.FK_TBL_COURS_TBL_TERM" />
-        <AssociationConnector Association="db_max_instModel.FK_TBL_SPE_COURS_TBL_YEARS" />
-        <AssociationConnector Association="db_max_instModel.FK_TBL_STUD_STUDY_COURS_TBL_TERMS" />
-        <AssociationConnector Association="db_max_instModel.FK_TBL_STUD_STUDY_COURS_TBL_YEARS" />
-        <EntityTypeShape EntityType="db_max_instModel.TBL_GREIVANCES" Width="1.5" PointX="5.25" PointY="37.5" />
-        <AssociationConnector Association="db_max_instModel.FK_GREIVANCES_TBL_STUDENTS" />
-        <EntityTypeShape EntityType="db_max_instModel.TB_BUY" Width="1.5" PointX="12.625" PointY="1" />
-        <EntityTypeShape EntityType="db_max_instModel.TBL_CATEGORIES" Width="1.5" PointX="10.375" PointY="32.625" />
-        <EntityTypeShape EntityType="db_max_instModel.TBL_SUPPLIERS" Width="1.5" PointX="10.375" PointY="1.375" />
-        <AssociationConnector Association="db_max_instModel.FK_TB_BUY_TBL_CATEGORIES" />
-        <AssociationConnector Association="db_max_instModel.FK_TB_BUY_TBL_SUPPLIERS" />
-        <EntityTypeShape EntityType="db_max_instModel.TBL_SuppliersPayments" Width="1.5" PointX="12.625" PointY="5.75" />
-        <AssociationConnector Association="db_max_instModel.FK_TBL_SuppliersPayments_TBL_SUPPLIERS" />
+        <AssociationConnector Association="db_max_instModel.FK_TBL_STUD_STUDY_COURS_TBL_TERMS" ManuallyRouted="false" />
+        <AssociationConnector Association="db_max_instModel.FK_TBL_STUD_STUDY_COURS_TBL_YEARS" ManuallyRouted="false" />
+        <AssociationConnector Association="db_max_instModel.FK_TBL_SuppliersPayments_TBL_SUPPLIERS" ManuallyRouted="false" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

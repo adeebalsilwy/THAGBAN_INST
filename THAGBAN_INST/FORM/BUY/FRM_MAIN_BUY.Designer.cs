@@ -44,14 +44,6 @@
             DevExpress.Utils.ToolTipItem toolTipItem6 = new DevExpress.Utils.ToolTipItem();
             DevExpress.Utils.SuperToolTip superToolTip7 = new DevExpress.Utils.SuperToolTip();
             DevExpress.Utils.ToolTipItem toolTipItem7 = new DevExpress.Utils.ToolTipItem();
-            DevExpress.Utils.SuperToolTip superToolTip8 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipItem toolTipItem8 = new DevExpress.Utils.ToolTipItem();
-            DevExpress.Utils.SuperToolTip superToolTip9 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipItem toolTipItem9 = new DevExpress.Utils.ToolTipItem();
-            DevExpress.Utils.SuperToolTip superToolTip10 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipItem toolTipItem10 = new DevExpress.Utils.ToolTipItem();
-            DevExpress.Utils.SuperToolTip superToolTip11 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipItem toolTipItem11 = new DevExpress.Utils.ToolTipItem();
             this.fluentDesignFormControl1 = new DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormControl();
             this.pn_notification = new DevExpress.XtraEditors.PanelControl();
             this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
@@ -69,13 +61,10 @@
             this.btn_buy = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.btn_suppliers = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.btn_customers = new DevExpress.XtraBars.Navigation.AccordionControlElement();
-            this.btn_users = new DevExpress.XtraBars.Navigation.AccordionControlElement();
-            this.btn_help = new DevExpress.XtraBars.Navigation.AccordionControlElement();
-            this.btn_reports = new DevExpress.XtraBars.Navigation.AccordionControlElement();
-            this.btn_anylsis = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.btn_about = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.xtraTabControl1 = new DevExpress.XtraTab.XtraTabControl();
             this.hom_page = new DevExpress.XtraTab.XtraTabPage();
+            this.labl_user_name = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.fluentDesignFormControl1)).BeginInit();
             this.fluentDesignFormControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pn_notification)).BeginInit();
@@ -87,6 +76,7 @@
             // 
             // fluentDesignFormControl1
             // 
+            this.fluentDesignFormControl1.Controls.Add(this.labl_user_name);
             this.fluentDesignFormControl1.Controls.Add(this.pn_notification);
             this.fluentDesignFormControl1.FluentDesignForm = this;
             this.fluentDesignFormControl1.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
@@ -188,10 +178,6 @@
             this.btn_buy,
             this.btn_suppliers,
             this.btn_customers,
-            this.btn_users,
-            this.btn_help,
-            this.btn_reports,
-            this.btn_anylsis,
             this.btn_about});
             this.accordionControl1.Location = new System.Drawing.Point(874, 30);
             this.accordionControl1.Margin = new System.Windows.Forms.Padding(14, 12, 14, 12);
@@ -289,7 +275,7 @@
             toolTipItem5.Text = "الموظفين";
             superToolTip5.Items.Add(toolTipItem5);
             this.btn_suppliers.SuperTip = superToolTip5;
-            this.btn_suppliers.Text = "الايجارات";
+            this.btn_suppliers.Text = "المخازن";
             this.btn_suppliers.Click += new System.EventHandler(this.btn_suppliers_Click);
             // 
             // btn_customers
@@ -307,80 +293,8 @@
             toolTipItem6.Text = "الاجازات ";
             superToolTip6.Items.Add(toolTipItem6);
             this.btn_customers.SuperTip = superToolTip6;
-            this.btn_customers.Text = "التخفيضات والمنح";
+            this.btn_customers.Text = "التالف من المخزن";
             this.btn_customers.Click += new System.EventHandler(this.btn_customers_Click);
-            // 
-            // btn_users
-            // 
-            this.btn_users.Appearance.Default.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_users.Appearance.Default.Options.UseFont = true;
-            this.btn_users.HeaderTemplate.AddRange(new DevExpress.XtraBars.Navigation.HeaderElementInfo[] {
-            new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.HeaderControl),
-            new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.ContextButtons),
-            new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.Text, DevExpress.XtraBars.Navigation.HeaderElementAlignment.Right),
-            new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.Image, DevExpress.XtraBars.Navigation.HeaderElementAlignment.Right)});
-            this.btn_users.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_users.ImageOptions.Image")));
-            this.btn_users.Name = "btn_users";
-            this.btn_users.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            toolTipItem7.Text = "سجل الدوام ";
-            superToolTip7.Items.Add(toolTipItem7);
-            this.btn_users.SuperTip = superToolTip7;
-            this.btn_users.Text = "سجل الدوام ";
-            this.btn_users.Click += new System.EventHandler(this.btn_users_Click);
-            // 
-            // btn_help
-            // 
-            this.btn_help.Appearance.Default.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_help.Appearance.Default.Options.UseFont = true;
-            this.btn_help.HeaderTemplate.AddRange(new DevExpress.XtraBars.Navigation.HeaderElementInfo[] {
-            new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.HeaderControl),
-            new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.ContextButtons),
-            new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.Text, DevExpress.XtraBars.Navigation.HeaderElementAlignment.Right),
-            new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.Image, DevExpress.XtraBars.Navigation.HeaderElementAlignment.Right)});
-            this.btn_help.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_help.ImageOptions.Image")));
-            this.btn_help.Name = "btn_help";
-            this.btn_help.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            toolTipItem8.Text = "اضافه مستخدم";
-            superToolTip8.Items.Add(toolTipItem8);
-            this.btn_help.SuperTip = superToolTip8;
-            this.btn_help.Text = "مشاريع ";
-            this.btn_help.Click += new System.EventHandler(this.btn_help_Click);
-            // 
-            // btn_reports
-            // 
-            this.btn_reports.Appearance.Default.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_reports.Appearance.Default.Options.UseFont = true;
-            this.btn_reports.HeaderTemplate.AddRange(new DevExpress.XtraBars.Navigation.HeaderElementInfo[] {
-            new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.HeaderControl),
-            new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.ContextButtons),
-            new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.Text, DevExpress.XtraBars.Navigation.HeaderElementAlignment.Right),
-            new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.Image, DevExpress.XtraBars.Navigation.HeaderElementAlignment.Right)});
-            this.btn_reports.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_reports.ImageOptions.Image")));
-            this.btn_reports.Name = "btn_reports";
-            this.btn_reports.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            toolTipItem9.Text = "الرواتب";
-            superToolTip9.Items.Add(toolTipItem9);
-            this.btn_reports.SuperTip = superToolTip9;
-            this.btn_reports.Text = "الدورات الخارجيه";
-            this.btn_reports.Click += new System.EventHandler(this.btn_reports_Click);
-            // 
-            // btn_anylsis
-            // 
-            this.btn_anylsis.Appearance.Default.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_anylsis.Appearance.Default.Options.UseFont = true;
-            this.btn_anylsis.HeaderTemplate.AddRange(new DevExpress.XtraBars.Navigation.HeaderElementInfo[] {
-            new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.HeaderControl),
-            new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.ContextButtons),
-            new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.Text, DevExpress.XtraBars.Navigation.HeaderElementAlignment.Right),
-            new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.Image, DevExpress.XtraBars.Navigation.HeaderElementAlignment.Right)});
-            this.btn_anylsis.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_anylsis.ImageOptions.Image")));
-            this.btn_anylsis.Name = "btn_anylsis";
-            this.btn_anylsis.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            toolTipItem10.Text = "التقارير";
-            superToolTip10.Items.Add(toolTipItem10);
-            this.btn_anylsis.SuperTip = superToolTip10;
-            this.btn_anylsis.Text = "التقارير";
-            this.btn_anylsis.Click += new System.EventHandler(this.btn_anylsis_Click);
             // 
             // btn_about
             // 
@@ -394,10 +308,11 @@
             this.btn_about.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_about.ImageOptions.Image")));
             this.btn_about.Name = "btn_about";
             this.btn_about.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            toolTipItem11.Text = "حول النظام ";
-            superToolTip11.Items.Add(toolTipItem11);
-            this.btn_about.SuperTip = superToolTip11;
+            toolTipItem7.Text = "حول النظام ";
+            superToolTip7.Items.Add(toolTipItem7);
+            this.btn_about.SuperTip = superToolTip7;
             this.btn_about.Text = "حول";
+            this.btn_about.Click += new System.EventHandler(this.btn_about_Click);
             // 
             // xtraTabControl1
             // 
@@ -418,8 +333,20 @@
             this.hom_page.AutoScroll = true;
             this.hom_page.Name = "hom_page";
             this.hom_page.ShowCloseButton = DevExpress.Utils.DefaultBoolean.False;
-            this.hom_page.Size = new System.Drawing.Size(872, 487);
+            this.hom_page.Size = new System.Drawing.Size(867, 486);
             this.hom_page.Text = "الرئيسية";
+            // 
+            // labl_user_name
+            // 
+            this.labl_user_name.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.labl_user_name.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labl_user_name.ForeColor = System.Drawing.Color.Black;
+            this.labl_user_name.Location = new System.Drawing.Point(164, 0);
+            this.labl_user_name.Name = "labl_user_name";
+            this.labl_user_name.Size = new System.Drawing.Size(563, 27);
+            this.labl_user_name.TabIndex = 9;
+            this.labl_user_name.Text = "اديب الصلوي";
+            this.labl_user_name.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // FRM_MAIN_BUY
             // 
@@ -462,10 +389,6 @@
         public DevExpress.XtraBars.Navigation.AccordionControlElement btn_suppliers;
         public DevExpress.XtraBars.Navigation.AccordionControlElement btn_buy;
         public DevExpress.XtraBars.Navigation.AccordionControlElement btn_customers;
-        public DevExpress.XtraBars.Navigation.AccordionControlElement btn_users;
-        public DevExpress.XtraBars.Navigation.AccordionControlElement btn_reports;
-        public DevExpress.XtraBars.Navigation.AccordionControlElement btn_anylsis;
-        private DevExpress.XtraBars.Navigation.AccordionControlElement btn_help;
         private DevExpress.XtraBars.Navigation.AccordionControlElement btn_about;
         private DevExpress.XtraBars.BarButtonItem barButtonItem1;
         private DevExpress.XtraBars.BarButtonItem barButtonItem2;
@@ -476,5 +399,6 @@
         private DevExpress.XtraBars.BarHeaderItem barHeaderItem5;
         private DevExpress.XtraTab.XtraTabControl xtraTabControl1;
         private DevExpress.XtraTab.XtraTabPage hom_page;
+        public System.Windows.Forms.Label labl_user_name;
     }
 }

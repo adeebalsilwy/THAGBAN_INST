@@ -289,7 +289,7 @@ namespace THAGBAN_INST.FORM.FRM_LECTUER_MANG.move_stud
             //var tbl1 = (from tl in con.TBL_LECT_TECH_COURS.Where(w => w.STATE == true)
             //            join
             //         l in con.TBL_LECTUER on tl.LECT_ID equals l.LECT_ID
-            //            join c in con.TBL_LECT_COURS.Where(w => w.LECT_COURS_ID == cours_id) on 
+            //            join c in con.TBL_LECT_COURS.Where(w => w.LECT_COURS_ID == spec_id) on 
             //            l.LECT_COURS_ID equals c.LECT_COURS_ID
             //            select new
             //            {
@@ -298,7 +298,7 @@ namespace THAGBAN_INST.FORM.FRM_LECTUER_MANG.move_stud
             //            }).Distinct().ToList();
 
 
-            //var tbl1= con.TBL_LECTUER.Join(con.TBL_LECT_COURS.Where(w=>w.LECT_COURS_ID==cours_id),
+            //var tbl1= con.TBL_LECTUER.Join(con.TBL_LECT_COURS.Where(w=>w.LECT_COURS_ID==spec_id),
             //    l=>l.TBL_LECT_COURS.LECT_COURS_ID,
             //    c=>c.LECT_COURS_ID,
             //    (l,c)=>new

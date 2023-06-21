@@ -40,18 +40,18 @@
             this.com_spic = new System.Windows.Forms.ComboBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.lbl_pad_y1 = new System.Windows.Forms.Label();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.lbl_good_y1 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.lbl_pad_y2 = new System.Windows.Forms.Label();
-            this.panel16 = new System.Windows.Forms.Panel();
-            this.lbl_pad = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.panel15 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.lbl_pad = new System.Windows.Forms.Label();
+            this.panel16 = new System.Windows.Forms.Panel();
+            this.lbl_pad_y2 = new System.Windows.Forms.Label();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
+            this.lbl_good_y1 = new System.Windows.Forms.Label();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.lbl_pad_y1 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.chartControl1 = new DevExpress.XtraCharts.ChartControl();
             this.panel13.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -60,10 +60,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.ch_spec.Properties)).BeginInit();
             this.panel1.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.panel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.panel15.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            this.panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(xyDiagram1)).BeginInit();
             this.SuspendLayout();
@@ -206,66 +206,81 @@
             this.flowLayoutPanel1.TabIndex = 12;
             this.flowLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanel1_Paint_1);
             // 
-            // pictureBox1
+            // panel15
             // 
-            this.pictureBox1.Image = global::THAGBAN_INST.Properties.Resources.icons8_ok_200px1;
-            this.pictureBox1.Location = new System.Drawing.Point(11, 40);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(116, 79);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.panel15.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.panel15.Controls.Add(this.label3);
+            this.panel15.Controls.Add(this.lbl_pad);
+            this.panel15.Controls.Add(this.panel16);
+            this.panel15.Controls.Add(this.lbl_pad_y2);
+            this.panel15.Controls.Add(this.pictureBox6);
+            this.panel15.Location = new System.Drawing.Point(20, 17);
+            this.panel15.Margin = new System.Windows.Forms.Padding(20, 17, 20, 17);
+            this.panel15.Name = "panel15";
+            this.panel15.Size = new System.Drawing.Size(370, 225);
+            this.panel15.TabIndex = 6;
+            this.panel15.Paint += new System.Windows.Forms.PaintEventHandler(this.panel15_Paint);
             // 
-            // lbl_pad_y1
+            // label3
             // 
-            this.lbl_pad_y1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lbl_pad_y1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_pad_y1.ForeColor = System.Drawing.Color.White;
-            this.lbl_pad_y1.Location = new System.Drawing.Point(11, 147);
-            this.lbl_pad_y1.Name = "lbl_pad_y1";
-            this.lbl_pad_y1.Size = new System.Drawing.Size(94, 48);
-            this.lbl_pad_y1.TabIndex = 2;
-            this.lbl_pad_y1.Text = "0.00";
-            this.lbl_pad_y1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lbl_pad_y1.Click += new System.EventHandler(this.lbl_good2_Click);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(133, 55);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(218, 79);
+            this.label3.TabIndex = 5;
+            this.label3.Text = "الطلاب الراسبين ";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
-            // panel6
+            // lbl_pad
             // 
-            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel6.Location = new System.Drawing.Point(0, 0);
-            this.panel6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(369, 25);
-            this.panel6.TabIndex = 3;
-            this.panel6.Paint += new System.Windows.Forms.PaintEventHandler(this.panel6_Paint);
+            this.lbl_pad.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lbl_pad.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_pad.ForeColor = System.Drawing.Color.White;
+            this.lbl_pad.Location = new System.Drawing.Point(202, 147);
+            this.lbl_pad.Name = "lbl_pad";
+            this.lbl_pad.Size = new System.Drawing.Size(95, 48);
+            this.lbl_pad.TabIndex = 4;
+            this.lbl_pad.Text = "0.00";
+            this.lbl_pad.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl_pad.Click += new System.EventHandler(this.lbl_pad1_Click);
             // 
-            // lbl_good_y1
+            // panel16
             // 
-            this.lbl_good_y1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lbl_good_y1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_good_y1.ForeColor = System.Drawing.Color.White;
-            this.lbl_good_y1.Location = new System.Drawing.Point(199, 147);
-            this.lbl_good_y1.Name = "lbl_good_y1";
-            this.lbl_good_y1.Size = new System.Drawing.Size(121, 48);
-            this.lbl_good_y1.TabIndex = 4;
-            this.lbl_good_y1.Text = "0.00";
-            this.lbl_good_y1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lbl_good_y1.Click += new System.EventHandler(this.lbl_good1_Click);
+            this.panel16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.panel16.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel16.Location = new System.Drawing.Point(0, 0);
+            this.panel16.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel16.Name = "panel16";
+            this.panel16.Size = new System.Drawing.Size(370, 25);
+            this.panel16.TabIndex = 3;
+            this.panel16.Paint += new System.Windows.Forms.PaintEventHandler(this.panel16_Paint);
             // 
-            // label4
+            // lbl_pad_y2
             // 
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(161, 70);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(195, 49);
-            this.label4.TabIndex = 5;
-            this.label4.Text = "الطلاب الناجحين ";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label4.Click += new System.EventHandler(this.label4_Click_1);
+            this.lbl_pad_y2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lbl_pad_y2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_pad_y2.ForeColor = System.Drawing.Color.White;
+            this.lbl_pad_y2.Location = new System.Drawing.Point(3, 147);
+            this.lbl_pad_y2.Name = "lbl_pad_y2";
+            this.lbl_pad_y2.Size = new System.Drawing.Size(95, 48);
+            this.lbl_pad_y2.TabIndex = 2;
+            this.lbl_pad_y2.Text = "0.00";
+            this.lbl_pad_y2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl_pad_y2.Click += new System.EventHandler(this.lbl_pad2_Click);
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.Image = global::THAGBAN_INST.Properties.Resources.icons8_internal_96px_1;
+            this.pictureBox6.Location = new System.Drawing.Point(11, 40);
+            this.pictureBox6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(116, 79);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox6.TabIndex = 0;
+            this.pictureBox6.TabStop = false;
+            this.pictureBox6.Click += new System.EventHandler(this.pictureBox6_Click);
             // 
             // panel5
             // 
@@ -282,81 +297,66 @@
             this.panel5.TabIndex = 2;
             this.panel5.Paint += new System.Windows.Forms.PaintEventHandler(this.panel5_Paint);
             // 
-            // pictureBox6
+            // label4
             // 
-            this.pictureBox6.Image = global::THAGBAN_INST.Properties.Resources.icons8_internal_96px_1;
-            this.pictureBox6.Location = new System.Drawing.Point(11, 40);
-            this.pictureBox6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(116, 79);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox6.TabIndex = 0;
-            this.pictureBox6.TabStop = false;
-            this.pictureBox6.Click += new System.EventHandler(this.pictureBox6_Click);
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(161, 70);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(195, 49);
+            this.label4.TabIndex = 5;
+            this.label4.Text = "الطلاب الناجحين ";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label4.Click += new System.EventHandler(this.label4_Click_1);
             // 
-            // lbl_pad_y2
+            // lbl_good_y1
             // 
-            this.lbl_pad_y2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lbl_pad_y2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_pad_y2.ForeColor = System.Drawing.Color.White;
-            this.lbl_pad_y2.Location = new System.Drawing.Point(3, 147);
-            this.lbl_pad_y2.Name = "lbl_pad_y2";
-            this.lbl_pad_y2.Size = new System.Drawing.Size(95, 48);
-            this.lbl_pad_y2.TabIndex = 2;
-            this.lbl_pad_y2.Text = "0.00";
-            this.lbl_pad_y2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lbl_pad_y2.Click += new System.EventHandler(this.lbl_pad2_Click);
+            this.lbl_good_y1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lbl_good_y1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_good_y1.ForeColor = System.Drawing.Color.White;
+            this.lbl_good_y1.Location = new System.Drawing.Point(199, 147);
+            this.lbl_good_y1.Name = "lbl_good_y1";
+            this.lbl_good_y1.Size = new System.Drawing.Size(121, 48);
+            this.lbl_good_y1.TabIndex = 4;
+            this.lbl_good_y1.Text = "0.00";
+            this.lbl_good_y1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl_good_y1.Click += new System.EventHandler(this.lbl_good1_Click);
             // 
-            // panel16
+            // panel6
             // 
-            this.panel16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.panel16.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel16.Location = new System.Drawing.Point(0, 0);
-            this.panel16.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panel16.Name = "panel16";
-            this.panel16.Size = new System.Drawing.Size(370, 25);
-            this.panel16.TabIndex = 3;
-            this.panel16.Paint += new System.Windows.Forms.PaintEventHandler(this.panel16_Paint);
+            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel6.Location = new System.Drawing.Point(0, 0);
+            this.panel6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(369, 25);
+            this.panel6.TabIndex = 3;
+            this.panel6.Paint += new System.Windows.Forms.PaintEventHandler(this.panel6_Paint);
             // 
-            // lbl_pad
+            // lbl_pad_y1
             // 
-            this.lbl_pad.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lbl_pad.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_pad.ForeColor = System.Drawing.Color.White;
-            this.lbl_pad.Location = new System.Drawing.Point(202, 147);
-            this.lbl_pad.Name = "lbl_pad";
-            this.lbl_pad.Size = new System.Drawing.Size(95, 48);
-            this.lbl_pad.TabIndex = 4;
-            this.lbl_pad.Text = "0.00";
-            this.lbl_pad.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lbl_pad.Click += new System.EventHandler(this.lbl_pad1_Click);
+            this.lbl_pad_y1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lbl_pad_y1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_pad_y1.ForeColor = System.Drawing.Color.White;
+            this.lbl_pad_y1.Location = new System.Drawing.Point(11, 147);
+            this.lbl_pad_y1.Name = "lbl_pad_y1";
+            this.lbl_pad_y1.Size = new System.Drawing.Size(94, 48);
+            this.lbl_pad_y1.TabIndex = 2;
+            this.lbl_pad_y1.Text = "0.00";
+            this.lbl_pad_y1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl_pad_y1.Click += new System.EventHandler(this.lbl_good2_Click);
             // 
-            // label3
+            // pictureBox1
             // 
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(133, 55);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(218, 79);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "الطلاب الراسبين ";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label3.Click += new System.EventHandler(this.label3_Click);
-            // 
-            // panel15
-            // 
-            this.panel15.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.panel15.Controls.Add(this.label3);
-            this.panel15.Controls.Add(this.lbl_pad);
-            this.panel15.Controls.Add(this.panel16);
-            this.panel15.Controls.Add(this.lbl_pad_y2);
-            this.panel15.Controls.Add(this.pictureBox6);
-            this.panel15.Location = new System.Drawing.Point(20, 17);
-            this.panel15.Margin = new System.Windows.Forms.Padding(20, 17, 20, 17);
-            this.panel15.Name = "panel15";
-            this.panel15.Size = new System.Drawing.Size(370, 225);
-            this.panel15.TabIndex = 6;
-            this.panel15.Paint += new System.Windows.Forms.PaintEventHandler(this.panel15_Paint);
+            this.pictureBox1.Image = global::THAGBAN_INST.Properties.Resources.icons8_ok_200px1;
+            this.pictureBox1.Location = new System.Drawing.Point(11, 40);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(116, 79);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // chartControl1
             // 
@@ -393,10 +393,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.ch_spec.Properties)).EndInit();
             this.panel1.ResumeLayout(false);
             this.flowLayoutPanel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.panel5.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.panel15.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            this.panel5.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(xyDiagram1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartControl1)).EndInit();
             this.ResumeLayout(false);
@@ -415,7 +415,6 @@
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private DevExpress.XtraEditors.CheckEdit ch_years;
         public System.Windows.Forms.ComboBox com_years;
-        private DevExpress.XtraCharts.ChartControl chartControl1;
         private System.Windows.Forms.Panel panel15;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label lbl_pad;
@@ -428,5 +427,6 @@
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Label lbl_pad_y1;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private DevExpress.XtraCharts.ChartControl chartControl1;
     }
 }

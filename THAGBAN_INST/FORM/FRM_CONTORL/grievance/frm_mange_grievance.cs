@@ -1,4 +1,5 @@
 ﻿using DevExpress.XtraEditors;
+using DevExpress.XtraReports.UI;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -10,6 +11,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using THAGBAN_INST.DATA;
+using THAGBAN_INST.reports.control_report;
 
 namespace THAGBAN_INST.FORM.FRM_CONTORL
 {
@@ -155,6 +157,18 @@ namespace THAGBAN_INST.FORM.FRM_CONTORL
         private void gridView2_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
         {
             get_sele();
+        }
+
+        private void simpleButton2_Click(object sender, EventArgs e)
+        {
+            if (griev_id != 0)
+            {
+                report_gerive report = new report_gerive();
+                report.DataSource = con.TBL_GREIVANCES.Find(griev_id);
+                report.ShowRibbonPreview();
+            }
+           
+
         }
     }
 }

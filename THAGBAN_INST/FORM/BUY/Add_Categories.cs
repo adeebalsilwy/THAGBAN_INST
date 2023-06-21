@@ -23,7 +23,7 @@ namespace EPS.AddPage
         public double CatQuantity;
         public CategoriesPage page;
         public int IDGroup;
-
+        public int stor_id=0;
 
 
         public Add_Categories()
@@ -31,6 +31,16 @@ namespace EPS.AddPage
             InitializeComponent();
         }
 
+        void get_data()
+        {
+            db_max_instEntities con=new db_max_instEntities();
+
+            com_stor.DataSource = con.TBL_STORS.ToList();
+            com_stor.DisplayMember = "STOR_NAME";
+            com_stor.ValueMember = "STOR_ID";
+            if (id != 0)
+                com_stor.SelectedValue = stor_id;
+        }
         private bool Save()
         {
             // check fields
@@ -101,6 +111,7 @@ namespace EPS.AddPage
                     CatName = edt_name.Text,
                     CatDes = edt_description.Text,
                     CatQuantity = CatQuantity,
+                    STOR_ID=stor_id
 
                 };
                 db.Entry(add).State = System.Data.Entity.EntityState.Added;
@@ -131,6 +142,7 @@ namespace EPS.AddPage
                     CatName = edt_name.Text,
                     CatDes = edt_description.Text,
                     CatQuantity = CatQuantity,
+                    STOR_ID=stor_id
 
 
                 };
@@ -216,6 +228,28 @@ namespace EPS.AddPage
         private void link_addnewgroups_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
 
+        }
+
+        private void Add_Categories_Load(object sender, EventArgs e)
+        {
+           
+            if (id != 0)
+            {
+               
+                get_data();
+            }
+            get_data();
+        }
+
+        private void com_stor_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                stor_id = Convert.ToInt32(com_stor.SelectedValue.ToString());
+            }catch(Exception ex)
+            {
+
+            }
         }
     }
 }

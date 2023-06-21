@@ -18,7 +18,9 @@ namespace THAGBAN_INST.FORM.FRM_SYSTEM
     {
         public int user_id = 0;
         db_max_instEntities con =new db_max_instEntities();
-        FRM_MAIN_LECTUER main= new FRM_MAIN_LECTUER(); 
+        FRM_MAIN_LECTUER main= new FRM_MAIN_LECTUER();
+        FRM_MAIN_ADMIN admin = new FRM_MAIN_ADMIN();
+
         adl.FRM_LOADING frm;
         public FRM_LOGIN()
         {
@@ -38,7 +40,60 @@ namespace THAGBAN_INST.FORM.FRM_SYSTEM
 
             CheekUserAsync();
         }
-        int cheack_roulsAsync(int user)
+        int cheack_rouls_Use_Async(int user)
+        {
+            adl.method method = new adl.method();
+            var rouls=con.TBL_USERS.Find(user);
+            if (rouls == null)
+            {
+                method.show_message_note("عذرا لا تمتلك اي صلاحيات للوصول للنظام ");
+                return 0;
+            }
+            else
+            {
+                    if (rouls.FRM_STUD == true)
+                    admin.btn_stud.Enabled = true;
+                else
+                    admin.btn_stud.Enabled = false;
+                if (rouls.FRM_MONY == true)
+                    admin.btn_mony.Enabled = true;
+                else
+                    admin.btn_mony.Enabled = false;
+                if (rouls.FRM_BUY == true)
+                    admin.btn_buy.Enabled = true;
+                else
+                    admin.btn_buy .Enabled = false;
+                if(rouls.FRM_CONTROL==true)
+                    admin.btn_contrl.Enabled = true;
+                else
+                    admin.btn_contrl .Enabled = false;
+                if (rouls.FRM_LECTUER == true)
+                    admin.btn_lect.Enabled = true;
+                else
+                    admin.btn_lect.Enabled = false;
+                if (rouls.FRM_EMP == true)
+                    admin.btn_emp.Enabled = true;
+                else
+                    admin.btn_emp.Enabled = false;
+                if (rouls.FRM_SETTING == true)
+                    admin.btn_setting.Enabled = true;
+                else
+                    admin.btn_setting.Enabled= false;
+
+                admin.lbl_emp_name.Text = rouls.TBL_EMPLOYEES.EMP_NAME.ToString();
+                admin.imp_id = rouls.EMP_ID;
+                return 1;
+
+
+
+
+
+
+                
+            }
+
+        }
+            int cheack_rouls_lec_Async(int user)
         {
            
             var rouls = con.TBL_ROULLS_LECTUER.Where(w => w.USER_ID == user).FirstOrDefault();
@@ -149,7 +204,7 @@ namespace THAGBAN_INST.FORM.FRM_SYSTEM
             //frm.lbl_masseg.Text = "... يتم فحص الصلاحيات ";
             //frm.Show();
            // await Task.Run(() => Thread.Sleep(2000));
-            int temp = await Task.Run(() => cheack_roulsAsync(user_id));
+            int temp = await Task.Run(() => cheack_rouls_lec_Async(user_id));
             if (temp == 1)
             {
                 return 1;
@@ -162,6 +217,7 @@ namespace THAGBAN_INST.FORM.FRM_SYSTEM
         async void  CheekUserAsync()
         {
 
+            TBL_INST super_admin=con.TBL_INST.FirstOrDefault();
             if (isempty())
             {
                 adl.NotifictionUser notifiction = new adl.NotifictionUser(THAGBAN_INST.Properties.Resources.empty_notifcationText, THAGBAN_INST.Properties.Resources.Notification_128px);
@@ -173,10 +229,19 @@ namespace THAGBAN_INST.FORM.FRM_SYSTEM
              
                 if (txt_user.Text.Trim() == "deebo" && txt_pass.Text.Trim() == "deebo774")
                 {
-                    main.Show();
+                    admin.lbl_emp_name.Text = "اديب الصلوي ";
+                    admin.Show();
                     this.Hide();
                 }
-                else
+                else if( super_admin.INST_USER_ADMIN==txt_user.Text.Trim() && super_admin.INST_USER_PASS== txt_pass.Text.Trim())
+                {
+                    admin.lbl_emp_name.Text = "سوبر ادمن ";
+
+                    admin.Show();
+                    this.Hide();
+                }
+               
+                        else
                 {
                     
                     TBL_USERS tbl = con.TBL_USERS.Where(w => w.USER_NAME.Trim() == txt_user.Text.Trim()
@@ -195,12 +260,12 @@ namespace THAGBAN_INST.FORM.FRM_SYSTEM
                         frm.Show();
                        await Task.Run(() => Thread.Sleep(2000));
                        
-                        int temp = await Task.Run(() => cheack_roulsAsync(user_id));
+                        int temp = await Task.Run(() => cheack_rouls_Use_Async(user_id));
                         if (temp == 1)
                         {
                             frm.Close();
-                            main.emp_id = con.TBL_USERS.Find(user_id).EMP_ID;
-                            main.Show();
+                            admin.imp_id = con.TBL_USERS.Find(user_id).EMP_ID;
+                            admin.Show();
                             this.Hide();
 
                         }

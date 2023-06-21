@@ -18,14 +18,19 @@ namespace THAGBAN_INST.DATA
         public TBL_CATEGORIES()
         {
             this.TB_BUY = new HashSet<TB_BUY>();
+            this.TBL_OutCome = new HashSet<TBL_OutCome>();
         }
     
         public int ID { get; set; }
         public string CatName { get; set; }
         public string CatDes { get; set; }
         public Nullable<double> CatQuantity { get; set; }
+        public Nullable<int> STOR_ID { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<TB_BUY> TB_BUY { get; set; }
+        public virtual TBL_STORS TBL_STORS { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<TBL_OutCome> TBL_OutCome { get; set; }
     }
 }

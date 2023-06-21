@@ -798,7 +798,7 @@
             // 
             // xrLabel9
             // 
-            this.xrLabel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(129)))), ((int)(((byte)(216)))));
+            this.xrLabel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.xrLabel9.BorderColor = System.Drawing.Color.White;
             this.xrLabel9.Borders = DevExpress.XtraPrinting.BorderSide.Left;
             this.xrLabel9.BorderWidth = 2F;
@@ -822,7 +822,7 @@
             // 
             // xrLabel8
             // 
-            this.xrLabel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(129)))), ((int)(((byte)(216)))));
+            this.xrLabel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.xrLabel8.BorderColor = System.Drawing.Color.White;
             this.xrLabel8.Borders = DevExpress.XtraPrinting.BorderSide.Left;
             this.xrLabel8.BorderWidth = 2F;
@@ -846,7 +846,7 @@
             // 
             // xrLabel4
             // 
-            this.xrLabel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(129)))), ((int)(((byte)(216)))));
+            this.xrLabel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.xrLabel4.BorderColor = System.Drawing.Color.White;
             this.xrLabel4.Borders = DevExpress.XtraPrinting.BorderSide.Left;
             this.xrLabel4.BorderWidth = 2F;
@@ -870,7 +870,7 @@
             // 
             // xrLabel2
             // 
-            this.xrLabel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(129)))), ((int)(((byte)(216)))));
+            this.xrLabel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.xrLabel2.BorderColor = System.Drawing.Color.White;
             this.xrLabel2.Borders = DevExpress.XtraPrinting.BorderSide.Left;
             this.xrLabel2.BorderWidth = 2F;
@@ -894,7 +894,7 @@
             // 
             // xrLabel5
             // 
-            this.xrLabel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(129)))), ((int)(((byte)(216)))));
+            this.xrLabel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.xrLabel5.BorderColor = System.Drawing.Color.White;
             this.xrLabel5.Borders = DevExpress.XtraPrinting.BorderSide.Left;
             this.xrLabel5.BorderWidth = 2F;

@@ -71,6 +71,7 @@ namespace THAGBAN_INST.FORM.BUY
                     page.edt_description.Text = add.CatDes;
                     page.CatQuantity = (double)add.CatQuantity;
                     page.id = id;
+                    page.stor_id=Convert.ToInt32(db.TBL_CATEGORIES.Find(id).STOR_ID.ToString());
                     page.page = this;
                     page.Show();
                 }

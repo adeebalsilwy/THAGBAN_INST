@@ -588,10 +588,10 @@
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[TBL_STUD_LECT.TBL_LECT_TECH_COURS.LECT_TIME]")});
             this.xrLabel16.Font = new DevExpress.Drawing.DXFont("Tahoma", 10F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrLabel16.ForeColor = System.Drawing.Color.Black;
-            this.xrLabel16.LocationFloat = new DevExpress.Utils.PointFloat(476.1274F, 50.88F);
+            this.xrLabel16.LocationFloat = new DevExpress.Utils.PointFloat(488.1274F, 50.88F);
             this.xrLabel16.Name = "xrLabel16";
             this.xrLabel16.Padding = new DevExpress.XtraPrinting.PaddingInfo(6, 6, 0, 0, 96F);
-            this.xrLabel16.SizeF = new System.Drawing.SizeF(85.92892F, 23.99999F);
+            this.xrLabel16.SizeF = new System.Drawing.SizeF(73.92892F, 23.99999F);
             this.xrLabel16.StyleName = "DetailData1";
             this.xrLabel16.StylePriority.UseBorderColor = false;
             this.xrLabel16.StylePriority.UseBorders = false;
@@ -604,14 +604,14 @@
             // 
             // xrLabel22
             // 
-            this.xrLabel22.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(104)))), ((int)(((byte)(196)))));
+            this.xrLabel22.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.xrLabel22.BorderColor = System.Drawing.Color.White;
             this.xrLabel22.Borders = DevExpress.XtraPrinting.BorderSide.Left;
             this.xrLabel22.BorderWidth = 2F;
             this.xrLabel22.Dpi = 96F;
             this.xrLabel22.Font = new DevExpress.Drawing.DXFont("Arial", 12F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrLabel22.ForeColor = System.Drawing.Color.White;
-            this.xrLabel22.LocationFloat = new DevExpress.Utils.PointFloat(396.869F, 50.88F);
+            this.xrLabel22.LocationFloat = new DevExpress.Utils.PointFloat(408.869F, 50.87999F);
             this.xrLabel22.Name = "xrLabel22";
             this.xrLabel22.Padding = new DevExpress.XtraPrinting.PaddingInfo(6, 6, 0, 0, 96F);
             this.xrLabel22.SizeF = new System.Drawing.SizeF(79.25842F, 26.88001F);
@@ -637,7 +637,7 @@
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[TBL_STUD_LECT.TBL_LECT_TECH_COURS.LECT_END_DATE]")});
             this.xrLabel15.Font = new DevExpress.Drawing.DXFont("Tahoma", 10F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrLabel15.ForeColor = System.Drawing.Color.Black;
-            this.xrLabel15.LocationFloat = new DevExpress.Utils.PointFloat(268.3529F, 50.88F);
+            this.xrLabel15.LocationFloat = new DevExpress.Utils.PointFloat(280.3529F, 50.88F);
             this.xrLabel15.Name = "xrLabel15";
             this.xrLabel15.Padding = new DevExpress.XtraPrinting.PaddingInfo(6, 6, 0, 0, 96F);
             this.xrLabel15.SizeF = new System.Drawing.SizeF(128.5161F, 23.99999F);
@@ -653,7 +653,7 @@
             // 
             // xrLabel21
             // 
-            this.xrLabel21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(104)))), ((int)(((byte)(196)))));
+            this.xrLabel21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.xrLabel21.BorderColor = System.Drawing.Color.White;
             this.xrLabel21.Borders = DevExpress.XtraPrinting.BorderSide.Left;
             this.xrLabel21.BorderWidth = 2F;
@@ -663,7 +663,7 @@
             this.xrLabel21.LocationFloat = new DevExpress.Utils.PointFloat(192.8655F, 50.88F);
             this.xrLabel21.Name = "xrLabel21";
             this.xrLabel21.Padding = new DevExpress.XtraPrinting.PaddingInfo(6, 6, 0, 0, 96F);
-            this.xrLabel21.SizeF = new System.Drawing.SizeF(75.48741F, 26.88F);
+            this.xrLabel21.SizeF = new System.Drawing.SizeF(87.48743F, 26.88F);
             this.xrLabel21.StyleName = "DetailCaption1";
             this.xrLabel21.StylePriority.UseBackColor = false;
             this.xrLabel21.StylePriority.UseBorderColor = false;
@@ -686,7 +686,7 @@
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[TBL_STUD_LECT.TBL_LECT_TECH_COURS.LECT_START_DATE]")});
             this.xrLabel14.Font = new DevExpress.Drawing.DXFont("Tahoma", 10F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrLabel14.ForeColor = System.Drawing.Color.Black;
-            this.xrLabel14.LocationFloat = new DevExpress.Utils.PointFloat(87.84343F, 50.88F);
+            this.xrLabel14.LocationFloat = new DevExpress.Utils.PointFloat(87.8434F, 50.88F);
             this.xrLabel14.Name = "xrLabel14";
             this.xrLabel14.Padding = new DevExpress.XtraPrinting.PaddingInfo(6, 6, 0, 0, 96F);
             this.xrLabel14.SizeF = new System.Drawing.SizeF(105.0221F, 24F);
@@ -702,17 +702,17 @@
             // 
             // xrLabel20
             // 
-            this.xrLabel20.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(104)))), ((int)(((byte)(196)))));
+            this.xrLabel20.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.xrLabel20.BorderColor = System.Drawing.Color.White;
             this.xrLabel20.Borders = DevExpress.XtraPrinting.BorderSide.Left;
             this.xrLabel20.BorderWidth = 2F;
             this.xrLabel20.Dpi = 96F;
             this.xrLabel20.Font = new DevExpress.Drawing.DXFont("Arial", 12F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrLabel20.ForeColor = System.Drawing.Color.White;
-            this.xrLabel20.LocationFloat = new DevExpress.Utils.PointFloat(5.859375E-05F, 50.88F);
+            this.xrLabel20.LocationFloat = new DevExpress.Utils.PointFloat(6.103516E-05F, 50.88F);
             this.xrLabel20.Name = "xrLabel20";
             this.xrLabel20.Padding = new DevExpress.XtraPrinting.PaddingInfo(6, 6, 0, 0, 96F);
-            this.xrLabel20.SizeF = new System.Drawing.SizeF(87.84337F, 26.88F);
+            this.xrLabel20.SizeF = new System.Drawing.SizeF(87.84338F, 26.88F);
             this.xrLabel20.StyleName = "DetailCaption1";
             this.xrLabel20.StylePriority.UseBackColor = false;
             this.xrLabel20.StylePriority.UseBorderColor = false;
@@ -736,10 +736,10 @@
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[TBL_STUD_LECT.TBL_LECT_TECH_COURS.TBL_EMPLOYEES.EMP_NAME]")});
             this.xrLabel10.Font = new DevExpress.Drawing.DXFont("Tahoma", 12F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrLabel10.ForeColor = System.Drawing.Color.Black;
-            this.xrLabel10.LocationFloat = new DevExpress.Utils.PointFloat(120.0676F, 26.88001F);
+            this.xrLabel10.LocationFloat = new DevExpress.Utils.PointFloat(120.0676F, 26.88F);
             this.xrLabel10.Name = "xrLabel10";
             this.xrLabel10.Padding = new DevExpress.XtraPrinting.PaddingInfo(6, 2, 0, 0, 96F);
-            this.xrLabel10.SizeF = new System.Drawing.SizeF(186.92F, 24F);
+            this.xrLabel10.SizeF = new System.Drawing.SizeF(186.9199F, 24F);
             this.xrLabel10.StyleName = "GroupData1";
             this.xrLabel10.StylePriority.UseBackColor = false;
             this.xrLabel10.StylePriority.UseBorderColor = false;
@@ -753,7 +753,7 @@
             // 
             // xrLabel9
             // 
-            this.xrLabel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(104)))), ((int)(((byte)(196)))));
+            this.xrLabel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.xrLabel9.BorderColor = System.Drawing.Color.White;
             this.xrLabel9.Borders = DevExpress.XtraPrinting.BorderSide.Bottom;
             this.xrLabel9.BorderWidth = 2F;
@@ -804,7 +804,7 @@
             // 
             // xrLabel7
             // 
-            this.xrLabel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(104)))), ((int)(((byte)(196)))));
+            this.xrLabel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.xrLabel7.BorderColor = System.Drawing.Color.White;
             this.xrLabel7.Borders = DevExpress.XtraPrinting.BorderSide.Bottom;
             this.xrLabel7.BorderWidth = 2F;
@@ -853,7 +853,7 @@
             // 
             // xrLabel19
             // 
-            this.xrLabel19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(104)))), ((int)(((byte)(196)))));
+            this.xrLabel19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.xrLabel19.BorderColor = System.Drawing.Color.White;
             this.xrLabel19.Borders = DevExpress.XtraPrinting.BorderSide.Left;
             this.xrLabel19.BorderWidth = 2F;
@@ -902,7 +902,7 @@
             // 
             // xrLabel18
             // 
-            this.xrLabel18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(104)))), ((int)(((byte)(196)))));
+            this.xrLabel18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.xrLabel18.BorderColor = System.Drawing.Color.White;
             this.xrLabel18.Borders = DevExpress.XtraPrinting.BorderSide.Left;
             this.xrLabel18.BorderWidth = 2F;

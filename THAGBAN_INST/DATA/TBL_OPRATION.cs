@@ -20,7 +20,9 @@ namespace THAGBAN_INST.DATA
             this.TBL_PART_SALARY = new HashSet<TBL_PART_SALARY>();
             this.TBL_SEND_STUD__COURS = new HashSet<TBL_SEND_STUD__COURS>();
             this.TBL_SEND_STUD_LECT = new HashSet<TBL_SEND_STUD_LECT>();
+            this.TBL_SEND_STUD_SPEC = new HashSet<TBL_SEND_STUD_SPEC>();
             this.TBL_SEND_TECT_LECT = new HashSet<TBL_SEND_TECT_LECT>();
+            this.TBL_SERVICES = new HashSet<TBL_SERVICES>();
         }
     
         public int OPRATION_ID { get; set; }
@@ -37,6 +39,10 @@ namespace THAGBAN_INST.DATA
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<TBL_SEND_STUD_LECT> TBL_SEND_STUD_LECT { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<TBL_SEND_STUD_SPEC> TBL_SEND_STUD_SPEC { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<TBL_SEND_TECT_LECT> TBL_SEND_TECT_LECT { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<TBL_SERVICES> TBL_SERVICES { get; set; }
     }
 }

@@ -33,11 +33,6 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
-            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
-            this.btn_delete = new DevExpress.XtraEditors.SimpleButton();
-            this.btn_edite = new DevExpress.XtraEditors.SimpleButton();
-            this.btn_save = new DevExpress.XtraEditors.SimpleButton();
             this.coPRICE = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colNOTE = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colGREIVANCE_ID = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -48,6 +43,12 @@
             this.colTBL_MARKS3 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colSTATE = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colMARK_ID = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
+            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
+            this.btn_delete = new DevExpress.XtraEditors.SimpleButton();
+            this.btn_edite = new DevExpress.XtraEditors.SimpleButton();
+            this.btn_save = new DevExpress.XtraEditors.SimpleButton();
+            this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
@@ -91,18 +92,18 @@
             // 
             // gridView2
             // 
-            this.gridView2.Appearance.EvenRow.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.gridView2.Appearance.EvenRow.Font = new System.Drawing.Font("Tahoma", 9.75F);
-            this.gridView2.Appearance.EvenRow.Options.UseBackColor = true;
-            this.gridView2.Appearance.EvenRow.Options.UseFont = true;
-            this.gridView2.Appearance.HeaderPanel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gridView2.Appearance.FocusedRow.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.gridView2.Appearance.FocusedRow.Options.UseFont = true;
+            this.gridView2.Appearance.HeaderPanel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.gridView2.Appearance.HeaderPanel.Options.UseFont = true;
-            this.gridView2.Appearance.OddRow.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.gridView2.Appearance.OddRow.Font = new System.Drawing.Font("Tahoma", 9.75F);
-            this.gridView2.Appearance.OddRow.Options.UseBackColor = true;
-            this.gridView2.Appearance.OddRow.Options.UseFont = true;
-            this.gridView2.Appearance.ViewCaption.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gridView2.Appearance.ViewCaption.Options.UseFont = true;
+            this.gridView2.Appearance.HeaderPanel.Options.UseTextOptions = true;
+            this.gridView2.Appearance.HeaderPanel.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridView2.Appearance.HeaderPanel.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridView2.Appearance.Row.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.gridView2.Appearance.Row.Options.UseFont = true;
+            this.gridView2.Appearance.Row.Options.UseTextOptions = true;
+            this.gridView2.Appearance.Row.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridView2.Appearance.Row.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.gridView2.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.coPRICE,
             this.colNOTE,
@@ -122,94 +123,6 @@
             this.gridView2.RowCellClick += new DevExpress.XtraGrid.Views.Grid.RowCellClickEventHandler(this.gridView2_RowCellClick);
             this.gridView2.FocusedRowChanged += new DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventHandler(this.gridView2_FocusedRowChanged);
             this.gridView2.FocusedColumnChanged += new DevExpress.XtraGrid.Views.Base.FocusedColumnChangedEventHandler(this.gridView2_FocusedColumnChanged);
-            // 
-            // panelControl1
-            // 
-            this.panelControl1.Controls.Add(this.simpleButton1);
-            this.panelControl1.Controls.Add(this.btn_delete);
-            this.panelControl1.Controls.Add(this.btn_edite);
-            this.panelControl1.Controls.Add(this.btn_save);
-            this.panelControl1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelControl1.Location = new System.Drawing.Point(0, 487);
-            this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(925, 61);
-            this.panelControl1.TabIndex = 8;
-            this.panelControl1.Paint += new System.Windows.Forms.PaintEventHandler(this.panelControl1_Paint);
-            // 
-            // simpleButton1
-            // 
-            this.simpleButton1.AccessibleRole = System.Windows.Forms.AccessibleRole.Border;
-            this.simpleButton1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.simpleButton1.Appearance.BackColor = System.Drawing.Color.Transparent;
-            this.simpleButton1.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.simpleButton1.Appearance.Options.UseBackColor = true;
-            this.simpleButton1.Appearance.Options.UseBorderColor = true;
-            this.simpleButton1.Appearance.Options.UseFont = true;
-            this.simpleButton1.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("simpleButton1.ImageOptions.SvgImage")));
-            this.simpleButton1.Location = new System.Drawing.Point(215, 5);
-            this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.ShowFocusRectangle = DevExpress.Utils.DefaultBoolean.True;
-            this.simpleButton1.Size = new System.Drawing.Size(101, 50);
-            this.simpleButton1.TabIndex = 45;
-            this.simpleButton1.Text = "تحديث";
-            this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
-            // 
-            // btn_delete
-            // 
-            this.btn_delete.AccessibleRole = System.Windows.Forms.AccessibleRole.Border;
-            this.btn_delete.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btn_delete.Appearance.BackColor = System.Drawing.Color.Transparent;
-            this.btn_delete.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_delete.Appearance.Options.UseBackColor = true;
-            this.btn_delete.Appearance.Options.UseBorderColor = true;
-            this.btn_delete.Appearance.Options.UseFont = true;
-            this.btn_delete.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_delete.ImageOptions.Image")));
-            this.btn_delete.Location = new System.Drawing.Point(345, 5);
-            this.btn_delete.Name = "btn_delete";
-            this.btn_delete.ShowFocusRectangle = DevExpress.Utils.DefaultBoolean.True;
-            this.btn_delete.Size = new System.Drawing.Size(101, 50);
-            this.btn_delete.TabIndex = 44;
-            this.btn_delete.Text = "حذف";
-            this.btn_delete.Click += new System.EventHandler(this.btn_delete_Click);
-            // 
-            // btn_edite
-            // 
-            this.btn_edite.AccessibleRole = System.Windows.Forms.AccessibleRole.Border;
-            this.btn_edite.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btn_edite.Appearance.BackColor = System.Drawing.Color.Transparent;
-            this.btn_edite.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_edite.Appearance.Options.UseBackColor = true;
-            this.btn_edite.Appearance.Options.UseBorderColor = true;
-            this.btn_edite.Appearance.Options.UseFont = true;
-            this.btn_edite.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_edite.ImageOptions.Image")));
-            this.btn_edite.Location = new System.Drawing.Point(495, 5);
-            this.btn_edite.Name = "btn_edite";
-            this.btn_edite.ShowFocusRectangle = DevExpress.Utils.DefaultBoolean.True;
-            this.btn_edite.Size = new System.Drawing.Size(101, 50);
-            this.btn_edite.TabIndex = 43;
-            this.btn_edite.Text = "تعديل";
-            this.btn_edite.Click += new System.EventHandler(this.btn_edite_Click);
-            // 
-            // btn_save
-            // 
-            this.btn_save.AccessibleRole = System.Windows.Forms.AccessibleRole.Border;
-            this.btn_save.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btn_save.Appearance.BackColor = System.Drawing.Color.Transparent;
-            this.btn_save.Appearance.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btn_save.Appearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.btn_save.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_save.Appearance.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.ForwardDiagonal;
-            this.btn_save.Appearance.Options.UseBackColor = true;
-            this.btn_save.Appearance.Options.UseBorderColor = true;
-            this.btn_save.Appearance.Options.UseFont = true;
-            this.btn_save.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_save.ImageOptions.Image")));
-            this.btn_save.Location = new System.Drawing.Point(609, 5);
-            this.btn_save.Name = "btn_save";
-            this.btn_save.ShowFocusRectangle = DevExpress.Utils.DefaultBoolean.True;
-            this.btn_save.Size = new System.Drawing.Size(101, 50);
-            this.btn_save.TabIndex = 42;
-            this.btn_save.Text = "اضافة";
-            this.btn_save.Click += new System.EventHandler(this.btn_save_Click);
             // 
             // coPRICE
             // 
@@ -301,6 +214,117 @@
             this.colMARK_ID.VisibleIndex = 5;
             this.colMARK_ID.Width = 119;
             // 
+            // panelControl1
+            // 
+            this.panelControl1.Controls.Add(this.simpleButton2);
+            this.panelControl1.Controls.Add(this.simpleButton1);
+            this.panelControl1.Controls.Add(this.btn_delete);
+            this.panelControl1.Controls.Add(this.btn_edite);
+            this.panelControl1.Controls.Add(this.btn_save);
+            this.panelControl1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panelControl1.Location = new System.Drawing.Point(0, 487);
+            this.panelControl1.Name = "panelControl1";
+            this.panelControl1.Size = new System.Drawing.Size(925, 61);
+            this.panelControl1.TabIndex = 8;
+            this.panelControl1.Paint += new System.Windows.Forms.PaintEventHandler(this.panelControl1_Paint);
+            // 
+            // simpleButton1
+            // 
+            this.simpleButton1.AccessibleRole = System.Windows.Forms.AccessibleRole.Border;
+            this.simpleButton1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.simpleButton1.Appearance.BackColor = System.Drawing.Color.Transparent;
+            this.simpleButton1.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.simpleButton1.Appearance.Options.UseBackColor = true;
+            this.simpleButton1.Appearance.Options.UseBorderColor = true;
+            this.simpleButton1.Appearance.Options.UseFont = true;
+            this.simpleButton1.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("simpleButton1.ImageOptions.SvgImage")));
+            this.simpleButton1.Location = new System.Drawing.Point(215, 5);
+            this.simpleButton1.Name = "simpleButton1";
+            this.simpleButton1.ShowFocusRectangle = DevExpress.Utils.DefaultBoolean.True;
+            this.simpleButton1.Size = new System.Drawing.Size(101, 50);
+            this.simpleButton1.TabIndex = 45;
+            this.simpleButton1.Text = "تحديث";
+            this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
+            // 
+            // btn_delete
+            // 
+            this.btn_delete.AccessibleRole = System.Windows.Forms.AccessibleRole.Border;
+            this.btn_delete.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btn_delete.Appearance.BackColor = System.Drawing.Color.Transparent;
+            this.btn_delete.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_delete.Appearance.Options.UseBackColor = true;
+            this.btn_delete.Appearance.Options.UseBorderColor = true;
+            this.btn_delete.Appearance.Options.UseFont = true;
+            this.btn_delete.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_delete.ImageOptions.Image")));
+            this.btn_delete.Location = new System.Drawing.Point(345, 5);
+            this.btn_delete.Name = "btn_delete";
+            this.btn_delete.ShowFocusRectangle = DevExpress.Utils.DefaultBoolean.True;
+            this.btn_delete.Size = new System.Drawing.Size(101, 50);
+            this.btn_delete.TabIndex = 44;
+            this.btn_delete.Text = "حذف";
+            this.btn_delete.Click += new System.EventHandler(this.btn_delete_Click);
+            // 
+            // btn_edite
+            // 
+            this.btn_edite.AccessibleRole = System.Windows.Forms.AccessibleRole.Border;
+            this.btn_edite.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btn_edite.Appearance.BackColor = System.Drawing.Color.Transparent;
+            this.btn_edite.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_edite.Appearance.Options.UseBackColor = true;
+            this.btn_edite.Appearance.Options.UseBorderColor = true;
+            this.btn_edite.Appearance.Options.UseFont = true;
+            this.btn_edite.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_edite.ImageOptions.Image")));
+            this.btn_edite.Location = new System.Drawing.Point(495, 5);
+            this.btn_edite.Name = "btn_edite";
+            this.btn_edite.ShowFocusRectangle = DevExpress.Utils.DefaultBoolean.True;
+            this.btn_edite.Size = new System.Drawing.Size(101, 50);
+            this.btn_edite.TabIndex = 43;
+            this.btn_edite.Text = "تعديل";
+            this.btn_edite.Click += new System.EventHandler(this.btn_edite_Click);
+            // 
+            // btn_save
+            // 
+            this.btn_save.AccessibleRole = System.Windows.Forms.AccessibleRole.Border;
+            this.btn_save.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btn_save.Appearance.BackColor = System.Drawing.Color.Transparent;
+            this.btn_save.Appearance.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btn_save.Appearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.btn_save.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_save.Appearance.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.ForwardDiagonal;
+            this.btn_save.Appearance.Options.UseBackColor = true;
+            this.btn_save.Appearance.Options.UseBorderColor = true;
+            this.btn_save.Appearance.Options.UseFont = true;
+            this.btn_save.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_save.ImageOptions.Image")));
+            this.btn_save.Location = new System.Drawing.Point(609, 5);
+            this.btn_save.Name = "btn_save";
+            this.btn_save.ShowFocusRectangle = DevExpress.Utils.DefaultBoolean.True;
+            this.btn_save.Size = new System.Drawing.Size(101, 50);
+            this.btn_save.TabIndex = 42;
+            this.btn_save.Text = "اضافة";
+            this.btn_save.Click += new System.EventHandler(this.btn_save_Click);
+            // 
+            // simpleButton2
+            // 
+            this.simpleButton2.AccessibleRole = System.Windows.Forms.AccessibleRole.Border;
+            this.simpleButton2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.simpleButton2.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.simpleButton2.Appearance.Options.UseBorderColor = true;
+            this.simpleButton2.Appearance.Options.UseFont = true;
+            this.simpleButton2.Appearance.Options.UseTextOptions = true;
+            this.simpleButton2.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.simpleButton2.Appearance.TextOptions.Trimming = DevExpress.Utils.Trimming.EllipsisCharacter;
+            this.simpleButton2.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.simpleButton2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton2.ImageOptions.Image")));
+            this.simpleButton2.Location = new System.Drawing.Point(64, 5);
+            this.simpleButton2.Name = "simpleButton2";
+            this.simpleButton2.ShowFocusRectangle = DevExpress.Utils.DefaultBoolean.True;
+            this.simpleButton2.Size = new System.Drawing.Size(120, 51);
+            this.simpleButton2.TabIndex = 56;
+            this.simpleButton2.Text = "طباعه";
+            this.simpleButton2.Click += new System.EventHandler(this.simpleButton2_Click);
+            // 
             // frm_mange_grievance
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -339,5 +363,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn colTBL_MARKS3;
         private DevExpress.XtraGrid.Columns.GridColumn colSTATE;
         private DevExpress.XtraGrid.Columns.GridColumn colMARK_ID;
+        public DevExpress.XtraEditors.SimpleButton simpleButton2;
     }
 }

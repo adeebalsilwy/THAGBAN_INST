@@ -60,10 +60,10 @@ namespace THAGBAN_INST.FORM.FRM_MANG_STUD.marks
                 txt_mark_value.Text=tbl.MARK_COURS.ToString();
                 cours_id = Convert.ToInt32(tbl.COURS_ID);
                 year_id= Convert.ToInt32(tbl.YEARS_ID);
-               // MessageBox.Show(cours_id.ToString());
+               // MessageBox.Show(spec_id.ToString());
 
                 get_info();
-               // MessageBox.Show(cours_id.ToString());
+               // MessageBox.Show(spec_id.ToString());
             }
             else
             {

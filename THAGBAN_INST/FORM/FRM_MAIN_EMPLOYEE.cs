@@ -9,12 +9,15 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using THAGBAN_INST.DATA;
 using THAGBAN_INST.FORM.FRM_EMP_MANEGER;
 using THAGBAN_INST.FORM.FRM_EMP_MANEGER.attends;
 using THAGBAN_INST.FORM.FRM_EMP_MANEGER.holidays;
 using THAGBAN_INST.FORM.FRM_EMP_MANEGER.job;
 using THAGBAN_INST.FORM.FRM_EMP_MANEGER.part_salary;
 using THAGBAN_INST.FORM.FRM_EMP_MANEGER.users;
+using THAGBAN_INST.FORM.FRM_LECTUER_MANG;
+using THAGBAN_INST.FORM.FRM_SYSTEM;
 using THAGBAN_INST.reports.emp_reports;
 
 namespace THAGBAN_INST.FORM
@@ -23,15 +26,71 @@ namespace THAGBAN_INST.FORM
     {
         bool PageStageClose;
         XtraTabPage XtraPage;
+        public int imp_id=0;
+        db_max_instEntities con = new db_max_instEntities();
+
         public FRM_MAIN_EMPLOYEE()
         {
             InitializeComponent();
         }
-      
 
 
+        private void LoadHomePage()
+        {
+
+
+            try
+            {
+                home_page page = new home_page();
+                page.Dock = DockStyle.Fill;
+                xtraTabControl1.Controls.Add(page);
+                xtraTabControl1.Controls.Clear();
+                xtraTabControl1.TabPages.Clear();
+
+                PageStageClose = true;
+                // xtraTabControl1.TabPages.Add(xtraTabControl1.TabPages.First());
+                xtraTabControl1.SelectedTabPage = xtraTabControl1.TabPages.First();
+                xtraTabControl1.SelectedTabPage.Text = "الرئيسيه";
+
+               
+
+
+
+            }
+            catch (Exception ex) { }
+        }
+
+        private bool check_user()
+        {
+            adl.method method = new adl.method();
+
+            if (imp_id != 0)
+            {
+                TBL_EMPLOYEES tbl = con.TBL_EMPLOYEES.Find(imp_id);
+                if (tbl.TBL_JOB.JOB_NAME.Trim() == "مدير")
+                    return true;
+                else
+                {
+                    method.show_message_note("ليس لديك صلاحيه الوصول الى هذه الواجهه");
+                    return false;
+                }
+            }
+            else
+            {
+                return true;
+            }
+        }
         private void FRM_MAIN_Load(object sender, EventArgs e)
         {
+            if(imp_id!=0)
+            labl_user_name.Text = con.TBL_EMPLOYEES.Find(imp_id).EMP_NAME.ToString();
+
+            LoadHomePage();
+            xtraTabControl1.Controls.Clear();
+            //xtraTabControl1.TabPages.Clear();
+            home_page frm = new home_page();
+            SelectPage(frm, "الرئيسيه");
+            PageStageClose = true;
 
         }
 
@@ -123,21 +182,49 @@ namespace THAGBAN_INST.FORM
 
         private void btn_help_Click(object sender, EventArgs e)
         {
-            frm_mang_users frm = new frm_mang_users();
-            SelectPage(frm, "المستخدمين ");
+            if (check_user())
+            {
+                frm_mang_users frm = new frm_mang_users();
+                SelectPage(frm, "المستخدمين ");
+            }
+            
         }
 
         private void btn_reports_Click(object sender, EventArgs e)
         {
-            frm_mang_part frm = new frm_mang_part();
-            SelectPage(frm, "الاقساط");
+            if (check_user())
+            {
+                frm_mang_part frm = new frm_mang_part();
+                SelectPage(frm, "الاقساط");
+            }
 
         }
 
         private void btn_anylsis_Click(object sender, EventArgs e)
         {
-            frm_mang_reptort_emp frm =new frm_mang_reptort_emp();
-            SelectPage(frm, "التقارير ");
+            if (check_user())
+            {
+                frm_mang_reptort_emp frm = new frm_mang_reptort_emp();
+                SelectPage(frm, "التقارير ");
+            }
+        }
+
+        private void hom_page_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btn_about_Click(object sender, EventArgs e)
+        {
+            AboutBox frm = new AboutBox();
+            frm.ShowDialog();
+        }
+
+        private void btn_home_Click(object sender, EventArgs e)
+        {
+            home_page home = new home_page();
+            SelectPage(home, "الرئيسيه");
+
         }
     }
 

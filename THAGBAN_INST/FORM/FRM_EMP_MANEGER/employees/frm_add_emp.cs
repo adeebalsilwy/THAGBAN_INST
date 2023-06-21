@@ -162,7 +162,7 @@ namespace THAGBAN_INST.FORM.FRM_EMP_MANEGER.employees
                         cl.EMP_ID = Convert.ToInt32(emp_id);
                         con.TBL_EMPLOYEES.AddOrUpdate(cl);
                         con.SaveChanges();
-
+                        add_user_data(cl.EMP_ID);
                         adl.NotifictionUser notifiction = new adl.NotifictionUser(THAGBAN_INST.Properties.Resources.EditNotificationText, THAGBAN_INST.Properties.Resources.edit_32px);
                         notifiction.Show();
                         clear();
@@ -173,9 +173,10 @@ namespace THAGBAN_INST.FORM.FRM_EMP_MANEGER.employees
                         //update 
                         con.TBL_EMPLOYEES.AddOrUpdate(cl);
                         con.SaveChanges();
-                        frm_add_users frm = new frm_add_users();
-                        frm.emp_id = cl.EMP_ID;
-                        frm.ShowDialog();
+                        add_user_data(cl.EMP_ID);
+                        //frm_add_users frm = new frm_add_users();
+                        //frm.emp_id = cl.EMP_ID;
+                        //frm.ShowDialog();
                         adl.NotifictionUser notifiction = new adl.NotifictionUser(THAGBAN_INST.Properties.Resources.AddNotificationText, THAGBAN_INST.Properties.Resources.add_32px);
                         notifiction.Show();
                         clear();
@@ -238,6 +239,19 @@ namespace THAGBAN_INST.FORM.FRM_EMP_MANEGER.employees
                     ch_mal.Checked=true;
                 else
                 radioButton1.Checked=true;
+               TBL_USERS tbl=con.TBL_USERS.Where(w=>w.EMP_ID==emp_id).FirstOrDefault();
+                if (tbl != null)
+                {
+                    ch_roule.Checked = true;
+                    txt_user_name.Text = tbl.USER_NAME;
+                    txt_password.Text = tbl.USER_PASS;
+                    ch_frm_buy.Checked = (bool)tbl.FRM_BUY;
+                    ch_frm_contr.Checked = (bool)tbl.FRM_CONTROL;
+                    ch_frm_emp.Checked= (bool)tbl.FRM_EMP;
+                    ch_frm_lect.Checked = (bool)tbl.FRM_LECTUER;
+                    ch_frm_mony.Checked = (bool)tbl.FRM_MONY;
+                    ch_frm_stud.Checked = (bool)tbl.FRM_STUD;
+                }
                 
             }
 
@@ -371,6 +385,62 @@ namespace THAGBAN_INST.FORM.FRM_EMP_MANEGER.employees
             }
             else
                 return;
+        }
+
+        void add_user_data(int emp_id1)
+        {
+            TBL_USERS user = new TBL_USERS();
+            user.EMP_ID = emp_id1;
+            user.USER_NAME = txt_user_name.Text;
+            user.USER_PASS = txt_password.Text;
+            if (ch_frm_buy.Checked == true)
+                user.FRM_BUY = true;
+            else
+                user.FRM_BUY = false;
+            if (ch_frm_contr.Checked == true)
+                user.FRM_CONTROL = true;
+            else
+                user.FRM_CONTROL = false;
+            if(ch_frm_emp.Checked==true)
+                user.FRM_EMP=true;
+            else
+                user.FRM_EMP= false;
+            if(ch_frm_lect.Checked==true)
+                user.FRM_LECTUER = true;
+            else
+                user.FRM_LECTUER= false;
+            if(ch_frm_mony.Checked==true)
+                user.FRM_MONY = true;
+            else
+                user.FRM_MONY= false;
+            if (ch_frm_stud.Checked == true)
+            user.FRM_STUD = true;
+            else
+                user.FRM_STUD= false;
+            if (ch_setting.Checked == true)
+                user.FRM_SETTING = true;
+            else
+                user.FRM_SETTING = false;
+
+            if(emp_id==0)
+            con.TBL_USERS.Add(user);
+            else
+            {
+                user.USER_ID = con.TBL_USERS.Where(w => w.EMP_ID == emp_id).FirstOrDefault().USER_ID;
+                con.TBL_USERS.AddOrUpdate(user);
+            }
+            con.SaveChanges();
+            
+        }
+
+        private void ch_roule_CheckedChanged(object sender, EventArgs e)
+        {
+            if (ch_roule.Checked == true)
+            {
+                panel2.Enabled = true;
+            }
+            else
+                panel2.Enabled=false;
         }
     }
 }

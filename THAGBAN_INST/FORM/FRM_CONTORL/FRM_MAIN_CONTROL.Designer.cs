@@ -47,6 +47,7 @@
             DevExpress.Utils.SuperToolTip superToolTip8 = new DevExpress.Utils.SuperToolTip();
             DevExpress.Utils.ToolTipItem toolTipItem8 = new DevExpress.Utils.ToolTipItem();
             this.fluentDesignFormControl1 = new DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormControl();
+            this.labl_user_name = new System.Windows.Forms.Label();
             this.pn_notification = new DevExpress.XtraEditors.PanelControl();
             this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem2 = new DevExpress.XtraBars.BarButtonItem();
@@ -78,6 +79,7 @@
             // 
             // fluentDesignFormControl1
             // 
+            this.fluentDesignFormControl1.Controls.Add(this.labl_user_name);
             this.fluentDesignFormControl1.Controls.Add(this.pn_notification);
             this.fluentDesignFormControl1.FluentDesignForm = this;
             this.fluentDesignFormControl1.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
@@ -97,6 +99,18 @@
             this.fluentDesignFormControl1.TabStop = false;
             this.fluentDesignFormControl1.TitleItemLinks.Add(this.barButtonItem1);
             this.fluentDesignFormControl1.TitleItemLinks.Add(this.barButtonItem2);
+            // 
+            // labl_user_name
+            // 
+            this.labl_user_name.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.labl_user_name.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labl_user_name.ForeColor = System.Drawing.Color.Black;
+            this.labl_user_name.Location = new System.Drawing.Point(198, 2);
+            this.labl_user_name.Name = "labl_user_name";
+            this.labl_user_name.Size = new System.Drawing.Size(563, 27);
+            this.labl_user_name.TabIndex = 9;
+            this.labl_user_name.Text = "اديب الصلوي";
+            this.labl_user_name.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // pn_notification
             // 
@@ -332,6 +346,7 @@
             superToolTip8.Items.Add(toolTipItem8);
             this.btn_about.SuperTip = superToolTip8;
             this.btn_about.Text = "حول";
+            this.btn_about.Click += new System.EventHandler(this.btn_about_Click);
             // 
             // xtraTabControl1
             // 
@@ -352,7 +367,7 @@
             this.hom_page.AutoScroll = true;
             this.hom_page.Name = "hom_page";
             this.hom_page.ShowCloseButton = DevExpress.Utils.DefaultBoolean.False;
-            this.hom_page.Size = new System.Drawing.Size(866, 484);
+            this.hom_page.Size = new System.Drawing.Size(867, 486);
             this.hom_page.Text = "الرئيسية";
             // 
             // FRM_MAIN_CONTROL
@@ -407,5 +422,6 @@
         private DevExpress.XtraBars.BarHeaderItem barHeaderItem5;
         private DevExpress.XtraTab.XtraTabControl xtraTabControl1;
         private DevExpress.XtraTab.XtraTabPage hom_page;
+        public System.Windows.Forms.Label labl_user_name;
     }
 }

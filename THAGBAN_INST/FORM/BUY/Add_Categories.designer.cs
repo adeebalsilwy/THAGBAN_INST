@@ -41,6 +41,8 @@ namespace EPS.AddPage
             this.toastNotificationsManager1 = new DevExpress.XtraBars.ToastNotifications.ToastNotificationsManager(this.components);
             this.label3 = new System.Windows.Forms.Label();
             this.edt_description = new System.Windows.Forms.RichTextBox();
+            this.com_stor = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.toastNotificationsManager1)).BeginInit();
             this.SuspendLayout();
@@ -151,15 +153,42 @@ namespace EPS.AddPage
             this.edt_description.Location = new System.Drawing.Point(39, 122);
             this.edt_description.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.edt_description.Name = "edt_description";
-            this.edt_description.Size = new System.Drawing.Size(407, 210);
+            this.edt_description.Size = new System.Drawing.Size(407, 195);
             this.edt_description.TabIndex = 4;
             this.edt_description.Text = "";
+            // 
+            // com_stor
+            // 
+            this.com_stor.AllowDrop = true;
+            this.com_stor.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.com_stor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.com_stor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.com_stor.FormattingEnabled = true;
+            this.com_stor.Location = new System.Drawing.Point(125, 363);
+            this.com_stor.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.com_stor.Name = "com_stor";
+            this.com_stor.Size = new System.Drawing.Size(321, 28);
+            this.com_stor.TabIndex = 7;
+            this.com_stor.SelectedIndexChanged += new System.EventHandler(this.com_stor_SelectedIndexChanged);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.DimGray;
+            this.label2.Location = new System.Drawing.Point(388, 324);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(77, 20);
+            this.label2.TabIndex = 6;
+            this.label2.Text = "اسم المخزن";
             // 
             // Add_Categories
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(500, 497);
+            this.Controls.Add(this.com_stor);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.edt_description);
             this.Controls.Add(this.txt_message);
             this.Controls.Add(this.label3);
@@ -179,6 +208,7 @@ namespace EPS.AddPage
             this.Text = "اضافة صنف";
             this.TopMost = true;
             this.Activated += new System.EventHandler(this.Add_Categories_Activated);
+            this.Load += new System.EventHandler(this.Add_Categories_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.toastNotificationsManager1)).EndInit();
             this.ResumeLayout(false);
@@ -198,5 +228,7 @@ namespace EPS.AddPage
         private DevExpress.XtraBars.ToastNotifications.ToastNotificationsManager toastNotificationsManager1;
         private System.Windows.Forms.Label label3;
         public System.Windows.Forms.RichTextBox edt_description;
+        public System.Windows.Forms.ComboBox com_stor;
+        private System.Windows.Forms.Label label2;
     }
 }

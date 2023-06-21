@@ -52,11 +52,11 @@
             // 
             // labelControl1
             // 
-            this.labelControl1.Appearance.Font = new System.Drawing.Font("ae_AlArabiya", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl1.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl1.Appearance.Options.UseFont = true;
             this.labelControl1.Location = new System.Drawing.Point(111, 14);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(258, 26);
+            this.labelControl1.Size = new System.Drawing.Size(245, 24);
             this.labelControl1.TabIndex = 43;
             this.labelControl1.Text = "شاشه اضافه وتعديل انواع الاجازات";
             // 
@@ -147,7 +147,7 @@
             this.txt_holay_type_name.BorderThickness = 3;
             this.txt_holay_type_name.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txt_holay_type_name.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txt_holay_type_name.DefaultFont = new System.Drawing.Font("ae_AlArabiya", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.txt_holay_type_name.DefaultFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.txt_holay_type_name.DefaultText = "";
             this.txt_holay_type_name.FillColor = System.Drawing.Color.White;
             this.txt_holay_type_name.HideSelection = true;
@@ -194,7 +194,7 @@
             this.txt_holay_type_name.SelectionLength = 0;
             this.txt_holay_type_name.SelectionStart = 0;
             this.txt_holay_type_name.ShortcutsEnabled = true;
-            this.txt_holay_type_name.Size = new System.Drawing.Size(319, 54);
+            this.txt_holay_type_name.Size = new System.Drawing.Size(319, 51);
             this.txt_holay_type_name.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txt_holay_type_name.TabIndex = 46;
             this.txt_holay_type_name.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -207,21 +207,21 @@
             // 
             // labelControl2
             // 
-            this.labelControl2.Appearance.Font = new System.Drawing.Font("ae_AlArabiya", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl2.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl2.Appearance.Options.UseFont = true;
             this.labelControl2.Location = new System.Drawing.Point(298, 59);
             this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(49, 19);
+            this.labelControl2.Size = new System.Drawing.Size(59, 16);
             this.labelControl2.TabIndex = 44;
             this.labelControl2.Text = "نوع الاجازه ";
             // 
             // labelControl3
             // 
-            this.labelControl3.Appearance.Font = new System.Drawing.Font("ae_AlArabiya", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl3.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl3.Appearance.Options.UseFont = true;
             this.labelControl3.Location = new System.Drawing.Point(264, 144);
             this.labelControl3.Name = "labelControl3";
-            this.labelControl3.Size = new System.Drawing.Size(83, 19);
+            this.labelControl3.Size = new System.Drawing.Size(91, 16);
             this.labelControl3.TabIndex = 47;
             this.labelControl3.Text = "وصف  نوع الاجازه ";
             // 

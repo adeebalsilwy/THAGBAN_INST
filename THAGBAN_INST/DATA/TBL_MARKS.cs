@@ -29,10 +29,10 @@ namespace THAGBAN_INST.DATA
         public Nullable<int> SPEC_ID { get; set; }
     
         public virtual TBL_COURS TBL_COURS { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<TBL_GREIVANCES> TBL_GREIVANCES { get; set; }
         public virtual TBL_SPECIAL TBL_SPECIAL { get; set; }
         public virtual TBL_STUDENTS TBL_STUDENTS { get; set; }
         public virtual TBL_YEARS_MARK TBL_YEARS_MARK { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<TBL_GREIVANCES> TBL_GREIVANCES { get; set; }
     }
 }

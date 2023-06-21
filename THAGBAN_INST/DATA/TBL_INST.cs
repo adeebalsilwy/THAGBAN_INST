@@ -31,6 +31,8 @@ namespace THAGBAN_INST.DATA
         public string NOTE { get; set; }
         public string INST_ADMIN { get; set; }
         public string INST_TOTAL { get; set; }
+        public string INST_USER_ADMIN { get; set; }
+        public string INST_USER_PASS { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<TBL_LEVLE> TBL_LEVLE { get; set; }

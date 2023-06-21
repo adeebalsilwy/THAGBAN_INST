@@ -119,7 +119,7 @@ namespace THAGBAN_INST.FORM.FRM_EMP_MANEGER.job
                 try
                 {
                     TBL_JOB cl = new TBL_JOB();
-                    cl.JOB_NAME = txt_job_name.Text;
+                    cl.JOB_NAME = txt_job_name.Text.Trim().ToString();
                     cl.JOB_DESC = txt_job_desc.Text;
                     cl.NOTE= txt_job_note.Text;
                     cl.DEPT_ID =Convert.ToInt32(com_dept.SelectedValue.ToString());

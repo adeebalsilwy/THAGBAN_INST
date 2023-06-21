@@ -30,29 +30,30 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FRM_MAIN_EMPLOYEE));
-            DevExpress.Utils.SuperToolTip superToolTip1 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipItem toolTipItem1 = new DevExpress.Utils.ToolTipItem();
-            DevExpress.Utils.SuperToolTip superToolTip2 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipItem toolTipItem2 = new DevExpress.Utils.ToolTipItem();
-            DevExpress.Utils.SuperToolTip superToolTip3 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipItem toolTipItem3 = new DevExpress.Utils.ToolTipItem();
-            DevExpress.Utils.SuperToolTip superToolTip4 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipItem toolTipItem4 = new DevExpress.Utils.ToolTipItem();
-            DevExpress.Utils.SuperToolTip superToolTip5 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipItem toolTipItem5 = new DevExpress.Utils.ToolTipItem();
-            DevExpress.Utils.SuperToolTip superToolTip6 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipItem toolTipItem6 = new DevExpress.Utils.ToolTipItem();
-            DevExpress.Utils.SuperToolTip superToolTip7 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipItem toolTipItem7 = new DevExpress.Utils.ToolTipItem();
-            DevExpress.Utils.SuperToolTip superToolTip8 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipItem toolTipItem8 = new DevExpress.Utils.ToolTipItem();
-            DevExpress.Utils.SuperToolTip superToolTip9 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipItem toolTipItem9 = new DevExpress.Utils.ToolTipItem();
-            DevExpress.Utils.SuperToolTip superToolTip10 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipItem toolTipItem10 = new DevExpress.Utils.ToolTipItem();
-            DevExpress.Utils.SuperToolTip superToolTip11 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipItem toolTipItem11 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.SuperToolTip superToolTip12 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipItem toolTipItem12 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.SuperToolTip superToolTip13 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipItem toolTipItem13 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.SuperToolTip superToolTip14 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipItem toolTipItem14 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.SuperToolTip superToolTip15 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipItem toolTipItem15 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.SuperToolTip superToolTip16 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipItem toolTipItem16 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.SuperToolTip superToolTip17 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipItem toolTipItem17 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.SuperToolTip superToolTip18 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipItem toolTipItem18 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.SuperToolTip superToolTip19 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipItem toolTipItem19 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.SuperToolTip superToolTip20 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipItem toolTipItem20 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.SuperToolTip superToolTip21 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipItem toolTipItem21 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.SuperToolTip superToolTip22 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipItem toolTipItem22 = new DevExpress.Utils.ToolTipItem();
             this.fluentDesignFormControl1 = new DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormControl();
+            this.labl_user_name = new System.Windows.Forms.Label();
             this.pn_notification = new DevExpress.XtraEditors.PanelControl();
             this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem2 = new DevExpress.XtraBars.BarButtonItem();
@@ -75,18 +76,17 @@
             this.btn_anylsis = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.btn_about = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.xtraTabControl1 = new DevExpress.XtraTab.XtraTabControl();
-            this.hom_page = new DevExpress.XtraTab.XtraTabPage();
             ((System.ComponentModel.ISupportInitialize)(this.fluentDesignFormControl1)).BeginInit();
             this.fluentDesignFormControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pn_notification)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fluentFormDefaultManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.accordionControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).BeginInit();
-            this.xtraTabControl1.SuspendLayout();
             this.SuspendLayout();
             // 
             // fluentDesignFormControl1
             // 
+            this.fluentDesignFormControl1.Controls.Add(this.labl_user_name);
             this.fluentDesignFormControl1.Controls.Add(this.pn_notification);
             this.fluentDesignFormControl1.FluentDesignForm = this;
             this.fluentDesignFormControl1.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
@@ -101,11 +101,23 @@
             this.fluentDesignFormControl1.Manager = this.fluentFormDefaultManager1;
             this.fluentDesignFormControl1.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.fluentDesignFormControl1.Name = "fluentDesignFormControl1";
-            this.fluentDesignFormControl1.Size = new System.Drawing.Size(1124, 30);
+            this.fluentDesignFormControl1.Size = new System.Drawing.Size(1108, 30);
             this.fluentDesignFormControl1.TabIndex = 2;
             this.fluentDesignFormControl1.TabStop = false;
             this.fluentDesignFormControl1.TitleItemLinks.Add(this.barButtonItem1);
             this.fluentDesignFormControl1.TitleItemLinks.Add(this.barButtonItem2);
+            // 
+            // labl_user_name
+            // 
+            this.labl_user_name.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.labl_user_name.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labl_user_name.ForeColor = System.Drawing.Color.Black;
+            this.labl_user_name.Location = new System.Drawing.Point(270, 0);
+            this.labl_user_name.Name = "labl_user_name";
+            this.labl_user_name.Size = new System.Drawing.Size(563, 27);
+            this.labl_user_name.TabIndex = 7;
+            this.labl_user_name.Text = "اديب الصلوي";
+            this.labl_user_name.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // pn_notification
             // 
@@ -180,6 +192,8 @@
             // 
             // accordionControl1
             // 
+            this.accordionControl1.Appearance.AccordionControl.BackColor = System.Drawing.Color.White;
+            this.accordionControl1.Appearance.AccordionControl.Options.UseBackColor = true;
             this.accordionControl1.Dock = System.Windows.Forms.DockStyle.Right;
             this.accordionControl1.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
             this.btn_home,
@@ -193,11 +207,11 @@
             this.btn_reports,
             this.btn_anylsis,
             this.btn_about});
-            this.accordionControl1.Location = new System.Drawing.Point(874, 30);
+            this.accordionControl1.Location = new System.Drawing.Point(858, 30);
             this.accordionControl1.Margin = new System.Windows.Forms.Padding(14, 12, 14, 12);
             this.accordionControl1.Name = "accordionControl1";
             this.accordionControl1.ScrollBarMode = DevExpress.XtraBars.Navigation.ScrollBarMode.Touch;
-            this.accordionControl1.Size = new System.Drawing.Size(250, 510);
+            this.accordionControl1.Size = new System.Drawing.Size(250, 502);
             this.accordionControl1.TabIndex = 3;
             this.accordionControl1.ViewType = DevExpress.XtraBars.Navigation.AccordionControlViewType.HamburgerMenu;
             // 
@@ -215,10 +229,11 @@
             this.btn_home.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_home.ImageOptions.Image")));
             this.btn_home.Name = "btn_home";
             this.btn_home.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            toolTipItem1.Text = "الرئيسة";
-            superToolTip1.Items.Add(toolTipItem1);
-            this.btn_home.SuperTip = superToolTip1;
+            toolTipItem12.Text = "الرئيسة";
+            superToolTip12.Items.Add(toolTipItem12);
+            this.btn_home.SuperTip = superToolTip12;
             this.btn_home.Text = "الرئيسة";
+            this.btn_home.Click += new System.EventHandler(this.btn_home_Click);
             // 
             // btn_groups
             // 
@@ -232,9 +247,9 @@
             this.btn_groups.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_groups.ImageOptions.Image")));
             this.btn_groups.Name = "btn_groups";
             this.btn_groups.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            toolTipItem2.Text = "الاقسام";
-            superToolTip2.Items.Add(toolTipItem2);
-            this.btn_groups.SuperTip = superToolTip2;
+            toolTipItem13.Text = "الاقسام";
+            superToolTip13.Items.Add(toolTipItem13);
+            this.btn_groups.SuperTip = superToolTip13;
             this.btn_groups.Text = "الاقسام";
             this.btn_groups.Click += new System.EventHandler(this.btn_groups_Click);
             // 
@@ -250,9 +265,9 @@
             this.btn_categories.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_categories.ImageOptions.Image")));
             this.btn_categories.Name = "btn_categories";
             this.btn_categories.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            toolTipItem3.Text = "الوظائف";
-            superToolTip3.Items.Add(toolTipItem3);
-            this.btn_categories.SuperTip = superToolTip3;
+            toolTipItem14.Text = "الوظائف";
+            superToolTip14.Items.Add(toolTipItem14);
+            this.btn_categories.SuperTip = superToolTip14;
             this.btn_categories.Text = "الوظائف";
             this.btn_categories.Click += new System.EventHandler(this.btn_categories_Click);
             // 
@@ -268,9 +283,9 @@
             this.btn_suppliers.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_suppliers.ImageOptions.Image")));
             this.btn_suppliers.Name = "btn_suppliers";
             this.btn_suppliers.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            toolTipItem4.Text = "الموظفين";
-            superToolTip4.Items.Add(toolTipItem4);
-            this.btn_suppliers.SuperTip = superToolTip4;
+            toolTipItem15.Text = "الموظفين";
+            superToolTip15.Items.Add(toolTipItem15);
+            this.btn_suppliers.SuperTip = superToolTip15;
             this.btn_suppliers.Text = "الموظفين";
             this.btn_suppliers.Click += new System.EventHandler(this.btn_suppliers_Click);
             // 
@@ -286,9 +301,9 @@
             this.btn_buy.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_buy.ImageOptions.Image")));
             this.btn_buy.Name = "btn_buy";
             this.btn_buy.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            toolTipItem5.Text = "انواع الاجازات";
-            superToolTip5.Items.Add(toolTipItem5);
-            this.btn_buy.SuperTip = superToolTip5;
+            toolTipItem16.Text = "انواع الاجازات";
+            superToolTip16.Items.Add(toolTipItem16);
+            this.btn_buy.SuperTip = superToolTip16;
             this.btn_buy.Text = "انواع الاجازات ";
             this.btn_buy.Click += new System.EventHandler(this.btn_buy_Click);
             // 
@@ -304,9 +319,9 @@
             this.btn_customers.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_customers.ImageOptions.Image")));
             this.btn_customers.Name = "btn_customers";
             this.btn_customers.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            toolTipItem6.Text = "الاجازات ";
-            superToolTip6.Items.Add(toolTipItem6);
-            this.btn_customers.SuperTip = superToolTip6;
+            toolTipItem17.Text = "الاجازات ";
+            superToolTip17.Items.Add(toolTipItem17);
+            this.btn_customers.SuperTip = superToolTip17;
             this.btn_customers.Text = "الاجازات ";
             this.btn_customers.Click += new System.EventHandler(this.btn_customers_Click);
             // 
@@ -322,9 +337,9 @@
             this.btn_users.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_users.ImageOptions.Image")));
             this.btn_users.Name = "btn_users";
             this.btn_users.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            toolTipItem7.Text = "سجل الدوام ";
-            superToolTip7.Items.Add(toolTipItem7);
-            this.btn_users.SuperTip = superToolTip7;
+            toolTipItem18.Text = "سجل الدوام ";
+            superToolTip18.Items.Add(toolTipItem18);
+            this.btn_users.SuperTip = superToolTip18;
             this.btn_users.Text = "سجل الدوام ";
             this.btn_users.Click += new System.EventHandler(this.btn_users_Click);
             // 
@@ -340,9 +355,9 @@
             this.btn_help.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_help.ImageOptions.Image")));
             this.btn_help.Name = "btn_help";
             this.btn_help.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            toolTipItem8.Text = "اضافه مستخدم";
-            superToolTip8.Items.Add(toolTipItem8);
-            this.btn_help.SuperTip = superToolTip8;
+            toolTipItem19.Text = "اضافه مستخدم";
+            superToolTip19.Items.Add(toolTipItem19);
+            this.btn_help.SuperTip = superToolTip19;
             this.btn_help.Text = "اضافه مستخدم";
             this.btn_help.Click += new System.EventHandler(this.btn_help_Click);
             // 
@@ -358,9 +373,9 @@
             this.btn_reports.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_reports.ImageOptions.Image")));
             this.btn_reports.Name = "btn_reports";
             this.btn_reports.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            toolTipItem9.Text = "الرواتب";
-            superToolTip9.Items.Add(toolTipItem9);
-            this.btn_reports.SuperTip = superToolTip9;
+            toolTipItem20.Text = "الرواتب";
+            superToolTip20.Items.Add(toolTipItem20);
+            this.btn_reports.SuperTip = superToolTip20;
             this.btn_reports.Text = "الرواتب";
             this.btn_reports.Click += new System.EventHandler(this.btn_reports_Click);
             // 
@@ -376,9 +391,9 @@
             this.btn_anylsis.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_anylsis.ImageOptions.Image")));
             this.btn_anylsis.Name = "btn_anylsis";
             this.btn_anylsis.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            toolTipItem10.Text = "التقارير";
-            superToolTip10.Items.Add(toolTipItem10);
-            this.btn_anylsis.SuperTip = superToolTip10;
+            toolTipItem21.Text = "التقارير";
+            superToolTip21.Items.Add(toolTipItem21);
+            this.btn_anylsis.SuperTip = superToolTip21;
             this.btn_anylsis.Text = "التقارير";
             this.btn_anylsis.Click += new System.EventHandler(this.btn_anylsis_Click);
             // 
@@ -394,10 +409,11 @@
             this.btn_about.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_about.ImageOptions.Image")));
             this.btn_about.Name = "btn_about";
             this.btn_about.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            toolTipItem11.Text = "حول النظام ";
-            superToolTip11.Items.Add(toolTipItem11);
-            this.btn_about.SuperTip = superToolTip11;
+            toolTipItem22.Text = "حول النظام ";
+            superToolTip22.Items.Add(toolTipItem22);
+            this.btn_about.SuperTip = superToolTip22;
             this.btn_about.Text = "حول";
+            this.btn_about.Click += new System.EventHandler(this.btn_about_Click);
             // 
             // xtraTabControl1
             // 
@@ -406,32 +422,21 @@
             this.xtraTabControl1.Location = new System.Drawing.Point(0, 30);
             this.xtraTabControl1.Name = "xtraTabControl1";
             this.xtraTabControl1.RightToLeftLayout = DevExpress.Utils.DefaultBoolean.True;
-            this.xtraTabControl1.SelectedTabPage = this.hom_page;
-            this.xtraTabControl1.Size = new System.Drawing.Size(874, 510);
+            this.xtraTabControl1.Size = new System.Drawing.Size(858, 502);
             this.xtraTabControl1.TabIndex = 4;
-            this.xtraTabControl1.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
-            this.hom_page});
             this.xtraTabControl1.CloseButtonClick += new System.EventHandler(this.xtraTabControl1_CloseButtonClick);
-            // 
-            // hom_page
-            // 
-            this.hom_page.AutoScroll = true;
-            this.hom_page.Name = "hom_page";
-            this.hom_page.ShowCloseButton = DevExpress.Utils.DefaultBoolean.False;
-            this.hom_page.Size = new System.Drawing.Size(872, 489);
-            this.hom_page.Text = "الرئيسية";
             // 
             // FRM_MAIN_EMPLOYEE
             // 
             this.Appearance.Options.UseFont = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1124, 540);
+            this.ClientSize = new System.Drawing.Size(1108, 532);
             this.Controls.Add(this.xtraTabControl1);
             this.Controls.Add(this.accordionControl1);
             this.Controls.Add(this.fluentDesignFormControl1);
             this.FluentDesignFormControl = this.fluentDesignFormControl1;
-            this.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
             this.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.Name = "FRM_MAIN_EMPLOYEE";
             this.NavigationControl = this.accordionControl1;
@@ -446,7 +451,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.fluentFormDefaultManager1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.accordionControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).EndInit();
-            this.xtraTabControl1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -475,6 +479,6 @@
         private DevExpress.XtraBars.BarHeaderItem barHeaderItem4;
         private DevExpress.XtraBars.BarHeaderItem barHeaderItem5;
         private DevExpress.XtraTab.XtraTabControl xtraTabControl1;
-        private DevExpress.XtraTab.XtraTabPage hom_page;
+        public System.Windows.Forms.Label labl_user_name;
     }
 }
